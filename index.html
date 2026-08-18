@@ -646,16 +646,19 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
 /* ==== INICIO DADOS AUTOMATICOS - NAO EDITAR A MAO ====
    A tarefa agendada diaria substitui o conteudo entre estes marcadores.
    Formato: {date,read,rhr,hrv,sleep,acute,natM,natT,bikeK,bikeT,runK,runT,obs,auto:true} */
-var LOG_AUTO = [];
-var LOG_AUTO_UPDATED = "";
+var LOG_AUTO = [
+ {date:"2026-08-17",read:25,rhr:45,hrv:48,sleep:5.9,acute:447,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"Descanso programado - sem atividade registrada",auto:true},
+ {date:"2026-08-18",read:41,rhr:46,hrv:49,sleep:6.7,acute:377,natM:null,natT:null,bikeK:15.0,bikeT:48,runK:null,runT:null,obs:"REGEN-B Bike Z1 40min - FC media 95, max 122",auto:true}
+];
+var LOG_AUTO_UPDATED = "18/08/2026 18:00";
 /* ==== FIM DADOS AUTOMATICOS ==== */
 
 /* ==== INICIO CHECKLIST DA SEMANA - NAO EDITAR A MAO ====
    Chave: "AAAA-MM-DD|indice". Valor: "auto" (detectado no Garmin) ou "manual". */
-var SESS_DONE = {};
+var SESS_DONE = {"2026-08-18|0":"auto"};
 /* ==== FIM CHECKLIST DA SEMANA ==== */
 
-var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,7,16);
+var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,7,18);
 
 var SECOES=[
  ["s-visao","01","Visão geral"],["s-atual","02","Semana em curso"],["s-espinha","03","A espinha"],
@@ -760,8 +763,8 @@ var SEMANA_ATUAL=[
  {date:"2026-08-19",dow:"Qua",tag:"off",s:[]},
  {date:"2026-08-20",dow:"Qui",s:[{t:"n",n:"NAT-0 · Ambientação 600 m",o:"reconhecimento, sem cronômetro"}]},
  {date:"2026-08-21",dow:"Sex",tag:"off",s:[]},
- {date:"2026-08-22",dow:"Sáb",s:[{t:"n",n:"NAT-0 · Ambientação 600 m",o:"segunda ida à água"}]},
- {date:"2026-08-23",dow:"Dom",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"rua, plano, FC teto 100"}]}
+ {date:"2026-08-22",dow:"Sáb",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"rua, plano, FC teto 100"}]},
+ {date:"2026-08-23",dow:"Dom",s:[{t:"n",n:"NAT-0 · Ambientação 600 m",o:"segunda ida à água"}]}
 ];
 /* ==== FIM SEMANA EM CURSO ==== */
 
