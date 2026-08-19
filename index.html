@@ -134,6 +134,22 @@ svg.chart{width:100%;display:block;overflow:visible}
 .callout.bad{border-left-color:var(--crit)}
 .callout.info{border-left-color:var(--nat)}
 .callout b{color:var(--ink-1)}
+.gng{display:flex;align-items:center;gap:15px;padding:15px 17px;border-radius:12px;border:1px solid var(--border);background:var(--surface-2)}
+.gng .lamp{width:42px;height:42px;border-radius:50%;flex:none}
+.gng .verdict{font-size:18px;font-weight:700;letter-spacing:.04em;line-height:1.15}
+.gng .why{font-size:11.5px;color:var(--ink-2);margin-top:4px;line-height:1.45}
+.gngnum{display:flex;flex-wrap:wrap;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:13px}
+.gngnum>div{background:var(--surface-1);padding:9px 12px;flex:1 1 92px}
+.gngnum .l{font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3)}
+.gngnum .v{font-size:16px;font-weight:600;margin-top:2px;font-variant-numeric:tabular-nums;color:var(--ink-1)}
+.gngnum .s{font-size:9.5px;color:var(--ink-3);margin-top:2px}
+.note{margin-top:9px;padding-top:9px;border-top:1px dashed var(--grid)}
+.note .nl{font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);margin-bottom:4px}
+.note textarea{width:100%;box-sizing:border-box;font:inherit;font-size:11.5px;line-height:1.4;background:var(--surface-2);color:var(--ink-1);border:1px solid var(--border);border-radius:8px;padding:6px 8px;resize:vertical;min-height:32px}
+.note textarea:focus{outline:none;border-color:var(--nat)}
+.note textarea::placeholder{color:var(--ink-3)}
+.note.has textarea{border-left:2px solid var(--warn)}
+.nsync{font-size:9px;color:var(--good);margin-top:3px}
 .flag{display:inline-block;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:4px;background:var(--surface-3);color:var(--ink-3);border:1px solid var(--border);vertical-align:middle;margin-left:5px}
 
 .wkgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden}
@@ -231,8 +247,29 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
 </section>
 
 <section id="s-atual">
-  <div class="shead"><span class="kick">02</span><h2>Semana em curso</h2><p id="wkRange">—</p></div>
+  <div class="shead"><span class="kick">02</span><h2>Hoje — antes de treinar</h2><p id="wkRange">—</p></div>
+
+  <div class="card">
+    <div class="ctitle"><b>Go / No-Go</b><span id="gngWhen" style="color:var(--ink-3)"></span></div>
+    <div class="gng" id="gngBox"></div>
+    <div class="gngnum" id="gngNum"></div>
+    <div id="gngWarn"></div>
+    <div style="font-size:10.5px;color:var(--ink-3);margin-top:11px;line-height:1.5">
+      Calculado sobre a última linha do registro do Garmin, pelas regras da seção 13. Limiares usados: readiness <b style="color:var(--ink-2)">≥60 verde · 40–59 amarelo · &lt;40 vermelho</b> · FCrep de alerta <b style="color:var(--ink-2)">≥48</b> (base 40–43 mais 5) · VFC na banda <b style="color:var(--ink-2)">52–74</b> · sono mínimo <b style="color:var(--ink-2)">6 h</b>. Readiness e VFC são estimativas do relógio, não medidas clínicas.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>Registro do Garmin</b><span id="miniCount" style="color:var(--ink-3)"></span>
+      <button class="btn sm" id="btnMore" style="margin-left:auto">Ver tudo</button></div>
+    <div class="tscroll"><table>
+      <thead><tr><th>Data</th><th class="num">Read.</th><th class="num">FCrep</th><th class="num">VFC</th><th class="num">Sono</th><th class="num">Carga</th><th>Atividade</th></tr></thead>
+      <tbody id="tbMini"></tbody>
+    </table></div>
+  </div>
+
   <div class="card" style="padding:16px 18px 18px">
+    <div class="ctitle" style="margin-bottom:12px"><b>Semana em curso</b></div>
     <div class="wkbar">
       <span class="cnt" id="wkCount">—</span>
       <span class="prog"><i id="wkProg" style="width:0%"></i></span>
@@ -240,7 +277,12 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
     </div>
     <div class="wkgrid" id="wkGrid"></div>
     <div style="font-size:11px;color:var(--ink-3);margin-top:12px;padding-top:11px;border-top:1px solid var(--grid)">
-      Cada linha é uma <b style="color:var(--ink-2)">atividade</b>, não um dia — dias com duas ou três atividades têm uma caixa para cada uma, então dá para marcar o que você fez e deixar o resto em aberto. Clique na linha ou use Tab e Espaço. A etiqueta <span class="auto">Garmin</span> aparece quando a sincronização diária detectou a atividade sozinha. Para guardar as marcações entre sessões, use <b style="color:var(--ink-2)">Exportar</b>.
+      Cada linha é uma <b style="color:var(--ink-2)">atividade</b>, não um dia — dias com duas ou três atividades têm uma caixa para cada uma, então dá para marcar o que você fez e deixar o resto em aberto. Clique na linha ou use Tab e Espaço. A etiqueta <span class="auto">Garmin</span> aparece quando a sincronização diária detectou a atividade sozinha.<br><br>
+      O campo <b style="color:var(--ink-2)">o que eu fiz</b> de cada dia é para o que saiu do script: um CrossFit no dia de folga, uma sessão trocada, um treino cortado no meio. Fica salvo neste aparelho automaticamente. Para que entre na análise de domingo, use <b style="color:var(--ink-2)">Copiar anotações</b> e cole no chat — a página não consegue escrever no arquivo sozinha.
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+      <button class="btn sm" id="btnCopyNotes">Copiar anotações</button>
+      <button class="btn sm" id="btnClearNotes">Limpar anotações deste aparelho</button>
     </div>
   </div>
   <div class="callout ok">
@@ -658,6 +700,14 @@ var LOG_AUTO_UPDATED = "19/08/2026 07:31";
    Chave: "AAAA-MM-DD|indice". Valor: "auto" (detectado no Garmin) ou "manual". */
 var SESS_DONE = {"2026-08-18|0":"auto"};
 /* ==== FIM CHECKLIST DA SEMANA ==== */
+
+/* ==== INICIO ANOTACOES - NAO EDITAR A MAO ====
+   O que o Alex fez ALEM do prescrito, ou no lugar do prescrito.
+   Chave: "AAAA-MM-DD". Valor: texto livre, SEM apostrofos.
+   O Claude grava aqui quando o Alex conta no chat ou manda o export.
+   A tarefa diaria PRESERVA este bloco. A tarefa semanal LE para a analise. */
+var NOTAS = {};
+/* ==== FIM ANOTACOES ==== */
 
 var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,7,19);
 
@@ -1160,6 +1210,116 @@ function drawFis(){
   svg.querySelector(".hitFis").addEventListener("mouseleave",function(){tip.style.opacity="0";});
 }
 
+/* ---------- anotacoes: NOTAS vem do arquivo, localStorage guarda o que ele digita ---------- */
+var LSKEY="notas703";
+function lsGet(){try{return JSON.parse(localStorage.getItem(LSKEY)||"{}");}catch(e){return {};}}
+function lsSet(o){try{localStorage.setItem(LSKEY,JSON.stringify(o));}catch(e){}}
+function notaDe(date){var l=lsGet(); return l[date]!==undefined?l[date]:(NOTAS[date]||"");}
+function setNota(date,txt){var l=lsGet(); if(txt.trim())l[date]=txt; else delete l[date]; lsSet(l);}
+
+/* ---------- Go / No-Go ---------- */
+var LIM={readVerde:60,readAmarelo:40,rhrAlerta:48,hrvMin:52,hrvMax:74,sonoMin:6};
+
+function serieFim(campo,teste){
+  var d=LOG.slice().filter(function(r){return r[campo]!==null&&r[campo]!==undefined;})
+        .sort(function(a,b){return a.date<b.date?-1:1;});
+  var n=0;
+  for(var i=d.length-1;i>=0;i--){ if(teste(d[i][campo]))n++; else break; }
+  return n;
+}
+
+function goNoGo(){
+  var box=$("gngBox"), num=$("gngNum"), warn=$("gngWarn");
+  var d=LOG.slice().filter(function(r){return r.read!==null&&r.read!==undefined;})
+        .sort(function(a,b){return a.date<b.date?-1:1;});
+  if(!d.length){
+    box.innerHTML='<div class="lamp" style="background:var(--ink-3)"></div><div><div class="verdict" style="color:var(--ink-3)">SEM DADO</div><div class="why">Nenhuma leitura do Garmin no registro.</div></div>';
+    num.innerHTML=""; warn.innerHTML=""; $("gngWhen").textContent=""; return;
+  }
+  var h=d[d.length-1], ant=d.length>1?d[d.length-2]:null;
+  var p=h.date.split("-");
+  $("gngWhen").textContent="leitura de "+p[2]+"/"+p[1];
+
+  var nRhr=serieFim("rhr",function(v){return v>=LIM.rhrAlerta;});
+  var nSono=serieFim("sleep",function(v){return v<LIM.sonoMin;});
+  var nRead=serieFim("read",function(v){return v<LIM.readAmarelo;});
+
+  var travas=[];
+  if(nRhr>=3)travas.push("FC de repouso em "+h.rhr+" bpm, no alerta há "+nRhr+" dias seguidos");
+  if(nSono>=2)travas.push("sono abaixo de 6 h há "+nSono+" noites");
+  if(nRead>=2)travas.push("readiness abaixo de 40 há "+nRead+" dias");
+
+  var cor,txt,pq;
+  if(travas.length){
+    cor="var(--crit)"; txt="NO-GO";
+    pq="<b>Regra de parada acionada:</b> "+travas.join(" · ")+". A conduta da seção 13 é parar ou trocar por natação técnica.";
+  }else if(h.read<LIM.readAmarelo){
+    cor="var(--crit)"; txt="VERMELHO";
+    pq="Readiness em <b>"+h.read+"</b>. Troque por natação técnica ou descanse.";
+  }else if(h.read<LIM.readVerde){
+    cor="var(--warn)"; txt="AMARELO";
+    pq="Readiness em <b>"+h.read+"</b>. Faça o treino, mas <b>corte a intensidade</b> — tudo vira Z1/Z2.";
+  }else{
+    cor="var(--good)"; txt="VERDE";
+    pq="Readiness em <b>"+h.read+"</b>. Treino como prescrito.";
+  }
+  box.innerHTML='<div class="lamp" style="background:'+cor+'"></div><div><div class="verdict" style="color:'+cor+'">'+txt+'</div><div class="why">'+pq+'</div></div>';
+
+  function delta(a,b,inv){
+    if(a===null||a===undefined||b===null||b===undefined)return "";
+    var v=a-b; if(!v)return "estável";
+    var sobe=v>0, cor;
+    if(inv===null)cor="var(--ink-3)";              // neutro: sem juizo de valor
+    else cor=((inv?!sobe:sobe)?"var(--good)":"var(--warn)");
+    return '<span style="color:'+cor+'">'+(sobe?"▲":"▼")+" "+br(Math.abs(v),Math.abs(v)%1?1:0)+"</span> vs ontem";
+  }
+  var cel=[
+    ["Readiness",h.read===null?"—":h.read,ant?delta(h.read,ant.read,false):""],
+    ["FC repouso",h.rhr===null?"—":h.rhr+" bpm",h.rhr>=LIM.rhrAlerta?'<span style="color:var(--warn)">acima do alerta</span>':(ant?delta(h.rhr,ant.rhr,true):"")],
+    ["VFC semanal",h.hrv===null?"—":h.hrv,(h.hrv!==null&&(h.hrv<LIM.hrvMin||h.hrv>LIM.hrvMax))?'<span style="color:var(--ink-3)">fora da banda 52–74</span>':"na banda"],
+    ["Sono",h.sleep===null?"—":br(h.sleep,1)+" h",h.sleep!==null&&h.sleep<LIM.sonoMin?'<span style="color:var(--warn)">abaixo de 6 h</span>':(ant?delta(h.sleep,ant.sleep,false):"")],
+    ["Carga aguda",h.acute===null||h.acute===undefined?"—":h.acute,ant&&ant.acute!==undefined?delta(h.acute,ant.acute,null):""]
+  ];
+  num.innerHTML=cel.map(function(c){
+    return '<div><div class="l">'+c[0]+'</div><div class="v">'+c[1]+'</div><div class="s">'+(c[2]||"")+'</div></div>';
+  }).join("");
+
+  var av=[];
+  if(nRhr>0&&nRhr<3)av.push("FC de repouso no alerta há "+nRhr+" dia(s) — a regra dispara em 3.");
+  if(nSono===1)av.push("Uma noite abaixo de 6 h — a regra dispara em 2.");
+  if(h.hrv!==null&&h.hrv<LIM.hrvMin&&!travas.length)av.push("VFC abaixo da banda. <b>Isolada, quase nunca foi fadiga</b> nos seus 16 semanas — só conta se FCrep, sono e readiness concordarem.");
+  warn.innerHTML=av.length?'<div class="callout" style="margin-top:13px">'+av.join("<br>")+'</div>':"";
+}
+
+/* ---------- registro recente, no topo ---------- */
+var MINI_ALL=false;
+function renderMini(){
+  var tb=$("tbMini"); if(!tb)return;
+  var d=LOG.slice().sort(function(a,b){return a.date<b.date?1:-1;});
+  var lim=MINI_ALL?d.length:7, vis=d.slice(0,lim);
+  $("miniCount").textContent=MINI_ALL?"todos os "+d.length+" dias":"últimos "+vis.length+" dias";
+  $("btnMore").textContent=MINI_ALL?"Ver menos":"Ver tudo";
+  tb.innerHTML="";
+  if(!vis.length){tb.innerHTML='<tr><td colspan="7" style="color:var(--ink-3);text-align:center;padding:20px">Nenhuma leitura ainda.</td></tr>';return;}
+  vis.forEach(function(r){
+    var p=(r.date||"").split("-");
+    var at=[];
+    if(r.natM)at.push(r.natM+" m nado");
+    if(r.bikeK)at.push(br(r.bikeK)+" km bike");
+    if(r.runK)at.push(br(r.runK)+" km corrida");
+    var extra=notaDe(r.date);
+    tb.appendChild(el("tr","",
+      "<td class='k'>"+(p.length===3?p[2]+"/"+p[1]:r.date)+"</td>"+
+      "<td class='num'"+(r.read!==null&&r.read<LIM.readAmarelo?" style='color:var(--crit)'":"")+">"+(r.read===null||r.read===undefined?"—":r.read)+"</td>"+
+      "<td class='num'"+(r.rhr>=LIM.rhrAlerta?" style='color:var(--warn)'":"")+">"+(r.rhr||"—")+"</td>"+
+      "<td class='num'>"+(r.hrv||"—")+"</td>"+
+      "<td class='num'"+(r.sleep!==null&&r.sleep<LIM.sonoMin?" style='color:var(--warn)'":"")+">"+(r.sleep?br(r.sleep,1):"—")+"</td>"+
+      "<td class='num'>"+(r.acute||"—")+"</td>"+
+      "<td style='font-size:11px'>"+(at.join(" · ")||'<span style="color:var(--ink-3)">'+(r.obs||"—")+"</span>")+
+        (extra?'<div style="color:var(--warn);font-size:10.5px;margin-top:2px">+ '+extra.replace(/</g,"&lt;")+'</div>':"")+"</td>"));
+  });
+}
+
 function renderWeek(){
   var g=$("wkGrid"); g.innerHTML="";
   var tot=0,done=0;
@@ -1190,6 +1350,20 @@ function renderWeek(){
       row.addEventListener("keydown",function(ev){if(ev.key===" "||ev.key==="Enter"){ev.preventDefault();toggle();}});
       c.appendChild(row);
     });
+    var nb=el("div","note"), val=notaDe(d.date);
+    if(val)nb.classList.add("has");
+    nb.appendChild(el("div","nl","o que eu fiz"));
+    var ta=document.createElement("textarea");
+    ta.rows=1; ta.value=val;
+    ta.placeholder=d.s.length?"treino extra, troca, sessão cortada…":"fez algo hoje? anote aqui";
+    ta.addEventListener("input",function(){
+      setNota(d.date,ta.value);
+      nb.classList.toggle("has",!!ta.value.trim());
+      ta.style.height="auto"; ta.style.height=(ta.scrollHeight+2)+"px";
+    });
+    nb.appendChild(ta);
+    if(NOTAS[d.date])nb.appendChild(el("div","nsync","● já registrado na análise"));
+    c.appendChild(nb);
     if(d.s.length && d.s.every(function(s,i){return SESS_DONE[d.date+"|"+i];}))c.classList.add("done");
     g.appendChild(c);
   });
@@ -1223,7 +1397,30 @@ function renderLog(){
     });
   }
   drawEvo("nat");drawEvo("bike");drawEvo("run");drawFis();
+  renderMini(); goNoGo();
 }
+
+$("btnMore").addEventListener("click",function(){MINI_ALL=!MINI_ALL;renderMini();});
+
+$("btnCopyNotes").addEventListener("click",function(){
+  var l=lsGet(), linhas=[];
+  Object.keys(l).sort().forEach(function(k){
+    if(!l[k].trim())return;
+    var p=k.split("-");
+    linhas.push(p[2]+"/"+p[1]+"/"+p[0]+": "+l[k].trim());
+  });
+  if(!linhas.length){toast("Nenhuma anotação neste aparelho");return;}
+  var txt="Anotações do painel 70.3 — o que fiz além do prescrito:\n"+linhas.join("\n");
+  function ok(){toast("Copiado — cole no chat");}
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(ok,function(){window.prompt("Copie o texto:",txt);});
+  }else{window.prompt("Copie o texto:",txt);}
+});
+
+$("btnClearNotes").addEventListener("click",function(){
+  if(!window.confirm("Apagar as anotações guardadas neste aparelho? As que já entraram na análise continuam."))return;
+  lsSet({}); renderWeek(); renderMini(); toast("Anotações do aparelho apagadas");
+});
 
 $("btnAdd").addEventListener("click",function(){
   var d=$("fDate").value;
@@ -1238,7 +1435,10 @@ $("btnAdd").addEventListener("click",function(){
 });
 
 $("btnExport").addEventListener("click",function(){
-  var b=new Blob([JSON.stringify({gerado:new Date().toISOString(),registros:LOG,checklist:SESS_DONE},null,2)],{type:"application/json"});
+  var notas={}; var l=lsGet();
+  Object.keys(NOTAS).forEach(function(k){notas[k]=NOTAS[k];});
+  Object.keys(l).forEach(function(k){if(l[k].trim())notas[k]=l[k];});
+  var b=new Blob([JSON.stringify({gerado:new Date().toISOString(),registros:LOG,checklist:SESS_DONE,anotacoes:notas},null,2)],{type:"application/json"});
   var a=document.createElement("a"); a.href=URL.createObjectURL(b); a.download="registro-703-brasilia.json"; a.click();
   toast("Arquivo baixado");
 });
@@ -1260,7 +1460,9 @@ $("fileIn").addEventListener("change",function(ev){
         byDate[r.date]=mg;
       });
       LOG=Object.keys(byDate).map(function(k){return byDate[k];});
-      if(j&&j.checklist){Object.keys(j.checklist).forEach(function(k){SESS_DONE[k]=j.checklist[k];});renderWeek();}
+      if(j&&j.checklist){Object.keys(j.checklist).forEach(function(k){SESS_DONE[k]=j.checklist[k];});}
+      if(j&&j.anotacoes){var l=lsGet();Object.keys(j.anotacoes).forEach(function(k){if(j.anotacoes[k])l[k]=j.anotacoes[k];});lsSet(l);}
+      renderWeek();
       renderLog();toast("Registro mesclado — "+inc.length+" entradas");
     }catch(e){toast("Arquivo inválido");}
   };
