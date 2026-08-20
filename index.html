@@ -691,9 +691,10 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
 var LOG_AUTO = [
  {date:"2026-08-17",read:25,rhr:45,hrv:48,sleep:5.9,acute:447,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"Descanso programado - sem atividade registrada",auto:true},
  {date:"2026-08-18",read:41,rhr:46,hrv:49,sleep:6.7,acute:377,natM:null,natT:null,bikeK:15.0,bikeT:48,runK:null,runT:null,obs:"REGEN-B Bike Z1 40min - FC media 95, max 122",auto:true},
- {date:"2026-08-19",read:64,rhr:45,hrv:50,sleep:7.3,acute:309,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"Descanso programado - sem atividade registrada",auto:true}
+ {date:"2026-08-19",read:64,rhr:45,hrv:50,sleep:7.3,acute:382,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"HIIT 54min - FC media 91, max 157. Fora do plano: o dia estava marcado como descanso",auto:true},
+ {date:"2026-08-20",read:71,rhr:41,hrv:53,sleep:6.8,acute:311,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"Sem atividade registrada ate a leitura da manha",auto:true}
 ];
-var LOG_AUTO_UPDATED = "19/08/2026 07:31";
+var LOG_AUTO_UPDATED = "20/08/2026 06:45";
 /* ==== FIM DADOS AUTOMATICOS ==== */
 
 /* ==== INICIO CHECKLIST DA SEMANA - NAO EDITAR A MAO ====
@@ -706,10 +707,10 @@ var SESS_DONE = {"2026-08-18|0":"auto"};
    Chave: "AAAA-MM-DD". Valor: texto livre, SEM apostrofos.
    O Claude grava aqui quando o Alex conta no chat ou manda o export.
    A tarefa diaria PRESERVA este bloco. A tarefa semanal LE para a analise. */
-var NOTAS = {};
+var NOTAS = {"2026-08-19":"Garmin registrou: HIIT 54min"};
 /* ==== FIM ANOTACOES ==== */
 
-var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,7,19);
+var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,7,20);
 
 var SECOES=[
  ["s-visao","01","Visão geral"],["s-atual","02","Semana em curso"],["s-espinha","03","A espinha"],
