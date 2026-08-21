@@ -150,6 +150,76 @@ svg.chart{width:100%;display:block;overflow:visible}
 .note textarea::placeholder{color:var(--ink-3)}
 .note.has textarea{border-left:2px solid var(--warn)}
 .nsync{font-size:9px;color:var(--good);margin-top:3px}
+
+/* ---------- CHIPS "FIZ DIFERENTE" ---------- */
+.xtra{margin-top:9px;padding-top:9px;border-top:1px dashed var(--grid)}
+.xtra .nl{font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:4px}
+.chip{
+  font:inherit;font-size:10px;line-height:1;padding:5px 8px;border-radius:999px;cursor:pointer;
+  background:var(--surface-2);color:var(--ink-3);border:1px solid var(--border);
+  transition:background .12s,color .12s,border-color .12s;white-space:nowrap;
+}
+.chip:hover{border-color:var(--ink-3);color:var(--ink-2)}
+.chip:focus-visible{outline:2px solid var(--nat);outline-offset:1px}
+.chip.on{color:#fff;font-weight:600;border-color:transparent}
+.chip.on[data-k="cross"]{background:#8b5cf6}
+.chip.on[data-k="bike"]{background:var(--bike)}
+.chip.on[data-k="nat"]{background:var(--nat)}
+.chip.on[data-k="musc"]{background:#6b7280}
+.chip.on[data-k="run"]{background:var(--run)}
+
+/* ---------- DRAWER LATERAL ---------- */
+#scrim{
+  position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:80;
+  opacity:0;pointer-events:none;transition:opacity .2s;
+}
+#scrim.on{opacity:1;pointer-events:auto}
+#drawer{
+  position:fixed;top:0;right:0;bottom:0;width:min(430px,92vw);z-index:81;
+  background:var(--surface-1);border-left:1px solid var(--border);
+  box-shadow:-14px 0 40px rgba(0,0,0,.4);
+  transform:translateX(102%);transition:transform .24s cubic-bezier(.4,0,.2,1);
+  display:flex;flex-direction:column;
+}
+#drawer.on{transform:translateX(0)}
+.dw-top{padding:18px 20px 15px;border-bottom:1px solid var(--grid);display:flex;align-items:flex-start;gap:12px}
+.dw-top .bar{width:5px;align-self:stretch;border-radius:3px;flex:none;min-height:38px}
+.dw-top .tt{flex:1;min-width:0}
+.dw-top .mod{font-size:9.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-bottom:5px}
+.dw-top h3{font-size:15px;font-weight:640;line-height:1.3;letter-spacing:-.005em}
+.dw-top .when{font-size:11px;color:var(--ink-3);margin-top:5px}
+.dw-x{
+  font:inherit;font-size:19px;line-height:1;flex:none;cursor:pointer;
+  background:var(--surface-3);color:var(--ink-2);border:1px solid var(--border);
+  border-radius:8px;width:31px;height:31px;
+}
+.dw-x:hover{color:var(--ink-1);border-color:var(--ink-3)}
+.dw-body{padding:18px 20px 26px;overflow-y:auto;flex:1}
+.dw-sec{margin-bottom:19px}
+.dw-sec:last-child{margin-bottom:0}
+.dw-sec h4{font-size:9.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-bottom:9px}
+.dw-step{
+  display:flex;gap:10px;font-size:12.5px;color:var(--ink-2);line-height:1.5;
+  padding:8px 0;border-bottom:1px dashed var(--grid);
+}
+.dw-step:last-child{border-bottom:0}
+.dw-step i{
+  font-style:normal;font-size:9.5px;font-weight:700;color:var(--ink-3);
+  min-width:17px;padding-top:2px;flex:none;font-variant-numeric:tabular-nums;
+}
+.dw-step b{color:var(--ink-1);font-weight:600}
+.dw-obs{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-size:12.5px;color:var(--ink-2);line-height:1.5}
+.dw-obs b{color:var(--ink-1)}
+.dw-zn{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed var(--grid);font-size:12px}
+.dw-zn:last-child{border-bottom:0}
+.dw-zn span{color:var(--ink-3)}
+.dw-zn b{color:var(--ink-1);font-variant-numeric:tabular-nums}
+.dw-empty{padding:22px 14px;text-align:center;color:var(--ink-3);font-size:12px;border:1px dashed var(--grid);border-radius:10px;line-height:1.5}
+.dw-foot{padding:14px 20px;border-top:1px solid var(--grid);background:var(--surface-2);display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.dw-foot .stt{font-size:11.5px;color:var(--ink-2);flex:1;min-width:110px}
+.dw-foot .stt b{color:var(--ink-1)}
+@media (max-width:900px){ #drawer{width:100vw} }
 .flag{display:inline-block;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:4px;background:var(--surface-3);color:var(--ink-3);border:1px solid var(--border);vertical-align:middle;margin-left:5px}
 
 .wkgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden}
@@ -166,8 +236,14 @@ svg.chart{width:100%;display:block;overflow:visible}
 .day .dtag{margin-left:auto;font-size:9px;padding:2px 5px;border-radius:4px;background:var(--surface-3);color:var(--ink-3);border:1px solid var(--border)}
 .day .dtag.hard{color:#f0b53c;border-color:#f0b53c}
 .day .dtag.rest{color:var(--good);border-color:var(--good)}
-.chk{display:flex;align-items:flex-start;gap:9px;padding:6px 0 6px 8px;border-left:2px solid var(--grid);margin-bottom:5px;cursor:pointer;border-radius:0 6px 6px 0;transition:background .12s}
+.chk{display:flex;align-items:flex-start;gap:9px;padding:6px 0 6px 8px;border-left:2px solid var(--grid);margin-bottom:5px;border-radius:0 6px 6px 0;transition:background .12s}
 .chk:hover{background:var(--surface-2)}
+.chk .box{cursor:pointer}
+.chk .txt{cursor:pointer;flex:1;min-width:0}
+.chk .box:focus-visible,.chk .txt:focus-visible{outline:2px solid var(--nat);outline-offset:2px;border-radius:4px}
+.chk .txt:hover .nm{text-decoration:underline;text-decoration-color:var(--ink-3);text-underline-offset:2px}
+.chk .go{font-size:10px;color:var(--ink-3);flex:none;padding-top:2px;opacity:0;transition:opacity .12s}
+.chk:hover .go{opacity:1}
 .chk.n{border-left-color:var(--nat)} .chk.b{border-left-color:var(--bike)}
 .chk.r{border-left-color:var(--run)} .chk.f{border-left-color:var(--ink-3)}
 .chk .box{
@@ -277,21 +353,113 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
     </div>
     <div class="wkgrid" id="wkGrid"></div>
     <div style="font-size:11px;color:var(--ink-3);margin-top:12px;padding-top:11px;border-top:1px solid var(--grid)">
-      Cada linha é uma <b style="color:var(--ink-2)">atividade</b>, não um dia — dias com duas ou três atividades têm uma caixa para cada uma, então dá para marcar o que você fez e deixar o resto em aberto. Clique na linha ou use Tab e Espaço. A etiqueta <span class="auto">Garmin</span> aparece quando a sincronização diária detectou a atividade sozinha.<br><br>
-      O campo <b style="color:var(--ink-2)">o que eu fiz</b> de cada dia é para o que saiu do script: um CrossFit no dia de folga, uma sessão trocada, um treino cortado no meio. Fica salvo neste aparelho automaticamente. Para que entre na análise de domingo, use <b style="color:var(--ink-2)">Copiar anotações</b> e cole no chat — a página não consegue escrever no arquivo sozinha.
+      Cada linha é uma <b style="color:var(--ink-2)">atividade</b>, não um dia — dias com duas ou três atividades têm uma caixa para cada uma. <b style="color:var(--ink-2)">A caixa marca; o nome do treino abre o detalhe</b> num painel lateral. A etiqueta <span class="auto">Garmin</span> aparece quando a sincronização diária detectou a atividade sozinha.<br><br>
+      Os botões <b style="color:var(--ink-2)">fiz diferente</b> são para quando o dia saiu do script: toque em CrossFit, Bike, Natação, Musculação ou Corrida — dá para marcar mais de um. Você só diz <em>qual</em> modalidade; <b style="color:var(--ink-2)">tempo, batimento e distância vêm do Garmin</b> na sincronização. O campo <b style="color:var(--ink-2)">o que eu fiz</b> continua ali para quando quiser escrever algo à mão.<br><br>
+      Tudo fica salvo neste aparelho automaticamente. Para entrar na análise de domingo, use <b style="color:var(--ink-2)">Copiar anotações</b> e cole no chat — a página não consegue escrever no arquivo sozinha.
     </div>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
       <button class="btn sm" id="btnCopyNotes">Copiar anotações</button>
       <button class="btn sm" id="btnClearNotes">Limpar anotações deste aparelho</button>
     </div>
   </div>
-  <div class="callout ok">
+  
+  <div class="card">
+    <div class="ctitle"><b>Registro completo</b></div>
+    <div class="tscroll"><table>
+      <thead><tr><th>Data</th><th class="num">Read.</th><th class="num">FCrep</th><th class="num">VFC</th><th class="num">Sono</th><th class="num">Nado</th><th class="num">Bike</th><th class="num">Corrida</th><th>Obs</th><th></th></tr></thead>
+      <tbody id="tbLog"></tbody>
+    </table></div>
+  </div>
+
+<div class="callout ok">
     <b>Bloco 0 é regeneração, não treino.</b> Em 16/08 a prontidão estava em <b>1 (POOR)</b> com 62 h de recovery pendentes e VFC semanal em 47 (banda 52–74) — eco normal de uma ultra de 9h55 com 2.738 m de D+. FCrep estável em 43 é o que tranquiliza. <b>Portão para abrir o Bloco A em 31/08:</b> VFC na banda <em>e</em> readiness ≥ 60 por 3 dias seguidos.
   </div>
 </section>
 
+<section id="s-trilhas">
+  <div class="shead"><span class="kick">03</span><h2>As três trilhas</h2>
+    <p>Onde cada modalidade está hoje, e como ela vem evoluindo semana a semana.</p></div>
+  <div class="lanes" id="lanes"></div>
+
+  <div class="card">
+    <div class="ctitle"><i style="width:9px;height:9px;border-radius:2px;background:var(--nat);display:inline-block"></i> <b>Natação</b> — evolução
+      <span class="seg" data-for="nat"><button data-m="vol" class="on">Volume</button><button data-m="pace">Ritmo /100 m</button><button data-m="time">Tempo</button></span></div>
+    <div class="chart-wrap"><svg class="chart" id="chNat" viewBox="0 0 880 230"></svg><div class="tip" id="tipNat"></div></div>
+    <div id="emNat"></div>
+    <div class="callout" style="border-left-color:var(--nat)"><b>A linha tracejada é a meta de prova: 2:30/100 m.</b> No gráfico de ritmo, <b>para baixo é melhor</b>. O ritmo aqui inclui o descanso das séries — para comparar de verdade, use o teste <b>703 NAT-TESTE (400 m)</b> a cada 6–8 semanas e lance como sessão separada.</div>
+  </div>
+
+
+  <div class="card">
+    <div class="ctitle"><i style="width:9px;height:9px;border-radius:2px;background:var(--bike);display:inline-block"></i> <b>Ciclismo</b> — evolução
+      <span class="seg" data-for="bike"><button data-m="vol" class="on">Volume</button><button data-m="pace">Velocidade</button><button data-m="time">Tempo</button></span></div>
+    <div class="chart-wrap"><svg class="chart" id="chBike" viewBox="0 0 880 230"></svg><div class="tip" id="tipBike"></div></div>
+    <div id="emBike"></div>
+    <div class="callout" style="border-left-color:var(--bike)"><b>Meta de prova: 30,9 km/h.</b> Lance rolo e rua — mas saiba que o rolo mede velocidade de forma artificial. <b>Para acompanhar progresso real, compare só rua com rua</b>, e de preferência no mesmo percurso do teste de 20 min.</div>
+  </div>
+
+
+  <div class="card">
+    <div class="ctitle"><i style="width:9px;height:9px;border-radius:2px;background:var(--run);display:inline-block"></i> <b>Corrida</b> — evolução
+      <span class="seg" data-for="run"><button data-m="vol" class="on">Volume</button><button data-m="pace">Ritmo /km</button><button data-m="time">Tempo</button></span></div>
+    <div class="chart-wrap"><svg class="chart" id="chRun" viewBox="0 0 880 230"></svg><div class="tip" id="tipRun"></div></div>
+    <div id="emRun"></div>
+    <div class="callout" style="border-left-color:var(--run)"><b>Meta de prova: 6:03/km depois de 90 km de bike.</b> A referência que importa não é a corrida solta — é o <b>brick de domingo</b>. Marque no campo de observação quando a sessão for brick.</div>
+  </div>
+
+
+  <div class="card">
+    <div class="ctitle"><i style="width:9px;height:9px;border-radius:2px;background:var(--ink-2);display:inline-block"></i> <b>Fisiologia</b> — evolução diária
+      <span class="seg" data-fis="1">
+        <button data-k="read" class="on">Readiness</button><button data-k="rhr">FC repouso</button><button data-k="hrv">VFC</button><button data-k="sleep">Sono</button><button data-k="acute">Carga aguda</button>
+      </span></div>
+    <div class="chart-wrap"><svg class="chart" id="chFis" viewBox="0 0 880 240"></svg><div class="tip" id="tipFis"></div></div>
+    <div id="emFis"></div>
+    <div class="callout"><b>As faixas sombreadas são as bandas dele</b>, medidas em 16 semanas: VFC <b>52–74 ms</b> · FCrep <b>40–43 bpm</b> · readiness <b>≥60 = verde</b>. Sair da banda uma vez é oscilação; o que decide é a tendência cruzada. <b>FCrep 5+ bpm acima da base por 3 dias é o único sinal isolado que manda parar.</b> Estes dados chegam sozinhos pela sincronização diária das 06:30.</div>
+  </div>
+
+</section>
+
+<section id="s-registro">
+  <div class="shead"><span class="kick">04</span><h2>Lançamento manual</h2>
+    <p>Só para o que o Garmin não pegou. Use <b>Exportar</b> para salvar em arquivo e <b>Importar</b> para recarregar.</p></div>
+
+  <div class="card">
+    <div class="ctitle"><b>Lançar sessão</b></div>
+    <div class="form-row">
+      <div class="field"><label>Data</label><input type="date" id="fDate"></div>
+      <div class="field"><label>Readiness</label><input type="number" id="fRead" min="0" max="100" placeholder="76"></div>
+      <div class="field"><label>FC repouso</label><input type="number" id="fRhr" placeholder="42"></div>
+      <div class="field"><label>VFC semanal</label><input type="number" id="fHrv" placeholder="58"></div>
+      <div class="field"><label>Sono (h)</label><input type="number" step="0.1" id="fSleep" placeholder="7.2"></div>
+    </div>
+    <div class="form-row">
+      <div class="field"><label>Nado — metros</label><input type="number" id="fNatM" placeholder="1500"></div>
+      <div class="field"><label>Nado — min</label><input type="number" step="0.1" id="fNatT" placeholder="45"></div>
+      <div class="field"><label>Bike — km</label><input type="number" step="0.1" id="fBikeK" placeholder="45"></div>
+      <div class="field"><label>Bike — min</label><input type="number" step="0.1" id="fBikeT" placeholder="90"></div>
+      <div class="field"><label>Corrida — km</label><input type="number" step="0.1" id="fRunK" placeholder="10"></div>
+      <div class="field"><label>Corrida — min</label><input type="number" step="0.1" id="fRunT" placeholder="55"></div>
+    </div>
+    <div class="form-row">
+      <div class="field" style="grid-column:span 3"><label>Observação</label><input type="text" id="fObs" placeholder="sensações, técnica, nutrição, contagem de braçadas…"></div>
+      <div class="field"><label>&nbsp;</label><button class="btn primary" id="btnAdd" style="width:100%;padding:7px">Adicionar</button></div>
+    </div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
 <section id="s-espinha">
-  <div class="shead"><span class="kick">03</span><h2>A espinha — 35 semanas</h2>
+  <div class="shead"><span class="kick">05</span><h2>A espinha — 35 semanas</h2>
     <p>Altura = volume semanal planejado. As quedas são semanas de recuperação (mesociclos 2:1, padrão Friel para 40+).</p></div>
   <div class="card">
     <div class="spine-track" id="spineTrack"></div>
@@ -301,14 +469,44 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
   </div>
 </section>
 
-<section id="s-trilhas">
-  <div class="shead"><span class="kick">04</span><h2>As três trilhas</h2>
-    <p>Dados reais do Garmin, 16/08/2025 a 16/08/2026. Nada estimado.</p></div>
-  <div class="lanes" id="lanes"></div>
+<section id="s-semana">
+  <div class="shead"><span class="kick">06</span><h2>A semana-padrão — 6 dias</h2>
+    <p>Montada nas suas disponibilidades. Sexta é o único descanso total.</p></div>
+  <div class="card">
+    <div class="tscroll"><table>
+      <thead><tr><th>Dia</th><th>Manhã</th><th>2ª sessão</th><th>Papel</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Segunda</td><td><b style="color:var(--ink-1)">Musculação — pernas pesada</b></td><td>Natação técnica</td><td>6 dias até o próximo longo de bike</td></tr>
+        <tr><td class="k">Terça</td><td>Corrida Z2 + cadência</td><td>Natação técnica</td><td>Fácil de propósito</td></tr>
+        <tr><td class="k">Quarta</td><td>Musculação — tronco, ombro, core</td><td>Bike no rolo Z2</td><td>Prehab de ombro + volume sem custo</td></tr>
+        <tr><td class="k">Quinta</td><td><b style="color:var(--ink-1)">Bike no rolo — qualidade</b></td><td>Natação</td><td><b>Dia duro 1</b></td></tr>
+        <tr><td class="k">Sexta</td><td colspan="2"><b style="color:var(--good)">DESCANSO TOTAL</b></td><td>Inegociável</td></tr>
+        <tr><td class="k">Sábado</td><td><b style="color:var(--ink-1)">Corrida longa com final em ritmo</b></td><td>Natação ou águas abertas</td><td><b>Dia duro 2</b></td></tr>
+        <tr><td class="k">Domingo</td><td colspan="2"><b style="color:var(--ink-1)">Bike longo na rua + brick de corrida</b></td><td>O treino que define o ciclo</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout">
+      <b>4 natações · 3 bikes · 3 corridas · 2 musculações · 1 descanso.</b> Os dois dias duros são quinta e sábado, em modalidades diferentes — o teto em que Friel e Seiler convergem. <b>Não há vaga livre para CrossFit</b>: se quiser mantê-lo, substitui a musculação de quarta, e só se o WOD não for pesado de perna. <b>Transição (T1/T2) entra como ensaio no brick de domingo</b> a partir do Bloco B.
+    </div>
+  </div>
+</section>
+
+<section id="s-curva">
+  <div class="shead"><span class="kick">07</span><h2>Curva de volume planejada</h2>
+    <p>A bike cresce mais que tudo — é o melhor preditor do tempo total no 70.3.</p></div>
+  <div class="card">
+    <div class="chart-wrap"><svg class="chart" id="chartCurve" viewBox="0 0 900 290"></svg><div class="tip" id="tipCurve"></div></div>
+    <div class="legend">
+      <div class="lg"><i style="background:var(--nat)"></i>Natação</div>
+      <div class="lg"><i style="background:var(--bike)"></i>Ciclismo</div>
+      <div class="lg"><i style="background:var(--run)"></i>Corrida</div>
+      <div class="lg"><i style="background:var(--ink-3)"></i>Força</div>
+    </div>
+  </div>
 </section>
 
 <section id="s-partida">
-  <div class="shead"><span class="kick">05</span><h2>O ponto de partida</h2>
+  <div class="shead"><span class="kick">08</span><h2>O ponto de partida</h2>
     <p>Escala logarítmica — a diferença entre as modalidades não cabe numa escala linear.</p></div>
   <div class="cols2">
     <div class="card">
@@ -325,22 +523,8 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
   </div>
 </section>
 
-<section id="s-curva">
-  <div class="shead"><span class="kick">06</span><h2>Curva de volume planejada</h2>
-    <p>A bike cresce mais que tudo — é o melhor preditor do tempo total no 70.3.</p></div>
-  <div class="card">
-    <div class="chart-wrap"><svg class="chart" id="chartCurve" viewBox="0 0 900 290"></svg><div class="tip" id="tipCurve"></div></div>
-    <div class="legend">
-      <div class="lg"><i style="background:var(--nat)"></i>Natação</div>
-      <div class="lg"><i style="background:var(--bike)"></i>Ciclismo</div>
-      <div class="lg"><i style="background:var(--run)"></i>Corrida</div>
-      <div class="lg"><i style="background:var(--ink-3)"></i>Força</div>
-    </div>
-  </div>
-</section>
-
 <section id="s-bench">
-  <div class="shead"><span class="kick">07</span><h2>Benchmark M45-49 — quem de fato faz sub-6h</h2>
+  <div class="shead"><span class="kick">09</span><h2>Benchmark M45-49 — quem de fato faz sub-6h</h2>
     <p>Resultados oficiais das edições 2025 e 2026, faixa etária M45-49.</p></div>
   <div class="card">
     <div class="ctitle"><b>Onde o sub-6h te coloca</b></div>
@@ -375,7 +559,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
 </section>
 
 <section id="s-projecao">
-  <div class="shead"><span class="kick">08</span><h2>Orçamento de tempo — sub-6h com transições</h2>
+  <div class="shead"><span class="kick">10</span><h2>Orçamento de tempo — sub-6h com transições</h2>
     <p>Natação travada em 2:30/100 m conforme sua definição. O resto é o que sobra.</p></div>
   <div class="card">
     <div class="ctitle"><b>Cenário-alvo: 5:58:00</b></div>
@@ -401,100 +585,6 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
     <div class="callout bad">
       <b>As transições deixaram de ser detalhe.</b> A mediana do grupo sub-6h de 2026 é <b>T1 3:34 e T2 3:56</b>, mas a dispersão vai até <b>9:30</b>. Orcei <b>7:30 somados</b>, que é folgado para quem treina transição e apertado para quem nunca fez. <b>Cinco minutos perdidos ali custam o mesmo que 2,5 km de bike mal pedalados.</b>
     </div>
-  </div>
-</section>
-
-<section id="s-semana">
-  <div class="shead"><span class="kick">09</span><h2>A semana-padrão — 6 dias</h2>
-    <p>Montada nas suas disponibilidades. Sexta é o único descanso total.</p></div>
-  <div class="card">
-    <div class="tscroll"><table>
-      <thead><tr><th>Dia</th><th>Manhã</th><th>2ª sessão</th><th>Papel</th></tr></thead>
-      <tbody>
-        <tr><td class="k">Segunda</td><td><b style="color:var(--ink-1)">Musculação — pernas pesada</b></td><td>Natação técnica</td><td>6 dias até o próximo longo de bike</td></tr>
-        <tr><td class="k">Terça</td><td>Corrida Z2 + cadência</td><td>Natação técnica</td><td>Fácil de propósito</td></tr>
-        <tr><td class="k">Quarta</td><td>Musculação — tronco, ombro, core</td><td>Bike no rolo Z2</td><td>Prehab de ombro + volume sem custo</td></tr>
-        <tr><td class="k">Quinta</td><td><b style="color:var(--ink-1)">Bike no rolo — qualidade</b></td><td>Natação</td><td><b>Dia duro 1</b></td></tr>
-        <tr><td class="k">Sexta</td><td colspan="2"><b style="color:var(--good)">DESCANSO TOTAL</b></td><td>Inegociável</td></tr>
-        <tr><td class="k">Sábado</td><td><b style="color:var(--ink-1)">Corrida longa com final em ritmo</b></td><td>Natação ou águas abertas</td><td><b>Dia duro 2</b></td></tr>
-        <tr><td class="k">Domingo</td><td colspan="2"><b style="color:var(--ink-1)">Bike longo na rua + brick de corrida</b></td><td>O treino que define o ciclo</td></tr>
-      </tbody>
-    </table></div>
-    <div class="callout">
-      <b>4 natações · 3 bikes · 3 corridas · 2 musculações · 1 descanso.</b> Os dois dias duros são quinta e sábado, em modalidades diferentes — o teto em que Friel e Seiler convergem. <b>Não há vaga livre para CrossFit</b>: se quiser mantê-lo, substitui a musculação de quarta, e só se o WOD não for pesado de perna. <b>Transição (T1/T2) entra como ensaio no brick de domingo</b> a partir do Bloco B.
-    </div>
-  </div>
-</section>
-
-
-
-<section id="s-registro">
-  <div class="shead"><span class="kick">10</span><h2>Registro e evolução</h2>
-    <p>Os dados ficam nesta aba. Use <b>Exportar</b> para salvar em arquivo e <b>Importar</b> para recarregar.</p></div>
-
-  <div class="card">
-    <div class="ctitle"><b>Lançar sessão</b></div>
-    <div class="form-row">
-      <div class="field"><label>Data</label><input type="date" id="fDate"></div>
-      <div class="field"><label>Readiness</label><input type="number" id="fRead" min="0" max="100" placeholder="76"></div>
-      <div class="field"><label>FC repouso</label><input type="number" id="fRhr" placeholder="42"></div>
-      <div class="field"><label>VFC semanal</label><input type="number" id="fHrv" placeholder="58"></div>
-      <div class="field"><label>Sono (h)</label><input type="number" step="0.1" id="fSleep" placeholder="7.2"></div>
-    </div>
-    <div class="form-row">
-      <div class="field"><label>Nado — metros</label><input type="number" id="fNatM" placeholder="1500"></div>
-      <div class="field"><label>Nado — min</label><input type="number" step="0.1" id="fNatT" placeholder="45"></div>
-      <div class="field"><label>Bike — km</label><input type="number" step="0.1" id="fBikeK" placeholder="45"></div>
-      <div class="field"><label>Bike — min</label><input type="number" step="0.1" id="fBikeT" placeholder="90"></div>
-      <div class="field"><label>Corrida — km</label><input type="number" step="0.1" id="fRunK" placeholder="10"></div>
-      <div class="field"><label>Corrida — min</label><input type="number" step="0.1" id="fRunT" placeholder="55"></div>
-    </div>
-    <div class="form-row">
-      <div class="field" style="grid-column:span 3"><label>Observação</label><input type="text" id="fObs" placeholder="sensações, técnica, nutrição, contagem de braçadas…"></div>
-      <div class="field"><label>&nbsp;</label><button class="btn primary" id="btnAdd" style="width:100%;padding:7px">Adicionar</button></div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="ctitle"><i style="width:9px;height:9px;border-radius:2px;background:var(--nat);display:inline-block"></i> <b>Natação</b> — evolução
-      <span class="seg" data-for="nat"><button data-m="vol" class="on">Volume</button><button data-m="pace">Ritmo /100 m</button><button data-m="time">Tempo</button></span></div>
-    <div class="chart-wrap"><svg class="chart" id="chNat" viewBox="0 0 880 230"></svg><div class="tip" id="tipNat"></div></div>
-    <div id="emNat"></div>
-    <div class="callout" style="border-left-color:var(--nat)"><b>A linha tracejada é a meta de prova: 2:30/100 m.</b> No gráfico de ritmo, <b>para baixo é melhor</b>. O ritmo aqui inclui o descanso das séries — para comparar de verdade, use o teste <b>703 NAT-TESTE (400 m)</b> a cada 6–8 semanas e lance como sessão separada.</div>
-  </div>
-
-  <div class="card">
-    <div class="ctitle"><i style="width:9px;height:9px;border-radius:2px;background:var(--bike);display:inline-block"></i> <b>Ciclismo</b> — evolução
-      <span class="seg" data-for="bike"><button data-m="vol" class="on">Volume</button><button data-m="pace">Velocidade</button><button data-m="time">Tempo</button></span></div>
-    <div class="chart-wrap"><svg class="chart" id="chBike" viewBox="0 0 880 230"></svg><div class="tip" id="tipBike"></div></div>
-    <div id="emBike"></div>
-    <div class="callout" style="border-left-color:var(--bike)"><b>Meta de prova: 30,9 km/h.</b> Lance rolo e rua — mas saiba que o rolo mede velocidade de forma artificial. <b>Para acompanhar progresso real, compare só rua com rua</b>, e de preferência no mesmo percurso do teste de 20 min.</div>
-  </div>
-
-  <div class="card">
-    <div class="ctitle"><i style="width:9px;height:9px;border-radius:2px;background:var(--run);display:inline-block"></i> <b>Corrida</b> — evolução
-      <span class="seg" data-for="run"><button data-m="vol" class="on">Volume</button><button data-m="pace">Ritmo /km</button><button data-m="time">Tempo</button></span></div>
-    <div class="chart-wrap"><svg class="chart" id="chRun" viewBox="0 0 880 230"></svg><div class="tip" id="tipRun"></div></div>
-    <div id="emRun"></div>
-    <div class="callout" style="border-left-color:var(--run)"><b>Meta de prova: 6:03/km depois de 90 km de bike.</b> A referência que importa não é a corrida solta — é o <b>brick de domingo</b>. Marque no campo de observação quando a sessão for brick.</div>
-  </div>
-
-  <div class="card">
-    <div class="ctitle"><i style="width:9px;height:9px;border-radius:2px;background:var(--ink-2);display:inline-block"></i> <b>Fisiologia</b> — evolução diária
-      <span class="seg" data-fis="1">
-        <button data-k="read" class="on">Readiness</button><button data-k="rhr">FC repouso</button><button data-k="hrv">VFC</button><button data-k="sleep">Sono</button><button data-k="acute">Carga aguda</button>
-      </span></div>
-    <div class="chart-wrap"><svg class="chart" id="chFis" viewBox="0 0 880 240"></svg><div class="tip" id="tipFis"></div></div>
-    <div id="emFis"></div>
-    <div class="callout"><b>As faixas sombreadas são as bandas dele</b>, medidas em 16 semanas: VFC <b>52–74 ms</b> · FCrep <b>40–43 bpm</b> · readiness <b>≥60 = verde</b>. Sair da banda uma vez é oscilação; o que decide é a tendência cruzada. <b>FCrep 5+ bpm acima da base por 3 dias é o único sinal isolado que manda parar.</b> Estes dados chegam sozinhos pela sincronização diária das 06:30.</div>
-  </div>
-
-  <div class="card">
-    <div class="ctitle"><b>Registro completo</b></div>
-    <div class="tscroll"><table>
-      <thead><tr><th>Data</th><th class="num">Read.</th><th class="num">FCrep</th><th class="num">VFC</th><th class="num">Sono</th><th class="num">Nado</th><th class="num">Bike</th><th class="num">Corrida</th><th>Obs</th><th></th></tr></thead>
-      <tbody id="tbLog"></tbody>
-    </table></div>
   </div>
 </section>
 
@@ -683,6 +773,24 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
 </main>
 <div class="toast" id="toast">Salvo</div>
 
+<div id="scrim"></div>
+<aside id="drawer" role="dialog" aria-modal="true" aria-labelledby="dwTitle" aria-hidden="true">
+  <div class="dw-top">
+    <div class="bar" id="dwBar"></div>
+    <div class="tt">
+      <div class="mod" id="dwMod">—</div>
+      <h3 id="dwTitle">—</h3>
+      <div class="when" id="dwWhen">—</div>
+    </div>
+    <button class="dw-x" id="dwClose" aria-label="Fechar">&times;</button>
+  </div>
+  <div class="dw-body" id="dwBody"></div>
+  <div class="dw-foot">
+    <span class="stt" id="dwStatus">—</span>
+    <button class="btn sm" id="dwToggle">Marcar como feito</button>
+  </div>
+</aside>
+
 <script>
 "use strict";
 /* ==== INICIO DADOS AUTOMATICOS - NAO EDITAR A MAO ====
@@ -714,13 +822,13 @@ var NOTAS = {"2026-08-19":"Garmin registrou: HIIT 54min","2026-08-20":"Garmin re
 var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,7,21);
 
 var SECOES=[
- ["s-visao","01","Visão geral"],["s-atual","02","Semana em curso"],["s-espinha","03","A espinha"],
- ["s-trilhas","04","As três trilhas"],["s-partida","05","Ponto de partida"],["s-curva","06","Curva de volume"],
- ["s-bench","07","Benchmark M45-49"],["s-projecao","08","Orçamento sub-6h"],["s-semana","09","Semana-padrão"],
- ["s-registro","10","Registro e evolução"],["s-fisio","11","Fisiologia e zonas"],["s-exames","12","Exames"],
+ ["s-visao","01","Visão geral"],["s-atual","02","Hoje"],["s-trilhas","03","As três trilhas"],
+ ["s-registro","04","Lançamento manual"],["s-espinha","05","A espinha"],["s-semana","06","Semana-padrão"],
+ ["s-curva","07","Curva de volume"],["s-partida","08","Ponto de partida"],["s-bench","09","Benchmark M45-49"],
+ ["s-projecao","10","Orçamento sub-6h"],["s-fisio","11","Fisiologia e zonas"],["s-exames","12","Exames"],
  ["s-regras","13","Regras de decisão"],["s-refs","14","Referências"]
 ];
-var GRUPOS={0:"Agora",2:"Diagnóstico",6:"Estratégia",9:"Execução",13:"Apoio"};
+var GRUPOS={0:"Agora",4:"Planejamento",7:"Diagnóstico e estratégia",10:"Apoio"};
 
 var BLOCOS=[
  {id:"B0",nome:"Regeneração",ini:1,fim:2,cor:"#6b7280"},
@@ -809,15 +917,44 @@ var FISIO=[
    REGRA: uma linha por ATIVIDADE, nunca combinada. Bike longo e brick de corrida
    sao DUAS linhas. Musculacao e natacao no mesmo dia sao DUAS linhas.
    Formato: {date:"AAAA-MM-DD", dow:"Seg", tag:"off"|"hard"|undefined,
-             s:[{t:"n"|"b"|"r"|"f", n:"nome", o:"observacao curta"}]} */
+             s:[{t:"n"|"b"|"r"|"f", n:"nome", o:"observacao curta",
+                 det:["passo 1","passo 2",...]}]}
+   O campo `det` alimenta o painel lateral que abre quando o Alex clica no nome
+   do treino. E um ARRAY DE STRINGS, cada uma um passo na ordem de execucao:
+   aquecimento, parte principal, desaquecimento. Inclua alvo de FC ou zona,
+   duracao e, quando fizer sentido, o proposito da sessao.
+   Use <b>...</b> para destacar o essencial. SEM APOSTROFOS.
+   `det` e OPCIONAL: sem ele o painel mostra um aviso de que nao foi gerado. */
 var SEMANA_ATUAL=[
  {date:"2026-08-17",dow:"Seg",tag:"off",s:[]},
- {date:"2026-08-18",dow:"Ter",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"FC teto 100 · abaixo do limiar medido"}]},
+ {date:"2026-08-18",dow:"Ter",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"FC teto 100 · abaixo do limiar medido",det:[
+   "<b>10′ aquecimento</b> — cadência livre, FC subindo devagar até 90 bpm",
+   "<b>25′ contínuo em Z1</b> — FC teto <b>100 bpm</b>, cadência 85–95 rpm. Se a FC passar de 100, alivie sem dó",
+   "<b>5′ soltura</b> — cadência alta, carga mínima",
+   "Objetivo é <b>circulação, não estímulo</b>. Bloco 0 é regeneração: a sessão só existe para mover sangue e reencontrar o gesto do pedal"
+ ]}]},
  {date:"2026-08-19",dow:"Qua",tag:"off",s:[]},
- {date:"2026-08-20",dow:"Qui",s:[{t:"n",n:"NAT-0 · Ambientação 600 m",o:"reconhecimento, sem cronômetro"}]},
+ {date:"2026-08-20",dow:"Qui",s:[{t:"n",n:"NAT-0 · Ambientação 600 m",o:"reconhecimento, sem cronômetro",det:[
+   "<b>100 m livre e solto</b> — só sentir a água, sem contar braçada",
+   "<b>4 × 50 m</b> com 30″ de pausa — foco em <b>rolagem de tronco</b> e respiração bilateral",
+   "<b>200 m contínuo</b> em ritmo confortável, sem olhar o relógio",
+   "<b>100 m de soltura</b> — costas ou peito, o que for mais confortável",
+   "<b>Sem cronômetro nesta sessão.</b> O objetivo é adaptação: 5 sessões em 12 meses significa que o corpo ainda está reaprendendo a posição na água"
+ ]}]},
  {date:"2026-08-21",dow:"Sex",tag:"off",s:[]},
- {date:"2026-08-22",dow:"Sáb",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"rua, plano, FC teto 100"}]},
- {date:"2026-08-23",dow:"Dom",s:[{t:"n",n:"NAT-0 · Ambientação 600 m",o:"segunda ida à água"}]}
+ {date:"2026-08-22",dow:"Sáb",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"rua, plano, FC teto 100",det:[
+   "<b>10′ aquecimento</b> — plano, cadência livre",
+   "<b>25′ contínuo em Z1</b> — FC teto <b>100 bpm</b>. Escolha percurso plano: subida estoura a FC sem querer",
+   "<b>5′ soltura</b>",
+   "Primeira das duas bikes de rua da semana. <b>Sem sprint, sem disputar semáforo.</b> Se o terreno forçar a FC acima de 100, reduza a marcha antes de reduzir a cadência"
+ ]}]},
+ {date:"2026-08-23",dow:"Dom",s:[{t:"n",n:"NAT-0 · Ambientação 600 m",o:"segunda ida à água",det:[
+   "<b>100 m solto</b> de aquecimento",
+   "<b>6 × 50 m</b> com 30″ de pausa — hoje conte as braçadas de cada 50 e anote a variação",
+   "<b>150 m contínuo</b> tentando repetir a contagem mais baixa do bloco acima",
+   "<b>50 m de soltura</b>",
+   "<b>A contagem de braçadas é o dado desta sessão.</b> Ela mede eficiência melhor que o cronômetro nesta fase — menos braçadas na mesma distância é mais deslize por braçada"
+ ]}]}
 ];
 /* ==== FIM SEMANA EM CURSO ==== */
 
@@ -1219,6 +1356,27 @@ function lsSet(o){try{localStorage.setItem(LSKEY,JSON.stringify(o));}catch(e){}}
 function notaDe(date){var l=lsGet(); return l[date]!==undefined?l[date]:(NOTAS[date]||"");}
 function setNota(date,txt){var l=lsGet(); if(txt.trim())l[date]=txt; else delete l[date]; lsSet(l);}
 
+/* ---------- "FIZ DIFERENTE": chips por dia ----------
+   Guarda so a MODALIDADE. Tempo, FC e distancia vem do Garmin na sincronizacao. */
+var XKEY="extras703";
+var MODS=[
+ {k:"cross",n:"CrossFit"},
+ {k:"bike", n:"Bike"},
+ {k:"nat",  n:"Natação"},
+ {k:"musc", n:"Musculação"},
+ {k:"run",  n:"Corrida"}
+];
+function modNome(k){for(var i=0;i<MODS.length;i++){if(MODS[i].k===k)return MODS[i].n;}return k;}
+function xGet(){try{return JSON.parse(localStorage.getItem(XKEY)||"{}");}catch(e){return {};}}
+function xSet(o){try{localStorage.setItem(XKEY,JSON.stringify(o));}catch(e){}}
+function xDe(date){var x=xGet(); return Array.isArray(x[date])?x[date]:[];}
+function xTgl(date,k){
+  var x=xGet(), a=Array.isArray(x[date])?x[date]:[], i=a.indexOf(k);
+  if(i>=0)a.splice(i,1); else a.push(k);
+  if(a.length)x[date]=a; else delete x[date];
+  xSet(x); return a;
+}
+
 /* ---------- Go / No-Go ---------- */
 var LIM={readVerde:60,readAmarelo:40,rhrAlerta:48,hrvMin:52,hrvMax:74,sonoMin:6};
 
@@ -1322,6 +1480,131 @@ function renderMini(){
   });
 }
 
+/* ============ DRAWER DO TREINO ============ */
+var MODINFO={
+  n:{nome:"Natação",   cor:"var(--nat)"},
+  b:{nome:"Ciclismo",  cor:"var(--bike)"},
+  r:{nome:"Corrida",   cor:"var(--run)"},
+  f:{nome:"Força",     cor:"var(--ink-3)"}
+};
+/* Zonas MEDIDAS. Corrida: TCPE de esteira 30/10/2025. Bike: TCPE de ciclo 15/08/2025. */
+var ZONAS={
+  r:[["Z1 Regenerativo","< 135 bpm"],["Z2 Base aeróbica","135–150 bpm"],["Z3 Aeróbica forte","150–159 bpm"],["Z4 Limiar","159–170 bpm"],["Z5 VO₂máx","171+ bpm"]],
+  b:[["Z1 Regenerativo","< 100 bpm"],["Z2 Base aeróbica","100–109 bpm"],["Z3 Aeróbica forte","109–127 bpm"],["Z4 Limiar","127–145 bpm"],["Z5 VO₂máx","145+ bpm"]]
+};
+var DW={d:null,i:null};
+
+function toggleSess(key){
+  if(SESS_DONE[key])delete SESS_DONE[key]; else SESS_DONE[key]="manual";
+  renderWeek();
+  if(DW.d && DW.d.date+"|"+DW.i===key) dwPaintStatus();
+}
+
+function dwPaintStatus(){
+  if(!DW.d)return;
+  var key=DW.d.date+"|"+DW.i, st=SESS_DONE[key];
+  $("dwStatus").innerHTML = st
+    ? '<b style="color:var(--good)">✓ Concluído</b>'+(st==="auto"?" · detectado pelo Garmin":" · marcado por você")
+    : '<b>Em aberto</b>';
+  $("dwToggle").textContent = st?"Desmarcar":"Marcar como feito";
+}
+
+function openDrawer(d,i){
+  var s=d.s[i]; if(!s)return;
+  DW.d=d; DW.i=i;
+  var mi=MODINFO[s.t]||{nome:"Sessão",cor:"var(--ink-3)"};
+  var p=d.date.split("-");
+
+  $("dwBar").style.background=mi.cor;
+  $("dwMod").textContent=mi.nome;
+  $("dwTitle").textContent=s.n;
+  $("dwWhen").textContent=d.dow+", "+p[2]+"/"+p[1]+"/"+p[0]+
+    (d.tag==="off"?" · dia de folga":(d.tag==="hard"?" · dia duro":""));
+
+  var b=$("dwBody"); b.innerHTML="";
+
+  /* 1. o passo a passo, se a tarefa semanal tiver preenchido `det` */
+  var det=Array.isArray(s.det)?s.det:null;
+  var sec=el("div","dw-sec");
+  sec.appendChild(el("h4","","O treino"));
+  if(det&&det.length){
+    det.forEach(function(linha,n){
+      var st=el("div","dw-step");
+      st.appendChild(el("i","",String(n+1)));
+      st.appendChild(el("div","",linha));
+      sec.appendChild(st);
+    });
+  }else{
+    sec.appendChild(el("div","dw-empty",
+      "O detalhamento desta sessão ainda não foi gerado.<br>O fechamento de domingo passa a escrevê-lo junto com a semana."));
+  }
+  b.appendChild(sec);
+
+  /* 2. a observacao curta que ja existia */
+  if(s.o){
+    var s2=el("div","dw-sec");
+    s2.appendChild(el("h4","","Ponto de atenção"));
+    s2.appendChild(el("div","dw-obs",s.o));
+    b.appendChild(s2);
+  }
+
+  /* 3. zonas da modalidade */
+  if(ZONAS[s.t]){
+    var s3=el("div","dw-sec");
+    s3.appendChild(el("h4","","Zonas de FC — "+mi.nome.toLowerCase()));
+    ZONAS[s.t].forEach(function(z){
+      s3.appendChild(el("div","dw-zn","<span>"+z[0]+"</span><b>"+z[1]+"</b>"));
+    });
+    s3.appendChild(el("div","",'<div style="font-size:10.5px;color:var(--ink-3);margin-top:9px;line-height:1.5">'+
+      (s.t==="b"
+        ? "Medidas no TCPE de ciclo de 15/08/2025, quando você não pedalava. <b style=\"color:var(--ink-2)\">Estão baixas e serão recalibradas no teste de 20 min.</b>"
+        : "Medidas no TCPE de esteira de 30/10/2025. Limiar 159 bpm · máximo 171 bpm.")+"</div>"));
+    b.appendChild(s3);
+  }
+
+  /* 4. o que voce marcou como feito fora do previsto */
+  var ex=xDe(d.date);
+  if(ex.length||notaDe(d.date)){
+    var s4=el("div","dw-sec");
+    s4.appendChild(el("h4","","Registrado neste dia"));
+    if(ex.length){
+      s4.appendChild(el("div","dw-obs","<b>Fiz diferente:</b> "+ex.map(modNome).join(" · ")));
+    }
+    var nt=notaDe(d.date);
+    if(nt){
+      var box=el("div","dw-obs",""); box.textContent=nt;
+      box.style.marginTop=ex.length?"9px":"0";
+      s4.appendChild(box);
+    }
+    b.appendChild(s4);
+  }
+
+  dwPaintStatus();
+  $("drawer").classList.add("on");
+  $("drawer").setAttribute("aria-hidden","false");
+  $("scrim").classList.add("on");
+  document.body.style.overflow="hidden";
+  $("dwClose").focus();
+}
+
+function closeDrawer(){
+  $("drawer").classList.remove("on");
+  $("drawer").setAttribute("aria-hidden","true");
+  $("scrim").classList.remove("on");
+  document.body.style.overflow="";
+  DW.d=null; DW.i=null;
+}
+
+$("dwClose").addEventListener("click",closeDrawer);
+$("scrim").addEventListener("click",closeDrawer);
+$("dwToggle").addEventListener("click",function(){
+  if(!DW.d)return;
+  toggleSess(DW.d.date+"|"+DW.i);
+});
+document.addEventListener("keydown",function(ev){
+  if(ev.key==="Escape"&&$("drawer").classList.contains("on"))closeDrawer();
+});
+
 function renderWeek(){
   var g=$("wkGrid"); g.innerHTML="";
   var tot=0,done=0;
@@ -1339,19 +1622,48 @@ function renderWeek(){
       var key=d.date+"|"+i, st=SESS_DONE[key];
       if(st)done++;
       var row=el("div","chk "+s.t+(st?" ok":""));
-      row.setAttribute("role","checkbox");
-      row.setAttribute("tabindex","0");
-      row.setAttribute("aria-checked",st?"true":"false");
-      row.innerHTML='<span class="box"></span><span class="txt">'+s.n+
-        (st==="auto"?'<span class="auto">Garmin</span>':'')+'<em>'+s.o+'</em></span>';
-      function toggle(){
-        if(SESS_DONE[key])delete SESS_DONE[key]; else SESS_DONE[key]="manual";
-        renderWeek();
-      }
-      row.addEventListener("click",toggle);
-      row.addEventListener("keydown",function(ev){if(ev.key===" "||ev.key==="Enter"){ev.preventDefault();toggle();}});
+
+      /* A CAIXA marca. O TEXTO abre o detalhe. Areas separadas de proposito. */
+      var box=el("span","box");
+      box.setAttribute("role","checkbox");
+      box.setAttribute("tabindex","0");
+      box.setAttribute("aria-checked",st?"true":"false");
+      box.setAttribute("aria-label",(st?"Desmarcar ":"Marcar ")+s.n);
+      box.addEventListener("click",function(ev){ev.stopPropagation();toggleSess(key);});
+      box.addEventListener("keydown",function(ev){
+        if(ev.key===" "||ev.key==="Enter"){ev.preventDefault();ev.stopPropagation();toggleSess(key);}
+      });
+
+      var txt=el("span","txt",'<span class="nm">'+s.n+'</span>'+
+        (st==="auto"?'<span class="auto">Garmin</span>':'')+'<em>'+s.o+'</em>');
+      txt.setAttribute("tabindex","0");
+      txt.setAttribute("role","button");
+      txt.setAttribute("aria-label","Ver o treino detalhado: "+s.n);
+      function abrir(){openDrawer(d,i);}
+      txt.addEventListener("click",abrir);
+      txt.addEventListener("keydown",function(ev){if(ev.key===" "||ev.key==="Enter"){ev.preventDefault();abrir();}});
+
+      row.appendChild(box);
+      row.appendChild(txt);
+      row.appendChild(el("span","go","›"));
       c.appendChild(row);
     });
+
+    /* chips: modalidade feita fora do previsto */
+    var xb=el("div","xtra"), sel=xDe(d.date);
+    xb.appendChild(el("div","nl","fiz diferente"));
+    var cw=el("div","chips");
+    MODS.forEach(function(m){
+      var b=el("button","chip"+(sel.indexOf(m.k)>=0?" on":""),m.n);
+      b.type="button";
+      b.setAttribute("data-k",m.k);
+      b.setAttribute("aria-pressed",sel.indexOf(m.k)>=0?"true":"false");
+      b.addEventListener("click",function(){ xTgl(d.date,m.k); renderWeek(); });
+      cw.appendChild(b);
+    });
+    xb.appendChild(cw);
+    c.appendChild(xb);
+
     var nb=el("div","note"), val=notaDe(d.date);
     if(val)nb.classList.add("has");
     nb.appendChild(el("div","nl","o que eu fiz"));
@@ -1405,14 +1717,19 @@ function renderLog(){
 $("btnMore").addEventListener("click",function(){MINI_ALL=!MINI_ALL;renderMini();});
 
 $("btnCopyNotes").addEventListener("click",function(){
-  var l=lsGet(), linhas=[];
-  Object.keys(l).sort().forEach(function(k){
-    if(!l[k].trim())return;
-    var p=k.split("-");
-    linhas.push(p[2]+"/"+p[1]+"/"+p[0]+": "+l[k].trim());
+  var l=lsGet(), x=xGet(), linhas=[];
+  var datas={};
+  Object.keys(l).forEach(function(k){if(l[k]&&l[k].trim())datas[k]=1;});
+  Object.keys(x).forEach(function(k){if(x[k]&&x[k].length)datas[k]=1;});
+  Object.keys(datas).sort().forEach(function(k){
+    var p=k.split("-"), partes=[];
+    if(x[k]&&x[k].length)partes.push("fiz "+x[k].map(modNome).join(" + "));
+    if(l[k]&&l[k].trim())partes.push(l[k].trim());
+    linhas.push(p[2]+"/"+p[1]+"/"+p[0]+": "+partes.join(" — "));
   });
   if(!linhas.length){toast("Nenhuma anotação neste aparelho");return;}
-  var txt="Anotações do painel 70.3 — o que fiz além do prescrito:\n"+linhas.join("\n");
+  var txt="Anotações do painel 70.3 — o que fiz além do prescrito:\n"+linhas.join("\n")+
+    "\n\n(Modalidade marcada no painel. Tempo, FC e distância vêm do Garmin.)";
   function ok(){toast("Copiado — cole no chat");}
   if(navigator.clipboard&&navigator.clipboard.writeText){
     navigator.clipboard.writeText(txt).then(ok,function(){window.prompt("Copie o texto:",txt);});
@@ -1420,8 +1737,8 @@ $("btnCopyNotes").addEventListener("click",function(){
 });
 
 $("btnClearNotes").addEventListener("click",function(){
-  if(!window.confirm("Apagar as anotações guardadas neste aparelho? As que já entraram na análise continuam."))return;
-  lsSet({}); renderWeek(); renderMini(); toast("Anotações do aparelho apagadas");
+  if(!window.confirm("Apagar as anotações e as marcações de fiz diferente guardadas neste aparelho? As que já entraram na análise continuam."))return;
+  lsSet({}); xSet({}); renderWeek(); renderMini(); toast("Anotações do aparelho apagadas");
 });
 
 $("btnAdd").addEventListener("click",function(){
