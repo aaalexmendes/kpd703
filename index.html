@@ -318,7 +318,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
 
 <section id="s-visao">
   <div class="shead"><span class="kick">01</span><h2>Visão geral</h2>
-    <p>Meta declarada: <b>sub-6h com transições incluídas</b>, natação a 2:30/100 m.</p></div>
+    <p>Meta declarada: <b>5h40 com transições incluídas</b> — natação 47:30, bike 2:50, corrida 1:55.</p></div>
   <div class="hero" id="hero"></div>
 </section>
 
@@ -395,7 +395,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
       <span class="seg" data-for="bike"><button data-m="vol" class="on">Volume</button><button data-m="pace">Velocidade</button><button data-m="time">Tempo</button></span></div>
     <div class="chart-wrap"><svg class="chart" id="chBike" viewBox="0 0 880 230"></svg><div class="tip" id="tipBike"></div></div>
     <div id="emBike"></div>
-    <div class="callout" style="border-left-color:var(--bike)"><b>Meta de prova: 30,9 km/h.</b> Lance rolo e rua — mas saiba que o rolo mede velocidade de forma artificial. <b>Para acompanhar progresso real, compare só rua com rua</b>, e de preferência no mesmo percurso do teste de 20 min.</div>
+    <div class="callout" style="border-left-color:var(--bike)"><b>Meta de prova: 31,8 km/h.</b> Lance rolo e rua — mas saiba que o rolo mede velocidade de forma artificial. <b>Para acompanhar progresso real, compare só rua com rua</b>, e de preferência no mesmo percurso do teste de 20 min.</div>
   </div>
 
 
@@ -404,7 +404,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
       <span class="seg" data-for="run"><button data-m="vol" class="on">Volume</button><button data-m="pace">Ritmo /km</button><button data-m="time">Tempo</button></span></div>
     <div class="chart-wrap"><svg class="chart" id="chRun" viewBox="0 0 880 230"></svg><div class="tip" id="tipRun"></div></div>
     <div id="emRun"></div>
-    <div class="callout" style="border-left-color:var(--run)"><b>Meta de prova: 6:03/km depois de 90 km de bike.</b> A referência que importa não é a corrida solta — é o <b>brick de domingo</b>. Marque no campo de observação quando a sessão for brick.</div>
+    <div class="callout" style="border-left-color:var(--run)"><b>Meta de prova: 5:27/km depois de 90 km de bike.</b> A referência que importa não é a corrida solta — é o <b>brick de domingo</b>. Marque no campo de observação quando a sessão for brick.</div>
   </div>
 
 
@@ -458,8 +458,302 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
   
 </section>
 
+<section id="s-historico">
+  <div class="shead"><span class="kick">05</span><h2>Histórico do ciclo</h2>
+    <p>Tudo o que foi treinado desde 17/08/2026, semana a semana. Nada é apagado.</p></div>
+
+  <div class="card">
+    <div class="ctitle"><b>Resumo acumulado</b><span id="hSince" style="color:var(--ink-3)"></span></div>
+    <div class="hero" id="hTiles"></div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>Semana a semana</b>
+      <span class="seg" id="hSeg"><button data-h="tab" class="on">Tabela</button><button data-h="cal">Calendário</button></span></div>
+    <div id="hTabela"></div>
+    <div id="hCal" style="display:none"></div>
+    <div class="callout info">
+      <b>Este painel mostra; o arquivo guarda.</b> O registro permanente vive em <b>HISTORICO_703.md</b> na pasta do projeto, com a versão em <b>HISTORICO_703.pdf</b> para ler no celular. As tarefas automáticas escrevem nos dois. Se este HTML se perder, o histórico não se perde junto.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>Decisões e mudanças de rumo</b></div>
+    <div class="tscroll"><table>
+      <thead><tr><th>Data</th><th>O que mudou</th><th>Por quê</th></tr></thead>
+      <tbody id="hDec"></tbody>
+    </table></div>
+  </div>
+</section>
+
+<section id="s-nutri">
+  <div class="shead"><span class="kick">06</span><h2>Nutrição</h2>
+    <p>Faixas de position stands, convertidas para 82 kg. Documento completo e fontes em NUTRICAO_703.md.</p></div>
+
+  <div class="card">
+    <div class="ctitle"><b>O buraco que importa</b></div>
+    <div class="callout bad">
+      <b>Você ingeriu ~24 g de carboidrato por hora na ultra de 9h55.</b> A faixa recomendada para esforço acima de 2,5 h é <b>até 90 g/h</b> (Thomas, Erdman &amp; Burke, 2016). Você operou a <b>um quarto do teto</b>. Provavelmente é a maior alavanca isolada do projeto — maior que a aerobarra, e de graça.
+    </div>
+    <div class="callout">
+      <b>E você é grande, o que provavelmente ajuda.</b> Ijaz et al. (2025) mediram, com traçador de ¹³C, atletas acima de 70 kg oxidando <b>45 ± 13 g/h</b> contra <b>33 ± 8 g/h</b> dos abaixo de 70 kg, ingerindo os mesmos 90 g/h. Com 82 kg você tem espaço para operar na parte <b>superior</b> da faixa. <b>Ressalva:</b> um estudo, n pequeno, e Jeukendrup (2014) afirma o contrário. A literatura está em conflito aberto aqui.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>Alvos na prova</b> <span class="flag">a validar em treino</span></div>
+    <div class="tscroll"><table>
+      <thead><tr><th>Trecho</th><th class="num">Alvo de carboidrato</th><th>Por quê</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Natação · 47 min</td><td class="num">zero</td><td>Inviável. O que conta é chegar abastecido</td></tr>
+        <tr><td class="k">Ciclismo · 2h55</td><td class="num"><b style="color:var(--ink-1)">75–90 g/h</b></td><td>É onde dá para comer. Concentre aqui</td></tr>
+        <tr><td class="k">Corrida · 2h08</td><td class="num"><b style="color:var(--ink-1)">60–75 g/h</b></td><td>Sintomas gastrointestinais sobem na corrida</td></tr>
+        <tr><td class="k">Líquido</td><td class="num">0,4–0,8 L/h</td><td>Conforme a sede, não por relógio</td></tr>
+        <tr><td class="k">Sódio</td><td class="num">400–800 mg/h</td><td>Derivado de 0,4–0,8 L/h × ~1 g/L. <b>Não há faixa em position stand</b></td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout">
+      <b>Acima de 60 g/h, frutose é obrigatória.</b> A glicose satura o transportador SGLT1 em ~60 g/h; a frutose recruta o GLUT5 e eleva a oxidação em 20–55%. Sem ela, o excedente fica parado no intestino — que é exatamente como se produz cólica em prova. <b>A proporção mudou:</b> a regra clássica 2:1 foi superada; a evidência recente aponta <b>1:0,8 a 1:1</b> de glicose para frutose (Morton et al., 2026).
+    </div>
+    <div class="callout bad">
+      <b>Carregar na bike e aliviar na corrida é especulativo</b> — assim rotulado pelos próprios autores que propõem (Morton et al., 2026). Faz sentido mecânico, mas não foi testado em ensaio controlado. Teste nos seus bricks antes de adotar como plano.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>Rampa de treino intestinal</b> <span class="flag">até a prova</span></div>
+    <div class="tscroll"><table>
+      <thead><tr><th>Quando</th><th>Onde</th><th class="num">Alvo</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Set–Out/2026</td><td>Bike longo de domingo</td><td class="num">40 g/h</td></tr>
+        <tr><td class="k">Nov–Dez/2026</td><td>Bike longo</td><td class="num">60 g/h · já com frutose</td></tr>
+        <tr><td class="k">Jan–Fev/2027</td><td>Bike longo + brick</td><td class="num">75 g/h bike · 60 g/h brick</td></tr>
+        <tr><td class="k">Mar/2027</td><td>2 simulações completas</td><td class="num"><b style="color:var(--ink-1)">90 g/h</b> · produtos da prova</td></tr>
+        <tr><td class="k">Abr/2027</td><td>Prova</td><td class="num">o que foi testado</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout">
+      <b>Ressalva honesta:</b> <b>não existe protocolo publicado de progressão gradual.</b> Os ensaios de gut training usaram <b>dose fixa de 90 g/h por 2 semanas</b> (Costa et al., 2017), não uma rampa. A escada acima é prudência minha, não achado de estudo. O que a revisão sistemática sustenta é o resultado: desconforto gastrointestinal <b>−47%</b> e má absorção <b>−45 a −54%</b> (Martinez et al., 2023).
+      <br><br><b>E há um atalho:</b> gut training não aumenta a capacidade de oxidar — quem faz isso é a <b>dieta diária alta em carboidrato</b>. Cox et al. (2010): 28 dias a 8,5 g/kg/dia elevaram a oxidação exógena de 54,6 para 63,6 g. Comer bem todo dia treina o intestino tanto quanto a sessão específica.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>No dia a dia</b> — 82,2 kg</div>
+    <div class="cols2">
+      <div class="tscroll"><table>
+        <thead><tr><th>Tipo de dia</th><th class="num">Carboidrato</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Folga ou regenerativo</td><td class="num">247–411 g</td></tr>
+          <tr><td class="k">Dia normal, 1 sessão</td><td class="num">411–575 g</td></tr>
+          <tr><td class="k">Dia duro ou 2 sessões</td><td class="num">493–822 g</td></tr>
+          <tr><td class="k">Brick longo de domingo</td><td class="num">658–986 g</td></tr>
+          <tr><td class="k">Recuperação &lt; 8 h entre sessões</td><td class="num">82–99 g/h nas 4 h seguintes</td></tr>
+        </tbody>
+      </table></div>
+      <div class="tscroll"><table>
+        <thead><tr><th>Proteína</th><th class="num">Alvo</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Por dia</td><td class="num"><b style="color:var(--ink-1)">131–164 g</b></td></tr>
+          <tr><td class="k">Por refeição · 4–5 ao dia</td><td class="num">25–30 g</td></tr>
+          <tr><td class="k">Pós-treino, até 2 h</td><td class="num">20–25 g</td></tr>
+          <tr><td class="k">Antes de dormir</td><td class="num">40 g</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="callout ok">
+      <b>Você NÃO precisa de mais proteína por ter 46 anos.</b> Moore (2021) conclui que atletas master acima de 35 têm massa muscular, resposta ao exercício e metabolismo proteico semelhantes aos de jovens — a resistência anabólica vem da <b>inatividade</b>, não da idade. O número de 0,40 g/kg por refeição que circula foi medido em <b>idosos não treinados de ~71 anos</b>. Contraponto: Doering et al. (2016) veem recuperação mais lenta após exercício com dano. Ficar em 1,8–2,0 g/kg cobre os dois cenários.
+    </div>
+    <div class="callout">
+      <b>Não faça "train low" neste ciclo.</b> A adaptação molecular é real (73–78% dos estudos), mas a metanálise de Gejl &amp; Nybo (2021), com 9 estudos, não encontrou efeito no desempenho: <b>SMD 0,17 · p = 0,29</b>. E o custo é documentado: qualidade de treino comprometida nos intervalos de pico. Você tem alfabetização técnica a construir em duas modalidades novas — sessão ruim custa mais que adaptação que não vira desempenho.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>Hidratação — e o risco de beber demais</b></div>
+    <div class="callout info">
+      <b>Meça sua taxa de sudorese. É grátis e vale mais que qualquer tabela.</b> Pese-se sem roupa antes e depois de 1 h de treino, anotando quanto bebeu. <b>1 kg perdido ≈ 1 L de suor.</b> Faça em dia quente e em dia frio.
+    </div>
+    <div class="callout bad">
+      <b>Hiponatremia é risco de amador, não de elite.</b> A causa dominante é <b>beber além da sede</b> (Rosner, 2017), e atletas recreativos correm mais risco justamente por suarem menos e terem mais oportunidade de beber. As três regras: <b>beba conforme a sede</b> · <b>não termine a prova mais pesado do que começou</b> · déficit de até ~3% do peso é bem tolerado, não persiga zero.
+    </div>
+    <div class="callout">
+      <b>A altitude de Brasília não muda nada.</b> Stellingwerff et al. (2019) registram que hidratação em altitude baixa-moderada é <b>lacuna de pesquisa</b>, e a faixa que eles estudam começa em ~1.600 m — Brasília fica abaixo. Use as regras do nível do mar. <b>O que importa na sua prova é o calor subindo ao longo da manhã.</b> A oxidação exógena de carboidrato cai 20–30% no calor, mas a recomendação de ingestão não muda.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>O risco que ninguém vê chegar</b> — disponibilidade energética</div>
+    <div class="tscroll"><table>
+      <thead><tr><th>Disponibilidade alvo</th><th class="num">Sobra para o corpo</th><th class="num">Você precisaria comer</th></tr></thead>
+      <tbody>
+        <tr><td class="k">45 kcal/kg FFM · ótimo</td><td class="num">3.132 kcal</td><td class="num"><b style="color:var(--ink-1)">~4.230 kcal/dia</b></td></tr>
+        <tr><td class="k">30 kcal/kg FFM</td><td class="num">2.088 kcal</td><td class="num">~3.190 kcal/dia</td></tr>
+        <tr><td class="k">25 kcal/kg FFM · topo da faixa de risco</td><td class="num" style="color:var(--crit)">1.740 kcal</td><td class="num">~2.840 kcal/dia</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout bad">
+      <b>Repare na última linha: 1.740 kcal é MENOS que a sua TMB medida de 1.873.</b> O risco aqui não é dieta — é <b>inércia</b>. Manter a alimentação de quando treinava 2 h/semana enquanto o volume vai para 13 h coloca você em baixa disponibilidade energética sem nenhuma decisão consciente. O position stand chama isso de "falha inadvertida em atender às necessidades energéticas".
+      <br><br><b>Sinais de alerta em homens</b> (Mountjoy et al., 2023, consenso REDs do COI): testosterona baixa, T3 no quartil inferior, lesão óssea de estresse, densidade óssea com Z-score &lt; −1. Os que aparecem primeiro na prática: <b>libido reduzida e queda das ereções matinais</b>.
+      <br><br>Cálculo com FFM = 69,6 kg e gasto de exercício de ~1.100 kcal/dia no pico. <b>Item para a nutricionista e para o médico</b>, junto com a resposta hemodinâmica hiperreativa e o perfil lipídico já em aberto.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>O que a literatura NÃO responde</b></div>
+    <ul class="refs">
+      <li>Não existe recomendação de g/h específica para <b>meia distância</b> versus distância completa. As diretrizes são por duração e intensidade. Morton et al. (2026) admitem que as orientações para triatlo são "largamente extrapoladas de dados de esporte único".</li>
+      <li>Não existe <b>protocolo publicado de progressão gradual</b> de treino intestinal.</li>
+      <li>Não há <b>faixa de mg de sódio por hora</b> em nenhum position stand.</li>
+      <li>Não há <b>ajuste de hidratação documentado</b> para ~1.100 m de altitude.</li>
+      <li>Não há alvo de proteína específico para <b>40+</b>, nem alvos de ferro, vitamina D ou cálcio por idade.</li>
+      <li>Se o <b>peso corporal</b> altera a oxidação exógena: Ijaz (2025) diz que sim, Jeukendrup (2014) diz que não. Em aberto.</li>
+    </ul>
+    <div class="callout">
+      <b>Não sou nutricionista.</b> Este painel organiza o que a evidência publicada diz e converte para o seu peso. Prescrição, exames e conduta são dela. <b>Leve o NUTRICAO_703.md junto.</b>
+    </div>
+  </div>
+</section>
+
+<section id="s-natacao">
+  <div class="shead"><span class="kick">07</span><h2>Natação — método e treinos</h2>
+    <p>Reconstruída em 22/08/2026. Cada sessão tem propósito e fonte. Documento completo em NATACAO_703.md.</p></div>
+
+  <div class="card">
+    <div class="ctitle"><b>O achado que reorganiza tudo</b></div>
+    <div class="tscroll"><table>
+      <thead><tr><th>Com a potência metabólica igualada em 1.000 W</th><th class="num">Nadadores</th><th class="num">Triatletas</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Eficiência propulsiva</td><td class="num"><b style="color:var(--ink-1)">61 ± 6%</b></td><td class="num"><b style="color:var(--ink-1)">44 ± 3%</b></td></tr>
+        <tr><td class="k">Distância por braçada</td><td class="num">1,23 m</td><td class="num">0,92 m</td></tr>
+        <tr><td class="k">Velocidade</td><td class="num">1,17 m/s</td><td class="num">0,95 m/s</td></tr>
+        <tr><td class="k">Eficiência bruta</td><td class="num" colspan="2" style="text-align:center">sem diferença</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout info">
+      <b>Com o custo metabólico igual, toda a diferença de 23% em velocidade veio de eficiência propulsiva</b> (Toussaint, 1990). Não de motor. Some a isso Roels et al. (2005): triatletas expressam <b>53,0 ml/kg/min nadando contra 68,2 pedalando</b> — perdem ~22% do VO₂máx ao entrar na água.
+      <br><br><b>Tradução:</b> você tem VO₂máx de 51,4 e 1.111 km de corrida em 12 meses. Seu limitante na água <b>não é aeróbio — é arrasto e economia</b>. Por isso a sessão de economia mede <b>braçadas por piscina</b>, não cronômetro: Costill et al. (1985) mediram que distância por braçada é o melhor preditor isolado de performance, r = 0,88.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>A biblioteca nova</b> — cinco sessões, cada uma com um propósito</div>
+    <div class="tscroll"><table>
+      <thead><tr><th>Treino</th><th class="num">Distância</th><th>Para quê</th><th>Base</th></tr></thead>
+      <tbody>
+        <tr><td class="k">NAT-E · Economia</td><td class="num">1.200 m</td><td>Reduzir braçadas mantendo o ritmo</td><td>Toussaint 1990 · Costill 1985 · Freudenheim 2010</td></tr>
+        <tr><td class="k">NAT-C · Ritmo crítico</td><td class="num">1.400 m</td><td>Sustentar o limiar de forma fracionada</td><td>Toubekis 2011 · 2019</td></tr>
+        <tr><td class="k">NAT-B1 · Ritmo</td><td class="num">1.300 m</td><td>Séries de 100 m no ritmo de prova</td><td>prática de treino</td></tr>
+        <tr><td class="k">NAT-P · Ritmo de prova</td><td class="num">1.900 m</td><td>Ensaio da distância com pacing correto</td><td>Peeling 2005 · Veiga 2019</td></tr>
+        <tr><td class="k">NAT-OW · Águas abertas</td><td class="num">2.000 m</td><td>Orientação, roupa de borracha, drafting, água fria</td><td>Chatard 1995 · Harris 2017</td></tr>
+        <tr><td class="k">NAT-TESTE · 400 m CSS</td><td class="num">1.620 m</td><td>Medir o ritmo crítico</td><td>Wakayoshi 1992</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout bad">
+      <b>O que estava errado antes.</b> Os treinos anteriores não tinham <b>alvo de tempo por repetição</b> ("ritmo confortável" não é prescrição), usavam <b>descanso solto</b> em vez da razão 1:8 que Toubekis testou, rodavam <b>seis educativos diferentes por sessão</b> — quando a literatura de aprendizagem motora mostra que treino por partes é <em>menos</em> eficiente que treino do todo (Wightman &amp; Lintern, 1985) — e não traziam <b>nenhuma instrução de foco atencional</b>, que é ganho de graça. Também não havia nada de águas abertas.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>Seu CSS</b> — como medir e usar</div>
+    <div class="callout info" style="font-size:13px">
+      <b>CSS (segundos por 100 m) = (T400 − T200) ÷ 2</b><br>
+      <span style="color:var(--ink-3)">Exemplo: 400 m em 11:20 (680 s) e 200 m em 5:20 (320 s) → (680 − 320) ÷ 2 = <b style="color:var(--ink-1)">180 s = 3:00/100 m</b></span>
+    </div>
+    <div class="tscroll"><table>
+      <thead><tr><th>Zona</th><th class="num">Prescrição</th><th>Onde se usa</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Aeróbio</td><td class="num">85–90% do CSS</td><td>volume, recuperação, NAT-E</td></tr>
+        <tr><td class="k"><b style="color:var(--ink-1)">Ritmo crítico</b></td><td class="num"><b style="color:var(--ink-1)">95–100% do CSS</b></td><td>NAT-C — a sessão que move o ponteiro</td></tr>
+        <tr><td class="k">Ritmo de prova</td><td class="num">80–85% do CSS</td><td>NAT-P — ver abaixo</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout">
+      <b>Três ressalvas sobre o CSS, para você não confiar demais nele.</b>
+      <br>1. <b>Não é o seu limiar sustentável indefinidamente.</b> Dekerle et al. (2005): ele <em>superestima</em> o máximo estado estável de lactato — 92,7% contra 88,3% da velocidade aeróbia máxima. A velocidade crítica dura de 14 a 39 minutos, não para sempre.
+      <br>2. <b>O protocolo 200/400 superestima o CSS verdadeiro</b> (Scott et al., 2023): distâncias curtas e relação custo-velocidade não linear.
+      <br>3. <b>Não existe estudo de confiabilidade do CSS em adultos iniciantes.</b> Todas as amostras são de nadadores treinados. No seu caso o teste será limitado por técnica, não por metabolismo. <b>Trate como marcador de progresso, não como verdade fisiológica.</b>
+      <br><br><b>Quanto conta como progresso real:</b> o erro típico é de até 4%. Só considere real uma mudança de <b>≥5%</b> ou uma tendência em três retestes. Melhora isolada de 2 s no 400 m é ruído.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>O pacing que parece errado e não é</b></div>
+    <div class="callout ok">
+      <b>Nadar mais devagar te faz terminar mais cedo.</b> Peeling et al. (2005) compararam triatletas nadando a 80–85%, 90–95% e 98–102% da velocidade de contrarrelógio: <b>o grupo de 80–85% teve o ciclismo E o tempo total mais rápidos</b>. Veiga et al. (2019), em águas abertas: quem vai bem é conservador no meio e acelera até 9% só na volta final.
+      <br><br><b>Na prova:</b> 200–300 m iniciais só para se posicionar, depois assentar em 80–85% do CSS e segurar. Acelerar apenas nos últimos 200 m. <b>O objetivo da natação num 70.3 não é o tempo da natação</b> — é sair da água com ombro e perna inteiros para 90 km de bike.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>⚠️ Águas abertas</b> — a parte séria</div>
+    <div class="callout bad">
+      <b>Harris et al. (2017), no Annals of Internal Medicine:</b> 135 mortes súbitas e paradas cardíacas em mais de 9 milhões de participações em triatlo. <b>Noventa delas na natação.</b> Idade média das vítimas: <b>46,7 ± 12,4 anos</b>, 85% homens.
+      <br><br>Você tem 46 anos e vai fazer sua primeira prova em águas abertas. O mecanismo é conhecido e treinável: a resposta de choque térmico leva a FC de ~96 para ~156 bpm e a respiração de ~12 para ~66 por minuto <b>no primeiro minuto</b> de imersão — e é <b>atenuada por 5 a 6 imersões prévias</b>.
+      <br><br><b>Regra que não se negocia: nada de prova com menos de 6 entradas em água aberta.</b> Começa na semana 28. Nunca sozinho.
+    </div>
+    <div class="callout ok">
+      <b>Dois ganhos que compensam ir até a água.</b>
+      <br>• <b>Roupa de borracha:</b> Chatard et al. (1995) mediram <b>19 s de ganho em 400 m (~6,2%) em triatletas</b> e <b>zero em nadadores competitivos</b>. O ganho é maior em quem tem menos flutuação e mais arrasto — <b>você é quem mais ganha</b>. Mínimo de 4 sessões com ela antes da prova.
+      <br>• <b>Drafting:</b> Chatard &amp; Wilson (2003) mediram <b>21% menos arrasto</b> a 0–50 cm atrás dos pés de alguém. É a maior economia gratuita da prova. Lateral rende 6–7%.
+      <br><br><b>Orientação:</b> levante só os olhos, a cada 6–8 braçadas. Cabeça alta aumenta o arrasto passivo em mais de 10% (Cortesi &amp; Gatta, 2015).
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>Volume e ombro</b></div>
+    <div class="tscroll"><table>
+      <tbody>
+        <tr><td class="k">Volume alvo</td><td><b style="color:var(--ink-1)">4 sessões/semana · 4 a 8 km/semana no pico</b></td></tr>
+        <tr><td class="k">Referência de campo</td><td>Age-groupers de Ironman com ~41 anos nadam 6,3 ± 3,1 km/semana (Rüst et al., 2011)</td></tr>
+        <tr><td class="k">Limiar de risco</td><td>Tendinopatia do supraespinal quadruplica acima de <b>35 km/semana</b> (Sein et al., 2010)</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout bad">
+      <b>Não use palmares neste ciclo.</b> Schorn et al. (2018) acompanharam 193 triatletas amadores por 12 meses: <b>19% tiveram lesão de ombro por sobrecarga, 86% atribuídas à natação</b>. Na regressão logística, o <b>único fator de risco que permaneceu significativo foi o uso de palmares</b> — 24% de lesão entre usuários contra 10% entre não usuários. <b>O volume de natação não foi fator de risco.</b> Se quiser usá-los, só depois da semana 16 e no máximo 200 m por sessão.
+    </div>
+    <div class="callout">
+      <b>Sobre prevenção, uma ressalva honesta:</b> Hibberd et al. (2012) testaram fortalecimento escapular por 6 semanas e <b>não encontraram diferença</b> em relação ao controle. Faça o FOR-B pelos outros méritos dele, mas sem promessa de que previne lesão de ombro — a evidência não sustenta.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>Onde encaixar cada sessão</b></div>
+    <div class="tscroll"><table>
+      <thead><tr><th>Dia</th><th>Sessão</th><th>Por quê</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Segunda</td><td><b style="color:var(--ink-1)">NAT-E</b> · economia</td><td>Depois da corrida Z2. Sessão técnica pede cabeça fresca, não perna fresca</td></tr>
+        <tr><td class="k">Terça</td><td><b style="color:var(--ink-1)">NAT-C</b> · ritmo crítico</td><td>Dia sem corrida — o esforço não compete</td></tr>
+        <tr><td class="k">Quinta</td><td>NAT-E ou NAT-A1</td><td>Segunda dose técnica da semana</td></tr>
+        <tr><td class="k">Sábado</td><td><b style="color:var(--ink-1)">NAT-P</b> · ritmo de prova</td><td>Volume longo; a partir da semana 28 vira NAT-OW</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout">
+      <b>A natação quase não interfere no resto.</b> Wilson et al. (2012): a interferência do treino concorrente é específica do segmento corporal — corrida interfere, ciclismo não, e natação não aparece como interferente. Laursen et al. (2000): nado de 3 km não afetou contrarrelógio de ciclismo de 3 h.
+      <br><br><b>Mas há um limite.</b> Frohlich et al. (2019): após nado de 2 km, o VO₂máx caiu 4,0% e a potência a 4 mM caiu 3,8%. <b>Nado próximo do máximo degrada o ciclismo seguinte.</b> Por isso o NAT-C, a sessão dura, fica na terça — longe da bike de qualidade de quarta. Separação de <b>≥6 h</b> entre sessões dissipa a maior parte da interferência aguda.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>O que NÃO tem base científica</b></div>
+    <ul class="refs">
+      <li><b>Offsets em segundos a partir do CSS</b> ("CSS +5 s = aeróbio"). Nenhum estudo valida. A ciência prescreve percentuais.</li>
+      <li><b>Send-off versus descanso fixo.</b> Zero estudos comparativos. Convenção de piscina.</li>
+      <li><b>Volume por sessão para adulto iniciante.</b> Nenhum ensaio de dose-resposta nessa população.</li>
+      <li><b>Frequência mínima para aquisição técnica em adulto.</b> As recomendações de 2–3× vêm de escolas de natação, não da literatura.</li>
+      <li><b>Educativos isolados como método.</b> Nenhum ensaio controlado em natação; a aprendizagem motora sugere o contrário.</li>
+      <li><b>Pull buoy como ferramenta de treino.</b> Nenhum estudo de intervenção.</li>
+      <li><b>Regra dos 10% de progressão.</b> Refutada em corrida por ensaio randomizado com 532 pessoas (Buist et al., 2008) e nunca testada em natação.</li>
+      <li><b>"Triatleta não deve treinar pernada."</b> Slogan. Ela custa oxigênio sem propulsão proporcional, mas <em>melhora o alinhamento e reduz o arrasto ativo</em>. O balanço nunca foi testado. Para 1,90 m com quadril afundando, pernada mínima de 2 tempos se justifica como posição — e a roupa de borracha resolve boa parte disso.</li>
+    </ul>
+    <div class="callout bad">
+      <b>E a lacuna maior:</b> <b>não existe estudo longitudinal de adulto iniciante em natação por 6 a 12 meses.</b> A curva de melhora que você deveria esperar não está publicada. Qualquer número que eu desse seria extrapolação — e por isso a escada de ritmo é revisada por teste, não prometida.
+    </div>
+  </div>
+</section>
+
 <section id="s-espinha">
-  <div class="shead"><span class="kick">05</span><h2>A espinha — 35 semanas</h2>
+  <div class="shead"><span class="kick">08</span><h2>A espinha — 35 semanas</h2>
     <p>Altura = volume semanal planejado. As quedas são semanas de recuperação (mesociclos 2:1, padrão Friel para 40+).</p></div>
   <div class="card">
     <div class="spine-track" id="spineTrack"></div>
@@ -470,29 +764,37 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
 </section>
 
 <section id="s-semana">
-  <div class="shead"><span class="kick">06</span><h2>A semana-padrão — 6 dias</h2>
-    <p>Montada nas suas disponibilidades. Sexta é o único descanso total.</p></div>
+  <div class="shead"><span class="kick">09</span><h2>A semana-padrão — 6 dias</h2>
+    <p>Terça e quinta sem corrida. Bike no rolo em qualquer dia. A folga você escolhe pelo readiness.</p></div>
   <div class="card">
     <div class="tscroll"><table>
       <thead><tr><th>Dia</th><th>Manhã</th><th>2ª sessão</th><th>Papel</th></tr></thead>
       <tbody>
-        <tr><td class="k">Segunda</td><td><b style="color:var(--ink-1)">Musculação — pernas pesada</b></td><td>Natação técnica</td><td>6 dias até o próximo longo de bike</td></tr>
-        <tr><td class="k">Terça</td><td>Corrida Z2 + cadência</td><td>Natação técnica</td><td>Fácil de propósito</td></tr>
-        <tr><td class="k">Quarta</td><td>Musculação — tronco, ombro, core</td><td>Bike no rolo Z2</td><td>Prehab de ombro + volume sem custo</td></tr>
-        <tr><td class="k">Quinta</td><td><b style="color:var(--ink-1)">Bike no rolo — qualidade</b></td><td>Natação</td><td><b>Dia duro 1</b></td></tr>
-        <tr><td class="k">Sexta</td><td colspan="2"><b style="color:var(--good)">DESCANSO TOTAL</b></td><td>Inegociável</td></tr>
+        <tr><td class="k">Segunda</td><td>Corrida Z2 + cadência</td><td>Natação técnica</td><td>Abertura fácil de propósito</td></tr>
+        <tr><td class="k">Terça</td><td><b style="color:var(--ink-1)">Força — musculação <em>ou</em> CrossFit</b></td><td>Natação técnica</td><td>Dia sem corrida</td></tr>
+        <tr><td class="k">Quarta</td><td><b style="color:var(--ink-1)">Bike no rolo — qualidade</b></td><td>—</td><td><b>Dia duro 1</b></td></tr>
+        <tr><td class="k">Quinta</td><td><b style="color:var(--ink-1)">Força — musculação <em>ou</em> CrossFit</b></td><td>Natação técnica</td><td>Dia sem corrida</td></tr>
+        <tr><td class="k">Sexta</td><td>Bike Z2 no rolo — cedo ou à noite</td><td>—</td><td><b style="color:var(--good)">Candidata a folga</b></td></tr>
         <tr><td class="k">Sábado</td><td><b style="color:var(--ink-1)">Corrida longa com final em ritmo</b></td><td>Natação ou águas abertas</td><td><b>Dia duro 2</b></td></tr>
         <tr><td class="k">Domingo</td><td colspan="2"><b style="color:var(--ink-1)">Bike longo na rua + brick de corrida</b></td><td>O treino que define o ciclo</td></tr>
       </tbody>
     </table></div>
+    <div class="callout ok">
+      <b>Reorganizada em 22/08/2026, com a sua disponibilidade nova.</b> Terça e quinta saíram da corrida e viraram <b>força + natação</b>. A corrida longa foi para <b>sábado</b>, e as outras duas corridas caíram em segunda e no brick de domingo. A bike ocupa quarta, sexta e domingo — <b>quarta e sexta no rolo</b>, que você faz cedo ou à noite sem depender de trânsito nem de luz.
+    </div>
     <div class="callout">
-      <b>4 natações · 3 bikes · 3 corridas · 2 musculações · 1 descanso.</b> Os dois dias duros são quinta e sábado, em modalidades diferentes — o teto em que Friel e Seiler convergem. <b>Não há vaga livre para CrossFit</b>: se quiser mantê-lo, substitui a musculação de quarta, e só se o WOD não for pesado de perna. <b>Transição (T1/T2) entra como ensaio no brick de domingo</b> a partir do Bloco B.
+      <b>4 natações · 3 bikes · 3 corridas · 2 sessões de força · 1 folga.</b> Os dois dias duros são <b>quarta e sábado</b>, em modalidades diferentes e com três dias de intervalo — o teto em que Friel e Seiler convergem para quem passou dos 40.
+      <br><br><b>O CrossFit entra oficialmente</b>, ocupando a vaga de força de terça ou quinta, no dia que você escolher. Duas ressalvas que valem: se o WOD for pesado de perna, ele conflita com a bike de qualidade de quarta — prefira a quinta nesse caso. E CrossFit <em>somado</em> à musculação, em vez de no lugar dela, empurra a semana acima do volume planejado; isso aparece na análise de domingo.
+    </div>
+    <div class="callout info">
+      <b>A folga não tem dia fixo — você decide pelo readiness.</b> A regra: quando o painel abrir amarelo ou vermelho, ou quando você quiser a folga, tire de <b>sexta</b> (primeira opção, já que é só bike fácil) ou de <b>segunda</b> (segunda opção). <b>Nunca de quarta, sábado ou domingo</b> — esses três carregam o plano. Se a semana terminar com sete dias treinados, isso não é mérito: é dívida de recuperação, e a análise de domingo vai apontar.
+      <br><br><b>Transição (T1/T2) entra como ensaio no brick de domingo</b> a partir do Bloco B.
     </div>
   </div>
 </section>
 
 <section id="s-curva">
-  <div class="shead"><span class="kick">07</span><h2>Curva de volume planejada</h2>
+  <div class="shead"><span class="kick">10</span><h2>Curva de volume planejada</h2>
     <p>A bike cresce mais que tudo — é o melhor preditor do tempo total no 70.3.</p></div>
   <div class="card">
     <div class="chart-wrap"><svg class="chart" id="chartCurve" viewBox="0 0 900 290"></svg><div class="tip" id="tipCurve"></div></div>
@@ -506,7 +808,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
 </section>
 
 <section id="s-partida">
-  <div class="shead"><span class="kick">08</span><h2>O ponto de partida</h2>
+  <div class="shead"><span class="kick">11</span><h2>O ponto de partida</h2>
     <p>Escala logarítmica — a diferença entre as modalidades não cabe numa escala linear.</p></div>
   <div class="cols2">
     <div class="card">
@@ -524,7 +826,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
 </section>
 
 <section id="s-bench">
-  <div class="shead"><span class="kick">09</span><h2>Benchmark M45-49 — quem de fato faz sub-6h</h2>
+  <div class="shead"><span class="kick">12</span><h2>Benchmark M45-49 — o grupo que fecha perto das 6 h</h2>
     <p>Resultados oficiais das edições 2025 e 2026, faixa etária M45-49.</p></div>
   <div class="card">
     <div class="ctitle"><b>Onde o sub-6h te coloca</b></div>
@@ -536,7 +838,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
       </tbody>
     </table></div>
     <div class="callout info">
-      <b>Sub-6h não é um tempo de elite em Brasília — e essa é a boa notícia.</b> Coloca você por volta do <b>136º–163º da sua faixa etária</b> e do <b>1.040º–1.070º geral</b> num campo de ~1.500. É uma meta que dezenas de homens de 45 a 49 anos batem todo ano nesse mesmo percurso. Não é ambição de pódio; é ambição realista com margem de erro.
+      <b>A referência abaixo é o grupo que cruza perto das 6 h — e a sua meta agora está 18 minutos à frente dele.</b> Fechar em 5:58 colocaria você por volta do <b>136º–163º da faixa</b> e do <b>1.040º–1.070º geral</b> num campo de ~1.500. Com 5:40 você fica acima disso, mas <b>não tenho os dados brutos para dizer em que posição</b> — a amostra que carreguei aqui são os 34 atletas ao redor da linha das 6 h, não a categoria inteira. Se quiser o número exato, dá para levantar nos resultados oficiais.
     </div>
   </div>
 
@@ -547,10 +849,10 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
       <tbody id="tbBench"></tbody>
     </table></div>
     <div class="callout ok">
-      <b>O achado que muda a sua estratégia:</b> o sub-6h mediano da sua faixa <b>corre a 6:14–6:15/km</b> — mais devagar do que eu tinha projetado para você. E <b>pedala a 32,1 km/h</b>. Ou seja: <b>o perfil típico do sub-6h é nadador e ciclista decente com corrida modesta.</b> Você é exatamente o inverso. Isso não é problema — é a sua vantagem comparativa, desde que a bike chegue perto de 31 km/h.
+      <b>O achado que sustenta a meta nova:</b> o atleta mediano desse grupo <b>corre a 6:14–6:15/km</b> e <b>pedala a 32,1 km/h</b>. Ou seja: <b>o perfil típico de quem fecha perto das 6 h é nadador e ciclista decente com corrida modesta.</b> Você é exatamente o inverso, e foi por isso que a corrida absorveu o maior corte da meta revisada. <b>Sua vantagem comparativa está na corrida — desde que a bike chegue a 31,8 km/h sem te destruir.</b>
     </div>
     <div class="callout">
-      <b>Existe precedente para o seu formato exato.</b> Em 2025, um atleta da faixa <b>nadou 56:05</b> — quase 9 min mais lento que o seu alvo — e ainda fechou em <b>5:54:29</b>, apoiado em bike de 2:44:53 e corrida de 2:03:38. Em 2026, outro <b>nadou 49:14 e perdeu 15 min nas transições</b>, mas correu <b>1:47:39</b> e fechou 5:41:49. <b>Nado lento + corrida forte é um caminho comprovado para o sub-6h.</b>
+      <b>Existe precedente para o seu formato exato.</b> Em 2025, um atleta da faixa <b>nadou 56:05</b> — quase 9 min mais lento que o seu alvo — e ainda fechou em <b>5:54:29</b>, apoiado em bike de 2:44:53 e corrida de 2:03:38. Em 2026, outro <b>nadou 49:14 e perdeu 15 min nas transições</b>, mas correu <b>1:47:39</b> e fechou 5:41:49. <b>Nado lento + corrida forte é um caminho comprovado.</b> O de 2026 fechou 5:41:49 correndo 1:47:39 — praticamente o desenho da sua meta de 5h40.
     </div>
     <div class="callout bad">
       <b>Ressalva de método:</b> a amostra são <b>34 atletas por edição</b> (ranks 151–184 em 2025, 115–148 em 2026) — a fatia que cerca a linha das 6 h, não a categoria inteira. É deliberado: esse é o grupo relevante para você. Mas as medianas descrevem <b>quem chega perto de 6 h</b>, não o M45-49 médio.
@@ -559,28 +861,53 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
 </section>
 
 <section id="s-projecao">
-  <div class="shead"><span class="kick">10</span><h2>Orçamento de tempo — sub-6h com transições</h2>
-    <p>Natação travada em 2:30/100 m conforme sua definição. O resto é o que sobra.</p></div>
+  <div class="shead"><span class="kick">13</span><h2>Orçamento de tempo — 5h40 com transições</h2>
+    <p>Bike e corrida definidas por você. A natação absorve a folga — e qualquer ganho nela vira margem.</p></div>
   <div class="card">
-    <div class="ctitle"><b>Cenário-alvo: 5:58:00</b></div>
+    <div class="ctitle"><b>Cenário-alvo: 5:40:00</b></div>
     <div class="tscroll"><table>
       <thead><tr><th>Etapa</th><th class="num">Ritmo</th><th class="num">Tempo</th><th class="num">Acumulado</th><th class="num">Corte</th><th class="num">Margem p/ corte</th></tr></thead>
       <tbody id="tbProj"></tbody>
     </table></div>
+    <div class="callout ok">
+      <b>Meta revisada em 22/08/2026: de 5:58 para 5:40.</b> Você definiu <b>bike 2:50</b> e <b>corrida 1:55</b>, e pediu para a natação absorver a diferença. Com transições de 7:30, o nado fecha em <b>47:30 — os mesmos 2:30/100 m de antes</b>. A mudança inteira veio das duas modalidades que você tem como treináveis: <b>5 min na bike e 13 min na corrida</b>.
+      <br><br><b>A natação virou a sua margem de segurança.</b> Isso é uma vantagem estrutural: qualquer ganho abaixo de 2:30/100 m entra direto como folga no tempo final, em vez de ser obrigação. Se você chegar a 2:15/100 m, são <b>4:45 de bônus</b>; a 2:00/100 m, <b>9:30</b>.
+    </div>
     <div class="callout info">
-      <b>A conta que importa.</b> Com o nado fixo em <b>47:30</b> e transições de <b>7:30</b>, sobram <b>5:05</b> para bike + corrida. A troca fica assim:
+      <b>A troca entre bike e corrida.</b> Com nado em 47:30 e transições em 7:30, sobram <b>4:45</b> para as duas:
       <div style="margin-top:9px" class="tscroll"><table>
         <thead><tr><th class="num">Se a bike for</th><th class="num">Tempo de bike</th><th class="num">A corrida precisa ser</th><th>Viabilidade</th></tr></thead>
         <tbody>
-          <tr><td class="num">29,0 km/h</td><td class="num">3:06:12</td><td class="num">1:58:48 · <b style="color:var(--ink-1)">5:37/km</b></td><td>Muito difícil pós-bike</td></tr>
-          <tr><td class="num">30,0 km/h</td><td class="num">3:00:00</td><td class="num">2:05:00 · <b style="color:var(--ink-1)">5:55/km</b></td><td>Exigente, mas dentro da sua caixa</td></tr>
-          <tr><td class="num"><b style="color:var(--ink-1)">30,9 km/h</b></td><td class="num"><b style="color:var(--ink-1)">2:55:00</b></td><td class="num">2:08:00 · <b style="color:var(--ink-1)">6:03/km</b></td><td><b style="color:var(--good)">O alvo — equilibrado</b></td></tr>
-          <tr><td class="num">32,1 km/h</td><td class="num">2:48:45</td><td class="num">2:16:15 · <b style="color:var(--ink-1)">6:27/km</b></td><td>Folgado na corrida, duro na bike</td></tr>
+          <tr><td class="num">30,0 km/h</td><td class="num">3:00:00</td><td class="num">1:45:00 · <b style="color:var(--ink-1)">4:58/km</b></td><td>Improvável pós-bike — é quase a sua previsão fresco</td></tr>
+          <tr><td class="num">30,9 km/h</td><td class="num">2:55:00</td><td class="num">1:50:00 · <b style="color:var(--ink-1)">5:13/km</b></td><td>Muito exigente na corrida</td></tr>
+          <tr><td class="num"><b style="color:var(--ink-1)">31,8 km/h</b></td><td class="num"><b style="color:var(--ink-1)">2:50:00</b></td><td class="num">1:55:00 · <b style="color:var(--ink-1)">5:27/km</b></td><td><b style="color:var(--good)">O alvo — equilibrado</b></td></tr>
+          <tr><td class="num">32,7 km/h</td><td class="num">2:45:00</td><td class="num">2:00:00 · <b style="color:var(--ink-1)">5:41/km</b></td><td>Folgado na corrida, muito duro na bike</td></tr>
         </tbody>
       </table></div>
     </div>
     <div class="callout">
-      <b>A conta do ciclismo, por modelo físico <span class="flag">estimativa</span>.</b> Para 31 km/h em terreno plano, 92 kg de sistema, ar de Brasília a 1.050 m (menos denso, ajuda): <b>~181 W com clip-on aero</b> contra <b>~206 W sem</b>, já com 12% de folga para vento e curvas. Em FTP a 75–80%: <b>227–242 W com aerobarra · 257–274 W sem</b>. <b>A aerobarra vale ~30 W de FTP</b> — a melhoria mais barata do projeto. Premissas: CdA 0,34 / 0,40 · Crr 0,005 · ρ 1,09 kg/m³. A altimetria oficial do percurso não é publicada, então os 12% são arbitrados.
+      <b>Onde 5h40 te coloca em relação ao benchmark.</b> A mediana do grupo M45-49 que fecha perto das 6 h corre a <b>6:14/km</b> e pedala a <b>32,1 km/h</b>. A sua meta te põe <b>47 s/km mais rápido que eles na corrida</b> e praticamente empatado na bike. É coerente com o seu perfil — 1.111,9 km de corrida em 12 meses contra 120,6 km de bike —, mas inverte o desenho típico de quem faz esse tempo. <b>Você vai chegar na corrida precisando correr forte, não sobreviver.</b> Isso torna o pacing da bike mais crítico, não menos.
+    </div>
+    <div class="callout bad">
+      <b>A corrida de 1:55 é a aposta mais confiável e também a mais frágil.</b> Confiável porque a previsão do Garmin para 21 km fresco é <b>1:42:59</b> (4:53/km) — 5:27/km pós-bike é 11% mais lento, o que é uma perda normal em brick bem treinado. Frágil porque essa margem some inteira se você estourar na bike. <b>O potenciômetro deixa de ser conforto e vira necessidade</b> a partir do momento em que a corrida passou a ter meta agressiva.
+    </div>
+    <div class="callout">
+      <b>A conta do ciclismo, por modelo físico <span class="flag">estimativa</span>.</b> Para <b>31,8 km/h</b> em terreno plano, 92 kg de sistema, ar de Brasília a 1.050 m (menos denso, ajuda): <b>~187 W com clip-on aero</b>, já com 12% de folga para vento e curvas. Em FTP a 75–80%: <b>234–249 W com aerobarra</b>. Para efeito de comparação, a meta antiga de 30,9 km/h pedia ~175 W, ou FTP de 218–233 W. <b>Subir 0,9 km/h custou ~12 W e ~16 W de FTP.</b>
+      <br><br><b>A aerobarra vale ~30 W</b> — mais do que o salto de meta inteiro. Continua sendo a melhoria mais barata do projeto, e agora ela deixou de ser opcional: sem ela, os mesmos 31,8 km/h exigiriam FTP acima de 270 W. Premissas: CdA 0,34 · Crr 0,005 · ρ 1,09 kg/m³. A altimetria oficial do percurso não é publicada, então os 12% são arbitrados.
+    </div>
+    <div class="callout info">
+      <b>A escada da natação.</b> A meta de prova é <b>2:30/100 m</b>, mas o alvo de <em>treino</em> é progressivo e revisado por teste — não é um número fixo até abril:
+      <div style="margin-top:9px" class="tscroll"><table>
+        <thead><tr><th>Quando</th><th class="num">Alvo de trabalho</th><th class="num">1,9 km ficaria</th><th>Como se decide</th></tr></thead>
+        <tbody>
+          <tr><td class="k">Hoje</td><td class="num">2:56/100 m</td><td class="num">55:44</td><td>Seu melhor registro em 600 m (05/04/26)</td></tr>
+          <tr><td class="k">Até a semana 8</td><td class="num">2:45/100 m</td><td class="num">52:15</td><td>Primeiro alvo do NAT-B1</td></tr>
+          <tr><td class="k">Semana 15 · portão do Bloco B</td><td class="num"><b style="color:var(--ink-1)">2:30/100 m</b></td><td class="num"><b style="color:var(--ink-1)">47:30</b></td><td><b>Teste de 400 m CSS decide</b> se sobe ou segura</td></tr>
+          <tr><td class="k">Semana 27 · portão do Bloco C</td><td class="num">2:15/100 m</td><td class="num">42:45</td><td>Só se o teste da 15 confirmar. <b>Bônus de 4:45</b></td></tr>
+          <tr><td class="k">Upside</td><td class="num">2:00/100 m</td><td class="num">38:00</td><td>Sua ideia inicial. <b>Bônus de 9:30</b> — não está no orçamento</td></tr>
+        </tbody>
+      </table></div>
+      <b>Por que escalonada e não fixa em 2:00:</b> você nadou <b>5 sessões em 12 meses</b>, e o melhor ritmo registrado em distância comparável é 2:56/100 m. Chegar a 2:00 exigiria cortar quase um minuto por 100 m e sustentar por 1,9 km em águas abertas. Pode acontecer — a natação é a modalidade onde iniciante melhora mais rápido, porque o ganho é técnico e não fisiológico. Mas <b>colocar isso no orçamento de tempo antes de um teste seria construir a prova sobre um número que os dados ainda não sustentam</b>.
     </div>
     <div class="callout bad">
       <b>As transições deixaram de ser detalhe.</b> A mediana do grupo sub-6h de 2026 é <b>T1 3:34 e T2 3:56</b>, mas a dispersão vai até <b>9:30</b>. Orcei <b>7:30 somados</b>, que é folgado para quem treina transição e apertado para quem nunca fez. <b>Cinco minutos perdidos ali custam o mesmo que 2,5 km de bike mal pedalados.</b>
@@ -589,7 +916,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
 </section>
 
 <section id="s-fisio">
-  <div class="shead"><span class="kick">11</span><h2>Âncoras fisiológicas e zonas</h2>
+  <div class="shead"><span class="kick">14</span><h2>Âncoras fisiológicas e zonas</h2>
     <p>Zonas de corrida herdadas do ciclo La Mision. As de bike são provisórias até o primeiro teste.</p></div>
   <div class="cols2">
     <div class="card">
@@ -625,7 +952,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
 </section>
 
 <section id="s-exames">
-  <div class="shead"><span class="kick">12</span><h2>Exames</h2>
+  <div class="shead"><span class="kick">15</span><h2>Exames</h2>
     <p>Dois testes cardiopulmonares, em modalidades diferentes. Documentos originais na pasta do projeto.</p></div>
 
   <div class="card">
@@ -722,13 +1049,13 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
       </tbody>
     </table></div>
     <div class="callout ok">
-      <b>A conta do sub-6h melhorou muito, e por um motivo concreto.</b> Um VO₂máx de 51,4 sustenta, a 78% de utilização, um FTP em torno de <b>227 W</b> — e o sub-6h pede ~232 W com aerobarra. <b>O motor aeróbico para pedalar a 31 km/h já existe.</b> O que falta não é capacidade central, que leva anos: é adaptação muscular específica, economia de pedalada e posição — que é justamente o que responde rápido numa primeira temporada de ciclismo. <b>Retiro o alarme que dei antes.</b> A bike segue sendo a maior alavanca do plano, mas deixou de ser o item improvável.
+      <b>A meta de bike é alcançável, e por um motivo concreto.</b> Um VO₂máx de 51,4 sustenta, a 78% de utilização, um FTP em torno de <b>227 W</b>. A meta revisada de <b>31,8 km/h pede 234–249 W com aerobarra</b> — ou seja, agora ela fica <em>acima</em> do que o motor atual entrega, por 7 a 22 W. <b>Isso é ganho de uma temporada de treino específico, não de anos.</b> O que falta não é capacidade central: é adaptação muscular, economia de pedalada e posição, que é justamente o que responde rápido numa primeira temporada de ciclismo. Mas registre a mudança: com 30,9 km/h o motor já bastava; com 31,8 ele precisa crescer.
     </div>
   </div>
 </section>
 
 <section id="s-regras">
-  <div class="shead"><span class="kick">13</span><h2>Regras de decisão</h2>
+  <div class="shead"><span class="kick">16</span><h2>Regras de decisão</h2>
     <p>O que fazer quando o corpo discorda do plano.</p></div>
   <div class="cols2">
     <div class="card">
@@ -761,7 +1088,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
 </section>
 
 <section id="s-refs">
-  <div class="shead"><span class="kick">14</span><h2>Referências</h2>
+  <div class="shead"><span class="kick">17</span><h2>Referências</h2>
     <p>Literatura revisada por pares, federações e metodologistas rastreáveis. Nenhum blog.</p></div>
   <div class="card refs"><ul id="refList"></ul></div>
   <footer>
@@ -801,9 +1128,10 @@ var LOG_AUTO = [
  {date:"2026-08-18",read:41,rhr:46,hrv:49,sleep:6.7,acute:377,natM:null,natT:null,bikeK:15.0,bikeT:48,runK:null,runT:null,obs:"REGEN-B Bike Z1 40min - FC media 95, max 122",auto:true},
  {date:"2026-08-19",read:64,rhr:45,hrv:50,sleep:7.3,acute:382,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"HIIT 54min - FC media 91, max 157. Fora do plano: o dia estava marcado como descanso",auto:true},
  {date:"2026-08-20",read:71,rhr:41,hrv:53,sleep:6.8,acute:345,natM:650,natT:31,bikeK:null,bikeT:null,runK:null,runT:null,obs:"NAT-0 Ambientacao 650m em 31min - FC media 103, max 145 · Forca 20min - FC media 71, max 104",auto:true},
- {date:"2026-08-21",read:70,rhr:46,hrv:55,sleep:6.4,acute:272,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"Descanso programado - sem atividade registrada",auto:true}
+ {date:"2026-08-21",read:70,rhr:46,hrv:55,sleep:6.4,acute:272,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"Descanso programado - sem atividade registrada",auto:true},
+ {date:"2026-08-22",read:64,rhr:48,hrv:58,sleep:6.4,acute:205,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"Sem atividade registrada ate a rodada da manha. REGEN-B bike Z1 40min prevista para hoje",auto:true}
 ];
-var LOG_AUTO_UPDATED = "21/08/2026 19:45";
+var LOG_AUTO_UPDATED = "22/08/2026 09:07";
 /* ==== FIM DADOS AUTOMATICOS ==== */
 
 /* ==== INICIO CHECKLIST DA SEMANA - NAO EDITAR A MAO ====
@@ -819,16 +1147,17 @@ var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto"};
 var NOTAS = {"2026-08-19":"Garmin registrou: HIIT 54min","2026-08-20":"Garmin registrou: forca 20min alem da natacao prescrita"};
 /* ==== FIM ANOTACOES ==== */
 
-var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,7,21);
+var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,7,22);
 
 var SECOES=[
  ["s-visao","01","Visão geral"],["s-atual","02","Hoje"],["s-trilhas","03","As três trilhas"],
- ["s-registro","04","Lançamento manual"],["s-espinha","05","A espinha"],["s-semana","06","Semana-padrão"],
- ["s-curva","07","Curva de volume"],["s-partida","08","Ponto de partida"],["s-bench","09","Benchmark M45-49"],
- ["s-projecao","10","Orçamento sub-6h"],["s-fisio","11","Fisiologia e zonas"],["s-exames","12","Exames"],
- ["s-regras","13","Regras de decisão"],["s-refs","14","Referências"]
+ ["s-registro","04","Lançamento manual"],["s-historico","05","Histórico do ciclo"],["s-nutri","06","Nutrição"],
+ ["s-natacao","07","Natação"],["s-espinha","08","A espinha"],["s-semana","09","Semana-padrão"],
+ ["s-curva","10","Curva de volume"],["s-partida","11","Ponto de partida"],["s-bench","12","Benchmark M45-49"],
+ ["s-projecao","13","Orçamento 5h40"],["s-fisio","14","Fisiologia e zonas"],["s-exames","15","Exames"],
+ ["s-regras","16","Regras de decisão"],["s-refs","17","Referências"]
 ];
-var GRUPOS={0:"Agora",4:"Planejamento",7:"Diagnóstico e estratégia",10:"Apoio"};
+var GRUPOS={0:"Agora",4:"Registro, nutrição e natação",7:"Planejamento",10:"Estratégia",13:"Apoio"};
 
 var BLOCOS=[
  {id:"B0",nome:"Regeneração",ini:1,fim:2,cor:"#6b7280"},
@@ -868,16 +1197,16 @@ var BASE_SESSOES=[
 var TRILHAS=[
  {nome:"Natação",cor:"var(--nat)",status:"crit",stLabel:"prioridade 1",
   kv:[["Sessões em 12 meses","5"],["Distância total","2,41 km"],["Maior nado contínuo","800 m (07/04/26)"],
-      ["Águas abertas","2 sessões, máx. 404 m"],["Meta de prova","1,9 km em 47:30"],["Ritmo-alvo","2:30/100 m"]],
+      ["Águas abertas","2 sessões, máx. 404 m"],["Meta de prova","1,9 km em 47:30"],["Ritmo-alvo","2:30/100 m · escada até 2:15"]],
   foot:"<strong>Por que é a prioridade.</strong> A base aeróbica não compra nada aqui: o custo do nado é governado por arrasto e eficiência propulsiva, e fatores independentes do tamanho corporal explicam 75% da variação da economia (Kjendlie 2004; Zamparo 2020). USAT e US Masters convergem: <em>3×/semana é o mínimo para adquirir técnica</em>. O plano usa 4."},
  {nome:"Ciclismo",cor:"var(--bike)",status:"warn",stLabel:"maior alavanca",
   kv:[["Sessões em 12 meses","6"],["Distância total","120,6 km"],["Maior pedal","37,2 km (18/01/26)"],
-      ["Velocidade média","19–27 km/h · sempre Z1"],["FTP no Garmin","230 W · dez/2025 ⚠ obsoleto"],["Meta de prova","90 km a 30,9 km/h"]],
-  foot:"<strong>Onde está o maior ganho.</strong> Melhor preditor do tempo total no 70.3 (Sousa 2021, n=16.667); o FTP explica 63,8% do split (Vivan 2025). Em 840 mil atletas, é a modalidade com pico de idade mais tardio (34 anos) e menor declínio etário (Jäckel 2020). <strong>A mediana dos sub-6h M45-49 é 32,1 km/h.</strong>"},
+      ["Velocidade média","19–27 km/h · sempre Z1"],["FTP no Garmin","230 W · dez/2025 ⚠ obsoleto"],["Meta de prova","90 km a 31,8 km/h"]],
+  foot:"<strong>Onde está o maior ganho.</strong> Melhor preditor do tempo total no 70.3 (Sousa 2021, n=16.667); o FTP explica 63,8% do split (Vivan 2025). Em 840 mil atletas, é a modalidade com pico de idade mais tardio (34 anos) e menor declínio etário (Jäckel 2020). <strong>A mediana do grupo que fecha perto das 6 h é 32,1 km/h — a sua meta de 31,8 fica praticamente em cima dela.</strong>"},
  {nome:"Corrida",cor:"var(--run)",status:"good",stLabel:"sua vantagem",
   kv:[["Volume em 12 meses","1.111,9 km · 118 sessões"],["Limiar de lactato","169–170 bpm"],["Endurance Score","6.758 · well trained"],
-      ["Previsão Garmin 21 km","1:42:59"],["Cadência atual","149–153 spm → meta 158–165"],["Meta de prova","21,1 km a 6:03/km"]],
-  foot:"<strong>É aqui que você compra o sub-6h.</strong> A mediana de corrida dos sub-6h da sua faixa é <em>6:14/km</em> — mais lenta que a sua meta. Cada segundo por km que você ganha na corrida compra folga na bike. O trabalho é <em>brick</em>, não volume."}
+      ["Previsão Garmin 21 km","1:42:59"],["Cadência atual","149–153 spm → meta 158–165"],["Meta de prova","21,1 km a 5:27/km"]],
+  foot:"<strong>É aqui que você compra as 5h40.</strong> A mediana de corrida do grupo que fecha perto das 6 h é <em>6:14/km</em> — a sua meta de <em>5:27/km</em> está 47 s/km à frente. Foi daqui que saíram 13 dos 18 minutos cortados da meta. O trabalho é <em>brick</em>, não volume."}
 ];
 
 var BENCH=[
@@ -892,9 +1221,9 @@ var BENCH=[
 var PROJ=[
  {et:"Natação 1,9 km",ritmo:"2:30/100 m",t:"47:30",ac:"0:47:30",corte:"1h10",marg:"+22:30",risco:true},
  {et:"T1",ritmo:"—",t:"4:00",ac:"0:51:30",corte:"—",marg:"—"},
- {et:"Ciclismo 90 km",ritmo:"30,9 km/h",t:"2:55:00",ac:"3:46:30",corte:"5h00",marg:"+1:13:30",risco:true},
- {et:"T2",ritmo:"—",t:"3:30",ac:"3:50:00",corte:"—",marg:"—"},
- {et:"Corrida 21,1 km",ritmo:"6:03/km",t:"2:08:00",ac:"5:58:00",corte:"8h30",marg:"+2:32:00"}
+ {et:"Ciclismo 90 km",ritmo:"31,8 km/h",t:"2:50:00",ac:"3:41:30",corte:"5h00",marg:"+1:18:30",risco:true},
+ {et:"T2",ritmo:"—",t:"3:30",ac:"3:45:00",corte:"—",marg:"—"},
+ {et:"Corrida 21,1 km",ritmo:"5:27/km",t:"1:55:00",ac:"5:40:00",corte:"8h30",marg:"+2:50:00"}
 ];
 
 var FISIO=[
@@ -928,32 +1257,36 @@ var FISIO=[
 var SEMANA_ATUAL=[
  {date:"2026-08-17",dow:"Seg",tag:"off",s:[]},
  {date:"2026-08-18",dow:"Ter",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"FC teto 100 · abaixo do limiar medido",det:[
-   "<b>10′ aquecimento</b> — cadência livre, FC subindo devagar até 90 bpm",
-   "<b>25′ contínuo em Z1</b> — FC teto <b>100 bpm</b>, cadência 85–95 rpm. Se a FC passar de 100, alivie sem dó",
-   "<b>5′ soltura</b> — cadência alta, carga mínima",
-   "Objetivo é <b>circulação, não estímulo</b>. Bloco 0 é regeneração: a sessão só existe para mover sangue e reencontrar o gesto do pedal"
+   "<b>40 min contínuos em Z1</b> — bloco único, sem aquecimento nem desaquecimento separados",
+   "<b>FC alvo 80–100 bpm</b> — é o alvo programado no relógio. Teto 100, bem abaixo do limiar aeróbio medido de 109",
+   "<b>Cadência leve, 85–95 rpm</b>, terreno plano",
+   "Descrição do treino no Garmin: <em>circulação, não estímulo. Zero impacto, zero dano excêntrico.</em>",
+   "<b>Confere com o workout 703 REGEN-B</b> agendado no Garmin (id 1668554296)"
  ]}]},
  {date:"2026-08-19",dow:"Qua",tag:"off",s:[]},
  {date:"2026-08-20",dow:"Qui",s:[{t:"n",n:"NAT-0 · Ambientação 600 m",o:"reconhecimento, sem cronômetro",det:[
-   "<b>100 m livre e solto</b> — só sentir a água, sem contar braçada",
-   "<b>4 × 50 m</b> com 30″ de pausa — foco em <b>rolagem de tronco</b> e respiração bilateral",
-   "<b>200 m contínuo</b> em ritmo confortável, sem olhar o relógio",
-   "<b>100 m de soltura</b> — costas ou peito, o que for mais confortável",
-   "<b>Sem cronômetro nesta sessão.</b> O objetivo é adaptação: 5 sessões em 12 meses significa que o corpo ainda está reaprendendo a posição na água"
+   "<b>100 m de aquecimento</b> — caminhar e boiar. Soltar a respiração: soprar todo o ar debaixo da água",
+   "<b>8 × 25 m crawl bem devagar</b>, com <b>40 s de descanso</b> entre cada — objetivo é chegar do outro lado sem falta de ar",
+   "<b>100 m de soltura</b> — costas, peito, o que for confortável",
+   "<b>400 m de nado real</b> no total. O nome do treino diz 600 m e o Garmin estima 720 m contando as pausas — o que você vai nadar são 400 m",
+   "Descrição do treino no Garmin: <em>não é treino, é reconhecimento. Zero cronômetro, zero séries. Se cansar, para.</em>",
+   "<b>Confere com o workout 703 NAT-0</b> agendado no Garmin (id 1666534298)"
  ]}]},
  {date:"2026-08-21",dow:"Sex",tag:"off",s:[]},
  {date:"2026-08-22",dow:"Sáb",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"rua, plano, FC teto 100",det:[
-   "<b>10′ aquecimento</b> — plano, cadência livre",
-   "<b>25′ contínuo em Z1</b> — FC teto <b>100 bpm</b>. Escolha percurso plano: subida estoura a FC sem querer",
-   "<b>5′ soltura</b>",
-   "Primeira das duas bikes de rua da semana. <b>Sem sprint, sem disputar semáforo.</b> Se o terreno forçar a FC acima de 100, reduza a marcha antes de reduzir a cadência"
+   "<b>40 min contínuos em Z1</b> — bloco único, igual ao de terça",
+   "<b>FC alvo 80–100 bpm</b>, cadência 85–95 rpm",
+   "<b>Escolha percurso plano.</b> Subida estoura a FC sem querer — se o terreno forçar acima de 100, reduza a marcha antes de reduzir a cadência",
+   "Sem sprint, sem disputar semáforo. <b>Circulação, não estímulo.</b>",
+   "<b>Confere com o workout 703 REGEN-B</b> agendado no Garmin (id 1668554296)"
  ]}]},
  {date:"2026-08-23",dow:"Dom",s:[{t:"n",n:"NAT-0 · Ambientação 600 m",o:"segunda ida à água",det:[
-   "<b>100 m solto</b> de aquecimento",
-   "<b>6 × 50 m</b> com 30″ de pausa — hoje conte as braçadas de cada 50 e anote a variação",
-   "<b>150 m contínuo</b> tentando repetir a contagem mais baixa do bloco acima",
-   "<b>50 m de soltura</b>",
-   "<b>A contagem de braçadas é o dado desta sessão.</b> Ela mede eficiência melhor que o cronômetro nesta fase — menos braçadas na mesma distância é mais deslize por braçada"
+   "<b>100 m de aquecimento</b> — caminhar e boiar, soltando a respiração debaixo da água",
+   "<b>8 × 25 m crawl bem devagar</b>, com <b>40 s de descanso</b> entre cada",
+   "<b>100 m de soltura</b>",
+   "<b>400 m de nado real.</b> É o mesmo workout de quinta — segunda ida à água na semana",
+   "Se quiser um dado para levar: <b>conte as braçadas de cada 25 m</b>. Nesta fase ela mede eficiência melhor que o cronômetro. Mas é iniciativa sua, não está no treino do Garmin",
+   "<b>Confere com o workout 703 NAT-0</b> agendado no Garmin (id 1666534298)"
  ]}]}
 ];
 /* ==== FIM SEMANA EM CURSO ==== */
@@ -1034,7 +1367,7 @@ var semAtual=Math.max(1,Math.min(TOTAL_WEEKS,Math.floor(Math.floor((TODAY-START)
   }
   var p=PLANO[semAtual-1], b=blocoDe(semAtual);
   var tiles=[
-   ["Meta de prova","5:58","alvo com transições · corte 8h30"],
+   ["Meta de prova","5:40","alvo com transições · corte 8h30"],
    ["Semana do macrociclo",semAtual+"<small> / 35</small>",fmtBR(weekStart(semAtual))+" a "+fmtBR(weekEnd(semAtual))],
    ["Bloco atual",'<span style="font-size:19px">'+b.nome+'</span>',"semanas "+b.ini+"–"+b.fim],
    ["Volume-alvo da semana",br(p.total)+"<small> h</small>","nado "+br(p.nat)+"h · bike "+br(p.bike)+"h · corrida "+br(p.run)+"h"],
@@ -1092,7 +1425,7 @@ var semAtual=Math.max(1,Math.min(TOTAL_WEEKS,Math.floor(Math.floor((TODAY-START)
   PROJ.forEach(function(p){
     pj.appendChild(el("tr","","<td class='k'>"+p.et+(p.risco?' <span class="flag" style="color:#f0b53c;border-color:#f0b53c">chave</span>':'')+"</td><td class='num'>"+p.ritmo+"</td><td class='num'><b style='color:var(--ink-1)'>"+p.t+"</b></td><td class='num'>"+p.ac+"</td><td class='num'>"+p.corte+"</td><td class='num'>"+p.marg+"</td>"));
   });
-  pj.appendChild(el("tr","","<td class='k' style='border-top:2px solid var(--axis)'>TOTAL</td><td class='num' style='border-top:2px solid var(--axis)'>113 km</td><td class='num' style='border-top:2px solid var(--axis)'><b style='color:var(--good);font-size:14px'>5:58:00</b></td><td class='num' style='border-top:2px solid var(--axis)'>—</td><td class='num' style='border-top:2px solid var(--axis)'>8h30</td><td class='num' style='border-top:2px solid var(--axis)'><b style='color:var(--good)'>+2:32:00</b></td>"));
+  pj.appendChild(el("tr","","<td class='k' style='border-top:2px solid var(--axis)'>TOTAL</td><td class='num' style='border-top:2px solid var(--axis)'>113 km</td><td class='num' style='border-top:2px solid var(--axis)'><b style='color:var(--good);font-size:14px'>5:40:00</b></td><td class='num' style='border-top:2px solid var(--axis)'>—</td><td class='num' style='border-top:2px solid var(--axis)'>8h30</td><td class='num' style='border-top:2px solid var(--axis)'><b style='color:var(--good)'>+2:50:00</b></td>"));
   var fs=$("tbFisio");
   FISIO.forEach(function(r){fs.appendChild(el("tr","","<td class='k'>"+r[0]+"</td><td class='num'><b style='color:var(--ink-1)'>"+r[1]+"</b></td><td style='font-size:11.5px'>"+r[2]+"</td>"));});
   $("wkRange").textContent="Semana "+semAtual+" · "+fmtBR(weekStart(semAtual))+" a "+fmtBR(weekEnd(semAtual))+" · "+blocoDe(semAtual).nome;
@@ -1175,10 +1508,10 @@ var MODAL={
        distKey:"natM", timeKey:"natT", distLabel:"m", meta:150, metaLabel:"meta 2:30/100 m",
        paceOf:function(r){return (r.natT*60)/(r.natM/100);}, paceFmt:function(v){return mmss(v)+"/100m";}, paceDown:true},
  bike:{svg:"chBike",tip:"tipBike",em:"emBike",cor:"var(--bike)", metric:"vol",
-       distKey:"bikeK",timeKey:"bikeT",distLabel:"km", meta:30.9, metaLabel:"meta 30,9 km/h",
+       distKey:"bikeK",timeKey:"bikeT",distLabel:"km", meta:31.8, metaLabel:"meta 31,8 km/h",
        paceOf:function(r){return r.bikeK/(r.bikeT/60);}, paceFmt:function(v){return br(v)+" km/h";}, paceDown:false},
  run :{svg:"chRun", tip:"tipRun", em:"emRun", cor:"var(--run)",  metric:"vol",
-       distKey:"runK", timeKey:"runT", distLabel:"km", meta:363, metaLabel:"meta 6:03/km",
+       distKey:"runK", timeKey:"runT", distLabel:"km", meta:327, metaLabel:"meta 5:27/km",
        paceOf:function(r){return (r.runT*60)/r.runK;}, paceFmt:function(v){return mmss(v)+"/km";}, paceDown:true}
 };
 
@@ -1271,6 +1604,9 @@ Array.prototype.forEach.call(document.querySelectorAll(".seg"),function(seg){
       FIS.metric=ev.target.dataset.k; drawFis(); return;
     }
     var mk=seg.dataset.for;
+    /* Segs que nao sao de grafico (ex.: o alternador do historico) tem
+       o proprio listener e devem ser ignorados aqui. */
+    if(!mk||!MODAL[mk])return;
     Array.prototype.forEach.call(seg.querySelectorAll("button"),function(b){b.classList.toggle("on",b===ev.target);});
     MODAL[mk].metric=ev.target.dataset.m;
     drawEvo(mk);
@@ -1479,6 +1815,126 @@ function renderMini(){
         (extra?'<div style="color:var(--warn);font-size:10.5px;margin-top:2px">+ '+extra.replace(/</g,"&lt;")+'</div>':"")+"</td>"));
   });
 }
+
+/* ============ HISTORICO DO CICLO ============
+   Le o LOG_AUTO (permanente, escrito pelas tarefas) e monta o acumulado.
+   O arquivo HISTORICO_703.md na pasta e a fonte de verdade; isto e a vista. */
+var DECISOES=[
+ ["17/08/2026","Início do macrociclo de 35 semanas","Prova em 18/04/2027"],
+ ["19/08/2026","Campo <b>read</b> passa a guardar sempre a leitura do despertar","A leitura pós-treino mistura fadiga aguda com prontidão e distorce o histórico"],
+ ["20/08/2026","Projeto migrado da pasta La Mision para Ironman 2027","Separar o ciclo do 70.3 do arquivo histórico da ultra"],
+ ["20/08/2026","Zonas de bike corrigidas para <b>100–109 bpm</b> na Z2","As anteriores (125–145) começavam <em>no</em> limiar medido. Pedalar ali achando que era base seria treinar em limiar o tempo todo"],
+ ["20/08/2026","Meta de cadência de corrida: <b>158–165 spm</b>, não 175–180","A meta antiga foi perseguida 16 semanas sem sair de 149–153. A 1,90 m em Z2, 150 spm com passada de 127 cm fecha a conta (Heiderscheit 2011)"],
+ ["21/08/2026","Painel duplicado do Cowork aposentado","Duas cópias divergindo. A da pasta é a única que as automações atualizam"],
+ ["21/08/2026","Chips <b>fiz diferente</b>, drawer de treino detalhado e seções reordenadas","Reduzir digitação e pôr o que é consultado diariamente no topo"],
+ ["22/08/2026","<b>Semana-padrão reorganizada</b>: terça e quinta sem corrida","A disponibilidade mudou. Corrida longa foi para sábado; força ocupa terça e quinta"],
+ ["22/08/2026","<b>CrossFit entra oficialmente</b>, na vaga de força de terça ou quinta","Ele pratica e quer manter. Melhor dentro do plano que competindo com ele"],
+ ["22/08/2026","<b>A folga deixa de ter dia fixo</b>","Passa a ser escolhida pelo readiness, com sexta e segunda como candidatas"],
+ ["22/08/2026","Documento de nutrição criado a partir de position stands","Ele completou 9h55 a ~24 g/h de carboidrato contra diretriz de até 90 g/h"],
+ ["22/08/2026","<b>Meta revisada de 5:58 para 5:40</b>: bike 2:50 (31,8 km/h) e corrida 1:55 (5:27/km)","Decisão dele. Os 18 min vieram das duas modalidades treináveis — 5 na bike e 13 na corrida"],
+ ["22/08/2026","Natação mantida em <b>47:30</b> e transformada em margem","Ele quis 2:00/100 m; os dados não sustentam ainda (5 sessões em 12 meses, melhor ritmo 2:56/100 m em 600 m). Virou escada revisada por teste, e todo ganho abaixo de 2:30 entra como folga"],
+ ["22/08/2026","Criado o <b>NAT-B1 · Ritmo 1300 m</b> no Garmin (id 1672426960)","Faltava sessão de ritmo: o NAT-A1 é 75% educativo. Série principal 6×100 m no ritmo de prova"],
+ ["22/08/2026","Corrigido o <b>det</b> dos treinos da semana 1","Eu tinha escrito o detalhamento sem ler o workout do Garmin. O NAT-0 real é 100 + 8×25 + 100 = 400 m, não 4×50 + 200 m contínuo. Erro meu, apontado por ele"],
+ ["22/08/2026","Semana 2 reagendada no Garmin","Tinha corrida na terça (viola a regra nova), 5 natações e nenhuma força. Ficou 4 natações, 3 bikes, 2 corridas, 2 forças"]
+];
+
+function histDados(){
+  var L=LOG.slice().filter(function(r){return r.date;}).sort(function(a,b){return a.date<b.date?-1:1;});
+  var acc={nat:0,natT:0,bike:0,bikeT:0,run:0,runT:0,dias:0,sessoes:0};
+  var semanas={};
+  L.forEach(function(r){
+    var d=new Date(r.date+"T12:00:00");
+    var sem=Math.max(1,Math.floor(Math.floor((d-START)/86400000)/7)+1);
+    if(!semanas[sem])semanas[sem]={sem:sem,nat:0,bike:0,run:0,natT:0,bikeT:0,runT:0,dias:[],read:[],rhr:[]};
+    var S=semanas[sem];
+    if(r.natM){acc.nat+=r.natM;S.nat+=r.natM;}
+    if(r.natT){acc.natT+=r.natT;S.natT+=r.natT;}
+    if(r.bikeK){acc.bike+=r.bikeK;S.bike+=r.bikeK;}
+    if(r.bikeT){acc.bikeT+=r.bikeT;S.bikeT+=r.bikeT;}
+    if(r.runK){acc.run+=r.runK;S.run+=r.runK;}
+    if(r.runT){acc.runT+=r.runT;S.runT+=r.runT;}
+    if(r.read!==null&&r.read!==undefined)S.read.push(r.read);
+    if(r.rhr)S.rhr.push(r.rhr);
+    if(r.natM||r.bikeK||r.runK)acc.sessoes++;
+    S.dias.push(r);
+    acc.dias++;
+  });
+  return {log:L,acc:acc,semanas:semanas};
+}
+
+function media(a){if(!a.length)return null;return a.reduce(function(x,y){return x+y;},0)/a.length;}
+
+function renderHist(){
+  if(!$("hTiles"))return;
+  var H=histDados(), a=H.acc;
+  var horas=(a.natT+a.bikeT+a.runT)/60;
+
+  $("hSince").textContent=a.dias?" · "+a.dias+" dia(s) registrados desde 17/08/2026":" · sem registros ainda";
+  $("hTiles").innerHTML=
+    tile("Horas de treino",horas?br(horas,1):"—","<small> h</small>",a.sessoes+" sessões com dado")+
+    tile("Natação",a.nat?br(a.nat/1000,2):"—","<small> km</small>",a.natT?br(a.natT/60,1)+" h":"sem dado")+
+    tile("Ciclismo",a.bike?br(a.bike,1):"—","<small> km</small>",a.bikeT?br(a.bikeT/60,1)+" h":"sem dado")+
+    tile("Corrida",a.run?br(a.run,1):"—","<small> km</small>",a.runT?br(a.runT/60,1)+" h":"sem dado");
+
+  /* tabela semana a semana */
+  var sems=Object.keys(H.semanas).map(Number).sort(function(x,y){return y-x;});
+  var linhas="";
+  sems.forEach(function(n){
+    var S=H.semanas[n], b=blocoDe(n);
+    var ini=weekStart(n), fim=weekEnd(n);
+    var mr=media(S.read), mh=media(S.rhr);
+    linhas+="<tr><td class='k'>"+n+"</td>"+
+      "<td style='font-size:11px'>"+fmtBR(ini).slice(0,5)+"–"+fmtBR(fim).slice(0,5)+"</td>"+
+      "<td style='font-size:11px'><span style='color:"+b.cor+"'>●</span> "+b.nome.split(" /")[0]+"</td>"+
+      "<td class='num'>"+(S.nat?br(S.nat/1000,2)+" km":"—")+"</td>"+
+      "<td class='num'>"+(S.bike?br(S.bike,1)+" km":"—")+"</td>"+
+      "<td class='num'>"+(S.run?br(S.run,1)+" km":"—")+"</td>"+
+      "<td class='num'>"+(mr!==null?Math.round(mr):"—")+"</td>"+
+      "<td class='num'>"+(mh!==null?Math.round(mh):"—")+"</td></tr>";
+  });
+  $("hTabela").innerHTML=linhas
+    ? "<div class='tscroll'><table><thead><tr><th>Sem</th><th>Período</th><th>Bloco</th><th class='num'>Nado</th><th class='num'>Bike</th><th class='num'>Corrida</th><th class='num'>Read. méd</th><th class='num'>FCrep méd</th></tr></thead><tbody>"+linhas+"</tbody></table></div>"
+    : "<div class='empty'>Nenhuma semana registrada ainda.</div>";
+
+  /* calendario */
+  var cal="";
+  sems.slice().reverse().forEach(function(n){
+    var S=H.semanas[n];
+    cal+="<div style='margin-bottom:14px'><div style='font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);margin-bottom:6px'>Semana "+n+"</div><div class='wkgrid'>";
+    S.dias.forEach(function(r){
+      var p=r.date.split("-"), at=[];
+      if(r.natM)at.push("<div class='sess n'>"+r.natM+" m nado</div>");
+      if(r.bikeK)at.push("<div class='sess b'>"+br(r.bikeK)+" km bike</div>");
+      if(r.runK)at.push("<div class='sess r'>"+br(r.runK)+" km corrida</div>");
+      cal+="<div class='day'><div class='dhead'><div class='d'>"+p[2]+"/"+p[1]+"</div>"+
+        (r.read!==null&&r.read!==undefined?"<span class='dtag"+(r.read>=LIM.readVerde?" rest":(r.read<LIM.readAmarelo?" hard":""))+"'>"+r.read+"</span>":"")+
+        "</div>"+(at.join("")||"<div class='rest'>sem atividade</div>")+
+        (r.obs?"<div style='font-size:10px;color:var(--ink-3);margin-top:5px;line-height:1.35'>"+String(r.obs).replace(/</g,"&lt;")+"</div>":"")+"</div>";
+    });
+    cal+="</div></div>";
+  });
+  $("hCal").innerHTML=cal||"<div class='empty'>Nenhum dia registrado ainda.</div>";
+
+  /* decisoes */
+  $("hDec").innerHTML=DECISOES.slice().reverse().map(function(d){
+    return "<tr><td class='k' style='white-space:nowrap'>"+d[0]+"</td><td>"+d[1]+"</td><td style='font-size:11px'>"+d[2]+"</td></tr>";
+  }).join("");
+}
+
+function tile(l,v,suf,n){
+  return "<div class='tile'><div class='lbl'>"+l+"</div><div class='val'>"+v+(v!=="—"?suf:"")+"</div><div class='note'>"+n+"</div></div>";
+}
+
+(function(){
+  var seg=$("hSeg"); if(!seg)return;
+  seg.addEventListener("click",function(ev){
+    var b=ev.target.closest("button"); if(!b)return;
+    Array.prototype.forEach.call(seg.querySelectorAll("button"),function(x){x.classList.toggle("on",x===b);});
+    var cal=b.getAttribute("data-h")==="cal";
+    $("hTabela").style.display=cal?"none":"";
+    $("hCal").style.display=cal?"":"none";
+  });
+})();
 
 /* ============ DRAWER DO TREINO ============ */
 var MODINFO={
@@ -1711,7 +2167,7 @@ function renderLog(){
     });
   }
   drawEvo("nat");drawEvo("bike");drawEvo("run");drawFis();
-  renderMini(); goNoGo();
+  renderMini(); goNoGo(); renderHist();
 }
 
 $("btnMore").addEventListener("click",function(){MINI_ALL=!MINI_ALL;renderMini();});
