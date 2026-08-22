@@ -151,6 +151,26 @@ svg.chart{width:100%;display:block;overflow:visible}
 .note.has textarea{border-left:2px solid var(--warn)}
 .nsync{font-size:9px;color:var(--good);margin-top:3px}
 
+/* ---------- NAVEGACAO DE SEMANAS ---------- */
+.navwk{
+  font:inherit;font-size:17px;line-height:1;cursor:pointer;
+  background:var(--surface-3);color:var(--ink-2);border:1px solid var(--border);
+  border-radius:7px;width:27px;height:27px;flex:none;padding:0;
+}
+.navwk:hover:not(:disabled){color:var(--ink-1);border-color:var(--ink-3)}
+.navwk:disabled{opacity:.3;cursor:default}
+.navwk:focus-visible{outline:2px solid var(--nat);outline-offset:2px}
+.prev-aviso{
+  border-left:3px solid var(--nat);background:var(--surface-2);
+  padding:10px 13px;border-radius:0 9px 9px 0;font-size:11.5px;color:var(--ink-2);margin-bottom:12px;
+}
+.prev-aviso b{color:var(--ink-1)}
+.day.prev{opacity:.92}
+.day.prev .sess{padding:5px 0 5px 8px;border-left:2px solid var(--grid);margin-bottom:5px;font-size:11px;line-height:1.35}
+.day.prev .sess.n{border-left-color:var(--nat)} .day.prev .sess.b{border-left-color:var(--bike)}
+.day.prev .sess.r{border-left-color:var(--run)} .day.prev .sess.f{border-left-color:var(--ink-3)}
+.day.prev .sess em{display:block;font-style:normal;color:var(--ink-3);font-size:10px;margin-top:1px}
+
 /* ---------- CHIPS "FIZ DIFERENTE" ---------- */
 .xtra{margin-top:9px;padding-top:9px;border-top:1px dashed var(--grid)}
 .xtra .nl{font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);margin-bottom:6px}
@@ -345,12 +365,19 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
   </div>
 
   <div class="card" style="padding:16px 18px 18px">
-    <div class="ctitle" style="margin-bottom:12px"><b>Semana em curso</b></div>
-    <div class="wkbar">
+    <div class="ctitle" style="margin-bottom:12px">
+      <button class="navwk" id="wkPrev" aria-label="Semana anterior">‹</button>
+      <b id="wkTitulo">Semana em curso</b>
+      <span id="wkSub" style="color:var(--ink-3);font-size:11.5px"></span>
+      <button class="navwk" id="wkNext" aria-label="Próxima semana" style="margin-left:auto">›</button>
+      <button class="btn sm" id="wkHoje" style="display:none">Voltar para hoje</button>
+    </div>
+    <div class="wkbar" id="wkBarra">
       <span class="cnt" id="wkCount">—</span>
       <span class="prog"><i id="wkProg" style="width:0%"></i></span>
       <button class="btn sm" id="btnClearWk">Limpar marcações</button>
     </div>
+    <div id="wkAviso"></div>
     <div class="wkgrid" id="wkGrid"></div>
     <div style="font-size:11px;color:var(--ink-3);margin-top:12px;padding-top:11px;border-top:1px solid var(--grid)">
       Cada linha é uma <b style="color:var(--ink-2)">atividade</b>, não um dia — dias com duas ou três atividades têm uma caixa para cada uma. <b style="color:var(--ink-2)">A caixa marca; o nome do treino abre o detalhe</b> num painel lateral. A etiqueta <span class="auto">Garmin</span> aparece quando a sincronização diária detectou a atividade sozinha.<br><br>
@@ -1129,14 +1156,14 @@ var LOG_AUTO = [
  {date:"2026-08-19",read:64,rhr:45,hrv:50,sleep:7.3,acute:382,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"HIIT 54min - FC media 91, max 157. Fora do plano: o dia estava marcado como descanso",auto:true},
  {date:"2026-08-20",read:71,rhr:41,hrv:53,sleep:6.8,acute:345,natM:650,natT:31,bikeK:null,bikeT:null,runK:null,runT:null,obs:"NAT-0 Ambientacao 650m em 31min - FC media 103, max 145 · Forca 20min - FC media 71, max 104",auto:true},
  {date:"2026-08-21",read:70,rhr:46,hrv:55,sleep:6.4,acute:272,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"Descanso programado - sem atividade registrada",auto:true},
- {date:"2026-08-22",read:64,rhr:48,hrv:58,sleep:6.4,acute:205,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"Sem atividade registrada ate a rodada da manha. REGEN-B bike Z1 40min prevista para hoje",auto:true}
+ {date:"2026-08-22",read:64,rhr:48,hrv:58,sleep:6.4,acute:261,natM:800,natT:35,bikeK:20.1,bikeT:50,runK:null,runT:null,obs:"REGEN-B Bike Z1 20,1km em 50min - FC media 98, max 112 · NAT-0 Ambientacao 800m em 35min - FC media 100, max 145, antecipada de domingo",auto:true}
 ];
-var LOG_AUTO_UPDATED = "22/08/2026 09:07";
+var LOG_AUTO_UPDATED = "22/08/2026 18:50";
 /* ==== FIM DADOS AUTOMATICOS ==== */
 
 /* ==== INICIO CHECKLIST DA SEMANA - NAO EDITAR A MAO ====
    Chave: "AAAA-MM-DD|indice". Valor: "auto" (detectado no Garmin) ou "manual". */
-var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto"};
+var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"auto"};
 /* ==== FIM CHECKLIST DA SEMANA ==== */
 
 /* ==== INICIO ANOTACOES - NAO EDITAR A MAO ====
@@ -1144,7 +1171,7 @@ var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto"};
    Chave: "AAAA-MM-DD". Valor: texto livre, SEM apostrofos.
    O Claude grava aqui quando o Alex conta no chat ou manda o export.
    A tarefa diaria PRESERVA este bloco. A tarefa semanal LE para a analise. */
-var NOTAS = {"2026-08-19":"Garmin registrou: HIIT 54min","2026-08-20":"Garmin registrou: forca 20min alem da natacao prescrita"};
+var NOTAS = {"2026-08-19":"Garmin registrou: HIIT 54min","2026-08-20":"Garmin registrou: forca 20min alem da natacao prescrita","2026-08-22":"Garmin registrou: natacao 800m 35min alem da bike prescrita - e o NAT-0 previsto para domingo 23/08, feito um dia antes"};
 /* ==== FIM ANOTACOES ==== */
 
 var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,7,22);
@@ -1290,6 +1317,43 @@ var SEMANA_ATUAL=[
  ]}]}
 ];
 /* ==== FIM SEMANA EM CURSO ==== */
+
+/* ==== INICIO AGENDA FUTURA - NAO EDITAR A MAO ====
+   As proximas 3 semanas, lidas do calendario do Garmin por get_scheduled_workouts.
+   Alimenta as setas de navegacao da secao 02. E PREVISAO: nao tem checkbox nem `det`.
+   Mesmo formato de SEMANA_ATUAL, mas so com t, n e o.
+   Formato: [ {sem:N, dias:[{date,dow,s:[{t,n,o}]}]}, ... ] */
+var AGENDA_FUTURA=[
+ {sem:2,dias:[
+  {date:"2026-08-24",dow:"Seg",s:[{t:"r",n:"RUN-0 · Retomada Z1/Z2 35′",o:"corrida leve"},{t:"n",n:"NAT-E2 · Economia 1600 m",o:"contagem de braçadas"}]},
+  {date:"2026-08-25",dow:"Ter",s:[{t:"f",n:"FOR-A · Força Base",o:"musculação ou CrossFit"},{t:"n",n:"NAT-TESTE · 400 m CSS",o:"o teste que calibra tudo"}]},
+  {date:"2026-08-26",dow:"Qua",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"FC teto 100"}]},
+  {date:"2026-08-27",dow:"Qui",s:[{t:"f",n:"FOR-B · Tronco, ombro e core",o:"prehab de natação"},{t:"n",n:"NAT-C2 · Ritmo crítico 1700 m",o:"8×100 no alvo"}]},
+  {date:"2026-08-28",dow:"Sex",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"candidata a folga"}]},
+  {date:"2026-08-29",dow:"Sáb",s:[{t:"r",n:"RUN-0 · Retomada Z1/Z2 35′",o:"corrida leve"},{t:"n",n:"NAT-P · Ritmo de prova 1900 m",o:"1500 m contínuos"}]},
+  {date:"2026-08-30",dow:"Dom",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"fecha o Bloco 0"}]}
+ ]},
+ {sem:3,dias:[
+  {date:"2026-08-31",dow:"Seg",s:[{t:"r",n:"RUN-A1 · Z2 50′ + cadência",o:"alvo 158–165 spm"},{t:"n",n:"NAT-E2 · Economia 1600 m",o:"contagem de braçadas"}]},
+  {date:"2026-09-01",dow:"Ter",s:[{t:"f",n:"FOR-A · Força Base",o:"musculação ou CrossFit"},{t:"n",n:"NAT-C2 · Ritmo crítico 1700 m",o:"já com o CSS medido"}]},
+  {date:"2026-09-02",dow:"Qua",s:[{t:"b",n:"BIKE-B1 · Z2 Base 60′",o:"FC teto 109 · dia duro 1"}]},
+  {date:"2026-09-03",dow:"Qui",s:[{t:"f",n:"FOR-B · Tronco, ombro e core",o:"prehab de natação"},{t:"n",n:"NAT-E2 · Economia 1600 m",o:"segunda dose técnica"}]},
+  {date:"2026-09-04",dow:"Sex",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"candidata a folga"}]},
+  {date:"2026-09-05",dow:"Sáb",s:[{t:"r",n:"RUN-A2 · Longo Z2 75′",o:"dia duro 2"},{t:"n",n:"NAT-P · Ritmo de prova 1900 m",o:"1500 m contínuos"}]},
+  {date:"2026-09-06",dow:"Dom",s:[{t:"b",n:"BIKE-B3 · Longo Z2 2h",o:"o treino que define o ciclo"},{t:"r",n:"RUN-BRICK · Trote 20′",o:"encadear em até 5 min"}]}
+ ]},
+ {sem:4,dias:[
+  {date:"2026-09-07",dow:"Seg",s:[{t:"r",n:"RUN-A1 · Z2 50′ + cadência",o:"alvo 158–165 spm"},{t:"n",n:"NAT-E2 · Economia 1600 m",o:"contagem de braçadas"}]},
+  {date:"2026-09-08",dow:"Ter",s:[{t:"f",n:"FOR-A · Força Base",o:"musculação ou CrossFit"},{t:"n",n:"NAT-C2 · Ritmo crítico 1700 m",o:"8×100 no alvo"}]},
+  {date:"2026-09-09",dow:"Qua",s:[{t:"b",n:"BIKE-TESTE · 20′ (proxy FTP)",o:"mede o progresso da bike"}]},
+  {date:"2026-09-10",dow:"Qui",s:[{t:"f",n:"FOR-B · Tronco, ombro e core",o:"prehab de natação"},{t:"n",n:"NAT-E2 · Economia 1600 m",o:"segunda dose técnica"}]},
+  {date:"2026-09-11",dow:"Sex",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"candidata a folga"}]},
+  {date:"2026-09-12",dow:"Sáb",s:[{t:"r",n:"RUN-A2 · Longo Z2 75′",o:"dia duro 2"},{t:"n",n:"NAT-P · Ritmo de prova 1900 m",o:"1500 m contínuos"}]},
+  {date:"2026-09-13",dow:"Dom",s:[{t:"b",n:"BIKE-B3 · Longo Z2 2h",o:"o treino que define o ciclo"},{t:"r",n:"RUN-BRICK · Trote 20′",o:"encadear em até 5 min"}]}
+ ]}
+];
+var AGENDA_FUTURA_UPDATED = "22/08/2026 16:20";
+/* ==== FIM AGENDA FUTURA ==== */
 
 var REFS=[
  ["Sousa CV et al. (2021) — <em>Front Physiol</em> 12:654552. O ciclismo é o melhor preditor do tempo total no 70.3 (n=16.667).","https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2021.654552/full"],
@@ -1835,7 +1899,12 @@ var DECISOES=[
  ["22/08/2026","Natação mantida em <b>47:30</b> e transformada em margem","Ele quis 2:00/100 m; os dados não sustentam ainda (5 sessões em 12 meses, melhor ritmo 2:56/100 m em 600 m). Virou escada revisada por teste, e todo ganho abaixo de 2:30 entra como folga"],
  ["22/08/2026","Criado o <b>NAT-B1 · Ritmo 1300 m</b> no Garmin (id 1672426960)","Faltava sessão de ritmo: o NAT-A1 é 75% educativo. Série principal 6×100 m no ritmo de prova"],
  ["22/08/2026","Corrigido o <b>det</b> dos treinos da semana 1","Eu tinha escrito o detalhamento sem ler o workout do Garmin. O NAT-0 real é 100 + 8×25 + 100 = 400 m, não 4×50 + 200 m contínuo. Erro meu, apontado por ele"],
- ["22/08/2026","Semana 2 reagendada no Garmin","Tinha corrida na terça (viola a regra nova), 5 natações e nenhuma força. Ficou 4 natações, 3 bikes, 2 corridas, 2 forças"]
+ ["22/08/2026","Semana 2 reagendada no Garmin","Tinha corrida na terça (viola a regra nova), 5 natações e nenhuma força. Ficou 4 natações, 3 bikes, 2 corridas, 2 forças"],
+ ["22/08/2026","<b>Biblioteca de natação reconstruída</b> com base científica","Ele perguntou se os treinos tinham base. Não tinham: sem alvo por repetição, descanso solto, seis educativos por sessão, nenhuma instrução de foco atencional, nada de águas abertas"],
+ ["22/08/2026","<b>Natação recalibrada: o ritmo real é 2:24/100 m, não 2:56</b>","O treino de 800 m de 22/08 teve tempo em movimento de 1.150 s. O 2:56 que eu usava vinha de tempo TOTAL, com as pausas dentro. <b>Erro meu</b> — os alvos de 2:45 estavam abaixo do que ele já faz andando"],
+ ["22/08/2026","<b>NAT-TESTE antecipado</b> da semana 15 para 25/08","Sem CSS medido, qualquer alvo é chute — e o anterior errou para baixo"],
+ ["22/08/2026","Calendário do Garmin limpo: <b>17 agendamentos duplicados</b> removidos","Programação antiga sobreposta à nova, com corrida em terça e quinta e força em quarta. Semanas 3 e 4 reagendadas"],
+ ["22/08/2026","<b>Navegação de semanas no painel</b> — setas para 3 semanas à frente","Ele só enxergava a semana corrente. Novo bloco AGENDA_FUTURA, alimentado pela sync das 06:35"]
 ];
 
 function histDados(){
@@ -2061,7 +2130,45 @@ document.addEventListener("keydown",function(ev){
   if(ev.key==="Escape"&&$("drawer").classList.contains("on"))closeDrawer();
 });
 
+/* WK_OFF = 0 e a semana em curso; 1, 2, 3 sao as previsoes de AGENDA_FUTURA. */
+var WK_OFF=0;
+
+function semanaDe(off){
+  if(off===0)return {dias:SEMANA_ATUAL,prev:false,sem:semAtual};
+  var a=(typeof AGENDA_FUTURA!=="undefined"&&AGENDA_FUTURA)?AGENDA_FUTURA:[];
+  /* casa pela data de inicio, nao pela posicao no array */
+  var alvo=weekStart(semAtual+off), chave=alvo.toISOString().slice(0,10);
+  for(var i=0;i<a.length;i++){
+    if(a[i].dias&&a[i].dias.length&&a[i].dias[0].date===chave)
+      return {dias:a[i].dias,prev:true,sem:a[i].sem||(semAtual+off)};
+  }
+  return {dias:null,prev:true,sem:semAtual+off};
+}
+
+function maxOff(){
+  for(var k=3;k>=1;k--){ if(semanaDe(k).dias) return k; }
+  return 0;
+}
+
+function renderWeekNav(){
+  var lim=maxOff();
+  $("wkPrev").disabled = WK_OFF<=0;
+  $("wkNext").disabled = WK_OFF>=lim;
+  $("wkHoje").style.display = WK_OFF===0 ? "none" : "";
+  var info=semanaDe(WK_OFF);
+  var ini=weekStart(info.sem), fim=weekEnd(info.sem), b=blocoDe(info.sem);
+  $("wkTitulo").textContent = WK_OFF===0 ? "Semana em curso" : "Semana "+info.sem;
+  $("wkSub").innerHTML = "· "+fmtBR(ini).slice(0,5)+" a "+fmtBR(fim).slice(0,5)+
+    " · <span style='color:"+b.cor+"'>●</span> "+b.nome.split(" /")[0]+
+    (WK_OFF===0?"":" · <b style='color:var(--nat)'>previsão</b>");
+}
+
 function renderWeek(){
+  renderWeekNav();
+  var info=semanaDe(WK_OFF);
+  if(info.prev){ renderWeekPrev(info); return; }
+  $("wkBarra").style.display="";
+  $("wkAviso").innerHTML="";
   var g=$("wkGrid"); g.innerHTML="";
   var tot=0,done=0;
   SEMANA_ATUAL.forEach(function(d){
@@ -2141,6 +2248,43 @@ function renderWeek(){
   $("wkProg").style.width=pct+"%";
   $("wkCount").innerHTML="<b>"+done+" de "+tot+"</b> atividades concluídas"+(tot&&done===tot?" &nbsp;✓ semana fechada":"");
 }
+
+/* Vista de PREVISAO: so leitura. Sem checkbox, sem chips, sem campo de anotacao. */
+function renderWeekPrev(info){
+  $("wkBarra").style.display="none";
+  var g=$("wkGrid"); g.innerHTML="";
+
+  if(!info.dias){
+    $("wkAviso").innerHTML="";
+    g.innerHTML='<div class="empty" style="grid-column:1/-1">Esta semana ainda não foi agendada.<br>'+
+      'O fechamento de domingo monta a semana seguinte e atualiza esta previsão.</div>';
+    return;
+  }
+
+  var nsess=0;
+  info.dias.forEach(function(d){ nsess+=(d.s?d.s.length:0); });
+  $("wkAviso").innerHTML='<div class="prev-aviso"><b>Previsão — '+nsess+' atividades agendadas no Garmin.</b> '+
+    'Aqui é só leitura: as marcações e o campo <em>o que eu fiz</em> aparecem quando a semana virar a atual. '+
+    'Atualizado em '+(typeof AGENDA_FUTURA_UPDATED!=="undefined"?AGENDA_FUTURA_UPDATED:"—")+'.</div>';
+
+  info.dias.forEach(function(d){
+    var c=el("div","day prev");
+    var hd=el("div","dhead"), p=d.date.split("-");
+    hd.appendChild(el("div","d",d.dow+" "+p[2]+"/"+p[1]));
+    if(d.tag==="off")hd.appendChild(el("span","dtag rest","folga"));
+    else if(d.tag==="hard")hd.appendChild(el("span","dtag hard","dia duro"));
+    c.appendChild(hd);
+    if(!d.s||!d.s.length){ c.appendChild(el("div","rest","descanso")); }
+    else d.s.forEach(function(s){
+      c.appendChild(el("div","sess "+s.t,s.n+(s.o?"<em>"+s.o+"</em>":"")));
+    });
+    g.appendChild(c);
+  });
+}
+
+$("wkPrev").addEventListener("click",function(){ if(WK_OFF>0){WK_OFF--;renderWeek();} });
+$("wkNext").addEventListener("click",function(){ if(WK_OFF<maxOff()){WK_OFF++;renderWeek();} });
+$("wkHoje").addEventListener("click",function(){ WK_OFF=0; renderWeek(); });
 
 function renderLog(){
   var tb=$("tbLog"); tb.innerHTML="";
