@@ -1308,13 +1308,15 @@ var SEMANA_ATUAL=[
    "Sem sprint, sem disputar semáforo. <b>Circulação, não estímulo.</b>",
    "<b>Confere com o workout 703 REGEN-B</b> agendado no Garmin (id 1668554296)"
  ]}]},
- {date:"2026-08-23",dow:"Dom",s:[{t:"n",n:"NAT-0 · Ambientação 600 m",o:"segunda ida à água",det:[
-   "<b>100 m de aquecimento</b> — caminhar e boiar, soltando a respiração debaixo da água",
-   "<b>8 × 25 m crawl bem devagar</b>, com <b>40 s de descanso</b> entre cada",
-   "<b>100 m de soltura</b>",
-   "<b>400 m de nado real.</b> É o mesmo workout de quinta — segunda ida à água na semana",
-   "Se quiser um dado para levar: <b>conte as braçadas de cada 25 m</b>. Nesta fase ela mede eficiência melhor que o cronômetro. Mas é iniciativa sua, não está no treino do Garmin",
-   "<b>Confere com o workout 703 NAT-0</b> agendado no Garmin (id 1666534298)"
+ {date:"2026-08-23",dow:"Dom",s:[{t:"n",n:"NAT-E2 · Economia 1800 m",o:"o alvo é braçada, não cronômetro",det:[
+   "<b>300 m de aquecimento</b> — crawl suave, expirando dentro da água o tempo todo",
+   "<b>4 × 50 m — CONTAGEM BASE</b>, 15 s de pausa. Conte as braçadas de cada piscina em ritmo confortável e <b>anote o número</b>: é a referência do dia",
+   "<b>10 × 50 m — MENOS UMA BRAÇADA</b> que a base, no <b>mesmo tempo</b>, 20 s de pausa. Alongue, não desacelere. Se perder o ritmo, volte à base e tente de novo",
+   "<b>6 × 100 m nado completo</b> mantendo a contagem reduzida, ritmo em torno de <b>2:20</b>, 25 s de pausa. É o teste real: a economia só vale se sobreviver na distância",
+   "<b>200 m de soltura.</b> Anote no painel a contagem base e a contagem final",
+   "<b>Foco externo</b> (Freudenheim 2010): pense em <b>empurrar a água para trás</b>, nunca em puxar a sua mão",
+   "<b>1.800 m de nado real.</b> O nome do treino diz 1600 e o Garmin estima 2210 contando as pausas — o que você nada são 1.800 m",
+   "<b>Confere com o workout 703 NAT-E2</b> agendado no Garmin (id 1672756325)"
  ]}]}
 ];
 /* ==== FIM SEMANA EM CURSO ==== */
@@ -1905,7 +1907,10 @@ var DECISOES=[
  ["22/08/2026","<b>Natação recalibrada: o ritmo real é 2:24/100 m, não 2:56</b>","O treino de 800 m de 22/08 teve tempo em movimento de 1.150 s. O 2:56 que eu usava vinha de tempo TOTAL, com as pausas dentro. <b>Erro meu</b> — os alvos de 2:45 estavam abaixo do que ele já faz andando"],
  ["22/08/2026","<b>NAT-TESTE antecipado</b> da semana 15 para 25/08","Sem CSS medido, qualquer alvo é chute — e o anterior errou para baixo"],
  ["22/08/2026","Calendário do Garmin limpo: <b>17 agendamentos duplicados</b> removidos","Programação antiga sobreposta à nova, com corrida em terça e quinta e força em quarta. Semanas 3 e 4 reagendadas"],
- ["22/08/2026","<b>Navegação de semanas no painel</b> — setas para 3 semanas à frente","Ele só enxergava a semana corrente. Novo bloco AGENDA_FUTURA, alimentado pela sync das 06:35"]
+ ["22/08/2026","<b>Navegação de semanas no painel</b> — setas para 3 semanas à frente","Ele só enxergava a semana corrente. Novo bloco AGENDA_FUTURA, alimentado pela sync das 06:35"],
+ ["23/08/2026","<b>Semana em curso corrigida</b>: domingo passou de NAT-0 (400 m) para NAT-E2 (1.800 m)","<b>Erro meu</b>, encontrado por ele: reagendei no Garmin mas não atualizei SEMANA_ATUAL. O painel mostrava o plano antigo enquanto o relógio já tinha o novo"],
+ ["23/08/2026","<b>A sync das 06:35 passa a conferir o painel contra o Garmin todo dia</b>","Nenhuma automação fazia isso — só a tarefa semanal escrevia nesse bloco, e ela roda uma vez por semana. Agora a divergência se corrige sozinha para os dias de hoje em diante"],
+ ["23/08/2026","Teste do painel ganha <b>bloco de coerência</b>","Seis verificações que pegam esse tipo de esquecimento: det presente, id citado, sem apóstrofo, sem treino aposentado em dia futuro, sem corrida em terça ou quinta, semana começando na segunda certa"]
 ];
 
 function histDados(){
