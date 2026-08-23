@@ -1157,14 +1157,14 @@ var LOG_AUTO = [
  {date:"2026-08-20",read:71,rhr:41,hrv:53,sleep:6.8,acute:345,natM:650,natT:31,bikeK:null,bikeT:null,runK:null,runT:null,obs:"NAT-0 Ambientacao 650m em 31min - FC media 103, max 145 · Forca 20min - FC media 71, max 104",auto:true},
  {date:"2026-08-21",read:70,rhr:46,hrv:55,sleep:6.4,acute:272,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"Descanso programado - sem atividade registrada",auto:true},
  {date:"2026-08-22",read:64,rhr:48,hrv:58,sleep:6.4,acute:261,natM:800,natT:19,bikeK:20.1,bikeT:50,runK:null,runT:null,obs:"REGEN-B Bike Z1 20,1km em 50min - FC media 98, max 112 · NAT-0 Ambientacao 800m com 19min em movimento (ritmo efetivo 2:24/100m) - FC media 100, max 145, antecipada de domingo",auto:true},
- {date:"2026-08-23",read:85,rhr:42,hrv:62,sleep:9.7,acute:188,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"Readiness 85 HIGH no despertar - melhor leitura do ciclo. Sono 9,7h score 85. Ate 09h20 sem atividade registrada",auto:true}
+ {date:"2026-08-23",read:85,rhr:42,hrv:62,sleep:9.7,acute:245,natM:1750,natT:54,bikeK:null,bikeT:null,runK:null,runT:null,obs:"NAT-E2 Economia 1750m em 54min - FC media 112, max 143. Contagem base 50 bracadas por 50m (direita + esquerda, piscina de 25m = 25 por piscina). Readiness 85 HIGH no despertar, melhor leitura do ciclo. Sono 9,7h score 85",auto:true}
 ];
-var LOG_AUTO_UPDATED = "23/08/2026 09:20";
+var LOG_AUTO_UPDATED = "23/08/2026 14:20";
 /* ==== FIM DADOS AUTOMATICOS ==== */
 
 /* ==== INICIO CHECKLIST DA SEMANA - NAO EDITAR A MAO ====
    Chave: "AAAA-MM-DD|indice". Valor: "auto" (detectado no Garmin) ou "manual". */
-var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"auto"};
+var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"auto","2026-08-23|0":"auto"};
 /* ==== FIM CHECKLIST DA SEMANA ==== */
 
 /* ==== INICIO ANOTACOES - NAO EDITAR A MAO ====
@@ -1172,7 +1172,7 @@ var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"aut
    Chave: "AAAA-MM-DD". Valor: texto livre, SEM apostrofos.
    O Claude grava aqui quando o Alex conta no chat ou manda o export.
    A tarefa diaria PRESERVA este bloco. A tarefa semanal LE para a analise. */
-var NOTAS = {"2026-08-19":"Garmin registrou: HIIT 54min","2026-08-20":"Garmin registrou: forca 20min alem da natacao prescrita","2026-08-22":"Garmin registrou: natacao 800m 35min alem da bike prescrita - e o NAT-0 previsto para domingo 23/08, feito um dia antes"};
+var NOTAS = {"2026-08-19":"Garmin registrou: HIIT 54min","2026-08-20":"Garmin registrou: forca 20min alem da natacao prescrita","2026-08-22":"Garmin registrou: natacao 800m 35min alem da bike prescrita - e o NAT-0 previsto para domingo 23/08, feito um dia antes","2026-08-23":"Contagem de bracadas NAT-E2 informada pelo Alex: 50 bracadas por 50m, contando direita e esquerda (bracadas individuais), em piscina de 25m - ou seja 25 bracadas por piscina. Convencao e piscina de referencia fixadas em 23/08/2026. Primeira medida do ciclo. 1,00 m por bracada aparente, estimadas 0,84 a 0,92 m nadadas descontando o deslize das duas saidas de parede"};
 /* ==== FIM ANOTACOES ==== */
 
 var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,7,23);
