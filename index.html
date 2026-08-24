@@ -1157,14 +1157,15 @@ var LOG_AUTO = [
  {date:"2026-08-20",read:71,rhr:41,hrv:53,sleep:6.8,acute:345,natM:650,natT:31,bikeK:null,bikeT:null,runK:null,runT:null,obs:"NAT-0 Ambientacao 650m em 31min - FC media 103, max 145 · Forca 20min - FC media 71, max 104",auto:true},
  {date:"2026-08-21",read:70,rhr:46,hrv:55,sleep:6.4,acute:272,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"Descanso programado - sem atividade registrada",auto:true},
  {date:"2026-08-22",read:64,rhr:48,hrv:58,sleep:6.4,acute:261,natM:800,natT:19,bikeK:20.1,bikeT:50,runK:null,runT:null,obs:"REGEN-B Bike Z1 20,1km em 50min - FC media 98, max 112 · NAT-0 Ambientacao 800m com 19min em movimento (ritmo efetivo 2:24/100m) - FC media 100, max 145, antecipada de domingo",auto:true},
- {date:"2026-08-23",read:85,rhr:42,hrv:62,sleep:9.7,acute:245,natM:1750,natT:54,bikeK:null,bikeT:null,runK:null,runT:null,obs:"NAT-E2 Economia 1750m em 54min - FC media 112, max 143. Contagem base 50 bracadas por 50m (direita + esquerda, piscina de 25m = 25 por piscina). Readiness 85 HIGH no despertar, melhor leitura do ciclo. Sono 9,7h score 85",auto:true}
+ {date:"2026-08-23",read:85,rhr:42,hrv:62,sleep:9.7,acute:245,natM:1750,natT:46,bikeK:null,bikeT:null,runK:null,runT:null,obs:"NAT-E2 Economia 1750m com 46min em movimento (ritmo efetivo 2:37/100m; tempo total 54min) - FC media 112, max 143. Contagem base 50 bracadas por 50m (direita + esquerda, piscina de 25m = 25 por piscina). Readiness 85 HIGH no despertar. Sono 9,7h score 85",auto:true},
+ {date:"2026-08-24",read:91,rhr:41,hrv:64,sleep:7.6,acute:314,natM:1200,natT:54,bikeK:null,bikeT:null,runK:5.9,runT:35,obs:"RUN-0 Retomada Z1/Z2 5,86km em 35min - FC media 129, max 153. Primeira corrida desde a La Mision · Natacao em piscina 1200m em 54min - FC media 110, max 137, alem do prescrito para segunda. Readiness 91 HIGH no despertar, EXCELLENT_RECOVERY - melhor leitura do ciclo. Sono 7,6h score 82, VFC noturna 77. Carga aguda fechou o dia em 314, recuperacao 21,3h. Leitura pos-treino de 70 MODERATE as 18:51 - nao substitui a do despertar",auto:true}
 ];
-var LOG_AUTO_UPDATED = "23/08/2026 14:20";
+var LOG_AUTO_UPDATED = "24/08/2026 19:10";
 /* ==== FIM DADOS AUTOMATICOS ==== */
 
 /* ==== INICIO CHECKLIST DA SEMANA - NAO EDITAR A MAO ====
    Chave: "AAAA-MM-DD|indice". Valor: "auto" (detectado no Garmin) ou "manual". */
-var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"auto","2026-08-23|0":"auto"};
+var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"auto","2026-08-23|0":"auto","2026-08-24|0":"auto"};
 /* ==== FIM CHECKLIST DA SEMANA ==== */
 
 /* ==== INICIO ANOTACOES - NAO EDITAR A MAO ====
@@ -1172,10 +1173,10 @@ var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"aut
    Chave: "AAAA-MM-DD". Valor: texto livre, SEM apostrofos.
    O Claude grava aqui quando o Alex conta no chat ou manda o export.
    A tarefa diaria PRESERVA este bloco. A tarefa semanal LE para a analise. */
-var NOTAS = {"2026-08-19":"Garmin registrou: HIIT 54min","2026-08-20":"Garmin registrou: forca 20min alem da natacao prescrita","2026-08-22":"Garmin registrou: natacao 800m 35min alem da bike prescrita - e o NAT-0 previsto para domingo 23/08, feito um dia antes","2026-08-23":"Contagem de bracadas NAT-E2 informada pelo Alex: 50 bracadas por 50m, contando direita e esquerda (bracadas individuais), em piscina de 25m - ou seja 25 bracadas por piscina. Convencao e piscina de referencia fixadas em 23/08/2026. Primeira medida do ciclo. 1,00 m por bracada aparente, estimadas 0,84 a 0,92 m nadadas descontando o deslize das duas saidas de parede"};
+var NOTAS = {"2026-08-19":"Garmin registrou: HIIT 54min","2026-08-20":"Garmin registrou: forca 20min alem da natacao prescrita","2026-08-22":"Garmin registrou: natacao 800m 35min alem da bike prescrita - e o NAT-0 previsto para domingo 23/08, feito um dia antes","2026-08-23":"Contagem de bracadas NAT-E2 informada pelo Alex: 50 bracadas por 50m, contando direita e esquerda (bracadas individuais), em piscina de 25m - ou seja 25 bracadas por piscina. Convencao e piscina de referencia fixadas em 23/08/2026. Primeira medida do ciclo. 1,00 m por bracada aparente, estimadas 0,84 a 0,92 m nadadas descontando o deslize das duas saidas de parede","2026-08-24":"Garmin registrou: natacao em piscina 1200m 54min alem da corrida RUN-0 prescrita para segunda"};
 /* ==== FIM ANOTACOES ==== */
 
-var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,7,23);
+var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,7,24);
 
 var SECOES=[
  ["s-visao","01","Visão geral"],["s-atual","02","Hoje"],["s-trilhas","03","As três trilhas"],
@@ -1283,40 +1284,93 @@ var FISIO=[
    Use <b>...</b> para destacar o essencial. SEM APOSTROFOS.
    `det` e OPCIONAL: sem ele o painel mostra um aviso de que nao foi gerado. */
 var SEMANA_ATUAL=[
- {date:"2026-08-17",dow:"Seg",tag:"off",s:[]},
- {date:"2026-08-18",dow:"Ter",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"FC teto 100 · abaixo do limiar medido",det:[
+ {date:"2026-08-24",dow:"Seg",s:[{t:"r",n:"RUN-0 · Retomada Z1/Z2 35′",o:"primeira corrida desde a La Misión",det:[
+   "<b>5 min de aquecimento</b> — trote solto, sem alvo de FC",
+   "<b>25 min na faixa 115–140 bpm</b> — é o alvo programado no relógio. Teto 140, bem abaixo do limiar de corrida medido de 159",
+   "<b>5 min de desaquecimento</b>",
+   "<b>É a primeira corrida do ciclo</b>, dez dias depois dos 37,2 km e 2.738 m de ganho da La Misión. O objetivo é reabrir a modalidade, não medir nada",
+   "Se a FC subir sozinha acima de 140 no plano, <b>caminhe até voltar</b> — a nota da sessão é ficar na faixa, não o ritmo",
+   "<b>Confere com o workout 703 RUN-0 · Retomada Z1/Z2 35min</b> agendado no Garmin (id 1666536253)"
+ ]}]},
+ {date:"2026-08-25",dow:"Ter",tag:"hard",s:[
+  {t:"f",n:"FOR-A · Força Base Triatlo",o:"pode virar CrossFit — mas veja o aviso",det:[
+   "<b>Agachamento livre 3×8</b>, 120 s de descanso",
+   "<b>Levantamento terra romeno 3×8</b>, 120 s de descanso",
+   "<b>Afundo caminhando 3×10</b> · <b>Remada curvada 3×10</b> · <b>Puxada alta ou barra fixa assistida 3×8</b>, 90 s entre séries",
+   "<b>Desenvolvimento de ombro 3×10</b> · <b>Prancha frontal e lateral 3×</b> · <b>Elevação de panturrilha 3×15</b>",
+   "<b>CrossFit é oficial nesta vaga</b> — mas se o WOD for pesado de perna, <b>troque para quinta</b>. A terça antecede a bike de quarta",
+   "<b>Confere com o workout 703 FOR-A · Forca Base Triatlo</b> agendado no Garmin (id 1666535464)"
+  ]},
+  {t:"n",n:"NAT-TESTE · 400 m CSS",o:"o teste que calibra toda a natação",det:[
+   "<b>400 m de aquecimento completo</b>, incluindo 4×25 progressivos no fim",
+   "<b>2 min de descanso total</b> antes do teste",
+   "<b>TESTE 400 m</b> — ritmo máximo SUSTENTÁVEL, saída constante. <b>Não estoure nos primeiros 100 m.</b> Anote o tempo",
+   "<b>5 min de recuperação completa</b>",
+   "<b>TESTE 200 m</b> — mesmo protocolo. Com o 400 e o 200 calcula-se o <b>CSS (ritmo crítico)</b>",
+   "<b>200 m de soltura.</b> Anote os dois tempos no painel — é a métrica-mestre da natação",
+   "<b>1.200 m de nado real.</b> O nome diz 400 m (é a distância do teste) e o Garmin estima 1.620 m contando as pausas — o que você nada são 1.200 m",
+   "<b>Confere com o workout 703 NAT-TESTE · 400m CSS (benchmark)</b> agendado no Garmin (id 1666531457)"
+  ]}
+ ]},
+ {date:"2026-08-26",dow:"Qua",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"FC teto 100 · circulação, não estímulo",det:[
    "<b>40 min contínuos em Z1</b> — bloco único, sem aquecimento nem desaquecimento separados",
    "<b>FC alvo 80–100 bpm</b> — é o alvo programado no relógio. Teto 100, bem abaixo do limiar aeróbio medido de 109",
    "<b>Cadência leve, 85–95 rpm</b>, terreno plano",
+   "Descrição do treino no Garmin: <em>Z1 estrito, terreno plano, cadência leve 85-95 rpm. Teto 100 bpm. Zero impacto, zero dano excêntrico.</em>",
+   "<b>Confere com o workout 703 REGEN-B · Z1 Bike 40min (FC medida)</b> agendado no Garmin (id 1668554296)"
+ ]}]},
+ {date:"2026-08-27",dow:"Qui",s:[
+  {t:"f",n:"FOR-B · Tronco, ombro e core",o:"prehab de natação",det:[
+   "<b>Rotação externa de ombro com elástico 3×15</b>, 45 s de descanso",
+   "<b>Remada unilateral com halter 3×10</b> · <b>Puxada alta ou barra fixa assistida 3×8</b> · <b>Flexão de braço 3×12</b>",
+   "<b>Desenvolvimento de ombro em pé 3×10</b> · <b>Farmers carry 40 m, 3 séries</b>",
+   "<b>Prancha frontal 45 s + lateral 30 s de cada lado, 3 séries</b> · <b>Pallof press anti-rotação 3×10</b>",
+   "<b>É prehab de ombro</b>, não força máxima. Serve para aguentar a subida de volume da natação sem lesão",
+   "<b>Confere com o workout 703 FOR-B · Tronco, Ombro e Core</b> agendado no Garmin (id 1666712911)"
+  ]},
+  {t:"n",n:"NAT-C2 · Ritmo Crítico 2200 m",o:"alvo 2:15/100 m — provisório até o teste",det:[
+   "<b>300 m de aquecimento</b> — 200 solto + 100 progressivo terminando no ritmo da série",
+   "<b>4 × 50 m de ativação progressiva</b>, 15 s de pausa. O quarto já no ritmo alvo: <b>1:07 nos 50 m</b>",
+   "<b>8 × 100 m — SÉRIE PRINCIPAL, alvo 2:15</b>, só 20 s de pausa. Deve doer no sexto. O oitavo tem que sair no mesmo tempo do primeiro; se cair mais de 5 s, saiu rápido demais",
+   "<b>100 m bem solto</b>, alternando nados",
+   "<b>3 × 200 m no ritmo alvo, alvo 4:35</b>, 35 s de pausa. Aqui o ritmo vira hábito",
+   "<b>200 m de soltura.</b> Anote o tempo do 1º e do 8º cem, e o tempo dos três 200",
+   "<b>2.200 m de nado real.</b> Atenção: o nome do treino diz 1700 m e o Garmin estima 2.525 m — <b>os três números são diferentes e o que você nada são 2.200 m</b>",
+   "Os alvos são <b>PROVISÓRIOS</b> até o NAT-TESTE de terça. Feito o teste, recalcule pelo CSS",
+   "<b>Confere com o workout 703 NAT-C2 · Ritmo Critico 1700m (calibrado)</b> agendado no Garmin (id 1672756132)"
+  ]}
+ ]},
+ {date:"2026-08-28",dow:"Sex",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"CANDIDATA A FOLGA — a semana não tem nenhuma",det:[
+   "<b>Esta é a sessão mais leve da semana e a semana 2 não tem dia de folga nenhum</b> — sete dias com treino agendado",
+   "<b>Sugestão: trate a sexta como folga</b> se a prontidão de quinta ou sexta não estiver boa. O Bloco 0 é regeneração, e cortar aqui não custa nada ao plano",
+   "Se for pedalar: <b>40 min contínuos em Z1</b>, FC alvo 80–100 bpm, cadência 85–95 rpm, terreno plano",
+   "Nunca sacrifique quarta, sábado ou domingo para criar folga — <b>a sexta é o dia certo para isso</b>",
+   "<b>Confere com o workout 703 REGEN-B · Z1 Bike 40min (FC medida)</b> agendado no Garmin (id 1668554296)"
+ ]}]},
+ {date:"2026-08-29",dow:"Sáb",tag:"hard",s:[
+  {t:"r",n:"RUN-0 · Retomada Z1/Z2 35′",o:"segunda corrida da retomada",det:[
+   "<b>5 min de aquecimento</b> + <b>25 min na faixa 115–140 bpm</b> + <b>5 min de desaquecimento</b>",
+   "<b>Mesmo treino de segunda</b> — a retomada é por repetição de dose leve, não por progressão de volume",
+   "Comece a observar a <b>cadência</b>: a meta do ciclo é <b>158–165 spm</b>. Nesta sessão só olhe o número, não force",
+   "<b>Confere com o workout 703 RUN-0 · Retomada Z1/Z2 35min</b> agendado no Garmin (id 1666536253)"
+  ]},
+  {t:"n",n:"NAT-P · Ritmo de Prova 2400 m",o:"1.500 m contínuos — o maior nado do ciclo",det:[
+   "<b>300 m de aquecimento</b> solto, incluindo 4×25 progressivos no fim",
+   "<b>LARGADA SIMULADA: 200 m</b> um pouco acima do ritmo, como na prova, para achar espaço. Depois você vai ter que se acalmar — <b>é esse o treino</b>",
+   "<b>1.500 m CONTÍNUOS em ritmo de prova, sem parar.</b> Alvo 80–85% do CSS: <b>deve parecer fácil demais nos primeiros 500 m</b>. Respire bilateral. A cada 100 m levante os olhos duas vezes para simular a orientação em águas abertas",
+   "<b>FINAL: 200 m acelerando progressivamente</b> até o ritmo de CSS",
+   "<b>200 m de soltura.</b> Anote o tempo dos 1.500 m e como estava o ombro no fim",
+   "<b>2.400 m de nado real.</b> O nome do treino diz 1900 m; o que você nada são 2.400 m",
+   "Por que devagar: <b>Peeling 2005</b> mostrou que nadar a 80–85% da velocidade de contrarrelógio produziu ciclismo <b>e tempo total mais rápidos</b> do que nadar a 98–102%. O objetivo é sair da água com perna e ombro inteiros para 90 km de bike",
+   "<b>Confere com o workout 703 NAT-P · Ritmo de Prova 1900m</b> agendado no Garmin (id 1672551333)"
+  ]}
+ ]},
+ {date:"2026-08-30",dow:"Dom",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"fecha o Bloco 0 — semana 2 de 2",det:[
+   "<b>40 min contínuos em Z1</b>, FC alvo 80–100 bpm, cadência 85–95 rpm",
+   "<b>É a última sessão do Bloco 0.</b> A semana 3 abre a Preparação Geral, com bike de qualidade na quarta e corrida longa no sábado",
+   "<b>Portão de saída do Bloco 0:</b> VFC de volta à banda 52–74 e readiness ≥ 60 por 3 dias seguidos. Na semana 1 os dois já foram atendidos",
    "Descrição do treino no Garmin: <em>circulação, não estímulo. Zero impacto, zero dano excêntrico.</em>",
-   "<b>Confere com o workout 703 REGEN-B</b> agendado no Garmin (id 1668554296)"
- ]}]},
- {date:"2026-08-19",dow:"Qua",tag:"off",s:[]},
- {date:"2026-08-20",dow:"Qui",s:[{t:"n",n:"NAT-0 · Ambientação 600 m",o:"reconhecimento, sem cronômetro",det:[
-   "<b>100 m de aquecimento</b> — caminhar e boiar. Soltar a respiração: soprar todo o ar debaixo da água",
-   "<b>8 × 25 m crawl bem devagar</b>, com <b>40 s de descanso</b> entre cada — objetivo é chegar do outro lado sem falta de ar",
-   "<b>100 m de soltura</b> — costas, peito, o que for confortável",
-   "<b>400 m de nado real</b> no total. O nome do treino diz 600 m e o Garmin estima 720 m contando as pausas — o que você vai nadar são 400 m",
-   "Descrição do treino no Garmin: <em>não é treino, é reconhecimento. Zero cronômetro, zero séries. Se cansar, para.</em>",
-   "<b>Confere com o workout 703 NAT-0</b> agendado no Garmin (id 1666534298)"
- ]}]},
- {date:"2026-08-21",dow:"Sex",tag:"off",s:[]},
- {date:"2026-08-22",dow:"Sáb",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"rua, plano, FC teto 100",det:[
-   "<b>40 min contínuos em Z1</b> — bloco único, igual ao de terça",
-   "<b>FC alvo 80–100 bpm</b>, cadência 85–95 rpm",
-   "<b>Escolha percurso plano.</b> Subida estoura a FC sem querer — se o terreno forçar acima de 100, reduza a marcha antes de reduzir a cadência",
-   "Sem sprint, sem disputar semáforo. <b>Circulação, não estímulo.</b>",
-   "<b>Confere com o workout 703 REGEN-B</b> agendado no Garmin (id 1668554296)"
- ]}]},
- {date:"2026-08-23",dow:"Dom",s:[{t:"n",n:"NAT-E2 · Economia 1800 m",o:"o alvo é braçada, não cronômetro",det:[
-   "<b>300 m de aquecimento</b> — crawl suave, expirando dentro da água o tempo todo",
-   "<b>4 × 50 m — CONTAGEM BASE</b>, 15 s de pausa. Conte as braçadas de cada piscina em ritmo confortável e <b>anote o número</b>: é a referência do dia",
-   "<b>10 × 50 m — MENOS UMA BRAÇADA</b> que a base, no <b>mesmo tempo</b>, 20 s de pausa. Alongue, não desacelere. Se perder o ritmo, volte à base e tente de novo",
-   "<b>6 × 100 m nado completo</b> mantendo a contagem reduzida, ritmo em torno de <b>2:20</b>, 25 s de pausa. É o teste real: a economia só vale se sobreviver na distância",
-   "<b>200 m de soltura.</b> Anote no painel a contagem base e a contagem final",
-   "<b>Foco externo</b> (Freudenheim 2010): pense em <b>empurrar a água para trás</b>, nunca em puxar a sua mão",
-   "<b>1.800 m de nado real.</b> O nome do treino diz 1600 e o Garmin estima 2210 contando as pausas — o que você nada são 1.800 m",
-   "<b>Confere com o workout 703 NAT-E2</b> agendado no Garmin (id 1672756325)"
+   "<b>Confere com o workout 703 REGEN-B · Z1 Bike 40min (FC medida)</b> agendado no Garmin (id 1668554296)"
  ]}]}
 ];
 /* ==== FIM SEMANA EM CURSO ==== */
@@ -1327,15 +1381,6 @@ var SEMANA_ATUAL=[
    Mesmo formato de SEMANA_ATUAL, mas so com t, n e o.
    Formato: [ {sem:N, dias:[{date,dow,s:[{t,n,o}]}]}, ... ] */
 var AGENDA_FUTURA=[
- {sem:2,dias:[
-  {date:"2026-08-24",dow:"Seg",s:[{t:"r",n:"RUN-0 · Retomada Z1/Z2 35′",o:"corrida leve"},{t:"n",n:"NAT-E2 · Economia 1600 m",o:"contagem de braçadas"}]},
-  {date:"2026-08-25",dow:"Ter",s:[{t:"f",n:"FOR-A · Força Base",o:"musculação ou CrossFit"},{t:"n",n:"NAT-TESTE · 400 m CSS",o:"o teste que calibra tudo"}]},
-  {date:"2026-08-26",dow:"Qua",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"FC teto 100"}]},
-  {date:"2026-08-27",dow:"Qui",s:[{t:"f",n:"FOR-B · Tronco, ombro e core",o:"prehab de natação"},{t:"n",n:"NAT-C2 · Ritmo crítico 1700 m",o:"8×100 no alvo"}]},
-  {date:"2026-08-28",dow:"Sex",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"candidata a folga"}]},
-  {date:"2026-08-29",dow:"Sáb",s:[{t:"r",n:"RUN-0 · Retomada Z1/Z2 35′",o:"corrida leve"},{t:"n",n:"NAT-P · Ritmo de prova 1900 m",o:"1500 m contínuos"}]},
-  {date:"2026-08-30",dow:"Dom",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"fecha o Bloco 0"}]}
- ]},
  {sem:3,dias:[
   {date:"2026-08-31",dow:"Seg",s:[{t:"r",n:"RUN-A1 · Z2 50′ + cadência",o:"alvo 158–165 spm"},{t:"n",n:"NAT-E2 · Economia 1600 m",o:"contagem de braçadas"}]},
   {date:"2026-09-01",dow:"Ter",s:[{t:"f",n:"FOR-A · Força Base",o:"musculação ou CrossFit"},{t:"n",n:"NAT-C2 · Ritmo crítico 1700 m",o:"já com o CSS medido"}]},
@@ -1348,14 +1393,14 @@ var AGENDA_FUTURA=[
  {sem:4,dias:[
   {date:"2026-09-07",dow:"Seg",s:[{t:"r",n:"RUN-A1 · Z2 50′ + cadência",o:"alvo 158–165 spm"},{t:"n",n:"NAT-E2 · Economia 1600 m",o:"contagem de braçadas"}]},
   {date:"2026-09-08",dow:"Ter",s:[{t:"f",n:"FOR-A · Força Base",o:"musculação ou CrossFit"},{t:"n",n:"NAT-C2 · Ritmo crítico 1700 m",o:"8×100 no alvo"}]},
-  {date:"2026-09-09",dow:"Qua",s:[{t:"b",n:"BIKE-TESTE · 20′ (proxy FTP)",o:"mede o progresso da bike"}]},
+  {date:"2026-09-09",dow:"Qua",s:[{t:"b",n:"BIKE-TESTE · 20′ (proxy FTP)",o:"confirmado no calendário — id 1666532785"}]},
   {date:"2026-09-10",dow:"Qui",s:[{t:"f",n:"FOR-B · Tronco, ombro e core",o:"prehab de natação"},{t:"n",n:"NAT-E2 · Economia 1600 m",o:"segunda dose técnica"}]},
   {date:"2026-09-11",dow:"Sex",s:[{t:"b",n:"REGEN-B · Bike Z1 40′",o:"candidata a folga"}]},
   {date:"2026-09-12",dow:"Sáb",s:[{t:"r",n:"RUN-A2 · Longo Z2 75′",o:"dia duro 2"},{t:"n",n:"NAT-P · Ritmo de prova 1900 m",o:"1500 m contínuos"}]},
   {date:"2026-09-13",dow:"Dom",s:[{t:"b",n:"BIKE-B3 · Longo Z2 2h",o:"o treino que define o ciclo"},{t:"r",n:"RUN-BRICK · Trote 20′",o:"encadear em até 5 min"}]}
  ]}
 ];
-var AGENDA_FUTURA_UPDATED = "23/08/2026 06:40";
+var AGENDA_FUTURA_UPDATED = "24/08/2026 06:40 (conferida contra o calendario do Garmin)";
 /* ==== FIM AGENDA FUTURA ==== */
 
 var REFS=[
