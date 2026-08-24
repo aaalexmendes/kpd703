@@ -1158,14 +1158,14 @@ var LOG_AUTO = [
  {date:"2026-08-21",read:70,rhr:46,hrv:55,sleep:6.4,acute:272,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"Descanso programado - sem atividade registrada",auto:true},
  {date:"2026-08-22",read:64,rhr:48,hrv:58,sleep:6.4,acute:261,natM:800,natT:19,bikeK:20.1,bikeT:50,runK:null,runT:null,obs:"REGEN-B Bike Z1 20,1km em 50min - FC media 98, max 112 · NAT-0 Ambientacao 800m com 19min em movimento (ritmo efetivo 2:24/100m) - FC media 100, max 145, antecipada de domingo",auto:true},
  {date:"2026-08-23",read:85,rhr:42,hrv:62,sleep:9.7,acute:245,natM:1750,natT:46,bikeK:null,bikeT:null,runK:null,runT:null,obs:"NAT-E2 Economia 1750m com 46min em movimento (ritmo efetivo 2:37/100m; tempo total 54min) - FC media 112, max 143. Contagem base 50 bracadas por 50m (direita + esquerda, piscina de 25m = 25 por piscina). Readiness 85 HIGH no despertar. Sono 9,7h score 85",auto:true},
- {date:"2026-08-24",read:91,rhr:41,hrv:64,sleep:7.6,acute:314,natM:1200,natT:54,bikeK:null,bikeT:null,runK:5.9,runT:35,obs:"RUN-0 Retomada Z1/Z2 5,86km em 35min - FC media 129, max 153. Primeira corrida desde a La Mision · Natacao em piscina 1200m em 54min - FC media 110, max 137, alem do prescrito para segunda. Readiness 91 HIGH no despertar, EXCELLENT_RECOVERY - melhor leitura do ciclo. Sono 7,6h score 82, VFC noturna 77. Carga aguda fechou o dia em 314, recuperacao 21,3h. Leitura pos-treino de 70 MODERATE as 18:51 - nao substitui a do despertar",auto:true}
+ {date:"2026-08-24",read:91,rhr:41,hrv:64,sleep:7.6,acute:314,natM:1200,natT:54,bikeK:null,bikeT:null,runK:5.9,runT:35,obs:"RUN-0 Retomada Z1/Z2 5,86km em 35min - FC media 129, max 153. Primeira corrida desde a La Mision · Natacao 1200m em 54min de tempo total - aula com professor, na vaga do NAT-E2. FC media 110, max 137, training effect 2,1 AEROBIC_BASE, RPE 60 e sensacao 100. Sessao majoritariamente tecnica: 500m de crawl completo, 600m de educativo de pernas e nado lateral, 100m em tiros de 25m (23s sem material, 18s com nadadeira e palmar). Detalhe completo em NOTAS. NAO ha ritmo de crawl comparavel aqui - o tempo em movimento de 20,2min mistura educativo lento com tiros curtos e nao se compara com os 2:24 de 22/08 nem os 2:37 de 23/08. Velocidade maxima de 1,44 m/s confere com os tiros de 25m em 18s. Dia cumprido conforme o plano, as duas sessoes previstas. Readiness 91 HIGH no despertar, EXCELLENT_RECOVERY - melhor leitura do ciclo. Sono 7,6h score 82, VFC noturna 77. Carga aguda fechou o dia em 314, recuperacao 21,3h. Leitura pos-treino de 70 MODERATE as 18:51 - nao substitui a do despertar",auto:true}
 ];
-var LOG_AUTO_UPDATED = "24/08/2026 19:10";
+var LOG_AUTO_UPDATED = "24/08/2026 19:50";
 /* ==== FIM DADOS AUTOMATICOS ==== */
 
 /* ==== INICIO CHECKLIST DA SEMANA - NAO EDITAR A MAO ====
    Chave: "AAAA-MM-DD|indice". Valor: "auto" (detectado no Garmin) ou "manual". */
-var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"auto","2026-08-23|0":"auto","2026-08-24|0":"auto"};
+var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"auto","2026-08-23|0":"auto","2026-08-24|0":"auto","2026-08-24|1":"auto"};
 /* ==== FIM CHECKLIST DA SEMANA ==== */
 
 /* ==== INICIO ANOTACOES - NAO EDITAR A MAO ====
@@ -1173,7 +1173,7 @@ var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"aut
    Chave: "AAAA-MM-DD". Valor: texto livre, SEM apostrofos.
    O Claude grava aqui quando o Alex conta no chat ou manda o export.
    A tarefa diaria PRESERVA este bloco. A tarefa semanal LE para a analise. */
-var NOTAS = {"2026-08-19":"Garmin registrou: HIIT 54min","2026-08-20":"Garmin registrou: forca 20min alem da natacao prescrita","2026-08-22":"Garmin registrou: natacao 800m 35min alem da bike prescrita - e o NAT-0 previsto para domingo 23/08, feito um dia antes","2026-08-23":"Contagem de bracadas NAT-E2 informada pelo Alex: 50 bracadas por 50m, contando direita e esquerda (bracadas individuais), em piscina de 25m - ou seja 25 bracadas por piscina. Convencao e piscina de referencia fixadas em 23/08/2026. Primeira medida do ciclo. 1,00 m por bracada aparente, estimadas 0,84 a 0,92 m nadadas descontando o deslize das duas saidas de parede","2026-08-24":"Garmin registrou: natacao em piscina 1200m 54min alem da corrida RUN-0 prescrita para segunda"};
+var NOTAS = {"2026-08-19":"Garmin registrou: HIIT 54min","2026-08-20":"Garmin registrou: forca 20min alem da natacao prescrita","2026-08-22":"Garmin registrou: natacao 800m 35min alem da bike prescrita - e o NAT-0 previsto para domingo 23/08, feito um dia antes","2026-08-23":"Contagem de bracadas NAT-E2 informada pelo Alex: 50 bracadas por 50m, contando direita e esquerda (bracadas individuais), em piscina de 25m - ou seja 25 bracadas por piscina. Convencao e piscina de referencia fixadas em 23/08/2026. Primeira medida do ciclo. 1,00 m por bracada aparente, estimadas 0,84 a 0,92 m nadadas descontando o deslize das duas saidas de parede","2026-08-24":"Dia cumprido conforme o plano: RUN-0 mais NAT-E2 de 1200m. CORRECAO de um erro meu: eu havia registrado a natacao como fora do plano porque get_scheduled_workouts devolveu o dia 24/08 vazio. Conferido em 24/08 a noite - esse endpoint SO lista agendamentos pendentes, treino cumprido some da consulta (22 e 23/08 tambem voltam vazios e tiveram treino agendado e feito). Calendario vazio no dia NAO e prova de ausencia. Consequencia: em 23/08 a automacao removeu uma natacao da segunda 24/08 da AGENDA_FUTURA pela mesma leitura equivocada - foi reposta em SEMANA_ATUAL · CONTEUDO DA AULA (informado pelo Alex): aula com professor, na vaga do NAT-E2. 200m crawl · 2x(100 so pernas + 100 nado lateral so pernas + 100 nado alternado com um braco girando e o outro parado, 50m para cada braco) · 2x tiro de 25m em 23s · 2x tiro de 25m com nadadeira e palmar em 18s · 300m crawl livre. Soma 1200m, exatamente o que o Garmin registrou. So 500m foram crawl completo (200 de aquecimento + 300 finais); 600m foram educativo de pernas e 100m foram tiros. ATENCAO: houve uso de PALMAR, que a decisao de 22/08 deste ciclo veta (Schorn 2018 - unico fator de risco de lesao de ombro que sobreviveu a regressao, 24 por cento contra 10 por cento). Registro factual para ele decidir como conduzir com o professor"};
 /* ==== FIM ANOTACOES ==== */
 
 var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,7,24);
@@ -1291,6 +1291,12 @@ var SEMANA_ATUAL=[
    "<b>É a primeira corrida do ciclo</b>, dez dias depois dos 37,2 km e 2.738 m de ganho da La Misión. O objetivo é reabrir a modalidade, não medir nada",
    "Se a FC subir sozinha acima de 140 no plano, <b>caminhe até voltar</b> — a nota da sessão é ficar na faixa, não o ritmo",
    "<b>Confere com o workout 703 RUN-0 · Retomada Z1/Z2 35min</b> agendado no Garmin (id 1666536253)"
+ ]},{t:"n",n:"NAT-E2 · Economia",o:"foco em distância por braçada, não em tempo",det:[
+   "<b>Sessão de economia</b> — o alvo é a <b>distância por braçada</b>, a métrica que Costill 1985 apontou como o melhor preditor isolado de velocidade (r = 0,88)",
+   "<b>Conte as braçadas</b> na mesma convenção fixada em 23/08: braçadas individuais (direita + esquerda), piscina de 25 m. A referência da última medida foi <b>50 braçadas por 50 m</b>",
+   "<b>Nade abaixo do ritmo de prova.</b> Esta sessão não é de esforço — é de técnica sob fadiga leve",
+   "<b>Nada de palmares neste ciclo</b> (Schorn 2018: único fator de risco de lesão de ombro que sobreviveu à regressão, 24% vs 10%)",
+   "<b>Confere com o workout 703 NAT-E2 · Economia 1600m (calibrado)</b> agendado no Garmin (id 1672756325)"
  ]}]},
  {date:"2026-08-25",dow:"Ter",tag:"hard",s:[
   {t:"f",n:"FOR-A · Força Base Triatlo",o:"pode virar CrossFit — mas veja o aviso",det:[
