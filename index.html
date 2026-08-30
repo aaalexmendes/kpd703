@@ -1370,7 +1370,18 @@ var FISIO=[
    Use <b>...</b> para destacar o essencial. SEM APOSTROFOS.
    `det` e OPCIONAL: sem ele o painel mostra um aviso de que nao foi gerado. */
 var SEMANA_ATUAL=[
- {date:"2026-08-31",dow:"Seg",tag:"hard",s:[{t:"n",n:"NAT-TESTE2 · CSS 400+200",o:"refazer o teste — o dado que falta no ciclo",det:[
+ {date:"2026-08-31",dow:"Seg",tag:"hard",s:[
+  {t:"r",n:"RUN-A1 · Z2 50′ + cadência",o:"alvo 158-165 spm - reposto em 30/08 a pedido dele",det:[
+   "<b>10 min de aquecimento</b> em Z1, FC 105–132 bpm",
+   "<b>6 × (2 min com cadência 158–165 spm + 3 min de recuperação)</b> — no bloco de cadência, FC livre; na recuperação, Z2 130–150 bpm",
+   "<b>Passos mais curtos e mais frequentes, NO MESMO RITMO.</b> Não é para correr mais rápido — é para trocar comprimento de passada por frequência",
+   "<b>5 min de desaquecimento</b> em Z1",
+   "Por que 158–165: Heiderscheit 2011 mediu <b>−20% de absorção de energia no joelho</b> com +5% de cadência. Os 175–180 do ciclo anterior nunca fizeram sentido para 1,90 m em ritmo Z2",
+   "<b>Por que ele voltou:</b> eu tinha cortado este treino para o volume da semana fechar em +12,8%. O Alex apontou que sobrava <b>uma única corrida de verdade na semana</b>, e ele tem razão — a semana-padrão de 22/08 prevê corrida na segunda, e este é o único treino que ataca a cadência, parada em <b>143–145 spm</b> há três semanas",
+   "<b>A segunda ficou com 100 min</b> (corrida + teste de CSS) e a semana subiu para <b>8h05, +24% sobre o alvo de 6,5 h</b>. Acima da tolerância de 20%, e assumido de propósito",
+   "<b>Confere com o workout 703 RUN-A1 · Z2 50min + Cadencia 158-165</b> agendado no Garmin (id 1666533088)"
+  ]},
+  {t:"n",n:"NAT-TESTE2 · CSS 400+200",o:"refazer o teste — o dado que falta no ciclo",det:[
    "<b>400 m de aquecimento</b> completo e sem pressa, terminando com 4 × 25 m progressivos. Em piscina de 50 m são <b>8 piscinas</b>",
    "<b>3 min de descanso TOTAL.</b> Respire, se acalme — o teste começa agora",
    "<b>TESTE 1 · 400 m no máximo sustentável.</b> Em piscina de 50 m são <b>OITO piscinas</b>: conte 1-2-3-4-5-6-7-8. Saída constante, não estoure nos primeiros 100. <b>Se o relógio apitar antes, IGNORE e termine a distância.</b> Anote o tempo no papel",
@@ -1381,7 +1392,8 @@ var SEMANA_ATUAL=[
    "<b>Por que refazer:</b> em 26/08 o lap do teste de 400 registrou 350 m na API e, pela contagem de braçadas, <b>300 m foram de fato nadados</b>. Sem os 400 completos a fórmula não fecha. O CSS ficou como estimativa (2:40–3:07/100 m, centro 2:55), nunca como medida",
    "<b>Três números diferentes, como sempre:</b> o nome diz 400+200, a soma dos passos dá <b>1.200 m de nado real</b> e o Garmin estima 1.680 m. <b>O nado real é 1.200 m</b>",
    "<b>Confere com o workout 703 NAT-TESTE2 · CSS 400+200 (piscina 50m)</b> agendado no Garmin (id 1681307336)"
- ]}]},
+  ]}
+ ]},
  {date:"2026-09-01",dow:"Ter",s:[
   {t:"f",n:"FOR-A · Força Base Triatlo",o:"musculação ou CrossFit — a vaga aceita os dois",det:[
    "<b>Agachamento livre 3 × 8</b>, descanso de 120 s",
@@ -2249,6 +2261,7 @@ function renderMini(){
    Le o LOG_AUTO (permanente, escrito pelas tarefas) e monta o acumulado.
    O arquivo HISTORICO_703.md na pasta e a fonte de verdade; isto e a vista. */
 var DECISOES=[
+ ["30/08/2026","<b>RUN-A1 reposto na segunda 31/08</b> — a semana 3 tinha ficado com uma única corrida de verdade","<b>Apontado pelo Alex</b> logo depois do fechamento. Eu havia cortado o RUN-A1 para fechar o volume em +12,8%, e sobraram só o longo de sábado e o brick de domingo — contra 2–3 corridas nas semanas anteriores e 118 sessões de corrida em 12 meses. Pior: o corte quebrou a semana-padrão de 22/08 (<em>Seg = corrida Z2/cadência + natação</em>) e tirou o <b>único treino que ataca a cadência</b>, que eu mesmo tinha listado como ponto de atenção. Terça e quinta não recebem corrida, então a segunda é o slot. <b>Custo assumido:</b> segunda com 100 min e a semana em <b>8h05, +24%</b> sobre o alvo — acima da tolerância de 20%, decidido com ele"],
  ["30/08/2026","<b>Semana 3 cortada de 11,25 h para 7,3 h</b> — o alvo do plano é 6,5 h","No fechamento das 20:10 o calendário ainda trazia 11,25 h agendadas, <b>+73% sobre o alvo</b>. Removidos o RUN-A1 de segunda, o NAT-E2 de quinta e o BIKE-B3 de 2 h de domingo; a REGEN-B de sexta virou <b>folga</b>. Fechou em 7,3 h (+12,8%), dentro da tolerância de +20%. <b>Custo declarado:</b> a bike ficou com 100 min e a natação com 3 sessões — o piso do Bloco A, não abaixo dele"],
  ["30/08/2026","<b>Sexta 04/09 é folga de calendário, não candidata a folga</b>","Na semana 2 ele treinou os <b>sete dias</b> e o TSB caiu de +132 para −95. Deixar a sexta como <em>candidata</em> a folga não funcionou: em 28/08 ele pedalou. A sessão foi removida do calendário"],
  ["30/08/2026","<b>Trava de progressão aplicada: nenhuma modalidade regrediu nem repetiu</b>","Natação 3/4, bike 2/3, corrida 2/3, força 3/2 — todas em <em>mais da metade</em>. O gate passou: readiness médio ao despertar 79 (≥60) e FCrep 40–43, na base. Natação segue nas versões escalonadas (C3, P3); as cheias só na semana 4"],
