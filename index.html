@@ -13,7 +13,7 @@
   --grid:#242a33; --axis:#383f4a; --border:rgba(255,255,255,0.10);
   --nat:#3987e5; --bike:#d95926; --run:#199e70;
   --good:#0ca30c; --warn:#fab219; --crit:#d03b3b;
-  --sbw:246px;
+  --sbw:268px;
 }
 html[data-theme="light"]{
   color-scheme: light;
@@ -23,7 +23,7 @@ html[data-theme="light"]{
   --nat:#2a78d6; --bike:#eb6834; --run:#1baf7a;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--surface-0);color:var(--ink-1);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px;line-height:1.55}
+body{background:var(--surface-0);color:var(--ink-1);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.55}
 
 /* ---------- SIDEBAR ---------- */
 #sb{
@@ -32,60 +32,60 @@ body{background:var(--surface-0);color:var(--ink-1);font-family:system-ui,-apple
   display:flex;flex-direction:column;z-index:60;overflow-y:auto;
 }
 .sb-brand{padding:20px 20px 16px;border-bottom:1px solid var(--grid)}
-.sb-brand h1{font-size:15px;font-weight:650;letter-spacing:-.01em;line-height:1.3}
-.sb-brand .sub{font-size:10px;color:var(--ink-3);letter-spacing:.08em;text-transform:uppercase;margin-top:5px}
+.sb-brand h1{font-size:17px;font-weight:650;letter-spacing:-.01em;line-height:1.3}
+.sb-brand .sub{font-size:12px;color:var(--ink-3);letter-spacing:.08em;text-transform:uppercase;margin-top:5px}
 .sb-count{padding:16px 20px;border-bottom:1px solid var(--grid);background:var(--surface-2)}
-.sb-count .big{font-size:34px;font-weight:670;letter-spacing:-.03em;line-height:1}
-.sb-count .big small{font-size:13px;font-weight:500;color:var(--ink-2);letter-spacing:0}
-.sb-count .l{font-size:9.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-bottom:7px}
-.sb-count .d{font-size:11px;color:var(--ink-3);margin-top:6px}
+.sb-count .big{font-size:36px;font-weight:670;letter-spacing:-.03em;line-height:1}
+.sb-count .big small{font-size:15px;font-weight:500;color:var(--ink-2);letter-spacing:0}
+.sb-count .l{font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-bottom:7px}
+.sb-count .d{font-size:13px;color:var(--ink-3);margin-top:6px}
 nav{padding:12px 10px;flex:1}
 nav a{
   display:flex;align-items:center;gap:10px;padding:8px 11px;border-radius:8px;
-  font-size:12.5px;color:var(--ink-2);text-decoration:none;margin-bottom:1px;
+  font-size:14.5px;color:var(--ink-2);text-decoration:none;margin-bottom:1px;
   border-left:2px solid transparent;transition:background .12s,color .12s;
 }
 nav a:hover{background:var(--surface-2);color:var(--ink-1)}
 nav a.on{background:var(--surface-3);color:var(--ink-1);font-weight:600;border-left-color:var(--nat)}
-nav a i{font-size:9.5px;color:var(--ink-3);font-variant-numeric:tabular-nums;font-style:normal;min-width:15px}
+nav a i{font-size:11.5px;color:var(--ink-3);font-variant-numeric:tabular-nums;font-style:normal;min-width:15px}
 nav a.on i{color:var(--nat)}
-nav .sep{font-size:9px;text-transform:uppercase;letter-spacing:.11em;color:var(--ink-3);padding:16px 11px 6px}
+nav .sep{font-size:11px;text-transform:uppercase;letter-spacing:.11em;color:var(--ink-3);padding:16px 11px 6px}
 .sb-foot{padding:12px 14px;border-top:1px solid var(--grid);display:flex;gap:6px;flex-wrap:wrap}
-.btn{font:inherit;font-size:11.5px;padding:6px 11px;border-radius:8px;cursor:pointer;background:var(--surface-3);color:var(--ink-1);border:1px solid var(--border)}
+.btn{font:inherit;font-size:13.5px;padding:6px 11px;border-radius:8px;cursor:pointer;background:var(--surface-3);color:var(--ink-1);border:1px solid var(--border)}
 .btn:hover{border-color:var(--ink-3)}
 .btn.primary{background:var(--nat);color:#fff;border-color:transparent}
-.btn.sm{padding:4px 9px;font-size:10.5px}
+.btn.sm{padding:4px 9px;font-size:12.5px}
 
 /* ---------- MAIN ---------- */
 main{margin-left:var(--sbw);padding:26px 30px 90px;max-width:1180px}
 section{margin-bottom:38px;scroll-margin-top:20px}
 .shead{display:flex;align-items:baseline;gap:12px;margin-bottom:14px;flex-wrap:wrap}
-.shead .kick{font-size:9.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--border);padding:3px 7px;border-radius:5px;flex:none}
-.shead h2{font-size:15px;font-weight:640;letter-spacing:.005em}
-.shead p{font-size:12px;color:var(--ink-3);margin-left:auto;max-width:480px;text-align:right}
+.shead .kick{font-size:11.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3);border:1px solid var(--border);padding:3px 7px;border-radius:5px;flex:none}
+.shead h2{font-size:17px;font-weight:640;letter-spacing:.005em}
+.shead p{font-size:14px;color:var(--ink-3);margin-left:auto;max-width:480px;text-align:right}
 .card{background:var(--surface-1);border:1px solid var(--border);border-radius:14px;padding:20px}
 .card+.card{margin-top:16px}
-.ctitle{font-size:12.5px;color:var(--ink-2);margin-bottom:14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.ctitle{font-size:14.5px;color:var(--ink-2);margin-bottom:14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .ctitle b{color:var(--ink-1)}
 
 .hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden}
 .tile{background:var(--surface-1);padding:16px 18px}
-.tile .lbl{font-size:9.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);margin-bottom:7px}
-.tile .val{font-size:27px;font-weight:660;letter-spacing:-.03em;line-height:1.05}
-.tile .val small{font-size:13px;font-weight:500;color:var(--ink-2);letter-spacing:0}
-.tile .note{font-size:11px;color:var(--ink-3);margin-top:6px}
+.tile .lbl{font-size:11.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);margin-bottom:7px}
+.tile .val{font-size:29px;font-weight:660;letter-spacing:-.03em;line-height:1.05}
+.tile .val small{font-size:15px;font-weight:500;color:var(--ink-2);letter-spacing:0}
+.tile .note{font-size:13px;color:var(--ink-3);margin-top:6px}
 
 /* espinha */
 .spine-track{display:flex;gap:2px;align-items:flex-end;height:62px;margin-bottom:6px}
 .wk{flex:1;border-radius:3px 3px 0 0;cursor:pointer;min-width:4px;transition:opacity .12s}
 .wk:hover{opacity:.7}
 .wk.now{outline:2px solid var(--ink-1);outline-offset:1px;z-index:2}
-.spine-axis{display:flex;gap:2px;font-size:9px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.spine-axis{display:flex;gap:2px;font-size:11px;color:var(--ink-3);font-variant-numeric:tabular-nums}
 .spine-axis span{flex:1;text-align:center;min-width:4px}
-#spineInfo{margin-top:13px;padding:11px 13px;background:var(--surface-2);border:1px solid var(--border);border-radius:9px;font-size:12px;color:var(--ink-2);min-height:42px}
+#spineInfo{margin-top:13px;padding:11px 13px;background:var(--surface-2);border:1px solid var(--border);border-radius:9px;font-size:14px;color:var(--ink-2);min-height:42px}
 #spineInfo b{color:var(--ink-1)}
 .legend{display:flex;gap:15px;flex-wrap:wrap;margin-top:14px;padding-top:13px;border-top:1px solid var(--grid)}
-.lg{display:flex;align-items:center;gap:7px;font-size:11.5px;color:var(--ink-2)}
+.lg{display:flex;align-items:center;gap:7px;font-size:13.5px;color:var(--ink-2)}
 .lg i{width:11px;height:11px;border-radius:3px;display:block;flex:none}
 .lg b{color:var(--ink-1);font-weight:600}
 
@@ -94,8 +94,8 @@ section{margin-bottom:38px;scroll-margin-top:20px}
 .lane{background:var(--surface-1);border:1px solid var(--border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
 .lane-top{padding:15px 17px;border-bottom:1px solid var(--grid);display:flex;align-items:center;gap:11px}
 .lane-top i{width:8px;height:32px;border-radius:3px;flex:none}
-.lane-top h3{font-size:14.5px;font-weight:640}
-.st{font-size:10.5px;margin-left:auto;padding:4px 9px;border-radius:6px;font-weight:600}
+.lane-top h3{font-size:16.5px;font-weight:640}
+.st{font-size:12.5px;margin-left:auto;padding:4px 9px;border-radius:6px;font-weight:600}
 .st-crit{background:rgba(208,59,59,.16);color:#ff8080}
 .st-warn{background:rgba(250,178,25,.16);color:#f0b53c}
 .st-good{background:rgba(12,163,12,.16);color:#3fca3f}
@@ -103,15 +103,15 @@ html[data-theme="light"] .st-crit{background:rgba(208,59,59,.12);color:#a52626}
 html[data-theme="light"] .st-warn{background:rgba(250,178,25,.2);color:#8a6100}
 html[data-theme="light"] .st-good{background:rgba(12,163,12,.12);color:#006300}
 .lane-body{padding:15px 17px;flex:1}
-.kv{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed var(--grid);font-size:12px}
+.kv{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed var(--grid);font-size:14px}
 .kv:last-child{border-bottom:0}
 .kv span{color:var(--ink-3)}
 .kv b{color:var(--ink-1);font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
-.lane-foot{padding:12px 17px;background:var(--surface-2);border-top:1px solid var(--grid);font-size:11.5px;color:var(--ink-2)}
+.lane-foot{padding:12px 17px;background:var(--surface-2);border-top:1px solid var(--grid);font-size:13.5px;color:var(--ink-2)}
 .lane-foot strong{color:var(--ink-1)}
 
-table{width:100%;border-collapse:collapse;font-size:12px}
-th{text-align:left;font-size:9.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3);font-weight:600;padding:0 9px 8px;border-bottom:1px solid var(--axis);white-space:nowrap}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3);font-weight:600;padding:0 9px 8px;border-bottom:1px solid var(--axis);white-space:nowrap}
 td{padding:8px 9px;border-bottom:1px solid var(--grid);color:var(--ink-2);font-variant-numeric:tabular-nums}
 td.k{color:var(--ink-1);font-weight:600;font-variant-numeric:normal}
 tr:last-child td{border-bottom:0}
@@ -120,40 +120,40 @@ tr:last-child td{border-bottom:0}
 
 .chart-wrap{position:relative}
 svg.chart{width:100%;display:block;overflow:visible}
-.tip{position:absolute;pointer-events:none;opacity:0;transition:opacity .1s;background:var(--surface-3);border:1px solid var(--border);border-radius:9px;padding:9px 11px;font-size:11.5px;color:var(--ink-1);box-shadow:0 6px 22px rgba(0,0,0,.35);z-index:20;white-space:nowrap}
+.tip{position:absolute;pointer-events:none;opacity:0;transition:opacity .1s;background:var(--surface-3);border:1px solid var(--border);border-radius:9px;padding:9px 11px;font-size:13.5px;color:var(--ink-1);box-shadow:0 6px 22px rgba(0,0,0,.35);z-index:20;white-space:nowrap}
 .tip .tr{display:flex;align-items:center;gap:7px;margin-top:3px;color:var(--ink-2)}
 .tip .tr i{width:8px;height:8px;border-radius:2px;display:block}
 .tip .tr b{color:var(--ink-1);margin-left:auto;font-variant-numeric:tabular-nums}
-.tip .th{font-weight:640;font-size:12px;margin-bottom:2px}
-.empty{padding:34px 16px;text-align:center;color:var(--ink-3);font-size:12px;border:1px dashed var(--grid);border-radius:10px}
+.tip .th{font-weight:640;font-size:14px;margin-bottom:2px}
+.empty{padding:34px 16px;text-align:center;color:var(--ink-3);font-size:14px;border:1px dashed var(--grid);border-radius:10px}
 
 .cols2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
 .cols3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
-.callout{border-left:3px solid var(--warn);background:var(--surface-2);padding:12px 15px;border-radius:0 10px 10px 0;font-size:12px;color:var(--ink-2);margin-top:14px}
+.callout{border-left:3px solid var(--warn);background:var(--surface-2);padding:12px 15px;border-radius:0 10px 10px 0;font-size:14px;color:var(--ink-2);margin-top:14px}
 .callout.ok{border-left-color:var(--good)}
 .callout.bad{border-left-color:var(--crit)}
 .callout.info{border-left-color:var(--nat)}
 .callout b{color:var(--ink-1)}
 .gng{display:flex;align-items:center;gap:15px;padding:15px 17px;border-radius:12px;border:1px solid var(--border);background:var(--surface-2)}
 .gng .lamp{width:42px;height:42px;border-radius:50%;flex:none}
-.gng .verdict{font-size:18px;font-weight:700;letter-spacing:.04em;line-height:1.15}
-.gng .why{font-size:11.5px;color:var(--ink-2);margin-top:4px;line-height:1.45}
+.gng .verdict{font-size:20px;font-weight:700;letter-spacing:.04em;line-height:1.15}
+.gng .why{font-size:13.5px;color:var(--ink-2);margin-top:4px;line-height:1.45}
 .gngnum{display:flex;flex-wrap:wrap;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:13px}
 .gngnum>div{background:var(--surface-1);padding:9px 12px;flex:1 1 92px}
-.gngnum .l{font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3)}
-.gngnum .v{font-size:16px;font-weight:600;margin-top:2px;font-variant-numeric:tabular-nums;color:var(--ink-1)}
-.gngnum .s{font-size:9.5px;color:var(--ink-3);margin-top:2px}
+.gngnum .l{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3)}
+.gngnum .v{font-size:18px;font-weight:600;margin-top:2px;font-variant-numeric:tabular-nums;color:var(--ink-1)}
+.gngnum .s{font-size:11.5px;color:var(--ink-3);margin-top:2px}
 .note{margin-top:9px;padding-top:9px;border-top:1px dashed var(--grid)}
-.note .nl{font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);margin-bottom:4px}
-.note textarea{width:100%;box-sizing:border-box;font:inherit;font-size:11.5px;line-height:1.4;background:var(--surface-2);color:var(--ink-1);border:1px solid var(--border);border-radius:8px;padding:6px 8px;resize:vertical;min-height:32px}
+.note .nl{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);margin-bottom:4px}
+.note textarea{width:100%;box-sizing:border-box;font:inherit;font-size:13.5px;line-height:1.4;background:var(--surface-2);color:var(--ink-1);border:1px solid var(--border);border-radius:8px;padding:6px 8px;resize:vertical;min-height:32px}
 .note textarea:focus{outline:none;border-color:var(--nat)}
 .note textarea::placeholder{color:var(--ink-3)}
 .note.has textarea{border-left:2px solid var(--warn)}
-.nsync{font-size:9px;color:var(--good);margin-top:3px}
+.nsync{font-size:11px;color:var(--good);margin-top:3px}
 
 /* ---------- NAVEGACAO DE SEMANAS ---------- */
 .navwk{
-  font:inherit;font-size:17px;line-height:1;cursor:pointer;
+  font:inherit;font-size:19px;line-height:1;cursor:pointer;
   background:var(--surface-3);color:var(--ink-2);border:1px solid var(--border);
   border-radius:7px;width:27px;height:27px;flex:none;padding:0;
 }
@@ -162,21 +162,21 @@ svg.chart{width:100%;display:block;overflow:visible}
 .navwk:focus-visible{outline:2px solid var(--nat);outline-offset:2px}
 .prev-aviso{
   border-left:3px solid var(--nat);background:var(--surface-2);
-  padding:10px 13px;border-radius:0 9px 9px 0;font-size:11.5px;color:var(--ink-2);margin-bottom:12px;
+  padding:10px 13px;border-radius:0 9px 9px 0;font-size:13.5px;color:var(--ink-2);margin-bottom:12px;
 }
 .prev-aviso b{color:var(--ink-1)}
 .day.prev{opacity:.92}
-.day.prev .sess{padding:5px 0 5px 8px;border-left:2px solid var(--grid);margin-bottom:5px;font-size:11px;line-height:1.35}
+.day.prev .sess{padding:5px 0 5px 8px;border-left:2px solid var(--grid);margin-bottom:5px;font-size:13px;line-height:1.35}
 .day.prev .sess.n{border-left-color:var(--nat)} .day.prev .sess.b{border-left-color:var(--bike)}
 .day.prev .sess.r{border-left-color:var(--run)} .day.prev .sess.f{border-left-color:var(--ink-3)}
-.day.prev .sess em{display:block;font-style:normal;color:var(--ink-3);font-size:10px;margin-top:1px}
+.day.prev .sess em{display:block;font-style:normal;color:var(--ink-3);font-size:12px;margin-top:1px}
 
 /* ---------- CHIPS "FIZ DIFERENTE" ---------- */
 .xtra{margin-top:9px;padding-top:9px;border-top:1px dashed var(--grid)}
-.xtra .nl{font-size:9px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);margin-bottom:6px}
+.xtra .nl{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);margin-bottom:6px}
 .chips{display:flex;flex-wrap:wrap;gap:4px}
 .chip{
-  font:inherit;font-size:10px;line-height:1;padding:5px 8px;border-radius:999px;cursor:pointer;
+  font:inherit;font-size:12px;line-height:1;padding:5px 8px;border-radius:999px;cursor:pointer;
   background:var(--surface-2);color:var(--ink-3);border:1px solid var(--border);
   transition:background .12s,color .12s,border-color .12s;white-space:nowrap;
 }
@@ -206,11 +206,11 @@ svg.chart{width:100%;display:block;overflow:visible}
 .dw-top{padding:18px 20px 15px;border-bottom:1px solid var(--grid);display:flex;align-items:flex-start;gap:12px}
 .dw-top .bar{width:5px;align-self:stretch;border-radius:3px;flex:none;min-height:38px}
 .dw-top .tt{flex:1;min-width:0}
-.dw-top .mod{font-size:9.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-bottom:5px}
-.dw-top h3{font-size:15px;font-weight:640;line-height:1.3;letter-spacing:-.005em}
-.dw-top .when{font-size:11px;color:var(--ink-3);margin-top:5px}
+.dw-top .mod{font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-bottom:5px}
+.dw-top h3{font-size:17px;font-weight:640;line-height:1.3;letter-spacing:-.005em}
+.dw-top .when{font-size:13px;color:var(--ink-3);margin-top:5px}
 .dw-x{
-  font:inherit;font-size:19px;line-height:1;flex:none;cursor:pointer;
+  font:inherit;font-size:21px;line-height:1;flex:none;cursor:pointer;
   background:var(--surface-3);color:var(--ink-2);border:1px solid var(--border);
   border-radius:8px;width:31px;height:31px;
 }
@@ -218,42 +218,42 @@ svg.chart{width:100%;display:block;overflow:visible}
 .dw-body{padding:18px 20px 26px;overflow-y:auto;flex:1}
 .dw-sec{margin-bottom:19px}
 .dw-sec:last-child{margin-bottom:0}
-.dw-sec h4{font-size:9.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-bottom:9px}
+.dw-sec h4{font-size:11.5px;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);margin-bottom:9px}
 .dw-step{
-  display:flex;gap:10px;font-size:12.5px;color:var(--ink-2);line-height:1.5;
+  display:flex;gap:10px;font-size:14.5px;color:var(--ink-2);line-height:1.5;
   padding:8px 0;border-bottom:1px dashed var(--grid);
 }
 .dw-step:last-child{border-bottom:0}
 .dw-step i{
-  font-style:normal;font-size:9.5px;font-weight:700;color:var(--ink-3);
+  font-style:normal;font-size:11.5px;font-weight:700;color:var(--ink-3);
   min-width:17px;padding-top:2px;flex:none;font-variant-numeric:tabular-nums;
 }
 .dw-step b{color:var(--ink-1);font-weight:600}
-.dw-obs{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-size:12.5px;color:var(--ink-2);line-height:1.5}
+.dw-obs{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-size:14.5px;color:var(--ink-2);line-height:1.5}
 .dw-obs b{color:var(--ink-1)}
-.dw-zn{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed var(--grid);font-size:12px}
+.dw-zn{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed var(--grid);font-size:14px}
 .dw-zn:last-child{border-bottom:0}
 .dw-zn span{color:var(--ink-3)}
 .dw-zn b{color:var(--ink-1);font-variant-numeric:tabular-nums}
-.dw-empty{padding:22px 14px;text-align:center;color:var(--ink-3);font-size:12px;border:1px dashed var(--grid);border-radius:10px;line-height:1.5}
+.dw-empty{padding:22px 14px;text-align:center;color:var(--ink-3);font-size:14px;border:1px dashed var(--grid);border-radius:10px;line-height:1.5}
 .dw-foot{padding:14px 20px;border-top:1px solid var(--grid);background:var(--surface-2);display:flex;align-items:center;gap:11px;flex-wrap:wrap}
-.dw-foot .stt{font-size:11.5px;color:var(--ink-2);flex:1;min-width:110px}
+.dw-foot .stt{font-size:13.5px;color:var(--ink-2);flex:1;min-width:110px}
 .dw-foot .stt b{color:var(--ink-1)}
 @media (max-width:900px){ #drawer{width:100vw} }
-.flag{display:inline-block;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:4px;background:var(--surface-3);color:var(--ink-3);border:1px solid var(--border);vertical-align:middle;margin-left:5px}
+.flag{display:inline-block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:4px;background:var(--surface-3);color:var(--ink-3);border:1px solid var(--border);vertical-align:middle;margin-left:5px}
 
 .wkgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden}
 .day{background:var(--surface-1);padding:12px 13px;min-height:104px}
-.day .d{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);margin-bottom:8px}
-.sess{font-size:11px;color:var(--ink-1);padding:4px 0 4px 8px;border-left:2px solid var(--grid);margin-bottom:5px;line-height:1.35}
+.day .d{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);margin-bottom:8px}
+.sess{font-size:13px;color:var(--ink-1);padding:4px 0 4px 8px;border-left:2px solid var(--grid);margin-bottom:5px;line-height:1.35}
 .sess.n{border-left-color:var(--nat)} .sess.b{border-left-color:var(--bike)}
 .sess.r{border-left-color:var(--run)} .sess.f{border-left-color:var(--ink-3)}
-.sess em{display:block;font-style:normal;color:var(--ink-3);font-size:10px}
-.rest{font-size:11px;color:var(--ink-3);font-style:italic}
+.sess em{display:block;font-style:normal;color:var(--ink-3);font-size:12px}
+.rest{font-size:13px;color:var(--ink-3);font-style:italic}
 .day.done{background:linear-gradient(var(--surface-2),var(--surface-2))}
 .day .dhead{display:flex;align-items:center;gap:7px;margin-bottom:9px}
-.day .d{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);margin:0}
-.day .dtag{margin-left:auto;font-size:9px;padding:2px 5px;border-radius:4px;background:var(--surface-3);color:var(--ink-3);border:1px solid var(--border)}
+.day .d{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);margin:0}
+.day .dtag{margin-left:auto;font-size:11px;padding:2px 5px;border-radius:4px;background:var(--surface-3);color:var(--ink-3);border:1px solid var(--border)}
 .day .dtag.hard{color:#f0b53c;border-color:#f0b53c}
 .day .dtag.rest{color:var(--good);border-color:var(--good)}
 .chk{display:flex;align-items:flex-start;gap:9px;padding:6px 0 6px 8px;border-left:2px solid var(--grid);margin-bottom:5px;border-radius:0 6px 6px 0;transition:background .12s}
@@ -262,7 +262,7 @@ svg.chart{width:100%;display:block;overflow:visible}
 .chk .txt{cursor:pointer;flex:1;min-width:0}
 .chk .box:focus-visible,.chk .txt:focus-visible{outline:2px solid var(--nat);outline-offset:2px;border-radius:4px}
 .chk .txt:hover .nm{text-decoration:underline;text-decoration-color:var(--ink-3);text-underline-offset:2px}
-.chk .go{font-size:10px;color:var(--ink-3);flex:none;padding-top:2px;opacity:0;transition:opacity .12s}
+.chk .go{font-size:12px;color:var(--ink-3);flex:none;padding-top:2px;opacity:0;transition:opacity .12s}
 .chk:hover .go{opacity:1}
 .chk.n{border-left-color:var(--nat)} .chk.b{border-left-color:var(--bike)}
 .chk.r{border-left-color:var(--run)} .chk.f{border-left-color:var(--ink-3)}
@@ -273,30 +273,91 @@ svg.chart{width:100%;display:block;overflow:visible}
 .chk:hover .box{border-color:var(--ink-3)}
 .chk.ok .box{background:var(--good);border-color:var(--good)}
 .chk.ok .box:after{content:"";position:absolute;left:5.5px;top:2px;width:4px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg)}
-.chk .txt{font-size:11px;color:var(--ink-1);line-height:1.35}
-.chk .txt em{display:block;font-style:normal;color:var(--ink-3);font-size:10px;margin-top:1px}
+.chk .txt{font-size:13px;color:var(--ink-1);line-height:1.35}
+.chk .txt em{display:block;font-style:normal;color:var(--ink-3);font-size:12px;margin-top:1px}
 .chk.ok .txt{color:var(--ink-3);text-decoration:line-through;text-decoration-color:var(--axis)}
 .chk.ok .txt em{text-decoration:none}
-.chk .auto{display:inline-block;font-size:8.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--good);border:1px solid var(--good);border-radius:3px;padding:0 4px;margin-left:5px;vertical-align:middle;text-decoration:none}
+.chk .auto{display:inline-block;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--good);border:1px solid var(--good);border-radius:3px;padding:0 4px;margin-left:5px;vertical-align:middle;text-decoration:none}
 .wkbar{display:flex;align-items:center;gap:12px;margin-bottom:12px;flex-wrap:wrap}
 .wkbar .prog{flex:1;min-width:160px;height:7px;border-radius:99px;background:var(--surface-3);overflow:hidden;border:1px solid var(--border)}
 .wkbar .prog i{display:block;height:100%;background:var(--good);transition:width .25s;border-radius:99px}
-.wkbar .cnt{font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.wkbar .cnt{font-size:14px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
 .wkbar .cnt b{color:var(--ink-1)}
+
+/* ---------- TEXTO TRUNCADO EM 3 LINHAS ---------- */
+.clamp3{
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;
+  overflow:hidden;line-height:1.45;
+}
+.clamp-wrap{position:relative}
+.clamp-mais{
+  font:inherit;font-size:11.5px;cursor:pointer;background:none;border:0;padding:2px 0 0;
+  color:var(--nat);text-decoration:none;letter-spacing:.02em;
+}
+.clamp-mais:hover{text-decoration:underline}
+td .clamp3{font-size:13px}
+
+/* ---------- CALENDARIO DE DUAS SEMANAS ---------- */
+.wk2{display:flex;flex-direction:column;gap:16px}
+.wk-bloco{}
+.wk-cab{
+  display:flex;align-items:baseline;gap:10px;margin-bottom:8px;flex-wrap:wrap;
+  padding-bottom:6px;border-bottom:1px solid var(--grid);
+}
+.wk-cab .tt{font-size:14px;font-weight:640;color:var(--ink-1)}
+.wk-cab .per{font-size:12.5px;color:var(--ink-3)}
+.wk-cab .tagprev{
+  font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+  padding:2px 7px;border-radius:5px;background:rgba(57,135,229,.14);color:var(--nat);
+  border:1px solid rgba(57,135,229,.35);
+}
+.wk-cab .cnt2{margin-left:auto;font-size:12.5px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.wk-cab .cnt2 b{color:var(--ink-1)}
+
+/* ---------- DIA JA FEITO / DESLOCADO ---------- */
+.day.feito{border-left:3px solid var(--good)}
+.day.hoje{outline:2px solid var(--nat);outline-offset:-2px}
+.chk .movido{
+  display:inline-block;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--warn);border:1px solid var(--warn);border-radius:3px;padding:0 4px;
+  margin-left:5px;vertical-align:middle;text-decoration:none;
+}
+.chk .real{
+  display:block;font-size:11.5px;color:var(--good);margin-top:2px;text-decoration:none;
+  font-variant-numeric:tabular-nums;
+}
+.chk.ok .real{text-decoration:none}
+
+/* ---------- PREVISTO x REALIZADO NO DRAWER ---------- */
+.pxr{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:11px;overflow:hidden;margin-bottom:14px}
+.pxr .c{background:var(--surface-1);padding:12px 14px}
+.pxr .c .l{font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);margin-bottom:6px}
+.pxr .c .v{font-size:19px;font-weight:650;letter-spacing:-.02em;line-height:1.1}
+.pxr .c .v small{font-size:13px;font-weight:500;color:var(--ink-2)}
+.pxr .c .d{font-size:11.5px;color:var(--ink-3);margin-top:4px}
+.pxr .c.real .v{color:var(--good)}
+.barcmp{margin:4px 0 14px}
+.barcmp .lin{display:flex;align-items:center;gap:9px;margin-bottom:7px;font-size:12.5px}
+.barcmp .lin .nm2{color:var(--ink-3);min-width:74px;flex:none}
+.barcmp .lin .track{flex:1;height:15px;border-radius:5px;background:var(--surface-3);overflow:hidden;border:1px solid var(--border);position:relative}
+.barcmp .lin .track i{display:block;height:100%;border-radius:4px}
+.barcmp .lin .vv{color:var(--ink-1);font-variant-numeric:tabular-nums;min-width:78px;text-align:right;flex:none}
+.dw-graf{margin-bottom:16px}
+.dw-graf svg{width:100%;display:block;overflow:visible}
 
 .refs a{color:var(--nat);text-decoration:none;border-bottom:1px solid transparent}
 .refs a:hover{border-bottom-color:var(--nat)}
-.refs li{margin-bottom:8px;font-size:12px;color:var(--ink-2);list-style:none;padding-left:14px;position:relative}
+.refs li{margin-bottom:8px;font-size:14px;color:var(--ink-2);list-style:none;padding-left:14px;position:relative}
 .refs li:before{content:"";position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:var(--ink-3)}
 
 .form-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(102px,1fr));gap:9px;margin-bottom:10px}
-.field label{display:block;font-size:9.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);margin-bottom:4px}
-.field input,.field select{width:100%;font:inherit;font-size:12px;padding:7px 9px;border-radius:8px;background:var(--surface-2);border:1px solid var(--border);color:var(--ink-1)}
+.field label{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);margin-bottom:4px}
+.field input,.field select{width:100%;font:inherit;font-size:14px;padding:7px 9px;border-radius:8px;background:var(--surface-2);border:1px solid var(--border);color:var(--ink-1)}
 .seg{display:inline-flex;background:var(--surface-3);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-left:auto}
-.seg button{font:inherit;font-size:10.5px;padding:5px 11px;border:0;background:transparent;color:var(--ink-3);cursor:pointer}
+.seg button{font:inherit;font-size:12.5px;padding:5px 11px;border:0;background:transparent;color:var(--ink-3);cursor:pointer}
 .seg button.on{background:var(--nat);color:#fff;font-weight:600}
-footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-size:11px;color:var(--ink-3)}
-.toast{position:fixed;bottom:24px;left:calc(50% + var(--sbw)/2);transform:translateX(-50%) translateY(20px);background:var(--ink-1);color:var(--surface-0);padding:10px 18px;border-radius:9px;font-size:12px;font-weight:600;opacity:0;transition:.2s;pointer-events:none;z-index:99}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-size:13px;color:var(--ink-3)}
+.toast{position:fixed;bottom:24px;left:calc(50% + var(--sbw)/2);transform:translateX(-50%) translateY(20px);background:var(--ink-1);color:var(--surface-0);padding:10px 18px;border-radius:9px;font-size:14px;font-weight:600;opacity:0;transition:.2s;pointer-events:none;z-index:99}
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 
 @media (max-width:900px){
@@ -350,8 +411,40 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
     <div class="gng" id="gngBox"></div>
     <div class="gngnum" id="gngNum"></div>
     <div id="gngWarn"></div>
-    <div style="font-size:10.5px;color:var(--ink-3);margin-top:11px;line-height:1.5">
+    <div style="font-size:12.5px;color:var(--ink-3);margin-top:11px;line-height:1.5">
       Calculado sobre a última linha do registro do Garmin, pelas regras da seção 13. Limiares usados: readiness <b style="color:var(--ink-2)">≥60 verde · 40–59 amarelo · &lt;40 vermelho</b> · FCrep de alerta <b style="color:var(--ink-2)">≥48</b> (base 40–43 mais 5) · VFC na banda <b style="color:var(--ink-2)">52–74</b> · sono mínimo <b style="color:var(--ink-2)">6 h</b>. Readiness e VFC são estimativas do relógio, não medidas clínicas.
+    </div>
+  </div>
+
+  <div class="card" style="padding:16px 18px 18px">
+    <div class="ctitle" style="margin-bottom:12px">
+      <button class="navwk" id="wkPrev" aria-label="Duas semanas anteriores">‹</button>
+      <b id="wkTitulo">Semana em curso</b>
+      <span id="wkSub" style="color:var(--ink-3);font-size:13.5px"></span>
+      <button class="navwk" id="wkNext" aria-label="Próximas duas semanas" style="margin-left:auto">›</button>
+      <button class="btn sm" id="wkHoje" style="display:none">Voltar para hoje</button>
+    </div>
+    <div class="wkbar" id="wkBarra">
+      <span class="cnt" id="wkCount">—</span>
+      <span class="prog"><i id="wkProg" style="width:0%"></i></span>
+      <button class="btn sm" id="btnClearWk">Limpar marcações</button>
+    </div>
+    <div id="wkAviso"></div>
+    <div class="wk2" id="wkGrid"></div>
+    <div id="progAviso"></div>
+    <div class="clamp-wrap" style="margin-top:12px;padding-top:11px;border-top:1px solid var(--grid)">
+      <div class="clamp3" id="wkAjuda" style="font-size:13px;color:var(--ink-3)">
+        Cada linha é uma <b style="color:var(--ink-2)">atividade</b>, não um dia. <b style="color:var(--ink-2)">A caixa marca; o nome do treino abre o detalhe</b> num painel lateral — e se o treino já foi feito, o painel mostra também <b style="color:var(--ink-2)">como você fez</b>, com os números reais e gráficos comparando com o prescrito.
+        A etiqueta <span class="auto">Garmin</span> aparece quando a sincronização detectou a atividade sozinha, e <span class="movido">movido</span> quando você fez o treino em outro dia.
+        As <b style="color:var(--ink-2)">duas semanas</b> aparecem juntas: a de cima é a atual, a de baixo é a próxima. As setas avançam de duas em duas.
+        Os botões <b style="color:var(--ink-2)">fiz diferente</b> são para quando o dia saiu do script: toque em CrossFit, Bike, Natação, Musculação ou Corrida — dá para marcar mais de um. Você só diz <em>qual</em> modalidade; tempo, batimento e distância vêm do Garmin. O campo <b style="color:var(--ink-2)">o que eu fiz</b> continua ali para escrever à mão.
+        Tudo fica salvo neste aparelho. Para entrar na análise de domingo, use <b style="color:var(--ink-2)">Copiar anotações</b> e cole no chat — a página não escreve no arquivo sozinha.
+      </div>
+      <button class="clamp-mais" data-clamp="wkAjuda">Ler tudo ▾</button>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
+      <button class="btn sm" id="btnCopyNotes">Copiar anotações</button>
+      <button class="btn sm" id="btnClearNotes">Limpar anotações deste aparelho</button>
     </div>
   </div>
 
@@ -364,32 +457,6 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
     </table></div>
   </div>
 
-  <div class="card" style="padding:16px 18px 18px">
-    <div class="ctitle" style="margin-bottom:12px">
-      <button class="navwk" id="wkPrev" aria-label="Semana anterior">‹</button>
-      <b id="wkTitulo">Semana em curso</b>
-      <span id="wkSub" style="color:var(--ink-3);font-size:11.5px"></span>
-      <button class="navwk" id="wkNext" aria-label="Próxima semana" style="margin-left:auto">›</button>
-      <button class="btn sm" id="wkHoje" style="display:none">Voltar para hoje</button>
-    </div>
-    <div class="wkbar" id="wkBarra">
-      <span class="cnt" id="wkCount">—</span>
-      <span class="prog"><i id="wkProg" style="width:0%"></i></span>
-      <button class="btn sm" id="btnClearWk">Limpar marcações</button>
-    </div>
-    <div id="wkAviso"></div>
-    <div class="wkgrid" id="wkGrid"></div>
-    <div style="font-size:11px;color:var(--ink-3);margin-top:12px;padding-top:11px;border-top:1px solid var(--grid)">
-      Cada linha é uma <b style="color:var(--ink-2)">atividade</b>, não um dia — dias com duas ou três atividades têm uma caixa para cada uma. <b style="color:var(--ink-2)">A caixa marca; o nome do treino abre o detalhe</b> num painel lateral. A etiqueta <span class="auto">Garmin</span> aparece quando a sincronização diária detectou a atividade sozinha.<br><br>
-      Os botões <b style="color:var(--ink-2)">fiz diferente</b> são para quando o dia saiu do script: toque em CrossFit, Bike, Natação, Musculação ou Corrida — dá para marcar mais de um. Você só diz <em>qual</em> modalidade; <b style="color:var(--ink-2)">tempo, batimento e distância vêm do Garmin</b> na sincronização. O campo <b style="color:var(--ink-2)">o que eu fiz</b> continua ali para quando quiser escrever algo à mão.<br><br>
-      Tudo fica salvo neste aparelho automaticamente. Para entrar na análise de domingo, use <b style="color:var(--ink-2)">Copiar anotações</b> e cole no chat — a página não consegue escrever no arquivo sozinha.
-    </div>
-    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">
-      <button class="btn sm" id="btnCopyNotes">Copiar anotações</button>
-      <button class="btn sm" id="btnClearNotes">Limpar anotações deste aparelho</button>
-    </div>
-  </div>
-  
   <div class="card">
     <div class="ctitle"><b>Registro completo</b></div>
     <div class="tscroll"><table>
@@ -510,11 +577,206 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
       <thead><tr><th>Data</th><th>O que mudou</th><th>Por quê</th></tr></thead>
       <tbody id="hDec"></tbody>
     </table></div>
+    <button class="clamp-mais" id="btnDec" style="margin-top:9px">Ver todas ▾</button>
+  </div>
+</section>
+
+
+
+<section id="s-natacao">
+  <div class="shead"><span class="kick">06</span><h2>Natação — método e treinos</h2>
+    <p>Reconstruída em 22/08/2026. Cada sessão tem propósito e fonte. Documento completo em NATACAO_703.md.</p></div>
+
+  <div class="card">
+    <div class="ctitle"><b>O achado que reorganiza tudo</b></div>
+    <div class="tscroll"><table>
+      <thead><tr><th>Com a potência metabólica igualada em 1.000 W</th><th class="num">Nadadores</th><th class="num">Triatletas</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Eficiência propulsiva</td><td class="num"><b style="color:var(--ink-1)">61 ± 6%</b></td><td class="num"><b style="color:var(--ink-1)">44 ± 3%</b></td></tr>
+        <tr><td class="k">Distância por braçada</td><td class="num">1,23 m</td><td class="num">0,92 m</td></tr>
+        <tr><td class="k">Velocidade</td><td class="num">1,17 m/s</td><td class="num">0,95 m/s</td></tr>
+        <tr><td class="k">Eficiência bruta</td><td class="num" colspan="2" style="text-align:center">sem diferença</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout info">
+      <b>Com o custo metabólico igual, toda a diferença de 23% em velocidade veio de eficiência propulsiva</b> (Toussaint, 1990). Não de motor. Some a isso Roels et al. (2005): triatletas expressam <b>53,0 ml/kg/min nadando contra 68,2 pedalando</b> — perdem ~22% do VO₂máx ao entrar na água.
+      <br><br><b>Tradução:</b> você tem VO₂máx de 51,4 e 1.111 km de corrida em 12 meses. Seu limitante na água <b>não é aeróbio — é arrasto e economia</b>. Por isso a sessão de economia mede <b>braçadas por piscina</b>, não cronômetro: Costill et al. (1985) mediram que distância por braçada é o melhor preditor isolado de performance, r = 0,88.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>A biblioteca nova</b> — cinco sessões, cada uma com um propósito</div>
+    <div class="tscroll"><table>
+      <thead><tr><th>Treino</th><th class="num">Distância</th><th>Para quê</th><th>Base</th></tr></thead>
+      <tbody>
+        <tr><td class="k">NAT-E · Economia</td><td class="num">1.200 m</td><td>Reduzir braçadas mantendo o ritmo</td><td>Toussaint 1990 · Costill 1985 · Freudenheim 2010</td></tr>
+        <tr><td class="k">NAT-C · Ritmo crítico</td><td class="num">1.400 m</td><td>Sustentar o limiar de forma fracionada</td><td>Toubekis 2011 · 2019</td></tr>
+        <tr><td class="k">NAT-B1 · Ritmo</td><td class="num">1.300 m</td><td>Séries de 100 m no ritmo de prova</td><td>prática de treino</td></tr>
+        <tr><td class="k">NAT-P · Ritmo de prova</td><td class="num">1.900 m</td><td>Ensaio da distância com pacing correto</td><td>Peeling 2005 · Veiga 2019</td></tr>
+        <tr><td class="k">NAT-OW · Águas abertas</td><td class="num">2.000 m</td><td>Orientação, roupa de borracha, drafting, água fria</td><td>Chatard 1995 · Harris 2017</td></tr>
+        <tr><td class="k">NAT-TESTE · 400 m CSS</td><td class="num">1.620 m</td><td>Medir o ritmo crítico</td><td>Wakayoshi 1992</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout bad">
+      <b>O que estava errado antes.</b> Os treinos anteriores não tinham <b>alvo de tempo por repetição</b> ("ritmo confortável" não é prescrição), usavam <b>descanso solto</b> em vez da razão 1:8 que Toubekis testou, rodavam <b>seis educativos diferentes por sessão</b> — quando a literatura de aprendizagem motora mostra que treino por partes é <em>menos</em> eficiente que treino do todo (Wightman &amp; Lintern, 1985) — e não traziam <b>nenhuma instrução de foco atencional</b>, que é ganho de graça. Também não havia nada de águas abertas.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>Seu CSS</b> — como medir e usar</div>
+    <div class="callout info" style="font-size:15px">
+      <b>CSS (segundos por 100 m) = (T400 − T200) ÷ 2</b><br>
+      <span style="color:var(--ink-3)">Exemplo: 400 m em 11:20 (680 s) e 200 m em 5:20 (320 s) → (680 − 320) ÷ 2 = <b style="color:var(--ink-1)">180 s = 3:00/100 m</b></span>
+    </div>
+    <div class="tscroll"><table>
+      <thead><tr><th>Zona</th><th class="num">Prescrição</th><th>Onde se usa</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Aeróbio</td><td class="num">85–90% do CSS</td><td>volume, recuperação, NAT-E</td></tr>
+        <tr><td class="k"><b style="color:var(--ink-1)">Ritmo crítico</b></td><td class="num"><b style="color:var(--ink-1)">95–100% do CSS</b></td><td>NAT-C — a sessão que move o ponteiro</td></tr>
+        <tr><td class="k">Ritmo de prova</td><td class="num">80–85% do CSS</td><td>NAT-P — ver abaixo</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout">
+      <b>Três ressalvas sobre o CSS, para você não confiar demais nele.</b>
+      <br>1. <b>Não é o seu limiar sustentável indefinidamente.</b> Dekerle et al. (2005): ele <em>superestima</em> o máximo estado estável de lactato — 92,7% contra 88,3% da velocidade aeróbia máxima. A velocidade crítica dura de 14 a 39 minutos, não para sempre.
+      <br>2. <b>O protocolo 200/400 superestima o CSS verdadeiro</b> (Scott et al., 2023): distâncias curtas e relação custo-velocidade não linear.
+      <br>3. <b>Não existe estudo de confiabilidade do CSS em adultos iniciantes.</b> Todas as amostras são de nadadores treinados. No seu caso o teste será limitado por técnica, não por metabolismo. <b>Trate como marcador de progresso, não como verdade fisiológica.</b>
+      <br><br><b>Quanto conta como progresso real:</b> o erro típico é de até 4%. Só considere real uma mudança de <b>≥5%</b> ou uma tendência em três retestes. Melhora isolada de 2 s no 400 m é ruído.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>O pacing que parece errado e não é</b></div>
+    <div class="callout ok">
+      <b>Nadar mais devagar te faz terminar mais cedo.</b> Peeling et al. (2005) compararam triatletas nadando a 80–85%, 90–95% e 98–102% da velocidade de contrarrelógio: <b>o grupo de 80–85% teve o ciclismo E o tempo total mais rápidos</b>. Veiga et al. (2019), em águas abertas: quem vai bem é conservador no meio e acelera até 9% só na volta final.
+      <br><br><b>Na prova:</b> 200–300 m iniciais só para se posicionar, depois assentar em 80–85% do CSS e segurar. Acelerar apenas nos últimos 200 m. <b>O objetivo da natação num 70.3 não é o tempo da natação</b> — é sair da água com ombro e perna inteiros para 90 km de bike.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>⚠️ Águas abertas</b> — a parte séria</div>
+    <div class="callout bad">
+      <b>Harris et al. (2017), no Annals of Internal Medicine:</b> 135 mortes súbitas e paradas cardíacas em mais de 9 milhões de participações em triatlo. <b>Noventa delas na natação.</b> Idade média das vítimas: <b>46,7 ± 12,4 anos</b>, 85% homens.
+      <br><br>Você tem 46 anos e vai fazer sua primeira prova em águas abertas. O mecanismo é conhecido e treinável: a resposta de choque térmico leva a FC de ~96 para ~156 bpm e a respiração de ~12 para ~66 por minuto <b>no primeiro minuto</b> de imersão — e é <b>atenuada por 5 a 6 imersões prévias</b>.
+      <br><br><b>Regra que não se negocia: nada de prova com menos de 6 entradas em água aberta.</b> Começa na semana 28. Nunca sozinho.
+    </div>
+    <div class="callout ok">
+      <b>Dois ganhos que compensam ir até a água.</b>
+      <br>• <b>Roupa de borracha:</b> Chatard et al. (1995) mediram <b>19 s de ganho em 400 m (~6,2%) em triatletas</b> e <b>zero em nadadores competitivos</b>. O ganho é maior em quem tem menos flutuação e mais arrasto — <b>você é quem mais ganha</b>. Mínimo de 4 sessões com ela antes da prova.
+      <br>• <b>Drafting:</b> Chatard &amp; Wilson (2003) mediram <b>21% menos arrasto</b> a 0–50 cm atrás dos pés de alguém. É a maior economia gratuita da prova. Lateral rende 6–7%.
+      <br><br><b>Orientação:</b> levante só os olhos, a cada 6–8 braçadas. Cabeça alta aumenta o arrasto passivo em mais de 10% (Cortesi &amp; Gatta, 2015).
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>Volume e ombro</b></div>
+    <div class="tscroll"><table>
+      <tbody>
+        <tr><td class="k">Volume alvo</td><td><b style="color:var(--ink-1)">4 sessões/semana · 4 a 8 km/semana no pico</b></td></tr>
+        <tr><td class="k">Referência de campo</td><td>Age-groupers de Ironman com ~41 anos nadam 6,3 ± 3,1 km/semana (Rüst et al., 2011)</td></tr>
+        <tr><td class="k">Limiar de risco</td><td>Tendinopatia do supraespinal quadruplica acima de <b>35 km/semana</b> (Sein et al., 2010)</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout bad">
+      <b>Não use palmares neste ciclo.</b> Schorn et al. (2018) acompanharam 193 triatletas amadores por 12 meses: <b>19% tiveram lesão de ombro por sobrecarga, 86% atribuídas à natação</b>. Na regressão logística, o <b>único fator de risco que permaneceu significativo foi o uso de palmares</b> — 24% de lesão entre usuários contra 10% entre não usuários. <b>O volume de natação não foi fator de risco.</b> Se quiser usá-los, só depois da semana 16 e no máximo 200 m por sessão.
+    </div>
+    <div class="callout">
+      <b>Sobre prevenção, uma ressalva honesta:</b> Hibberd et al. (2012) testaram fortalecimento escapular por 6 semanas e <b>não encontraram diferença</b> em relação ao controle. Faça o FOR-B pelos outros méritos dele, mas sem promessa de que previne lesão de ombro — a evidência não sustenta.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>Onde encaixar cada sessão</b></div>
+    <div class="tscroll"><table>
+      <thead><tr><th>Dia</th><th>Sessão</th><th>Por quê</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Segunda</td><td><b style="color:var(--ink-1)">NAT-E</b> · economia</td><td>Depois da corrida Z2. Sessão técnica pede cabeça fresca, não perna fresca</td></tr>
+        <tr><td class="k">Terça</td><td><b style="color:var(--ink-1)">NAT-C</b> · ritmo crítico</td><td>Dia sem corrida — o esforço não compete</td></tr>
+        <tr><td class="k">Quinta</td><td>NAT-E ou NAT-A1</td><td>Segunda dose técnica da semana</td></tr>
+        <tr><td class="k">Sábado</td><td><b style="color:var(--ink-1)">NAT-P</b> · ritmo de prova</td><td>Volume longo; a partir da semana 28 vira NAT-OW</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout">
+      <b>A natação quase não interfere no resto.</b> Wilson et al. (2012): a interferência do treino concorrente é específica do segmento corporal — corrida interfere, ciclismo não, e natação não aparece como interferente. Laursen et al. (2000): nado de 3 km não afetou contrarrelógio de ciclismo de 3 h.
+      <br><br><b>Mas há um limite.</b> Frohlich et al. (2019): após nado de 2 km, o VO₂máx caiu 4,0% e a potência a 4 mM caiu 3,8%. <b>Nado próximo do máximo degrada o ciclismo seguinte.</b> Por isso o NAT-C, a sessão dura, fica na terça — longe da bike de qualidade de quarta. Separação de <b>≥6 h</b> entre sessões dissipa a maior parte da interferência aguda.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ctitle"><b>O que NÃO tem base científica</b></div>
+    <ul class="refs">
+      <li><b>Offsets em segundos a partir do CSS</b> ("CSS +5 s = aeróbio"). Nenhum estudo valida. A ciência prescreve percentuais.</li>
+      <li><b>Send-off versus descanso fixo.</b> Zero estudos comparativos. Convenção de piscina.</li>
+      <li><b>Volume por sessão para adulto iniciante.</b> Nenhum ensaio de dose-resposta nessa população.</li>
+      <li><b>Frequência mínima para aquisição técnica em adulto.</b> As recomendações de 2–3× vêm de escolas de natação, não da literatura.</li>
+      <li><b>Educativos isolados como método.</b> Nenhum ensaio controlado em natação; a aprendizagem motora sugere o contrário.</li>
+      <li><b>Pull buoy como ferramenta de treino.</b> Nenhum estudo de intervenção.</li>
+      <li><b>Regra dos 10% de progressão.</b> Refutada em corrida por ensaio randomizado com 532 pessoas (Buist et al., 2008) e nunca testada em natação.</li>
+      <li><b>"Triatleta não deve treinar pernada."</b> Slogan. Ela custa oxigênio sem propulsão proporcional, mas <em>melhora o alinhamento e reduz o arrasto ativo</em>. O balanço nunca foi testado. Para 1,90 m com quadril afundando, pernada mínima de 2 tempos se justifica como posição — e a roupa de borracha resolve boa parte disso.</li>
+    </ul>
+    <div class="callout bad">
+      <b>E a lacuna maior:</b> <b>não existe estudo longitudinal de adulto iniciante em natação por 6 a 12 meses.</b> A curva de melhora que você deveria esperar não está publicada. Qualquer número que eu desse seria extrapolação — e por isso a escada de ritmo é revisada por teste, não prometida.
+    </div>
+  </div>
+</section>
+
+<section id="s-espinha">
+  <div class="shead"><span class="kick">07</span><h2>A espinha — 35 semanas</h2>
+    <p>Altura = volume semanal planejado. As quedas são semanas de recuperação (mesociclos 2:1, padrão Friel para 40+).</p></div>
+  <div class="card">
+    <div class="spine-track" id="spineTrack"></div>
+    <div class="spine-axis" id="spineAxis"></div>
+    <div id="spineInfo">Passe o mouse sobre uma semana.</div>
+    <div class="legend" id="spineLegend"></div>
+  </div>
+</section>
+
+<section id="s-semana">
+  <div class="shead"><span class="kick">08</span><h2>A semana-padrão — 6 dias</h2>
+    <p>Terça e quinta sem corrida. Bike no rolo em qualquer dia. A folga você escolhe pelo readiness.</p></div>
+  <div class="card">
+    <div class="tscroll"><table>
+      <thead><tr><th>Dia</th><th>Manhã</th><th>2ª sessão</th><th>Papel</th></tr></thead>
+      <tbody>
+        <tr><td class="k">Segunda</td><td>Corrida Z2 + cadência</td><td>Natação técnica</td><td>Abertura fácil de propósito</td></tr>
+        <tr><td class="k">Terça</td><td><b style="color:var(--ink-1)">Força — musculação <em>ou</em> CrossFit</b></td><td>Natação técnica</td><td>Dia sem corrida</td></tr>
+        <tr><td class="k">Quarta</td><td><b style="color:var(--ink-1)">Bike no rolo — qualidade</b></td><td>—</td><td><b>Dia duro 1</b></td></tr>
+        <tr><td class="k">Quinta</td><td><b style="color:var(--ink-1)">Força — musculação <em>ou</em> CrossFit</b></td><td>Natação técnica</td><td>Dia sem corrida</td></tr>
+        <tr><td class="k">Sexta</td><td>Bike Z2 no rolo — cedo ou à noite</td><td>—</td><td><b style="color:var(--good)">Candidata a folga</b></td></tr>
+        <tr><td class="k">Sábado</td><td><b style="color:var(--ink-1)">Corrida longa com final em ritmo</b></td><td>Natação ou águas abertas</td><td><b>Dia duro 2</b></td></tr>
+        <tr><td class="k">Domingo</td><td colspan="2"><b style="color:var(--ink-1)">Bike longo na rua + brick de corrida</b></td><td>O treino que define o ciclo</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout ok">
+      <b>Reorganizada em 22/08/2026, com a sua disponibilidade nova.</b> Terça e quinta saíram da corrida e viraram <b>força + natação</b>. A corrida longa foi para <b>sábado</b>, e as outras duas corridas caíram em segunda e no brick de domingo. A bike ocupa quarta, sexta e domingo — <b>quarta e sexta no rolo</b>, que você faz cedo ou à noite sem depender de trânsito nem de luz.
+    </div>
+    <div class="callout">
+      <b>4 natações · 3 bikes · 3 corridas · 2 sessões de força · 1 folga.</b> Os dois dias duros são <b>quarta e sábado</b>, em modalidades diferentes e com três dias de intervalo — o teto em que Friel e Seiler convergem para quem passou dos 40.
+      <br><br><b>O CrossFit entra oficialmente</b>, ocupando a vaga de força de terça ou quinta, no dia que você escolher. Duas ressalvas que valem: se o WOD for pesado de perna, ele conflita com a bike de qualidade de quarta — prefira a quinta nesse caso. E CrossFit <em>somado</em> à musculação, em vez de no lugar dela, empurra a semana acima do volume planejado; isso aparece na análise de domingo.
+    </div>
+    <div class="callout info">
+      <b>A folga não tem dia fixo — você decide pelo readiness.</b> A regra: quando o painel abrir amarelo ou vermelho, ou quando você quiser a folga, tire de <b>sexta</b> (primeira opção, já que é só bike fácil) ou de <b>segunda</b> (segunda opção). <b>Nunca de quarta, sábado ou domingo</b> — esses três carregam o plano. Se a semana terminar com sete dias treinados, isso não é mérito: é dívida de recuperação, e a análise de domingo vai apontar.
+      <br><br><b>Transição (T1/T2) entra como ensaio no brick de domingo</b> a partir do Bloco B.
+    </div>
+  </div>
+</section>
+
+<section id="s-curva">
+  <div class="shead"><span class="kick">09</span><h2>Curva de volume planejada</h2>
+    <p>A bike cresce mais que tudo — é o melhor preditor do tempo total no 70.3.</p></div>
+  <div class="card">
+    <div class="chart-wrap"><svg class="chart" id="chartCurve" viewBox="0 0 900 290"></svg><div class="tip" id="tipCurve"></div></div>
+    <div class="legend">
+      <div class="lg"><i style="background:var(--nat)"></i>Natação</div>
+      <div class="lg"><i style="background:var(--bike)"></i>Ciclismo</div>
+      <div class="lg"><i style="background:var(--run)"></i>Corrida</div>
+      <div class="lg"><i style="background:var(--ink-3)"></i>Força</div>
+    </div>
   </div>
 </section>
 
 <section id="s-nutri">
-  <div class="shead"><span class="kick">06</span><h2>Nutrição</h2>
+  <div class="shead"><span class="kick">10</span><h2>Nutrição</h2>
     <p>Faixas de position stands, convertidas para 82 kg. Documento completo e fontes em NUTRICAO_703.md.</p></div>
 
   <div class="card">
@@ -638,198 +900,6 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
     </ul>
     <div class="callout">
       <b>Não sou nutricionista.</b> Este painel organiza o que a evidência publicada diz e converte para o seu peso. Prescrição, exames e conduta são dela. <b>Leve o NUTRICAO_703.md junto.</b>
-    </div>
-  </div>
-</section>
-
-<section id="s-natacao">
-  <div class="shead"><span class="kick">07</span><h2>Natação — método e treinos</h2>
-    <p>Reconstruída em 22/08/2026. Cada sessão tem propósito e fonte. Documento completo em NATACAO_703.md.</p></div>
-
-  <div class="card">
-    <div class="ctitle"><b>O achado que reorganiza tudo</b></div>
-    <div class="tscroll"><table>
-      <thead><tr><th>Com a potência metabólica igualada em 1.000 W</th><th class="num">Nadadores</th><th class="num">Triatletas</th></tr></thead>
-      <tbody>
-        <tr><td class="k">Eficiência propulsiva</td><td class="num"><b style="color:var(--ink-1)">61 ± 6%</b></td><td class="num"><b style="color:var(--ink-1)">44 ± 3%</b></td></tr>
-        <tr><td class="k">Distância por braçada</td><td class="num">1,23 m</td><td class="num">0,92 m</td></tr>
-        <tr><td class="k">Velocidade</td><td class="num">1,17 m/s</td><td class="num">0,95 m/s</td></tr>
-        <tr><td class="k">Eficiência bruta</td><td class="num" colspan="2" style="text-align:center">sem diferença</td></tr>
-      </tbody>
-    </table></div>
-    <div class="callout info">
-      <b>Com o custo metabólico igual, toda a diferença de 23% em velocidade veio de eficiência propulsiva</b> (Toussaint, 1990). Não de motor. Some a isso Roels et al. (2005): triatletas expressam <b>53,0 ml/kg/min nadando contra 68,2 pedalando</b> — perdem ~22% do VO₂máx ao entrar na água.
-      <br><br><b>Tradução:</b> você tem VO₂máx de 51,4 e 1.111 km de corrida em 12 meses. Seu limitante na água <b>não é aeróbio — é arrasto e economia</b>. Por isso a sessão de economia mede <b>braçadas por piscina</b>, não cronômetro: Costill et al. (1985) mediram que distância por braçada é o melhor preditor isolado de performance, r = 0,88.
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="ctitle"><b>A biblioteca nova</b> — cinco sessões, cada uma com um propósito</div>
-    <div class="tscroll"><table>
-      <thead><tr><th>Treino</th><th class="num">Distância</th><th>Para quê</th><th>Base</th></tr></thead>
-      <tbody>
-        <tr><td class="k">NAT-E · Economia</td><td class="num">1.200 m</td><td>Reduzir braçadas mantendo o ritmo</td><td>Toussaint 1990 · Costill 1985 · Freudenheim 2010</td></tr>
-        <tr><td class="k">NAT-C · Ritmo crítico</td><td class="num">1.400 m</td><td>Sustentar o limiar de forma fracionada</td><td>Toubekis 2011 · 2019</td></tr>
-        <tr><td class="k">NAT-B1 · Ritmo</td><td class="num">1.300 m</td><td>Séries de 100 m no ritmo de prova</td><td>prática de treino</td></tr>
-        <tr><td class="k">NAT-P · Ritmo de prova</td><td class="num">1.900 m</td><td>Ensaio da distância com pacing correto</td><td>Peeling 2005 · Veiga 2019</td></tr>
-        <tr><td class="k">NAT-OW · Águas abertas</td><td class="num">2.000 m</td><td>Orientação, roupa de borracha, drafting, água fria</td><td>Chatard 1995 · Harris 2017</td></tr>
-        <tr><td class="k">NAT-TESTE · 400 m CSS</td><td class="num">1.620 m</td><td>Medir o ritmo crítico</td><td>Wakayoshi 1992</td></tr>
-      </tbody>
-    </table></div>
-    <div class="callout bad">
-      <b>O que estava errado antes.</b> Os treinos anteriores não tinham <b>alvo de tempo por repetição</b> ("ritmo confortável" não é prescrição), usavam <b>descanso solto</b> em vez da razão 1:8 que Toubekis testou, rodavam <b>seis educativos diferentes por sessão</b> — quando a literatura de aprendizagem motora mostra que treino por partes é <em>menos</em> eficiente que treino do todo (Wightman &amp; Lintern, 1985) — e não traziam <b>nenhuma instrução de foco atencional</b>, que é ganho de graça. Também não havia nada de águas abertas.
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="ctitle"><b>Seu CSS</b> — como medir e usar</div>
-    <div class="callout info" style="font-size:13px">
-      <b>CSS (segundos por 100 m) = (T400 − T200) ÷ 2</b><br>
-      <span style="color:var(--ink-3)">Exemplo: 400 m em 11:20 (680 s) e 200 m em 5:20 (320 s) → (680 − 320) ÷ 2 = <b style="color:var(--ink-1)">180 s = 3:00/100 m</b></span>
-    </div>
-    <div class="tscroll"><table>
-      <thead><tr><th>Zona</th><th class="num">Prescrição</th><th>Onde se usa</th></tr></thead>
-      <tbody>
-        <tr><td class="k">Aeróbio</td><td class="num">85–90% do CSS</td><td>volume, recuperação, NAT-E</td></tr>
-        <tr><td class="k"><b style="color:var(--ink-1)">Ritmo crítico</b></td><td class="num"><b style="color:var(--ink-1)">95–100% do CSS</b></td><td>NAT-C — a sessão que move o ponteiro</td></tr>
-        <tr><td class="k">Ritmo de prova</td><td class="num">80–85% do CSS</td><td>NAT-P — ver abaixo</td></tr>
-      </tbody>
-    </table></div>
-    <div class="callout">
-      <b>Três ressalvas sobre o CSS, para você não confiar demais nele.</b>
-      <br>1. <b>Não é o seu limiar sustentável indefinidamente.</b> Dekerle et al. (2005): ele <em>superestima</em> o máximo estado estável de lactato — 92,7% contra 88,3% da velocidade aeróbia máxima. A velocidade crítica dura de 14 a 39 minutos, não para sempre.
-      <br>2. <b>O protocolo 200/400 superestima o CSS verdadeiro</b> (Scott et al., 2023): distâncias curtas e relação custo-velocidade não linear.
-      <br>3. <b>Não existe estudo de confiabilidade do CSS em adultos iniciantes.</b> Todas as amostras são de nadadores treinados. No seu caso o teste será limitado por técnica, não por metabolismo. <b>Trate como marcador de progresso, não como verdade fisiológica.</b>
-      <br><br><b>Quanto conta como progresso real:</b> o erro típico é de até 4%. Só considere real uma mudança de <b>≥5%</b> ou uma tendência em três retestes. Melhora isolada de 2 s no 400 m é ruído.
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="ctitle"><b>O pacing que parece errado e não é</b></div>
-    <div class="callout ok">
-      <b>Nadar mais devagar te faz terminar mais cedo.</b> Peeling et al. (2005) compararam triatletas nadando a 80–85%, 90–95% e 98–102% da velocidade de contrarrelógio: <b>o grupo de 80–85% teve o ciclismo E o tempo total mais rápidos</b>. Veiga et al. (2019), em águas abertas: quem vai bem é conservador no meio e acelera até 9% só na volta final.
-      <br><br><b>Na prova:</b> 200–300 m iniciais só para se posicionar, depois assentar em 80–85% do CSS e segurar. Acelerar apenas nos últimos 200 m. <b>O objetivo da natação num 70.3 não é o tempo da natação</b> — é sair da água com ombro e perna inteiros para 90 km de bike.
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="ctitle"><b>⚠️ Águas abertas</b> — a parte séria</div>
-    <div class="callout bad">
-      <b>Harris et al. (2017), no Annals of Internal Medicine:</b> 135 mortes súbitas e paradas cardíacas em mais de 9 milhões de participações em triatlo. <b>Noventa delas na natação.</b> Idade média das vítimas: <b>46,7 ± 12,4 anos</b>, 85% homens.
-      <br><br>Você tem 46 anos e vai fazer sua primeira prova em águas abertas. O mecanismo é conhecido e treinável: a resposta de choque térmico leva a FC de ~96 para ~156 bpm e a respiração de ~12 para ~66 por minuto <b>no primeiro minuto</b> de imersão — e é <b>atenuada por 5 a 6 imersões prévias</b>.
-      <br><br><b>Regra que não se negocia: nada de prova com menos de 6 entradas em água aberta.</b> Começa na semana 28. Nunca sozinho.
-    </div>
-    <div class="callout ok">
-      <b>Dois ganhos que compensam ir até a água.</b>
-      <br>• <b>Roupa de borracha:</b> Chatard et al. (1995) mediram <b>19 s de ganho em 400 m (~6,2%) em triatletas</b> e <b>zero em nadadores competitivos</b>. O ganho é maior em quem tem menos flutuação e mais arrasto — <b>você é quem mais ganha</b>. Mínimo de 4 sessões com ela antes da prova.
-      <br>• <b>Drafting:</b> Chatard &amp; Wilson (2003) mediram <b>21% menos arrasto</b> a 0–50 cm atrás dos pés de alguém. É a maior economia gratuita da prova. Lateral rende 6–7%.
-      <br><br><b>Orientação:</b> levante só os olhos, a cada 6–8 braçadas. Cabeça alta aumenta o arrasto passivo em mais de 10% (Cortesi &amp; Gatta, 2015).
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="ctitle"><b>Volume e ombro</b></div>
-    <div class="tscroll"><table>
-      <tbody>
-        <tr><td class="k">Volume alvo</td><td><b style="color:var(--ink-1)">4 sessões/semana · 4 a 8 km/semana no pico</b></td></tr>
-        <tr><td class="k">Referência de campo</td><td>Age-groupers de Ironman com ~41 anos nadam 6,3 ± 3,1 km/semana (Rüst et al., 2011)</td></tr>
-        <tr><td class="k">Limiar de risco</td><td>Tendinopatia do supraespinal quadruplica acima de <b>35 km/semana</b> (Sein et al., 2010)</td></tr>
-      </tbody>
-    </table></div>
-    <div class="callout bad">
-      <b>Não use palmares neste ciclo.</b> Schorn et al. (2018) acompanharam 193 triatletas amadores por 12 meses: <b>19% tiveram lesão de ombro por sobrecarga, 86% atribuídas à natação</b>. Na regressão logística, o <b>único fator de risco que permaneceu significativo foi o uso de palmares</b> — 24% de lesão entre usuários contra 10% entre não usuários. <b>O volume de natação não foi fator de risco.</b> Se quiser usá-los, só depois da semana 16 e no máximo 200 m por sessão.
-    </div>
-    <div class="callout">
-      <b>Sobre prevenção, uma ressalva honesta:</b> Hibberd et al. (2012) testaram fortalecimento escapular por 6 semanas e <b>não encontraram diferença</b> em relação ao controle. Faça o FOR-B pelos outros méritos dele, mas sem promessa de que previne lesão de ombro — a evidência não sustenta.
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="ctitle"><b>Onde encaixar cada sessão</b></div>
-    <div class="tscroll"><table>
-      <thead><tr><th>Dia</th><th>Sessão</th><th>Por quê</th></tr></thead>
-      <tbody>
-        <tr><td class="k">Segunda</td><td><b style="color:var(--ink-1)">NAT-E</b> · economia</td><td>Depois da corrida Z2. Sessão técnica pede cabeça fresca, não perna fresca</td></tr>
-        <tr><td class="k">Terça</td><td><b style="color:var(--ink-1)">NAT-C</b> · ritmo crítico</td><td>Dia sem corrida — o esforço não compete</td></tr>
-        <tr><td class="k">Quinta</td><td>NAT-E ou NAT-A1</td><td>Segunda dose técnica da semana</td></tr>
-        <tr><td class="k">Sábado</td><td><b style="color:var(--ink-1)">NAT-P</b> · ritmo de prova</td><td>Volume longo; a partir da semana 28 vira NAT-OW</td></tr>
-      </tbody>
-    </table></div>
-    <div class="callout">
-      <b>A natação quase não interfere no resto.</b> Wilson et al. (2012): a interferência do treino concorrente é específica do segmento corporal — corrida interfere, ciclismo não, e natação não aparece como interferente. Laursen et al. (2000): nado de 3 km não afetou contrarrelógio de ciclismo de 3 h.
-      <br><br><b>Mas há um limite.</b> Frohlich et al. (2019): após nado de 2 km, o VO₂máx caiu 4,0% e a potência a 4 mM caiu 3,8%. <b>Nado próximo do máximo degrada o ciclismo seguinte.</b> Por isso o NAT-C, a sessão dura, fica na terça — longe da bike de qualidade de quarta. Separação de <b>≥6 h</b> entre sessões dissipa a maior parte da interferência aguda.
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="ctitle"><b>O que NÃO tem base científica</b></div>
-    <ul class="refs">
-      <li><b>Offsets em segundos a partir do CSS</b> ("CSS +5 s = aeróbio"). Nenhum estudo valida. A ciência prescreve percentuais.</li>
-      <li><b>Send-off versus descanso fixo.</b> Zero estudos comparativos. Convenção de piscina.</li>
-      <li><b>Volume por sessão para adulto iniciante.</b> Nenhum ensaio de dose-resposta nessa população.</li>
-      <li><b>Frequência mínima para aquisição técnica em adulto.</b> As recomendações de 2–3× vêm de escolas de natação, não da literatura.</li>
-      <li><b>Educativos isolados como método.</b> Nenhum ensaio controlado em natação; a aprendizagem motora sugere o contrário.</li>
-      <li><b>Pull buoy como ferramenta de treino.</b> Nenhum estudo de intervenção.</li>
-      <li><b>Regra dos 10% de progressão.</b> Refutada em corrida por ensaio randomizado com 532 pessoas (Buist et al., 2008) e nunca testada em natação.</li>
-      <li><b>"Triatleta não deve treinar pernada."</b> Slogan. Ela custa oxigênio sem propulsão proporcional, mas <em>melhora o alinhamento e reduz o arrasto ativo</em>. O balanço nunca foi testado. Para 1,90 m com quadril afundando, pernada mínima de 2 tempos se justifica como posição — e a roupa de borracha resolve boa parte disso.</li>
-    </ul>
-    <div class="callout bad">
-      <b>E a lacuna maior:</b> <b>não existe estudo longitudinal de adulto iniciante em natação por 6 a 12 meses.</b> A curva de melhora que você deveria esperar não está publicada. Qualquer número que eu desse seria extrapolação — e por isso a escada de ritmo é revisada por teste, não prometida.
-    </div>
-  </div>
-</section>
-
-<section id="s-espinha">
-  <div class="shead"><span class="kick">08</span><h2>A espinha — 35 semanas</h2>
-    <p>Altura = volume semanal planejado. As quedas são semanas de recuperação (mesociclos 2:1, padrão Friel para 40+).</p></div>
-  <div class="card">
-    <div class="spine-track" id="spineTrack"></div>
-    <div class="spine-axis" id="spineAxis"></div>
-    <div id="spineInfo">Passe o mouse sobre uma semana.</div>
-    <div class="legend" id="spineLegend"></div>
-  </div>
-</section>
-
-<section id="s-semana">
-  <div class="shead"><span class="kick">09</span><h2>A semana-padrão — 6 dias</h2>
-    <p>Terça e quinta sem corrida. Bike no rolo em qualquer dia. A folga você escolhe pelo readiness.</p></div>
-  <div class="card">
-    <div class="tscroll"><table>
-      <thead><tr><th>Dia</th><th>Manhã</th><th>2ª sessão</th><th>Papel</th></tr></thead>
-      <tbody>
-        <tr><td class="k">Segunda</td><td>Corrida Z2 + cadência</td><td>Natação técnica</td><td>Abertura fácil de propósito</td></tr>
-        <tr><td class="k">Terça</td><td><b style="color:var(--ink-1)">Força — musculação <em>ou</em> CrossFit</b></td><td>Natação técnica</td><td>Dia sem corrida</td></tr>
-        <tr><td class="k">Quarta</td><td><b style="color:var(--ink-1)">Bike no rolo — qualidade</b></td><td>—</td><td><b>Dia duro 1</b></td></tr>
-        <tr><td class="k">Quinta</td><td><b style="color:var(--ink-1)">Força — musculação <em>ou</em> CrossFit</b></td><td>Natação técnica</td><td>Dia sem corrida</td></tr>
-        <tr><td class="k">Sexta</td><td>Bike Z2 no rolo — cedo ou à noite</td><td>—</td><td><b style="color:var(--good)">Candidata a folga</b></td></tr>
-        <tr><td class="k">Sábado</td><td><b style="color:var(--ink-1)">Corrida longa com final em ritmo</b></td><td>Natação ou águas abertas</td><td><b>Dia duro 2</b></td></tr>
-        <tr><td class="k">Domingo</td><td colspan="2"><b style="color:var(--ink-1)">Bike longo na rua + brick de corrida</b></td><td>O treino que define o ciclo</td></tr>
-      </tbody>
-    </table></div>
-    <div class="callout ok">
-      <b>Reorganizada em 22/08/2026, com a sua disponibilidade nova.</b> Terça e quinta saíram da corrida e viraram <b>força + natação</b>. A corrida longa foi para <b>sábado</b>, e as outras duas corridas caíram em segunda e no brick de domingo. A bike ocupa quarta, sexta e domingo — <b>quarta e sexta no rolo</b>, que você faz cedo ou à noite sem depender de trânsito nem de luz.
-    </div>
-    <div class="callout">
-      <b>4 natações · 3 bikes · 3 corridas · 2 sessões de força · 1 folga.</b> Os dois dias duros são <b>quarta e sábado</b>, em modalidades diferentes e com três dias de intervalo — o teto em que Friel e Seiler convergem para quem passou dos 40.
-      <br><br><b>O CrossFit entra oficialmente</b>, ocupando a vaga de força de terça ou quinta, no dia que você escolher. Duas ressalvas que valem: se o WOD for pesado de perna, ele conflita com a bike de qualidade de quarta — prefira a quinta nesse caso. E CrossFit <em>somado</em> à musculação, em vez de no lugar dela, empurra a semana acima do volume planejado; isso aparece na análise de domingo.
-    </div>
-    <div class="callout info">
-      <b>A folga não tem dia fixo — você decide pelo readiness.</b> A regra: quando o painel abrir amarelo ou vermelho, ou quando você quiser a folga, tire de <b>sexta</b> (primeira opção, já que é só bike fácil) ou de <b>segunda</b> (segunda opção). <b>Nunca de quarta, sábado ou domingo</b> — esses três carregam o plano. Se a semana terminar com sete dias treinados, isso não é mérito: é dívida de recuperação, e a análise de domingo vai apontar.
-      <br><br><b>Transição (T1/T2) entra como ensaio no brick de domingo</b> a partir do Bloco B.
-    </div>
-  </div>
-</section>
-
-<section id="s-curva">
-  <div class="shead"><span class="kick">10</span><h2>Curva de volume planejada</h2>
-    <p>A bike cresce mais que tudo — é o melhor preditor do tempo total no 70.3.</p></div>
-  <div class="card">
-    <div class="chart-wrap"><svg class="chart" id="chartCurve" viewBox="0 0 900 290"></svg><div class="tip" id="tipCurve"></div></div>
-    <div class="legend">
-      <div class="lg"><i style="background:var(--nat)"></i>Natação</div>
-      <div class="lg"><i style="background:var(--bike)"></i>Ciclismo</div>
-      <div class="lg"><i style="background:var(--run)"></i>Corrida</div>
-      <div class="lg"><i style="background:var(--ink-3)"></i>Força</div>
     </div>
   </div>
 </section>
@@ -1167,8 +1237,10 @@ var LOG_AUTO = [
  {date:"2026-08-28",read:82,rhr:41,hrv:59,sleep:8.1,acute:291,natM:null,natT:null,bikeK:20.0,bikeT:45,runK:null,runT:null,obs:"REGEN-B Bike Z1 40min as 16:31 - 20,02km em 44,9min, FC media 111, max 130, 390 kcal, 156m de ganho de elevacao. Sessao prevista cumprida e marcada automaticamente no checklist (o Garmin classificou como cycling, que casa direto com a vaga de bike). REGISTRO FACTUAL DE FC: o treino pedia Z1 com teto de 100 bpm e a FC media saiu em 111, com maximo 130 - acima da faixa prescrita. O ganho de 156m indica terreno com subida, o que explica parte disso; nao e um julgamento, so o dado. A sexta era a candidata a folga da semana e ele optou por pedalar. Readiness do despertar 82 HIGH WELL_RECOVERED as 06:45, recuperacao zerada - referencia do dia. Fatores no despertar: carga de treino 100 VERY_GOOD, VFC 100 VERY_GOOD, recuperacao 99 GOOD, estresse 81 GOOD, sono da noite 78 GOOD, historico de sono 66 MODERATE - o historico de sono e o unico fator abaixo de bom. Leitura pos-exercicio de 75 HIGH RESTED_AND_READY as 17:23 citada so como contexto, nao substitui a do despertar. Sono 8,07h score 84 GOOD (19,0 por cento profundo, 20,7 REM, zero despertares), VFC noturna 66. FCrep 41, o menor valor desde 24/08 e no piso da base medida de 40-43. VFC semanal subiu de 57 para 59, status BALANCED. Carga aguda fechou o dia em 291, subindo de 258 no despertar. Recuperacao ao fim do dia 9,7h",auto:true}
 ,
  {date:"2026-08-29",read:88,rhr:42,hrv:61,sleep:8.5,acute:515,natM:1200,natT:34,bikeK:null,bikeT:null,runK:6.0,runT:35,obs:"RUN-0 Retomada Z1/Z2 as 10:02 - 5,97km em 35,0min, FC media 140, max 155, 482 kcal, 32m de ganho de elevacao. Ritmo 5:52/km. Segunda corrida da retomada, marcada automaticamente no checklist. REGISTRO FACTUAL DE FC: a faixa prescrita era 115-140 e a FC media saiu exatamente em 140, no teto - dado, nao julgamento. NAT-P3 Ritmo de Prova registrado em DUAS atividades separadas, as 11:15 e as 11:30, somando 1200m com 34,0min em movimento (39,8min de tempo total). Primeira: 300m em 476s de movimento, ritmo 2:39/100m, FC media 108 e max 148, training effect 1,3 RECOVERY. Segunda: 900m em 1562s de movimento, ritmo 2:53/100m, FC media 131 e max 165, training effect 3,0 AEROBIC_BASE, 24min vigorosos, RPE 50 e sensacao 100. RITMO EFETIVO DO CONJUNTO 2:50/100m em tempo de movimento. Na atividade de 900m o bloco principal durou 1391s com FC media 134 e max 165, compativel com os 800m continuos prescritos - o que daria 2:54/100m -, mas os typed splits vieram com distancia zero e NAO permitem confirmar essa atribuicao. DIVERGENCIA DE VOLUME: o painel prescreve 1300m de nado real no NAT-P3 e o relogio registrou 1200m repartidos em duas atividades. Nao da para dizer se faltaram 100m ou se o relogio perdeu contagem, falha que ja ocorreu em 26/08. CONTEXTO DE RITMO: 2:53/100m hoje contra 2:33,9/100m no teste de 26/08. O NAT-P3 pede de proposito 80 a 85 por cento do CSS (Peeling 2005), entao sair mais lento e o comportamento previsto da sessao, nao um sinal de queda. Readiness do despertar 88 HIGH WELL_RECOVERED as 08:02 com recuperacao zerada - referencia do dia e segunda melhor leitura do ciclo, atras so dos 91 de 24/08. Fatores no despertar: carga de treino 100 VERY_GOOD, VFC 100 VERY_GOOD, recuperacao 99 GOOD, estresse 86 GOOD, sono da noite 82 GOOD, historico de sono 72 GOOD - nenhum fator abaixo de bom, o primeiro dia assim desde o inicio do ciclo. Leituras pos-exercicio citadas so como contexto, nao substituem a do despertar: 66 as 10:44, 67 as 11:28 e 40 LOW as 11:58, esta ultima refletindo a recuperacao de 46,5h aberta pela soma de corrida mais natacao na mesma manha. Sono 8,48h score 86 GOOD (15,3 por cento profundo, 20,6 REM, 1 despertar, estresse noturno 15), VFC noturna 57. FCrep 42, dentro da base medida de 40-43 e longe do alerta de 48. VFC semanal subiu de 59 para 61. Carga aguda saltou de 238 no despertar para 515 as 11:58 - maior valor registrado no ciclo, efeito das duas sessoes concentradas. FECHAMENTO DAS 18:55: a leitura das 18:36 (contexto de atualizacao em tempo real, nao pos-exercicio) marcou 50 MODERATE com recuperacao de 39,9h, ou seja o relogio ja abateu 6,6h das 46,5h abertas ao meio-dia. Carga aguda estavel em 515. Nenhuma atividade nova registrada depois da natacao. Nenhum limiar de alerta atingido: FCrep 42 na base, sono 8,48h e readiness do despertar 88",auto:true}
+,
+ {date:"2026-08-30",read:59,rhr:40,hrv:59,sleep:7.8,acute:441,natM:null,natT:null,bikeK:null,bikeT:null,runK:null,runT:null,obs:"Readiness do despertar 59 MODERATE as 06:42, feedback BOOSTED_BY_GOOD_SLEEP - referencia do dia. Menor nota do despertar desde os 41 de 18/08 e a primeira leitura AMARELA do ciclo pelo criterio do painel (40-59). Fatores no despertar: VFC 100 VERY_GOOD, estresse 89 GOOD, carga de treino 84 GOOD, historico de sono 80 GOOD, sono da noite 72 GOOD e RECUPERACAO 55 MODERATE - a recuperacao e o unico fator abaixo de bom e e o que segura a nota. Recuperacao ainda aberta em 27,8h, resto das 46,5h que a soma de corrida mais natacao abriu em 29/08. Carga aguda 441 no despertar, recuando dos 515 de ontem mas ainda o segundo maior valor do ciclo. Sono 7,77h score 81 GOOD (21,0 por cento profundo, 23,4 REM, 3 despertares, estresse noturno 17), VFC noturna 62. VFC semanal 59, caindo de 61, dentro da banda 52-74. RETRATACAO DA RODADA DAS 06:20: naquela hora o relogio ainda nao havia sincronizado e a unica metrica disponivel era uma FC de repouso PARCIAL de 46 bpm, sobre a qual eu escrevi que era o primeiro valor fora da base 40-43 desde 25/08. Com a sincronizacao completa as 07:17 o valor consolidado do dia e 40 bpm - o MENOR do ciclo e no piso da base medida. O 46 era leitura incompleta do dia em curso, nao um dado real. Aquela observacao esta descartada. Nenhum limiar de alerta atingido: FCrep 40, sono 7,77h, readiness 59. Nenhuma atividade registrada ate as 07:17 - o REGEN-B de 40min segue em aberto",auto:true}
 ];
-var LOG_AUTO_UPDATED = "29/08/2026 18:58";
+var LOG_AUTO_UPDATED = "30/08/2026 07:20";
 /* ==== FIM DADOS AUTOMATICOS ==== */
 
 /* ==== INICIO CHECKLIST DA SEMANA - NAO EDITAR A MAO ====
@@ -1184,17 +1256,17 @@ var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"aut
 var NOTAS = {"2026-08-19":"Garmin registrou: HIIT 54min","2026-08-20":"Garmin registrou: forca 20min alem da natacao prescrita","2026-08-22":"Garmin registrou: natacao 800m 35min alem da bike prescrita - e o NAT-0 previsto para domingo 23/08, feito um dia antes","2026-08-23":"Contagem de bracadas NAT-E2 informada pelo Alex: 50 bracadas por 50m, contando direita e esquerda (bracadas individuais), em piscina de 25m - ou seja 25 bracadas por piscina. Convencao e piscina de referencia fixadas em 23/08/2026. Primeira medida do ciclo. 1,00 m por bracada aparente, estimadas 0,84 a 0,92 m nadadas descontando o deslize das duas saidas de parede","2026-08-24":"Dia cumprido conforme o plano: RUN-0 mais NAT-E2 de 1200m. CORRECAO de um erro meu: eu havia registrado a natacao como fora do plano porque get_scheduled_workouts devolveu o dia 24/08 vazio. Conferido em 24/08 a noite - esse endpoint SO lista agendamentos pendentes, treino cumprido some da consulta (22 e 23/08 tambem voltam vazios e tiveram treino agendado e feito). Calendario vazio no dia NAO e prova de ausencia. Consequencia: em 23/08 a automacao removeu uma natacao da segunda 24/08 da AGENDA_FUTURA pela mesma leitura equivocada - foi reposta em SEMANA_ATUAL · CONTEUDO DA AULA (informado pelo Alex): aula com professor, na vaga do NAT-E2. 200m crawl · 2x(100 so pernas + 100 nado lateral so pernas + 100 nado alternado com um braco girando e o outro parado, 50m para cada braco) · 2x tiro de 25m em 23s · 2x tiro de 25m com nadadeira e palmar em 18s · 300m crawl livre. Soma 1200m, exatamente o que o Garmin registrou. So 500m foram crawl completo (200 de aquecimento + 300 finais); 600m foram educativo de pernas e 100m foram tiros. ATENCAO: houve uso de PALMAR, que a decisao de 22/08 deste ciclo veta (Schorn 2018 - unico fator de risco de lesao de ombro que sobreviveu a regressao, 24 por cento contra 10 por cento). Registro factual para ele decidir como conduzir com o professor","2026-08-25":"Garmin registrou: HIIT 57min as 07:02, FC media 94 e max 146. O previsto para terca era FOR-A (forca, vaga que aceita CrossFit) mais NAT-TESTE de 400m CSS. O tipo hiit nao casa automaticamente com nenhuma modalidade do checklist - se esse HIIT cumpriu a sessao de forca, marque a mao no painel. O NAT-TESTE nao aparece no Garmin ate as 19:05","2026-08-26":"Garmin registrou: forca 15min as 10:23 (FC media 77, max 110) alem do NAT-TESTE previsto. A quarta so tinha natacao e a bike REGEN-B - a forca era a vaga de terca, aparentemente reposta hoje. Nao marquei nada da forca no checklist porque a quarta nao tem sessao de forca prevista; se ela repos a FOR-A de terca, marque a mao no dia 25. A bike REGEN-B de hoje nao foi feita ate as 18:30 · NAT-TESTE: o teste NAO produziu CSS valido. O lap dos 400m registrou 350m com um length corrompido (50m em 22,1s, 2,27 m/s, 8 bracadas, marcado como peito) e os dois esforcos sairam mais lentos que o ritmo regenerativo de 22/08 (2:40 e 2:28 contra 2:24 por 100m), com FC maxima de 140 na sessao inteira. Os alvos de natacao continuam provisorios ate um teste em esforco maximo. Decisao de como repetir e do Alex · CORRECAO EM 26/08 A NOITE, a partir do relato do Alex: ele nadou em PISCINA DE 50m (mais honesta que a de 25m, menos empurroes de parede) e observou que o relogio marcou 300m no teste de 400m e deixou de marcar 50m na soltura. Confirmado pelas bracadas: 174 no lap do teste, a 29,2 bracadas por 50m que e a taxa dele em esforco, dao 6 lengths = 300m. Ele nadou os 400m; o relogio registrou 300. Projecao dos 400m entre 10:16 e 11:10, centro 10:46. CSS estimado entre 2:40 e 3:07 por 100m, centro 2:55 - estimativa, nao medida. Retratei o argumento de que os esforcos foram mais lentos que o regenerativo de 22/08: aquela sessao era de tiros curtos com pausa e nao servia de comparacao","2026-08-29":"Dia cumprido conforme o plano: RUN-0 mais NAT-P3, as duas sessoes previstas, marcadas automaticamente no checklist. Duas observacoes factuais para voce decidir o que fazer com elas. (1) O NAT-P3 foi registrado em DUAS atividades separadas no Garmin, de 300m e 900m, somando 1200m - o painel prescreve 1300m de nado real. Pode ter sido pausa e reinicio do relogio, pode ter sido volume mesmo; nao da para distinguir pelos dados. (2) O ritmo de 2:53/100m no bloco de 900m e mais lento que os 2:33,9/100m do teste de 26/08, e esse e o comportamento esperado de uma sessao de ritmo de prova a 80-85 por cento do CSS - registro aqui so para o numero nao ser lido depois como perda de forma. A carga aguda saltou de 238 no despertar para 515, maior valor do ciclo, e o relogio abriu 46,5h de recuperacao"};
 /* ==== FIM ANOTACOES ==== */
 
-var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,7,29);
+var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,7,30);
 
 var SECOES=[
  ["s-visao","01","Visão geral"],["s-atual","02","Hoje"],["s-trilhas","03","As três trilhas"],
- ["s-registro","04","Lançamento manual"],["s-historico","05","Histórico do ciclo"],["s-nutri","06","Nutrição"],
- ["s-natacao","07","Natação"],["s-espinha","08","A espinha"],["s-semana","09","Semana-padrão"],
- ["s-curva","10","Curva de volume"],["s-partida","11","Ponto de partida"],["s-bench","12","Benchmark M45-49"],
+ ["s-registro","04","Lançamento manual"],["s-historico","05","Histórico do ciclo"],["s-natacao","06","Natação"],
+ ["s-espinha","07","A espinha"],["s-semana","08","Semana-padrão"],["s-curva","09","Curva de volume"],
+ ["s-nutri","10","Nutrição"],["s-partida","11","Ponto de partida"],["s-bench","12","Benchmark M45-49"],
  ["s-projecao","13","Orçamento 5h40"],["s-fisio","14","Fisiologia e zonas"],["s-exames","15","Exames"],
  ["s-regras","16","Regras de decisão"],["s-refs","17","Referências"]
 ];
-var GRUPOS={0:"Agora",4:"Registro, nutrição e natação",7:"Planejamento",10:"Estratégia",13:"Apoio"};
+var GRUPOS={0:"Agora",4:"Registro e natação",6:"Planejamento",10:"Estratégia",13:"Apoio"};
 
 var BLOCOS=[
  {id:"B0",nome:"Regeneração",ini:1,fim:2,cor:"#6b7280"},
@@ -1416,8 +1488,27 @@ var AGENDA_FUTURA=[
   {date:"2026-09-13",dow:"Dom",s:[{t:"b",n:"BIKE-B3 · Longo Z2 2h",o:"o treino que define o ciclo"},{t:"r",n:"RUN-BRICK · Trote 20′",o:"encadear em até 5 min"}]}
  ]}
 ];
-var AGENDA_FUTURA_UPDATED = "29/08/2026 16:05 (reconferida contra o calendario do Garmin de 31/08 a 20/09 - as mesmas 24 sessoes agendadas continuam batendo dia a dia com o que esta aqui, sem divergencias, sem duplicatas, sem corrida em terca ou quinta e sem forca na quarta; a semana 5 de 14 a 20/09 ainda nao foi agendada)";
+var AGENDA_FUTURA_UPDATED = "30/08/2026 06:25 (reconferida contra o calendario do Garmin de 31/08 a 20/09 - as mesmas 24 sessoes agendadas continuam batendo dia a dia com o que esta aqui, sem divergencias, sem duplicatas, sem corrida em terca ou quinta e sem forca na quarta; a semana 5 de 14 a 20/09 ainda nao foi agendada)";
 /* ==== FIM AGENDA FUTURA ==== */
+
+/* ==== INICIO ATIVIDADES - NAO EDITAR A MAO ====
+   Uma entrada por ATIVIDADE realizada, do get_activities_by_date + get_activity.
+   Alimenta o comparativo previsto x realizado no painel lateral.
+   Guarde os ultimos 60 dias; corte os mais antigos.
+   Campos: {date, t:"n"|"b"|"r"|"f"|"x", nome, dist (m para nado, km para bike e corrida),
+            dur (min totais), mov (min em movimento), fcm, fcx, te, teLabel, rpe, kcal,
+            movidoDe:"AAAA-MM-DD" quando o treino era de outro dia} */
+var ATIVIDADES=[
+ {date:"2026-08-18",t:"b",nome:"REGEN-B Bike Z1 40min",dist:15.0,dur:48,mov:48,fcm:95,fcx:122,te:1.4,teLabel:"RECOVERY",rpe:null,kcal:null},
+ {date:"2026-08-22",t:"b",nome:"REGEN-B Bike Z1 40min",dist:20.1,dur:50,mov:50,fcm:98,fcx:112,te:1.6,teLabel:"RECOVERY",rpe:null,kcal:311},
+ {date:"2026-08-22",t:"n",nome:"NAT-0 Ambientacao",dist:800,dur:35,mov:19.2,fcm:100,fcx:145,te:1.9,teLabel:"RECOVERY",rpe:30,kcal:258},
+ {date:"2026-08-23",t:"n",nome:"NAT-E2 Economia",dist:1750,dur:54,mov:45.8,fcm:112,fcx:143,te:2.2,teLabel:"AEROBIC_BASE",rpe:70,kcal:483},
+ {date:"2026-08-24",t:"n",nome:"Natacao em piscina",dist:1200,dur:53.6,mov:20.2,fcm:110,fcx:137,te:2.1,teLabel:"AEROBIC_BASE",rpe:60,kcal:459},
+ {date:"2026-08-24",t:"r",nome:"RUN-0 Retomada Z1/Z2",dist:5.86,dur:35.1,mov:35.1,fcm:129,fcx:153,te:2.3,teLabel:"AEROBIC_BASE",rpe:null,kcal:458},
+ {date:"2026-08-25",t:"x",nome:"HIIT",dist:null,dur:57.3,mov:57.3,fcm:94,fcx:146,te:null,teLabel:null,rpe:null,kcal:328}
+];
+var ATIVIDADES_UPDATED = "26/08/2026 19:30";
+/* ==== FIM ATIVIDADES ==== */
 
 var REFS=[
  ["Sousa CV et al. (2021) — <em>Front Physiol</em> 12:654552. O ciclismo é o melhor preditor do tempo total no 70.3 (n=16.667).","https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2021.654552/full"],
@@ -1497,7 +1588,7 @@ var semAtual=Math.max(1,Math.min(TOTAL_WEEKS,Math.floor(Math.floor((TODAY-START)
   var tiles=[
    ["Meta de prova","5:40","alvo com transições · corte 8h30"],
    ["Semana do macrociclo",semAtual+"<small> / 35</small>",fmtBR(weekStart(semAtual))+" a "+fmtBR(weekEnd(semAtual))],
-   ["Bloco atual",'<span style="font-size:19px">'+b.nome+'</span>',"semanas "+b.ini+"–"+b.fim],
+   ["Bloco atual",'<span style="font-size:21px">'+b.nome+'</span>',"semanas "+b.ini+"–"+b.fim],
    ["Volume-alvo da semana",br(p.total)+"<small> h</small>","nado "+br(p.nat)+"h · bike "+br(p.bike)+"h · corrida "+br(p.run)+"h"],
    ["Ritmo de nado alvo","2:30<small>/100 m</small>","1,9 km em 47:30 · seu maior nado: 800 m"]
   ];
@@ -1547,15 +1638,15 @@ var semAtual=Math.max(1,Math.min(TOTAL_WEEKS,Math.floor(Math.floor((TODAY-START)
   });
   var bn=$("tbBench");
   BENCH.forEach(function(r){
-    bn.appendChild(el("tr","","<td class='k'>"+r[0]+"</td><td class='num'>"+r[1]+"</td><td class='num'><b style='color:var(--ink-1)'>"+r[2]+"</b></td><td class='num'>"+r[3]+"</td><td class='num'>"+r[4]+"</td><td style='font-size:11.5px'>"+r[5]+"</td>"));
+    bn.appendChild(el("tr","","<td class='k'>"+r[0]+"</td><td class='num'>"+r[1]+"</td><td class='num'><b style='color:var(--ink-1)'>"+r[2]+"</b></td><td class='num'>"+r[3]+"</td><td class='num'>"+r[4]+"</td><td style='font-size:13.5px'>"+r[5]+"</td>"));
   });
   var pj=$("tbProj");
   PROJ.forEach(function(p){
     pj.appendChild(el("tr","","<td class='k'>"+p.et+(p.risco?' <span class="flag" style="color:#f0b53c;border-color:#f0b53c">chave</span>':'')+"</td><td class='num'>"+p.ritmo+"</td><td class='num'><b style='color:var(--ink-1)'>"+p.t+"</b></td><td class='num'>"+p.ac+"</td><td class='num'>"+p.corte+"</td><td class='num'>"+p.marg+"</td>"));
   });
-  pj.appendChild(el("tr","","<td class='k' style='border-top:2px solid var(--axis)'>TOTAL</td><td class='num' style='border-top:2px solid var(--axis)'>113 km</td><td class='num' style='border-top:2px solid var(--axis)'><b style='color:var(--good);font-size:14px'>5:40:00</b></td><td class='num' style='border-top:2px solid var(--axis)'>—</td><td class='num' style='border-top:2px solid var(--axis)'>8h30</td><td class='num' style='border-top:2px solid var(--axis)'><b style='color:var(--good)'>+2:50:00</b></td>"));
+  pj.appendChild(el("tr","","<td class='k' style='border-top:2px solid var(--axis)'>TOTAL</td><td class='num' style='border-top:2px solid var(--axis)'>113 km</td><td class='num' style='border-top:2px solid var(--axis)'><b style='color:var(--good);font-size:16px'>5:40:00</b></td><td class='num' style='border-top:2px solid var(--axis)'>—</td><td class='num' style='border-top:2px solid var(--axis)'>8h30</td><td class='num' style='border-top:2px solid var(--axis)'><b style='color:var(--good)'>+2:50:00</b></td>"));
   var fs=$("tbFisio");
-  FISIO.forEach(function(r){fs.appendChild(el("tr","","<td class='k'>"+r[0]+"</td><td class='num'><b style='color:var(--ink-1)'>"+r[1]+"</b></td><td style='font-size:11.5px'>"+r[2]+"</td>"));});
+  FISIO.forEach(function(r){fs.appendChild(el("tr","","<td class='k'>"+r[0]+"</td><td class='num'><b style='color:var(--ink-1)'>"+r[1]+"</b></td><td style='font-size:13.5px'>"+r[2]+"</td>"));});
   $("wkRange").textContent="Semana "+semAtual+" · "+fmtBR(weekStart(semAtual))+" a "+fmtBR(weekEnd(semAtual))+" · "+blocoDe(semAtual).nome;
   var ul=$("refList");
   REFS.forEach(function(r){ul.appendChild(el("li","",r[0]+' <a href="'+r[1]+'" target="_blank" rel="noopener">fonte ↗</a>'));});
@@ -1617,7 +1708,7 @@ var semAtual=Math.max(1,Math.min(TOTAL_WEEKS,Math.floor(Math.floor((TODAY-START)
     var p=PLANO[sem-1],b=BLOCOS[p.bloco];
     cross.setAttribute("x1",x(sem));cross.setAttribute("x2",x(sem));cross.setAttribute("opacity","1");
     tip.innerHTML='<div class="th">Semana '+sem+' · '+fmtBR(weekStart(sem)).slice(0,5)+'</div>'+
-      '<div style="color:var(--ink-3);font-size:10.5px;margin-bottom:5px">'+b.nome+' · total '+br(p.total)+' h</div>'+
+      '<div style="color:var(--ink-3);font-size:12.5px;margin-bottom:5px">'+b.nome+' · total '+br(p.total)+' h</div>'+
       '<div class="tr"><i style="background:var(--bike)"></i>Ciclismo<b>'+br(p.bike)+' h</b></div>'+
       '<div class="tr"><i style="background:var(--nat)"></i>Natação<b>'+br(p.nat)+' h</b></div>'+
       '<div class="tr"><i style="background:var(--run)"></i>Corrida<b>'+br(p.run)+' h</b></div>'+
@@ -1717,7 +1808,7 @@ function drawEvo(mk){
       '<div class="tr"><i style="background:'+c.cor+'"></i>Distância<b>'+(c.distLabel==="m"?Math.round(r[c.distKey])+" m":br(r[c.distKey])+" km")+'</b></div>'+
       '<div class="tr"><i style="background:'+c.cor+'"></i>Tempo<b>'+br(r[c.timeKey],0)+' min</b></div>'+
       '<div class="tr"><i style="background:'+c.cor+'"></i>'+(mk==="bike"?"Velocidade":"Ritmo")+'<b>'+c.paceFmt(c.paceOf(r))+'</b></div>'+
-      (r.obs?'<div style="color:var(--ink-3);font-size:10.5px;margin-top:5px;max-width:230px;white-space:normal">'+r.obs+'</div>':'');
+      (r.obs?'<div style="color:var(--ink-3);font-size:12.5px;margin-top:5px;max-width:230px;white-space:normal">'+r.obs+'</div>':'');
     tip.style.opacity="1";
     tip.style.left=Math.min(rr.width-190,Math.max(0,(xi(i)/W)*rr.width+14))+"px"; tip.style.top="14px";
   });
@@ -1806,7 +1897,7 @@ function drawFis(){
       if(r[m[0]]!==null&&r[m[0]]!==undefined&&r[m[0]]!=="")
         linhas+='<div class="tr"><i style="background:'+FIS_CFG[m[0]].cor+'"></i>'+m[1]+'<b>'+FIS_CFG[m[0]].fmt(Number(r[m[0]]))+'</b></div>';
     });
-    if(r.obs)linhas+='<div style="color:var(--ink-3);font-size:10.5px;margin-top:5px;max-width:230px;white-space:normal">'+r.obs+'</div>';
+    if(r.obs)linhas+='<div style="color:var(--ink-3);font-size:12.5px;margin-top:5px;max-width:230px;white-space:normal">'+r.obs+'</div>';
     tip.innerHTML=linhas; tip.style.opacity="1";
     tip.style.left=Math.min(rr.width-190,Math.max(0,(xi(i)/W)*rr.width+14))+"px"; tip.style.top="14px";
   });
@@ -1939,8 +2030,14 @@ function renderMini(){
       "<td class='num'>"+(r.hrv||"—")+"</td>"+
       "<td class='num'"+(r.sleep!==null&&r.sleep<LIM.sonoMin?" style='color:var(--warn)'":"")+">"+(r.sleep?br(r.sleep,1):"—")+"</td>"+
       "<td class='num'>"+(r.acute||"—")+"</td>"+
-      "<td style='font-size:11px'>"+(at.join(" · ")||'<span style="color:var(--ink-3)">'+(r.obs||"—")+"</span>")+
-        (extra?'<div style="color:var(--warn);font-size:10.5px;margin-top:2px">+ '+extra.replace(/</g,"&lt;")+'</div>':"")+"</td>"));
+      "<td style='font-size:13px'>"+(at.join(" · ")||'<span style="color:var(--ink-3)">'+(r.obs||"—")+"</span>")+
+        (at.length&&r.obs?'<div style="color:var(--ink-3);font-size:12.5px;margin-top:2px">'+String(r.obs).replace(/</g,"&lt;")+'</div>':"")+
+        (extra?'<div style="color:var(--warn);font-size:12.5px;margin-top:2px">+ '+extra.replace(/</g,"&lt;")+'</div>':"")+"</td>"));
+  });
+  /* trunca as celulas de atividade em 3 linhas */
+  Array.prototype.forEach.call(tb.querySelectorAll("tr"),function(tr,i){
+    var td=tr.cells[tr.cells.length-1];
+    if(td)clampCelula(td,"mini-obs-"+i);
   });
 }
 
@@ -1971,7 +2068,12 @@ var DECISOES=[
  ["22/08/2026","<b>Navegação de semanas no painel</b> — setas para 3 semanas à frente","Ele só enxergava a semana corrente. Novo bloco AGENDA_FUTURA, alimentado pela sync das 06:35"],
  ["23/08/2026","<b>Semana em curso corrigida</b>: domingo passou de NAT-0 (400 m) para NAT-E2 (1.800 m)","<b>Erro meu</b>, encontrado por ele: reagendei no Garmin mas não atualizei SEMANA_ATUAL. O painel mostrava o plano antigo enquanto o relógio já tinha o novo"],
  ["23/08/2026","<b>A sync das 06:35 passa a conferir o painel contra o Garmin todo dia</b>","Nenhuma automação fazia isso — só a tarefa semanal escrevia nesse bloco, e ela roda uma vez por semana. Agora a divergência se corrige sozinha para os dias de hoje em diante"],
- ["23/08/2026","Teste do painel ganha <b>bloco de coerência</b>","Seis verificações que pegam esse tipo de esquecimento: det presente, id citado, sem apóstrofo, sem treino aposentado em dia futuro, sem corrida em terça ou quinta, semana começando na segunda certa"]
+ ["23/08/2026","Teste do painel ganha <b>bloco de coerência</b>","Seis verificações que pegam esse tipo de esquecimento: det presente, id citado, sem apóstrofo, sem treino aposentado em dia futuro, sem corrida em terça ou quinta, semana começando na segunda certa"],
+ ["26/08/2026","<b>Volume da semana 2 escalonado</b>: natação de 6,6 km para 3,3 km","<b>Erro meu que ele encontrou:</b> eu tinha agendado 8,1 h numa semana cujo alvo do plano era 3,0 h — 2,7 vezes. Corrigi os treinos fracos e corrigi demais, sem checar contra a curva de volume do próprio painel"],
+ ["26/08/2026","Criados NAT-C3 (1.200 m) e NAT-P3 (1.300 m), versões escalonadas","Mesma estrutura dos treinos cheios, dose menor. Sobem para as versões completas na semana 4"],
+ ["26/08/2026","Teste de CSS remarcado da terça para quarta 26/08","Ele fez HIIT na terça em vez da força e do teste"],
+ ["26/08/2026","<b>Trava de progressão</b> por aderência","Pedido dele: se ficar uma semana sem nadar, não dá para retomar no volume que o plano previa. Zero sessões regride um degrau; metade repete a semana. Base: Neufer 1987, 3 sessões/semana preservam a mecânica de braçada e 1 não"],
+ ["26/08/2026","Painel: <b>duas semanas visíveis</b>, previsto × realizado no drawer, textos em 3 linhas, fonte +2","O calendário mostra a semana atual e a seguinte juntas; as setas avançam de duas em duas. Clicar num treino já feito mostra os números reais, as barras de FC e esforço e as últimas sessões da modalidade"]
 ];
 
 function histDados(){
@@ -2020,8 +2122,8 @@ function renderHist(){
     var ini=weekStart(n), fim=weekEnd(n);
     var mr=media(S.read), mh=media(S.rhr);
     linhas+="<tr><td class='k'>"+n+"</td>"+
-      "<td style='font-size:11px'>"+fmtBR(ini).slice(0,5)+"–"+fmtBR(fim).slice(0,5)+"</td>"+
-      "<td style='font-size:11px'><span style='color:"+b.cor+"'>●</span> "+b.nome.split(" /")[0]+"</td>"+
+      "<td style='font-size:13px'>"+fmtBR(ini).slice(0,5)+"–"+fmtBR(fim).slice(0,5)+"</td>"+
+      "<td style='font-size:13px'><span style='color:"+b.cor+"'>●</span> "+b.nome.split(" /")[0]+"</td>"+
       "<td class='num'>"+(S.nat?br(S.nat/1000,2)+" km":"—")+"</td>"+
       "<td class='num'>"+(S.bike?br(S.bike,1)+" km":"—")+"</td>"+
       "<td class='num'>"+(S.run?br(S.run,1)+" km":"—")+"</td>"+
@@ -2036,7 +2138,7 @@ function renderHist(){
   var cal="";
   sems.slice().reverse().forEach(function(n){
     var S=H.semanas[n];
-    cal+="<div style='margin-bottom:14px'><div style='font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);margin-bottom:6px'>Semana "+n+"</div><div class='wkgrid'>";
+    cal+="<div style='margin-bottom:14px'><div style='font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--ink-3);margin-bottom:6px'>Semana "+n+"</div><div class='wkgrid'>";
     S.dias.forEach(function(r){
       var p=r.date.split("-"), at=[];
       if(r.natM)at.push("<div class='sess n'>"+r.natM+" m nado</div>");
@@ -2045,16 +2147,29 @@ function renderHist(){
       cal+="<div class='day'><div class='dhead'><div class='d'>"+p[2]+"/"+p[1]+"</div>"+
         (r.read!==null&&r.read!==undefined?"<span class='dtag"+(r.read>=LIM.readVerde?" rest":(r.read<LIM.readAmarelo?" hard":""))+"'>"+r.read+"</span>":"")+
         "</div>"+(at.join("")||"<div class='rest'>sem atividade</div>")+
-        (r.obs?"<div style='font-size:10px;color:var(--ink-3);margin-top:5px;line-height:1.35'>"+String(r.obs).replace(/</g,"&lt;")+"</div>":"")+"</div>";
+        (r.obs?"<div style='font-size:12px;color:var(--ink-3);margin-top:5px;line-height:1.35'>"+String(r.obs).replace(/</g,"&lt;")+"</div>":"")+"</div>";
     });
     cal+="</div></div>";
   });
   $("hCal").innerHTML=cal||"<div class='empty'>Nenhum dia registrado ainda.</div>";
 
-  /* decisoes */
-  $("hDec").innerHTML=DECISOES.slice().reverse().map(function(d){
-    return "<tr><td class='k' style='white-space:nowrap'>"+d[0]+"</td><td>"+d[1]+"</td><td style='font-size:11px'>"+d[2]+"</td></tr>";
+  renderDec();
+}
+
+/* decisoes: 3 mais recentes, com botao para ver todas */
+var DEC_ALL=false;
+function renderDec(){
+  var alvo=$("hDec"); if(!alvo)return;
+  var todas=DECISOES.slice().reverse();
+  var vis=DEC_ALL?todas:todas.slice(0,3);
+  alvo.innerHTML=vis.map(function(d){
+    return "<tr><td class='k' style='white-space:nowrap'>"+d[0]+"</td><td>"+d[1]+"</td><td style='font-size:13px'>"+d[2]+"</td></tr>";
   }).join("");
+  var bt=$("btnDec");
+  if(bt){
+    bt.style.display = todas.length>3 ? "" : "none";
+    bt.textContent = DEC_ALL ? "Mostrar só as 3 últimas ▴" : "Ver todas as "+todas.length+" decisões ▾";
+  }
 }
 
 function tile(l,v,suf,n){
@@ -2115,6 +2230,12 @@ function openDrawer(d,i){
 
   var b=$("dwBody"); b.innerHTML="";
 
+  /* 0. SE JA FOI FEITO: previsto x realizado no topo, que e o que ele quer ver primeiro */
+  var rel=atvDe(d.date,s.t);
+  if(rel){
+    b.appendChild(blocoRealizado(rel,s,mi,d));
+  }
+
   /* 1. o passo a passo, se a tarefa semanal tiver preenchido `det` */
   var det=Array.isArray(s.det)?s.det:null;
   var sec=el("div","dw-sec");
@@ -2147,7 +2268,7 @@ function openDrawer(d,i){
     ZONAS[s.t].forEach(function(z){
       s3.appendChild(el("div","dw-zn","<span>"+z[0]+"</span><b>"+z[1]+"</b>"));
     });
-    s3.appendChild(el("div","",'<div style="font-size:10.5px;color:var(--ink-3);margin-top:9px;line-height:1.5">'+
+    s3.appendChild(el("div","",'<div style="font-size:12.5px;color:var(--ink-3);margin-top:9px;line-height:1.5">'+
       (s.t==="b"
         ? "Medidas no TCPE de ciclo de 15/08/2025, quando você não pedalava. <b style=\"color:var(--ink-2)\">Estão baixas e serão recalibradas no teste de 20 min.</b>"
         : "Medidas no TCPE de esteira de 30/10/2025. Limiar 159 bpm · máximo 171 bpm.")+"</div>"));
@@ -2179,6 +2300,102 @@ function openDrawer(d,i){
   $("dwClose").focus();
 }
 
+/* ============ BLOCO PREVISTO x REALIZADO ============
+   Aparece no topo do drawer quando a sessao ja tem atividade correspondente. */
+function alvoPrescrito(s){
+  /* tenta extrair a distancia prescrita do nome do treino, ex.: "NAT-C3 · Ritmo Crítico 1200 m" */
+  var m=String(s.n).match(/([\d.]+)\s*m\b/);
+  if(m&&s.t==="n")return {dist:parseFloat(m[1].replace(".",""))};
+  var k=String(s.n).match(/([\d.,]+)\s*km/);
+  if(k)return {dist:parseFloat(k[1].replace(",","."))};
+  var t=String(s.n).match(/(\d+)\s*[hm′']/);
+  if(t)return {dur:parseFloat(t[1])};
+  return {};
+}
+
+function blocoRealizado(rel,s,mi,dPres){
+  var a=rel.a, sec=el("div","dw-sec");
+  sec.appendChild(el("h4","","Como você fez"));
+
+  if(rel.movido){
+    var pm=rel.movido.split("-"), pd=a.date.split("-");
+    sec.appendChild(el("div","callout",
+      "<b>Treino deslocado.</b> Estava prescrito para <b>"+dPres.dow+" "+dPres.date.split("-")[2]+"/"+dPres.date.split("-")[1]+"</b> e você fez em <b>"+pd[2]+"/"+pd[1]+"</b>. "+
+      "Isso está registrado e entra na análise de domingo — deslocar um dia é normal; o que a análise olha é a <b>frequência da semana</b>, não a data exata."));
+  }
+
+  /* cartoes previsto x realizado */
+  var alvo=alvoPrescrito(s), pxr=el("div","pxr");
+  var uni = a.t==="n" ? "m" : "km";
+  var distReal = a.dist==null ? null : (a.t==="n"? a.dist : a.dist);
+  pxr.innerHTML=
+    "<div class='c'><div class='l'>Prescrito</div><div class='v'>"+
+      (alvo.dist!=null ? br(alvo.dist, a.t==="n"?0:1)+"<small> "+uni+"</small>" : (alvo.dur!=null? alvo.dur+"<small> min</small>":"—"))+
+    "</div><div class='d'>"+s.n+"</div></div>"+
+    "<div class='c real'><div class='l'>Realizado</div><div class='v'>"+
+      (distReal!=null ? br(distReal, a.t==="n"?0:1)+"<small> "+uni+"</small>" : Math.round(a.dur)+"<small> min</small>")+
+    "</div><div class='d'>"+Math.round(a.dur)+" min no total"+(a.mov&&a.mov<a.dur?" · "+Math.round(a.mov)+" min em movimento":"")+"</div></div>";
+  sec.appendChild(pxr);
+
+  /* barras: FC, esforco, ritmo */
+  var barras=el("div","barcmp"), linhas="";
+  function lin(nome,valor,pct,cor,txt){
+    return "<div class='lin'><span class='nm2'>"+nome+"</span>"+
+      "<span class='track'><i style='width:"+Math.max(2,Math.min(100,pct))+"%;background:"+cor+"'></i></span>"+
+      "<span class='vv'>"+txt+"</span></div>";
+  }
+  if(a.fcm)linhas+=lin("FC média",a.fcm,(a.fcm/190)*100,mi.cor,a.fcm+" bpm");
+  if(a.fcx)linhas+=lin("FC máxima",a.fcx,(a.fcx/190)*100,"var(--crit)",a.fcx+" bpm");
+  if(a.rpe!=null)linhas+=lin("Esforço",a.rpe,a.rpe,a.rpe>=70?"var(--warn)":"var(--good)","RPE "+a.rpe);
+  if(a.te!=null)linhas+=lin("Efeito",a.te,(a.te/5)*100,"var(--nat)",br(a.te,1)+(a.teLabel?" · "+a.teLabel.toLowerCase().replace("_"," "):""));
+  if(linhas){ barras.innerHTML=linhas; sec.appendChild(barras); }
+
+  /* ritmo x meta, so para natacao, bike e corrida */
+  if(a.dist&&a.mov){
+    var val,meta,rot,melhorMenor=true;
+    if(a.t==="n"){ val=a.mov*60/(a.dist/100); meta=150; rot=mmss(val)+"/100m"; }
+    else if(a.t==="r"){ val=a.mov*60/a.dist; meta=327; rot=mmss(val)+"/km"; }
+    else { val=a.dist/(a.mov/60); meta=31.8; rot=br(val,1)+" km/h"; melhorMenor=false; }
+    var bom = melhorMenor ? val<=meta : val>=meta;
+    var metaRot = a.t==="n"?"2:30/100m" : a.t==="r"?"5:27/km" : "31,8 km/h";
+    sec.appendChild(el("div","callout "+(bom?"ok":""),
+      "<b>Ritmo desta sessão: "+rot+"</b> · meta de prova "+metaRot+". "+
+      (a.t==="n"
+        ? "Calculado sobre o <b>tempo em movimento</b>, sem as pausas na borda."
+        : "")+
+      (bom? " <b>Está dentro da meta.</b>" : " Ainda acima da meta — normal nesta fase.")));
+  }
+
+  /* grafico de barras: esta sessao contra as ultimas da mesma modalidade */
+  var hist=ATV.filter(function(x){return x.t===a.t&&x.dist;}).slice(-6);
+  if(hist.length>=2){
+    var gwrap=el("div","dw-graf");
+    gwrap.appendChild(el("h4","","Últimas sessões de "+mi.nome.toLowerCase()));
+    var W=380,H=118,L=6,B=26,pw=W-L*2,ph=H-B-8;
+    var vals=hist.map(function(x){ return x.t==="n"? x.dist : x.dist; });
+    var mx=Math.max.apply(null,vals)*1.12;
+    var bw=pw/hist.length-8, g="";
+    hist.forEach(function(x,i){
+      var hgt=Math.max(3,(x.t==="n"?x.dist:x.dist)/mx*ph);
+      var xx=L+i*(bw+8), yy=8+ph-hgt;
+      var atual = x.date===a.date;
+      g+='<rect x="'+xx+'" y="'+yy+'" width="'+bw+'" height="'+hgt+'" rx="4" fill="'+mi.cor+'" opacity="'+(atual?1:.42)+'"/>';
+      g+='<text x="'+(xx+bw/2)+'" y="'+(yy-4)+'" fill="var(--ink-'+(atual?1:3)+')" font-size="11" text-anchor="middle" font-weight="'+(atual?700:400)+'">'+
+         (x.t==="n"? x.dist : br(x.dist,0))+'</text>';
+      var p=x.date.split("-");
+      g+='<text x="'+(xx+bw/2)+'" y="'+(H-9)+'" fill="var(--ink-3)" font-size="10.5" text-anchor="middle">'+p[2]+"/"+p[1]+'</text>';
+    });
+    var svg=document.createElementNS("http://www.w3.org/2000/svg","svg");
+    svg.setAttribute("viewBox","0 0 "+W+" "+H);
+    svg.innerHTML=g;
+    gwrap.appendChild(svg);
+    gwrap.appendChild(el("div","",'<div style="font-size:11.5px;color:var(--ink-3);margin-top:2px">'+
+      (a.t==="n"?"metros":"km")+' por sessão · a barra cheia é esta</div>'));
+    sec.appendChild(gwrap);
+  }
+
+  return sec;
+}
 function closeDrawer(){
   $("drawer").classList.remove("on");
   $("drawer").setAttribute("aria-hidden","true");
@@ -2197,7 +2414,94 @@ document.addEventListener("keydown",function(ev){
   if(ev.key==="Escape"&&$("drawer").classList.contains("on"))closeDrawer();
 });
 
-/* WK_OFF = 0 e a semana em curso; 1, 2, 3 sao as previsoes de AGENDA_FUTURA. */
+/* ============ ATIVIDADES REALIZADAS ============ */
+var ATV=(typeof ATIVIDADES!=="undefined"&&ATIVIDADES)?ATIVIDADES:[];
+
+/* Acha a atividade que cumpriu uma sessao prescrita.
+   Procura no proprio dia e, se nao achar, ate 3 dias depois (treino deslocado). */
+function atvDe(date,tipo){
+  var no=ATV.filter(function(a){return a.date===date&&a.t===tipo;});
+  if(no.length)return {a:no[0],movido:null};
+  var d0=new Date(date+"T12:00:00");
+  for(var k=1;k<=3;k++){
+    var d=new Date(d0); d.setDate(d.getDate()+k);
+    var chave=d.toISOString().slice(0,10);
+    var ach=ATV.filter(function(a){return a.date===chave&&a.t===tipo;});
+    /* so conta como deslocado se aquele dia nao tinha a mesma modalidade prescrita */
+    if(ach.length && !prescritoEm(chave,tipo)) return {a:ach[0],movido:chave};
+  }
+  return null;
+}
+
+function prescritoEm(date,tipo){
+  var achou=false;
+  SEMANA_ATUAL.forEach(function(d){
+    if(d.date===date)(d.s||[]).forEach(function(s){ if(s.t===tipo)achou=true; });
+  });
+  (typeof AGENDA_FUTURA!=="undefined"?AGENDA_FUTURA:[]).forEach(function(w){
+    (w.dias||[]).forEach(function(d){
+      if(d.date===date)(d.s||[]).forEach(function(s){ if(s.t===tipo)achou=true; });
+    });
+  });
+  return achou;
+}
+
+/* ============ TRAVA DE PROGRESSAO ============
+   Regra: a progressao de uma modalidade so avanca se a aderencia da semana
+   anterior foi suficiente. Base: Neufer 1987 mostrou que 3 sessoes/semana
+   preservam a mecanica de bracada e 1 nao. Sem sessoes, sem progressao. */
+var MOD_NOME={n:"Natação",b:"Ciclismo",r:"Corrida",f:"Força"};
+
+function aderenciaSemana(dias){
+  var out={n:{p:0,f:0},b:{p:0,f:0},r:{p:0,f:0},f:{p:0,f:0}};
+  dias.forEach(function(d){
+    (d.s||[]).forEach(function(s,i){
+      if(!out[s.t])return;
+      out[s.t].p++;
+      if(atvDe(d.date,s.t))out[s.t].f++;
+    });
+  });
+  return out;
+}
+
+function travaProgressao(){
+  /* olha os ultimos 7 dias fechados, terminando ontem */
+  var fim=new Date(TODAY); fim.setDate(fim.getDate()-1);
+  var ini=new Date(fim); ini.setDate(ini.getDate()-6);
+  var avisos=[];
+  Object.keys(MOD_NOME).forEach(function(t){
+    var n=ATV.filter(function(a){
+      var d=new Date(a.date+"T12:00:00");
+      return a.t===t && d>=ini && d<=fim;
+    }).length;
+    var alvo = t==="n"?4 : t==="b"?3 : t==="r"?3 : 2;
+    if(n===0)      avisos.push({t:t,n:n,alvo:alvo,nivel:"crit"});
+    else if(n<=Math.floor(alvo/2)) avisos.push({t:t,n:n,alvo:alvo,nivel:"warn"});
+  });
+  return {ini:ini,fim:fim,avisos:avisos};
+}
+
+function renderTrava(){
+  var box=$("progAviso"); if(!box)return;
+  if(WK_OFF!==0){ box.innerHTML=""; return; }
+  var r=travaProgressao();
+  if(!r.avisos.length){ box.innerHTML=""; return; }
+  var linhas=r.avisos.map(function(a){
+    var quando = a.n===0 ? "<b>nenhuma sessão</b>" : "<b>"+a.n+" de "+a.alvo+"</b>";
+    var conduta = a.nivel==="crit"
+      ? "<b>Não avance a dose.</b> Repita o último degrau que você completou — voltar direto ao volume planejado depois de uma semana parada é como o ombro se machuca."
+      : "<b>Segure a progressão.</b> Repita a semana em vez de subir.";
+    return "<div style='margin-bottom:7px'><b style='color:var(--ink-1)'>"+MOD_NOME[a.t]+"</b>: "+quando+
+           " nos últimos 7 dias. "+conduta+"</div>";
+  }).join("");
+  box.innerHTML='<div class="callout '+(r.avisos.some(function(a){return a.nivel==="crit";})?"bad":"")+'" style="margin-top:12px">'+
+    "<b>Trava de progressão ativa.</b><br>"+linhas+
+    "<div style='font-size:12px;color:var(--ink-3);margin-top:7px'>Janela de "+fmtBR(r.ini).slice(0,5)+" a "+fmtBR(r.fim).slice(0,5)+
+    ". A regra existe porque a dose das semanas seguintes foi desenhada supondo que a anterior foi cumprida. "+
+    "Neufer 1987: 3 sessões por semana preservam a mecânica de braçada; 1 não. <b style='color:var(--ink-2)'>Leve isso para o fechamento de domingo</b>, que é quem remonta a semana.</div></div>";
+}
+
+/* WK_OFF = 0 mostra semanas atual e seguinte; 2 mostra a 3a e a 4a. */
 var WK_OFF=0;
 
 function semanaDe(off){
@@ -2217,43 +2521,91 @@ function maxOff(){
   return 0;
 }
 
-function renderWeekNav(){
+/* O painel mostra DUAS semanas por vez: WK_OFF e WK_OFF+1. */
+function parVisivel(){
   var lim=maxOff();
+  return [WK_OFF, WK_OFF+1<=lim ? WK_OFF+1 : null];
+}
+
+function renderWeekNav(){
+  var lim=maxOff(), par=parVisivel();
   $("wkPrev").disabled = WK_OFF<=0;
-  $("wkNext").disabled = WK_OFF>=lim;
+  $("wkNext").disabled = WK_OFF+2>lim;
   $("wkHoje").style.display = WK_OFF===0 ? "none" : "";
-  var info=semanaDe(WK_OFF);
-  var ini=weekStart(info.sem), fim=weekEnd(info.sem), b=blocoDe(info.sem);
-  $("wkTitulo").textContent = WK_OFF===0 ? "Semana em curso" : "Semana "+info.sem;
-  $("wkSub").innerHTML = "· "+fmtBR(ini).slice(0,5)+" a "+fmtBR(fim).slice(0,5)+
-    " · <span style='color:"+b.cor+"'>●</span> "+b.nome.split(" /")[0]+
-    (WK_OFF===0?"":" · <b style='color:var(--nat)'>previsão</b>");
+  var a=semanaDe(par[0]);
+  var b=par[1]!==null?semanaDe(par[1]):null;
+  $("wkTitulo").textContent = WK_OFF===0 ? "Semana em curso e a seguinte"
+    : ("Semanas "+a.sem+(b?" e "+b.sem:""));
+  var bl=blocoDe(a.sem);
+  $("wkSub").innerHTML = "· "+fmtBR(weekStart(a.sem)).slice(0,5)+" a "+
+    fmtBR(weekEnd(b?b.sem:a.sem)).slice(0,5)+
+    " · <span style='color:"+bl.cor+"'>●</span> "+bl.nome.split(" /")[0];
 }
 
 function renderWeek(){
   renderWeekNav();
-  var info=semanaDe(WK_OFF);
-  if(info.prev){ renderWeekPrev(info); return; }
-  $("wkBarra").style.display="";
+  var par=parVisivel(), g=$("wkGrid");
+  g.innerHTML="";
   $("wkAviso").innerHTML="";
-  var g=$("wkGrid"); g.innerHTML="";
-  var tot=0,done=0;
-  SEMANA_ATUAL.forEach(function(d){
+
+  var atual=semanaDe(par[0]);
+  $("wkBarra").style.display = atual.prev ? "none" : "";
+
+  par.forEach(function(off){
+    if(off===null)return;
+    var info=semanaDe(off);
+    var bloco=el("div","wk-bloco");
+
+    var cab=el("div","wk-cab");
+    cab.appendChild(el("span","tt", off===0 ? "Semana "+info.sem+" — em curso" : "Semana "+info.sem));
+    cab.appendChild(el("span","per", fmtBR(weekStart(info.sem)).slice(0,5)+" a "+fmtBR(weekEnd(info.sem)).slice(0,5)));
+    if(info.prev)cab.appendChild(el("span","tagprev","previsão"));
+    var cnt=el("span","cnt2");
+    cab.appendChild(cnt);
+    bloco.appendChild(cab);
+
+    var grid=el("div","wkgrid");
+    bloco.appendChild(grid);
+
+    if(!info.dias){
+      grid.innerHTML='<div class="empty" style="grid-column:1/-1">Esta semana ainda não foi agendada.<br>'+
+        'O fechamento de domingo monta a semana seguinte e atualiza esta previsão.</div>';
+      g.appendChild(bloco);
+      return;
+    }
+
+    var r = info.prev ? pintaSemanaPrev(grid,info) : pintaSemanaAtual(grid,info);
+    cnt.innerHTML = info.prev
+      ? "<b>"+r.tot+"</b> atividades agendadas"
+      : "<b>"+r.done+" de "+r.tot+"</b> concluídas";
+    g.appendChild(bloco);
+  });
+
+  renderTrava();
+}
+
+/* Semana INTERATIVA: checkbox, chips, anotacao, comparativo. */
+function pintaSemanaAtual(g,info){
+  var tot=0,done=0, hoje=TODAY.toISOString().slice(0,10);
+  info.dias.forEach(function(d){
     var c=el("div","day");
-    var hd=el("div","dhead");
-    var p=d.date.split("-");
+    if(d.date===hoje)c.classList.add("hoje");
+    var hd=el("div","dhead"), p=d.date.split("-");
     hd.appendChild(el("div","d",d.dow+" "+p[2]+"/"+p[1]));
     if(d.tag==="off")hd.appendChild(el("span","dtag rest","folga"));
     else if(d.tag==="hard")hd.appendChild(el("span","dtag hard","dia duro"));
     c.appendChild(hd);
     if(!d.s.length){ c.appendChild(el("div","rest","descanso")); }
+
+    var algumFeito=false;
     d.s.forEach(function(s,i){
       tot++;
       var key=d.date+"|"+i, st=SESS_DONE[key];
       if(st)done++;
+      var rel=atvDe(d.date,s.t);
+      if(rel)algumFeito=true;
       var row=el("div","chk "+s.t+(st?" ok":""));
 
-      /* A CAIXA marca. O TEXTO abre o detalhe. Areas separadas de proposito. */
       var box=el("span","box");
       box.setAttribute("role","checkbox");
       box.setAttribute("tabindex","0");
@@ -2264,22 +2616,27 @@ function renderWeek(){
         if(ev.key===" "||ev.key==="Enter"){ev.preventDefault();ev.stopPropagation();toggleSess(key);}
       });
 
-      var txt=el("span","txt",'<span class="nm">'+s.n+'</span>'+
-        (st==="auto"?'<span class="auto">Garmin</span>':'')+'<em>'+s.o+'</em>');
+      var extra="";
+      if(st==="auto")extra+='<span class="auto">Garmin</span>';
+      if(rel&&rel.movido){
+        var pm=rel.movido.split("-");
+        extra+='<span class="movido">movido p/ '+pm[2]+"/"+pm[1]+'</span>';
+      }
+      var resumo = rel ? '<span class="real">✓ '+resumoAtv(rel.a)+'</span>' : "";
+      var txt=el("span","txt",'<span class="nm">'+s.n+'</span>'+extra+'<em>'+s.o+'</em>'+resumo);
       txt.setAttribute("tabindex","0");
       txt.setAttribute("role","button");
-      txt.setAttribute("aria-label","Ver o treino detalhado: "+s.n);
-      function abrir(){openDrawer(d,i);}
-      txt.addEventListener("click",abrir);
-      txt.addEventListener("keydown",function(ev){if(ev.key===" "||ev.key==="Enter"){ev.preventDefault();abrir();}});
+      txt.setAttribute("aria-label",(rel?"Ver previsto e realizado: ":"Ver o treino detalhado: ")+s.n);
+      txt.addEventListener("click",function(){openDrawer(d,i);});
+      txt.addEventListener("keydown",function(ev){if(ev.key===" "||ev.key==="Enter"){ev.preventDefault();openDrawer(d,i);}});
 
       row.appendChild(box);
       row.appendChild(txt);
       row.appendChild(el("span","go","›"));
       c.appendChild(row);
     });
+    if(algumFeito)c.classList.add("feito");
 
-    /* chips: modalidade feita fora do previsto */
     var xb=el("div","xtra"), sel=xDe(d.date);
     xb.appendChild(el("div","nl","fiz diferente"));
     var cw=el("div","chips");
@@ -2314,26 +2671,12 @@ function renderWeek(){
   var pct=tot?Math.round(done/tot*100):0;
   $("wkProg").style.width=pct+"%";
   $("wkCount").innerHTML="<b>"+done+" de "+tot+"</b> atividades concluídas"+(tot&&done===tot?" &nbsp;✓ semana fechada":"");
+  return {tot:tot,done:done};
 }
 
-/* Vista de PREVISAO: so leitura. Sem checkbox, sem chips, sem campo de anotacao. */
-function renderWeekPrev(info){
-  $("wkBarra").style.display="none";
-  var g=$("wkGrid"); g.innerHTML="";
-
-  if(!info.dias){
-    $("wkAviso").innerHTML="";
-    g.innerHTML='<div class="empty" style="grid-column:1/-1">Esta semana ainda não foi agendada.<br>'+
-      'O fechamento de domingo monta a semana seguinte e atualiza esta previsão.</div>';
-    return;
-  }
-
-  var nsess=0;
-  info.dias.forEach(function(d){ nsess+=(d.s?d.s.length:0); });
-  $("wkAviso").innerHTML='<div class="prev-aviso"><b>Previsão — '+nsess+' atividades agendadas no Garmin.</b> '+
-    'Aqui é só leitura: as marcações e o campo <em>o que eu fiz</em> aparecem quando a semana virar a atual. '+
-    'Atualizado em '+(typeof AGENDA_FUTURA_UPDATED!=="undefined"?AGENDA_FUTURA_UPDATED:"—")+'.</div>';
-
+/* Semana de PREVISAO: so leitura. */
+function pintaSemanaPrev(g,info){
+  var tot=0;
   info.dias.forEach(function(d){
     var c=el("div","day prev");
     var hd=el("div","dhead"), p=d.date.split("-");
@@ -2343,14 +2686,24 @@ function renderWeekPrev(info){
     c.appendChild(hd);
     if(!d.s||!d.s.length){ c.appendChild(el("div","rest","descanso")); }
     else d.s.forEach(function(s){
+      tot++;
       c.appendChild(el("div","sess "+s.t,s.n+(s.o?"<em>"+s.o+"</em>":"")));
     });
     g.appendChild(c);
   });
+  return {tot:tot,done:0};
 }
 
-$("wkPrev").addEventListener("click",function(){ if(WK_OFF>0){WK_OFF--;renderWeek();} });
-$("wkNext").addEventListener("click",function(){ if(WK_OFF<maxOff()){WK_OFF++;renderWeek();} });
+function resumoAtv(a){
+  if(a.t==="n")return (a.dist>=1000?br(a.dist/1000,2)+" km":a.dist+" m")+" · "+ms100(a)+"/100m";
+  if(a.t==="b")return br(a.dist,1)+" km · "+br(a.dist/(a.mov/60),1)+" km/h";
+  if(a.t==="r")return br(a.dist,1)+" km · "+mmss(a.mov*60/a.dist)+"/km";
+  return Math.round(a.dur)+" min"+(a.fcm?" · FC "+a.fcm:"");
+}
+function ms100(a){ return mmss(a.mov*60/(a.dist/100)); }
+
+$("wkPrev").addEventListener("click",function(){ if(WK_OFF>0){WK_OFF=Math.max(0,WK_OFF-2);renderWeek();} });
+$("wkNext").addEventListener("click",function(){ if(WK_OFF+2<=maxOff()){WK_OFF+=2;renderWeek();} });
 $("wkHoje").addEventListener("click",function(){ WK_OFF=0; renderWeek(); });
 
 function renderLog(){
@@ -2367,7 +2720,7 @@ function renderLog(){
         "<td class='num'>"+(r.natM?r.natM+" m":"—")+"</td>"+
         "<td class='num'>"+(r.bikeK?br(r.bikeK)+" km":"—")+"</td>"+
         "<td class='num'>"+(r.runK?br(r.runK)+" km":"—")+"</td>"+
-        "<td style='font-size:11px'>"+(r.obs||"")+"</td>"+
+        "<td style='font-size:13px'>"+(r.obs||"")+"</td>"+
         "<td><button class='btn sm' data-del='"+r.date+"'>×</button></td>"));
     });
     Array.prototype.forEach.call(tb.querySelectorAll("[data-del]"),function(b){
@@ -2382,6 +2735,36 @@ function renderLog(){
 }
 
 $("btnMore").addEventListener("click",function(){MINI_ALL=!MINI_ALL;renderMini();});
+
+/* ---------- EXPANDIR TEXTO TRUNCADO ----------
+   Qualquer botao .clamp-mais com data-clamp="idDoElemento" alterna 3 linhas / tudo. */
+document.addEventListener("click",function(ev){
+  var bt=ev.target.closest(".clamp-mais[data-clamp]");
+  if(!bt)return;
+  var alvo=$(bt.getAttribute("data-clamp")); if(!alvo)return;
+  var aberto=!alvo.classList.contains("clamp3");
+  alvo.classList.toggle("clamp3",aberto);
+  bt.textContent = aberto ? "Ler tudo ▾" : "Mostrar menos ▴";
+});
+
+/* Trunca em 3 linhas qualquer celula de observacao da tabela do Garmin
+   que passe de 3 linhas, e poe o botao ao lado. */
+function clampCelula(td,id){
+  var d=el("div","clamp3"); d.id=id; d.innerHTML=td.innerHTML;
+  td.innerHTML=""; td.appendChild(d);
+  /* so oferece o botao se o texto realmente transbordar */
+  requestAnimationFrame(function(){
+    if(d.scrollHeight-d.clientHeight>2){
+      var b=el("button","clamp-mais","Ler tudo ▾");
+      b.type="button"; b.setAttribute("data-clamp",id);
+      td.appendChild(b);
+    }else{
+      d.classList.remove("clamp3");
+    }
+  });
+}
+
+$("btnDec").addEventListener("click",function(){ DEC_ALL=!DEC_ALL; renderDec(); });
 
 $("btnCopyNotes").addEventListener("click",function(){
   var l=lsGet(), x=xGet(), linhas=[];
