@@ -1830,9 +1830,25 @@ var LOG_AUTO = [
   "bikeT": null,
   "runK": null,
   "runT": null
- }
+ },
+ {
+ "date": "2026-09-23",
+ "read": 68,
+ "rhr": 44,
+ "hrv": 57,
+ "sleep": 6.85,
+ "acute": 421,
+ "obs": "RODADA DA MANHA as 06:11. Readiness do DESPERTAR 68 MODERATE as 06:02:36, contexto AFTER_WAKEUP_RESET, feedback GOOD_SLEEP_HISTORY - unica leitura do dia ate agora. FATORES: sono 50 por cento MODERATE, recuperacao 99 por cento GOOD com recovery time ZERADO, carga de treino 100 por cento VERY_GOOD, VFC 100 por cento VERY_GOOD, historico de estresse 90 por cento GOOD, historico de sono 61 por cento MODERATE. FCrep 44, contra 40 ontem - primeira leitura acima do teto da base medida de 40-43 desde o inicio do ciclo, mas ainda bem abaixo do alerta de 48. VFC semanal 57, dentro da banda 52-74, tres pontos abaixo dos 60 de ontem; a VFC media da noite (medida separada, nao a semanal) foi 42. Sono 6,85 h (6h51) com score 67 FAIR: 20,4 por cento profundo, 70,6 por cento leve, 9,0 por cento REM, 3 despertares e 45 min acordado, estresse medio de sono 23. Carga aguda 421, contra 529 no fechamento de ontem e 474 no despertar de ontem - segue em queda. NENHUMA ATIVIDADE REGISTRADA HOJE ate as 06:11. TREINO PREVISTO PARA HOJE, quarta, DIA DURO: BIKE-FTP Teste 20 min em potencia (workout id 1700620063), MARCO DO CICLO - primeira medida de FTP em watts, confirmado no calendario do Garmin. CRITERIOS DE PARADA, verificacao literal: (1) FCrep igual ou acima de 48 por tres dias - NAO, os tres ultimos sao 42, 40 e 44; (2) sono abaixo de 6 h por duas noites - NAO, 6,32 h e 6,85 h, as duas acima de 6; (3) readiness do despertar abaixo de 40 por dois dias - NAO, 81 ontem e 68 hoje. NENHUM LIMIAR DISPAROU. SEMAFORO VERDE: readiness 68 acima de 60 e recuperacao em 0,0 h. CHECKLIST DA SEMANA 6: 0 de 9 sessoes marcadas ate agora - a unica vaga ja passada, RUN-V3 de segunda 21/09, permanece desmarcada porque o treino nao foi feito (confirmado nas rodadas de 21 e 22/09); a vaga de hoje, BIKE-FTP, ainda nao tem atividade. PASSO 3, conferencia da semana em curso contra o Garmin: get_scheduled_workouts de 21 a 27/09 devolveu 9 agendamentos, TODOS batendo exatamente com SEMANA_ATUAL dia a dia, incluindo a terca 22/09 vazia de proposito - NADA A CORRIGIR. PASSO 4: get_scheduled_workouts de 28/09 a 19/10 devolveu 11 agendamentos, IDENTICOS aos das rodadas anteriores - AGENDA_FUTURA mantida sem alterar nenhuma linha, so o carimbo de conferencia foi atualizado. Conflito que continua aberto para o Alex decidir, sem mudanca: o sabado 03/10 traz RUN-V2 5x1000 m fracionado na vaga que a semana-padrao reserva para CORRIDA LONGA. Nao ha corrida em terca ou quinta, nao ha forca na quarta e nao ha duplicatas no periodo.",
+ "auto": true,
+ "natM": null,
+ "natT": null,
+ "bikeK": null,
+ "bikeT": null,
+ "runK": null,
+ "runT": null
+}
 ];
-var LOG_AUTO_UPDATED = "22/09/2026 18:55";
+var LOG_AUTO_UPDATED = "23/09/2026 06:11";
 /* ==== FIM DADOS AUTOMATICOS ==== */
 
 /* ==== INICIO CHECKLIST DA SEMANA - NAO EDITAR A MAO ====
@@ -1870,7 +1886,7 @@ var NOTAS = {
 };
 /* ==== FIM ANOTACOES ==== */
 
-var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,8,22);
+var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,8,23);
 
 var SECOES=[
  ["s-visao","01","Visão geral"],["s-atual","02","Hoje"],["s-trilhas","03","As três trilhas"],
@@ -3338,7 +3354,7 @@ var AGENDA_FUTURA=[
   ]
  }
 ];
-var AGENDA_FUTURA_UPDATED = "22/09/2026 06:20 - reconferida na rodada da manha contra get_scheduled_workouts de 28/09 a 18/10: 11 agendamentos, os MESMOS da rodada de ontem, nenhum acrescimo e nenhuma remocao. CONTEUDO MANTIDO, nenhuma linha alterada. Conflitos que continuam abertos para o Alex decidir, repetidos aqui porque nada mudou: o sabado 03/10 traz RUN-V2 5x1000 m, treino fracionado, na vaga que a semana-padrao reserva para CORRIDA LONGA - mesmo padrao do sabado 26/09 da semana em curso; nao ha corrida longa agendada em nenhuma das duas semanas. A terca 06/10 segue vazia e a semana 9 so tem o NAT-TESTE2 de 12/10. Nao ha corrida em terca ou quinta, nao ha forca na quarta e nao ha duplicatas. ||| Historico da conferencia anterior, 21/09/2026 06:40 - reconferida na rodada da manha contra get_scheduled_workouts de 28/09 a 18/10: 11 agendamentos, identicos aos do fechamento de ontem. CONTEUDO MANTIDO, nenhuma linha alterada. Nota de conflito para o Alex: o sabado 03/10 traz RUN-V2 5x1000 m, treino fracionado, na vaga que a semana-padrao reserva para CORRIDA LONGA - mesmo padrao do sabado 26/09 da semana em curso; nao ha corrida longa agendada em nenhuma das duas semanas. A terca 06/10 segue vazia. Nao ha corrida em terca ou quinta, nao ha forca na quarta e nao ha duplicatas. ||| Historico da reescrita anterior, 20/09/2026 20:45 - fechamento da semana 5, lida de get_scheduled_workouts. Semana 7 (28/09 a 04/10) com 9 agendamentos e sexta 02/10 vazia. Semana 8 (05/10 a 11/10) so tem o RUN-TAPER de segunda. Semana 9 traz o NAT-TESTE2 agendado hoje para 12/10, seis semanas depois da medida de CSS de 31/08 - ele tinha sumido do horizonte e o teste-painel pegou. As semanas 8 e 9 serao completadas nos fechamentos de 27/09 e 04/10.";
+var AGENDA_FUTURA_UPDATED = "23/09/2026 06:11 - reconferida na rodada da manha contra get_scheduled_workouts de 28/09 a 19/10: 11 agendamentos, os MESMOS das rodadas anteriores, nenhum acrescimo e nenhuma remocao. CONTEUDO MANTIDO, nenhuma linha alterada. Conflitos que continuam abertos para o Alex decidir, repetidos aqui porque nada mudou: o sabado 03/10 traz RUN-V2 5x1000 m, treino fracionado, na vaga que a semana-padrao reserva para CORRIDA LONGA - mesmo padrao do sabado 26/09 da semana em curso; nao ha corrida longa agendada em nenhuma das duas semanas. A terca 06/10 segue vazia e a semana 9 so tem o NAT-TESTE2 de 12/10. Nao ha corrida em terca ou quinta, nao ha forca na quarta e nao ha duplicatas. ||| Historico da conferencia anterior, 22/09/2026 06:20 - reconferida na rodada da manha contra get_scheduled_workouts de 28/09 a 18/10: 11 agendamentos, os MESMOS da rodada de ontem, nenhum acrescimo e nenhuma remocao. CONTEUDO MANTIDO, nenhuma linha alterada. Conflitos que continuam abertos para o Alex decidir, repetidos aqui porque nada mudou: o sabado 03/10 traz RUN-V2 5x1000 m, treino fracionado, na vaga que a semana-padrao reserva para CORRIDA LONGA - mesmo padrao do sabado 26/09 da semana em curso; nao ha corrida longa agendada em nenhuma das duas semanas. A terca 06/10 segue vazia e a semana 9 so tem o NAT-TESTE2 de 12/10. Nao ha corrida em terca ou quinta, nao ha forca na quarta e nao ha duplicatas. ||| Historico da reescrita anterior, 20/09/2026 20:45 - fechamento da semana 5, lida de get_scheduled_workouts. Semana 7 (28/09 a 04/10) com 9 agendamentos e sexta 02/10 vazia. Semana 8 (05/10 a 11/10) so tem o RUN-TAPER de segunda. Semana 9 traz o NAT-TESTE2 agendado hoje para 12/10, seis semanas depois da medida de CSS de 31/08 - ele tinha sumido do horizonte e o teste-painel pegou. As semanas 8 e 9 serao completadas nos fechamentos de 27/09 e 04/10.";
 /* ==== FIM AGENDA FUTURA ==== */
 
 /* ==== INICIO ATIVIDADES - NAO EDITAR A MAO ====
