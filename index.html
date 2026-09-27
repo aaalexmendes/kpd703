@@ -1926,6 +1926,7 @@ var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"aut
    O Claude grava aqui quando o Alex conta no chat ou manda o export.
    A tarefa diaria PRESERVA este bloco. A tarefa semanal LE para a analise. */
 var NOTAS = {
+ "2026-09-27": "Informado pelo Alex no chat apos o fechamento da semana 6: O ROLO JA ESTA CONSERTADO. Pediu para incluir o teste de FTP na semana 7. BIKE-FTP remarcado para quarta 30/09 no lugar do BIKE-B2D; FOR-A foi de terca 29/09 para segunda 28/09 (regra: sem forca na vespera do teste); NAT-E2 foi de segunda para sabado 03/10. Na semana 8 o BIKE-FTP de 07/10 virou BIKE-B1D e a FOR-A voltou para a terca 06/10. · SEGUNDO AJUSTE, mesma noite, pela rotina informada pelo Alex: na segunda ele nada cedo e corre depois, e nao consegue fazer forca apos a corrida; na terca nao corre, mas pode nadar ou fazer forca; na quarta tem a manha toda livre. Semana 7 final: seg NAT-E2 + RUN-V3, ter NAT-C2, qua BIKE-FTP + FOR-A depois do teste, qui FOR-B + NAT-P3, sex folga, sab RUN-V2, dom BRICK-B3.",
  "2026-09-19": "Informado pelo Alex no fechamento de 19/09: ele NAO completou os 5 blocos do RUN-V1 porque SENTIU A COXA DIREITA. Palavras dele - nao conseguia dar o tiro acelerando a velocidade sem muita dor, e reduzindo o pace conseguia continuar correndo. Bate com os splits: o quarto bloco saiu a 4:42,5/km contra 4:14,4/km do terceiro, 28 s por km mais lento, com a MESMA FC media de 159, e a cadencia caindo de 156 para 146,6 spm. O quinto bloco foi aberto e encerrado em 4 s e nao houve volta a calma. Primeira queixa nesta regiao registrada no ciclo. Registro factual, sem avaliacao clinica - nao sou medico. O que fazer com a corrida do BRICK-D1 de domingo, que termina com 15 min de Z2 continuo, e decisao dele.",
  "2026-09-13": "Informado pelo Alex no fechamento de 13/09: o TESTE DE 20 MIN DE FC foi feito hoje e ficou registrado no Garmin na vaga do BIKE-B1 Z2 de domingo. O checkbox do painel marcou o slot do BIKE-B1, entao o dia parecia um rodizio Z2 facil de 60 min - nao era. Foi o BIKE-TESTE proxy FTP, deslocado da quarta 09/09. Resultado do step_index 3: 9.862,1 m em exatos 1.200 s = 29,6 km/h, FC media 139-140 e maxima 149. O BIKE-B1 de 60 min em Z2 nao foi feito.",
  "2026-09-09": "Natacao de tecnica 900 m informada pelo Alex (Garmin contou 750): 100 solto, 100 exercicios sem equipamento, 200 perna lateral, 300 respiracao unilateral com palmar (150 cada lado), 100 palmar, 100 solto. Conta como a natacao de segunda 07/09, no lugar da NAT-C3. A partir desta semana, ao menos um dia por semana sera aula de tecnica com professor.",
@@ -1951,7 +1952,7 @@ var NOTAS = {
 };
 /* ==== FIM ANOTACOES ==== */
 
-var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,8,26);
+var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,8,28);
 
 var SECOES=[
  ["s-visao","01","Visão geral"],["s-atual","02","Hoje"],["s-trilhas","03","As três trilhas"],
@@ -2898,9 +2899,197 @@ var SEMANAS_FEITAS=[
     ]
    }
   ]
+ },
+ {
+  "sem": 6,
+  "ini": "2026-09-21",
+  "fim": "2026-09-27",
+  "alvo": 7.5,
+  "dias": [
+   {
+    "date": "2026-09-21",
+    "dow": "Seg",
+    "tag": "hard",
+    "s": [
+     {
+      "t": "r",
+      "n": "RUN-V3 · 4x4min 90-95% FCmax",
+      "o": "dia duro 1 — voce avisou que hoje e so a corrida",
+      "det": [
+       "<b>15 min de aquecimento progressivo</b>, FC 110-145, terminando ja em Z2 alto",
+       "<b>4x (4 min com FC 161-171 + 3 min trotando a 110-140 bpm)</b>. Ritmo aproximado 4:15/km. Recuperacao ATIVA, sem parar de andar",
+       "<b>No 1o bloco a FC sobe devagar</b> — e o normal, nao acelere o ritmo para forcar o numero",
+       "<b>10 min de volta a calma</b> em FC 105-135",
+       "<b>O alvo de 161-171 bpm sai da sua FCmax real de 179</b>, nao dos 171 do laboratorio — voce ja registrou 174 em prova e 181 na Chapada",
+       "<b>Por que 4x4 min:</b> Helgerud 2007 comparou quatro formatos e o 4x4 a 90-95 por cento da FC maxima produziu o maior ganho de VO2max. Hov 2023 replicou, mais 6,5 por cento em 8 semanas",
+       "<b>ATENCAO, dado seu de 19/09:</b> voce interrompeu o RUN-V1 por dor na coxa direita e nao fez o 5o bloco. No brick de 20/09 a coxa nao incomodou. Se doer de novo, corte a repeticao — nao o ritmo",
+       "<b>A natacao desta segunda ja saiu:</b> voce antecipou o NAT-C3 para domingo 20/09 e parou em 975 m por caibra. Hoje e so a corrida, como voce avisou",
+       "<b>Confere com o workout 703 RUN-V3 · 4x4min 90-95% FCmax</b> agendado no Garmin (id 1694746590)"
+      ]
+     }
+    ]
+   },
+   {
+    "date": "2026-09-22",
+    "dow": "Ter",
+    "tag": "off",
+    "s": []
+   },
+   {
+    "date": "2026-09-23",
+    "dow": "Qua",
+    "tag": "hard",
+    "s": [
+     {
+      "t": "b",
+      "n": "BIKE-FTP · Teste 20 min em potencia",
+      "o": "MARCO do ciclo — a primeira medida de FTP em watts",
+      "det": [
+       "<b>Spindown do rolo ANTES de comecar.</b> Mesmo rolo, mesma marcha, ventilador ligado",
+       "<b>15 min de aquecimento</b> a 80-105 W e 90-115 bpm, cadencia 85-95 rpm",
+       "<b>3x (1 min a 120-150 W e 115-140 bpm + 2 min soltos a 70-100 W)</b> — abertura de perna, nao e o teste",
+       "<b>5 min de recuperacao completa</b> a 70-100 W. Beba agua",
+       "<b>TESTE — 20 MIN.</b> Maior potencia MEDIA que voce sustenta os 20 minutos inteiros, sem cair no fim. Erro classico e sair forte demais: nos primeiros 5 min tem de parecer que da para fazer mais",
+       "<b>10 min de volta a calma</b> a 65-95 W e 85-110 bpm",
+       "<b>FTP = media dos 20 min x 0,90</b> (fator para nao-elite, Gough 2025). ANOTE A POTENCIA MEDIA DOS 20 MIN",
+       "<b>Referencia de FC:</b> em 13/09 voce sustentou 139-140 bpm por 20 min na rua, a 29,6 km/h. Se ficar muito abaixo disso hoje, esta conservador",
+       "<b>O FTP de 230 W cadastrado no Garmin e falso</b> — e maior que os 162 W de pico medidos em incremental maximo. Ignore as zonas de potencia do relogio e leia watts absolutos",
+       "<b>A forca de terca foi removida de proposito</b> para voce nao chegar no teste com perna cansada. Ela foi para a sexta",
+       "<b>Confere com o workout 703 BIKE-FTP · Teste 20min POTENCIA+FC (rolo)</b> agendado no Garmin (id 1700620063)"
+      ]
+     }
+    ]
+   },
+   {
+    "date": "2026-09-24",
+    "dow": "Qui",
+    "s": [
+     {
+      "t": "f",
+      "n": "FOR-B · Tronco, Ombro e Core",
+      "o": "prehab de natacao — 8 exercicios, 3 series cada",
+      "det": [
+       "<b>Rotacao externa de ombro com elastico 3x15</b>, 45 s de pausa",
+       "<b>Remada unilateral com halter 3x10</b>, 75 s de pausa",
+       "<b>Puxada alta ou barra fixa assistida 3x8</b>, 90 s de pausa",
+       "<b>Flexao de braco 3x12</b>, 60 s de pausa",
+       "<b>Desenvolvimento de ombro em pe 3x10</b>, 75 s de pausa",
+       "<b>Farmers carry de 40 m, 3x</b>, 75 s de pausa",
+       "<b>Prancha frontal 45 s e lateral 30 s de cada lado, 3x</b>, 45 s de pausa",
+       "<b>Pallof press anti-rotacao 3x10</b>, 45 s de pausa",
+       "<b>E a sessao que protege o ombro</b> na semana em que a natacao volta ao volume cheio, com a NAT-C2 de 2.200 m na sexta",
+       "<b>Confere com o workout 703 FOR-B · Tronco, Ombro e Core (v2)</b> agendado no Garmin (id 1698840822)"
+      ]
+     }
+    ]
+   },
+   {
+    "date": "2026-09-25",
+    "dow": "Sex",
+    "s": [
+     {
+      "t": "f",
+      "n": "FOR-A · Forca Base Triatlo",
+      "o": "veio da terca, que foi esvaziada para o teste de FTP",
+      "det": [
+       "<b>Agachamento livre 3x8</b>, 120 s de pausa",
+       "<b>Levantamento terra romeno 3x8</b>, 120 s de pausa",
+       "<b>Afundo caminhando 3x10</b>, 90 s de pausa",
+       "<b>Remada curvada 3x10</b>, 90 s de pausa",
+       "<b>Puxada alta ou barra fixa assistida 3x8</b>, 90 s de pausa",
+       "<b>Desenvolvimento de ombro 3x10</b>, 90 s de pausa",
+       "<b>Prancha frontal e lateral 3x</b>, 60 s de pausa, e <b>elevacao de panturrilha 3x15</b>, 60 s",
+       "<b>CrossFit vale nesta vaga.</b> Mas hoje e sexta e o brick e domingo — WOD pesado de perna aqui cobra caro depois de amanha",
+       "<b>Confere com o workout 703 FOR-A · Forca Base Triatlo (v2)</b> agendado no Garmin (id 1698840673)"
+      ]
+     },
+     {
+      "t": "n",
+      "n": "NAT-C2 · Ritmo Critico — o maior nado do ciclo",
+      "o": "versao CHEIA liberada pela trava: 2.200 m contra 1.200 m da C3",
+      "det": [
+       "<b>300 m de aquecimento:</b> 200 soltos mais 100 progressivos terminando no ritmo da serie",
+       "<b>PAUSA: 30 s parado na borda.</b> Nao emende o aquecimento na serie",
+       "<b>4x 50 m de ATIVACAO progressiva</b>, 15 s parado entre eles. O 4o ja no ritmo alvo da serie principal",
+       "<b>PAUSA ANTES DA SERIE PRINCIPAL: 60 s parado</b> (com os 15 s do ultimo 50, sao 75 s). Esta era exatamente a pausa que faltava antes de 19/09",
+       "<b>8x 100 m no seu CSS de 2:46/100 m</b>, 20 s parado entre eles. Deve doer no 6o. O 8o tem de sair no mesmo tempo do 1o — se cair mais de 5 s, voce saiu rapido demais",
+       "<b>100 m bem soltos</b>, alternando nados. Aqui a recuperacao e ATIVA de proposito: a pausa e longa o bastante para isso ajudar (Toubekis 2008)",
+       "<b>PAUSA: 30 s parado</b> antes dos 200 de ritmo",
+       "<b>3x 200 m no ritmo alvo, sem parar</b>, 35 s parado entre eles. Aqui o ritmo vira habito",
+       "<b>200 m de volta a calma.</b> ANOTE o tempo do 1o e do 8o cem metros, e os tres 200",
+       "<b>Tres numeros diferentes:</b> o nome diz 1.700 m, a soma dos passos da <b>2.200 m</b> e o Garmin estima 2.645 m. <b>O nado real e 2.200 m</b>",
+       "<b>Confere com o workout 703 NAT-C2 · Ritmo Critico 1700m (pausas)</b> agendado no Garmin (id 1702724414)"
+      ]
+     }
+    ]
+   },
+   {
+    "date": "2026-09-26",
+    "dow": "Sab",
+    "tag": "hard",
+    "s": [
+     {
+      "t": "r",
+      "n": "RUN-V2 · 5x1000 m no ritmo-alvo",
+      "o": "dia duro 2 — o ritmo do Cooper, fracionado",
+      "det": [
+       "<b>15 min de aquecimento progressivo</b>, FC 110-145, com 3 aceleracoes de 20 s no fim",
+       "<b>5x (1.000 m em 4:17 + 2:30 trotando leve a 110-142 bpm)</b>",
+       "<b>NAO mais rapido que 4:17.</b> O objetivo e gravar o ritmo, nao provar que consegue correr mais forte",
+       "<b>10 min de volta a calma</b> a 105-135 bpm. ANOTE os cinco tempos",
+       "<b>Erro classico:</b> sair a 4:05 no primeiro e terminar a 4:30 no quinto — isso nao treina o ritmo do teste, treina a desacelerar. A meta e cinco vezes 4:17",
+       "<b>4:17/km ja e o seu ritmo:</b> no Cooper de 14/09 voce fez 2.777 m em 12 min, o que da 4:19/km com FC media de 165",
+       "<b>Ressalva honesta, do proprio workout:</b> o formato 5x1000 e pratica consagrada de treino, nao protocolo validado em ensaio. O que tem evidencia e o tempo acumulado acima de 90 por cento do VO2max",
+       "<b>Confere com o workout 703 RUN-V2 · 5x1000m ritmo-alvo</b> agendado no Garmin (id 1694746492)"
+      ]
+     },
+     {
+      "t": "n",
+      "n": "NAT-P3 · Ritmo de Prova 1.300 m",
+      "o": "1.000 m continuos — consolidar o marco que caiu em 16/09",
+      "det": [
+       "<b>200 m de aquecimento</b>, solto, com 4x25 progressivos no fim",
+       "<b>PAUSA: 45 s parado na borda.</b> Ajuste oculos e touca: os proximos 1.000 m sao sem parar",
+       "<b>LARGADA SIMULADA: 100 m</b> um pouco acima do ritmo, como na prova para achar espaco. NAO PARE no fim deste passo",
+       "<b>800 m CONTINUOS em ritmo de prova.</b> Deve parecer facil demais nos primeiros 300 m; se nao parecer, esta rapido. Respire bilateral e levante os olhos 2x a cada 100 m",
+       "<b>FINAL: 100 m acelerando ate o CSS.</b> Veiga 2019: quem vai bem em aguas abertas acelera ate 9 por cento na volta final",
+       "<b>PAUSA: 30 s parado.</b> Anote o tempo dos 800 m agora, antes de esquecer",
+       "<b>100 m de volta a calma.</b> Anote como estava o ombro no fim",
+       "<b>O bloco de 1.000 m e sem pausa DE PROPOSITO</b> — 100 de largada mais 800 mais 100 de final. A prova e assim, nao e esquecimento",
+       "<b>MARCO JA CUMPRIDO, hoje e para consolidar:</b> em 16/09 voce nadou os 800 m continuos em 22:10, a 2:46,3/100 m — exatamente o CSS medido. O marco previsto para a semana 11 caiu na semana 5",
+       "<b>Versao de entrada mantida de proposito.</b> A NAT-P cheia tem 1.900 m continuos; saltar de 1.000 para 1.900 em uma semana e demais, e o marco de 1.500 m e da semana 20",
+       "<b>Confere com o workout 703 NAT-P3 · Ritmo de Prova 1300m (pausas)</b> agendado no Garmin (id 1702724669)"
+      ]
+     }
+    ]
+   },
+   {
+    "date": "2026-09-27",
+    "dow": "Dom",
+    "s": [
+     {
+      "t": "b",
+      "n": "BRICK-B1 · Bike 60 min + T2 + Corrida 20 min",
+      "o": "brick continuo, um registro so — 80 min no total",
+      "det": [
+       "<b>BIKE — 10 min de aquecimento</b> a 90-112 bpm / 70-110 W, cadencia livre. No rolo, spindown antes",
+       "<b>BIKE — 45 min de base aerobica</b> a 112-128 bpm / 90-145 W, cadencia 85-90 rpm. Em subida ALIVIE em vez de deixar a FC subir. ANOTE a potencia media",
+       "<b>BIKE — 5 min de PREPARACAO DA TRANSICAO</b> a 125-138 bpm / 100-155 W, na posicao de prova. Nos ultimos 2 min suba a cadencia para 95 sem aumentar a carga: e isso que destrava a perna",
+       "<b>CORRIDA — primeiros 5 min</b> a 120-145 bpm. O treino inteiro esta aqui: NAO force o ritmo, cadencia alta e passada curta",
+       "<b>CORRIDA — 15 min em Z2 estavel</b> a 130-150 bpm, cadencia alvo 158-165 spm. ANOTE O PACE",
+       "<b>E UM treino so, nao dois.</b> Abra a atividade MULTIESPORTE no relogio e troque de esporte com o botao de volta — a T2 entra sozinha",
+       "<b>A bike encolhe de 68 para 60 min</b> em relacao ao BRICK-D1 de 20/09; a corrida e a mesma. A semana ja carrega o teste de FTP de quarta",
+       "<b>SEU MARCO A BATER, de 20/09:</b> a corrida do brick saiu a <b>5:18,1/km com FC media 148</b> ao longo de 3,79 km — mais rapido que o ritmo de prova alvo de 5:27/km",
+       "<b>Nos bricks a volta a calma da bike nao existe</b> — ela virou o bloco de preparacao de transicao. Aqui voce nao para, emenda",
+       "<b>Confere com o workout 703 BRICK-B1 · Bike 60min + T2 + Corrida 20min</b> agendado no Garmin (id 1700625905)"
+      ]
+     }
+    ]
+   }
+  ]
  }
 ];
-var SEMANAS_FEITAS_UPDATED = "20/09/2026 20:30 - semanas 1 a 5 arquivadas. A semana 5 (14/09 a 20/09) foi empurrada para ca no fechamento de domingo, com todos os det, ANTES de SEMANA_ATUAL ser reescrita para a semana 6. Alvo de 5,2 h por ser deload; foi PROGRAMADA em 7,5 h, ou seja 44 por cento acima do alvo ja no papel, e fechou em 8,33 h reais. As 8 sessoes prescritas foram cumpridas, mais um HIIT na quinta e a natacao de segunda 21/09 antecipada para domingo.";
+var SEMANAS_FEITAS_UPDATED = "27/09/2026 19:30 - semanas 1 a 6 arquivadas. A semana 6 (21/09 a 27/09) foi empurrada para ca no fechamento de domingo, com todos os det, ANTES de SEMANA_ATUAL ser reescrita para a semana 7. Alvo 7,5 h, programada em 8,35 h, realizada em 5,74 h contando o HIIT de 22/09 (4,74 h sem ele). 6 de 9 sessoes prescritas feitas: nao sairam o RUN-V3 de 21/09 nem FOR-A e NAT-C2 de 25/09; o BIKE-FTP parou aos 10 min por pane do cassete do rolo.";
 /* ==== FIM SEMANAS ARQUIVADAS ==== */
 
 /* ==== INICIO SEMANA EM CURSO - NAO EDITAR A MAO ====
@@ -2918,61 +3107,112 @@ var SEMANAS_FEITAS_UPDATED = "20/09/2026 20:30 - semanas 1 a 5 arquivadas. A sem
    `det` e OPCIONAL: sem ele o painel mostra um aviso de que nao foi gerado. */
 var SEMANA_ATUAL=[
  {
-  "date": "2026-09-21",
+  "date": "2026-09-28",
   "dow": "Seg",
   "tag": "hard",
   "s": [
    {
+    "t": "n",
+    "n": "NAT-E2 · Economia 1.800 m",
+    "o": "cedo, antes da corrida — sua rotina de segunda",
+    "det": [
+     "<b>300 m de aquecimento</b> em crawl suave, expirando dentro da agua o tempo todo",
+     "<b>PAUSA: 30 s parado na borda.</b> Nao emende o aquecimento na serie",
+     "<b>4x 50 m de CONTAGEM BASE</b>, 15 s parado entre eles. Anote a contagem — e a referencia do dia",
+     "<b>PAUSA ENTRE BLOCOS: 45 s parado</b> (com os 15 s do ultimo 50, sao 60 s)",
+     "<b>10x 50 m com UMA BRACADA A MENOS</b> que a base, no mesmo tempo, 20 s parado entre eles. Foco externo: empurrar a agua para tras",
+     "<b>PAUSA ANTES DOS 100: 60 s parado</b> (com os 20 s do ultimo 50, sao 80 s)",
+     "<b>6x 100 m de nado completo</b> mantendo a contagem reduzida, 25 s parado entre eles",
+     "<b>200 m de soltura.</b> Anote contagem base e contagem final",
+     "<b>Tres numeros diferentes:</b> o nome diz 1800m, a soma dos passos da <b>1.800 m</b> e o Garmin estima 2.345 m. <b>O nado real e 1.800 m</b>",
+     "<b>Nas pausas fique PARADO</b> — Toubekis 2005 e 2011: nadar solto em pausa curta piora a serie seguinte",
+     "<b>Confere com o workout 703 NAT-E2 · Economia 1800m (pausas)</b> agendado no Garmin (id 1702724141)"
+    ]
+   },
+   {
     "t": "r",
     "n": "RUN-V3 · 4x4min 90-95% FCmax",
-    "o": "dia duro 1 — voce avisou que hoje e so a corrida",
+    "o": "dia duro 1 — REPETE a sessao que nao saiu em 21/09 (trava da corrida)",
     "det": [
-     "<b>15 min de aquecimento progressivo</b>, FC 110-145, terminando ja em Z2 alto",
-     "<b>4x (4 min com FC 161-171 + 3 min trotando a 110-140 bpm)</b>. Ritmo aproximado 4:15/km. Recuperacao ATIVA, sem parar de andar",
-     "<b>No 1o bloco a FC sobe devagar</b> — e o normal, nao acelere o ritmo para forcar o numero",
-     "<b>10 min de volta a calma</b> em FC 105-135",
-     "<b>O alvo de 161-171 bpm sai da sua FCmax real de 179</b>, nao dos 171 do laboratorio — voce ja registrou 174 em prova e 181 na Chapada",
-     "<b>Por que 4x4 min:</b> Helgerud 2007 comparou quatro formatos e o 4x4 a 90-95 por cento da FC maxima produziu o maior ganho de VO2max. Hov 2023 replicou, mais 6,5 por cento em 8 semanas",
-     "<b>ATENCAO, dado seu de 19/09:</b> voce interrompeu o RUN-V1 por dor na coxa direita e nao fez o 5o bloco. No brick de 20/09 a coxa nao incomodou. Se doer de novo, corte a repeticao — nao o ritmo",
-     "<b>A natacao desta segunda ja saiu:</b> voce antecipou o NAT-C3 para domingo 20/09 e parou em 975 m por caibra. Hoje e so a corrida, como voce avisou",
+     "<b>15 min de aquecimento progressivo</b>, FC 110-145, terminando em Z2 alto",
+     "<b>4x (4 min com FC 161-171 + 3 min trotando a 110-140 bpm)</b>. Ritmo aproximado 4:15/km. Recuperacao ATIVA, sem parar",
+     "<b>No 1o bloco a FC sobe devagar</b> — e normal, nao acelere o ritmo para forcar o numero",
+     "<b>10 min de volta a calma</b> a 105-135 bpm",
+     "<b>O alvo de 161-171 bpm sai da sua FCmax real de 179</b>, nao dos 171 do laboratorio — descricao do proprio workout",
+     "<b>Por que o RUN-V3 e nao o RUN-V1:</b> a trava mandou REPETIR a corrida da semana 6, que tinha RUN-V3 na segunda e RUN-V2 no sabado. O RUN-V3 de 21/09 nao foi feito",
+     "<b>Coxa direita:</b> em 19/09 ela travou o RUN-V1. Se doer de novo, corte a repeticao — nao o ritmo",
      "<b>Confere com o workout 703 RUN-V3 · 4x4min 90-95% FCmax</b> agendado no Garmin (id 1694746590)"
     ]
    }
   ]
  },
  {
-  "date": "2026-09-22",
+  "date": "2026-09-29",
   "dow": "Ter",
-  "tag": "off",
-  "s": []
+  "s": [
+   {
+    "t": "n",
+    "n": "NAT-C2 · Ritmo Critico 2.200 m",
+    "o": "a versao cheia que nao saiu em 25/09 — estreia",
+    "det": [
+     "<b>300 m de aquecimento:</b> 200 soltos mais 100 progressivos terminando no ritmo da serie",
+     "<b>PAUSA: 30 s parado na borda.</b> Nao emende o aquecimento na serie",
+     "<b>4x 50 m de ATIVACAO progressiva</b>, 15 s parado entre eles. O 4o ja no ritmo da serie principal",
+     "<b>PAUSA ANTES DA SERIE PRINCIPAL: 60 s parado</b> (com os 15 s do ultimo 50, sao 75 s)",
+     "<b>8x 100 m no seu CSS de 2:46/100 m</b>, 20 s parado. O 8o tem de sair no tempo do 1o — se cair mais de 5 s, saiu rapido demais",
+     "<b>100 m bem soltos</b>, alternando nados. Recuperacao ATIVA de proposito (Toubekis 2008)",
+     "<b>PAUSA: 30 s parado</b> antes dos 200 de ritmo",
+     "<b>3x 200 m no ritmo alvo, sem parar</b>, 35 s parado entre eles",
+     "<b>200 m de volta a calma.</b> Anote o 1o e o 8o cem e os tres 200",
+     "<b>Tres numeros diferentes:</b> o nome diz 1700m, a soma dos passos da <b>2.200 m</b> e o Garmin estima 2.645 m. <b>O nado real e 2.200 m</b> — o maior nado do ciclo",
+     "<b>Confere com o workout 703 NAT-C2 · Ritmo Critico 1700m (pausas)</b> agendado no Garmin (id 1702724414)"
+    ]
+   }
+  ]
  },
  {
-  "date": "2026-09-23",
+  "date": "2026-09-30",
   "dow": "Qua",
   "tag": "hard",
   "s": [
    {
     "t": "b",
     "n": "BIKE-FTP · Teste 20 min em potencia",
-    "o": "MARCO do ciclo — a primeira medida de FTP em watts",
+    "o": "MARCO — refazer o teste que parou aos 10 min em 23/09. Rolo consertado",
     "det": [
-     "<b>Spindown do rolo ANTES de comecar.</b> Mesmo rolo, mesma marcha, ventilador ligado",
-     "<b>15 min de aquecimento</b> a 80-105 W e 90-115 bpm, cadencia 85-95 rpm",
-     "<b>3x (1 min a 120-150 W e 115-140 bpm + 2 min soltos a 70-100 W)</b> — abertura de perna, nao e o teste",
-     "<b>5 min de recuperacao completa</b> a 70-100 W. Beba agua",
-     "<b>TESTE — 20 MIN.</b> Maior potencia MEDIA que voce sustenta os 20 minutos inteiros, sem cair no fim. Erro classico e sair forte demais: nos primeiros 5 min tem de parecer que da para fazer mais",
-     "<b>10 min de volta a calma</b> a 65-95 W e 85-110 bpm",
-     "<b>FTP = media dos 20 min x 0,90</b> (fator para nao-elite, Gough 2025). ANOTE A POTENCIA MEDIA DOS 20 MIN",
-     "<b>Referencia de FC:</b> em 13/09 voce sustentou 139-140 bpm por 20 min na rua, a 29,6 km/h. Se ficar muito abaixo disso hoje, esta conservador",
-     "<b>O FTP de 230 W cadastrado no Garmin e falso</b> — e maior que os 162 W de pico medidos em incremental maximo. Ignore as zonas de potencia do relogio e leia watts absolutos",
-     "<b>A forca de terca foi removida de proposito</b> para voce nao chegar no teste com perna cansada. Ela foi para a sexta",
+     "<b>Rolo consertado</b>, informado por voce em 27/09. O teste de 23/09 parou aos 10 min por pane do cassete",
+     "<b>Spindown do rolo ANTES</b>, mesma marcha, ventilador ligado. Pareie o rolo ao relogio para gravar UMA atividade",
+     "<b>15 min de aquecimento</b> a 80-105 W / 90-115 bpm, cadencia 85-95 rpm",
+     "<b>3x (1 min a 120-150 W / 115-140 bpm + 2 min soltos a 70-100 W / 90-115 bpm)</b> — abertura de perna, nao e o teste",
+     "<b>5 min de recuperacao completa</b> a 70-100 W / 90-115 bpm. Beba agua",
+     "<b>TESTE — 20 MIN, sem alvo.</b> Maior potencia MEDIA sustentada os 20 min inteiros. Nos primeiros 5 min tem de parecer que da para mais",
+     "<b>10 min de volta a calma</b> a 65-95 W / 85-110 bpm",
+     "<b>FTP = media dos 20 min x 0,90</b> (Gough 2025, fator para nao-elite, citado no workout). ANOTE A POTENCIA MEDIA DOS 20 MIN",
+     "<b>Referencias:</b> 139-140 bpm por 20 min na rua em 13/09; 141 W medios nos 10 min que sairam em 23/09 — este ultimo NAO e FTP",
+     "<b>Sem forca na terca de proposito</b> — a regra proibe forca na vespera do teste. A FOR-A vem DEPOIS do teste, nesta mesma manha",
      "<b>Confere com o workout 703 BIKE-FTP · Teste 20min POTENCIA+FC (rolo)</b> agendado no Garmin (id 1700620063)"
+    ]
+   },
+   {
+    "t": "f",
+    "n": "FOR-A · Forca Base Triatlo",
+    "o": "depois do teste, na manha livre de quarta",
+    "det": [
+     "<b>Agachamento livre 3x8</b>, 120 s de pausa",
+     "<b>Levantamento terra romeno 3x8</b>, 120 s de pausa",
+     "<b>Afundo caminhando 3x10</b>, 90 s de pausa",
+     "<b>Remada curvada 3x10</b>, 90 s de pausa",
+     "<b>Puxada alta ou barra fixa assistida 3x8</b>, 90 s de pausa",
+     "<b>Desenvolvimento de ombro 3x10</b>, 90 s de pausa",
+     "<b>Prancha frontal e lateral 3x</b>, 60 s de pausa, e <b>elevacao de panturrilha 3x15</b>, 60 s",
+     "<b>Faca DEPOIS do teste de FTP, nunca antes.</b> O teste pede perna descansada. A terca nao pode ter forca por ser vespera do teste, e depois de correr na segunda voce nao consegue encaixar",
+     "<b>Confere com o workout 703 FOR-A · Forca Base Triatlo (v2)</b> agendado no Garmin (id 1698840673)"
     ]
    }
   ]
  },
  {
-  "date": "2026-09-24",
+  "date": "2026-10-01",
   "dow": "Qui",
   "s": [
    {
@@ -2988,111 +3228,77 @@ var SEMANA_ATUAL=[
      "<b>Farmers carry de 40 m, 3x</b>, 75 s de pausa",
      "<b>Prancha frontal 45 s e lateral 30 s de cada lado, 3x</b>, 45 s de pausa",
      "<b>Pallof press anti-rotacao 3x10</b>, 45 s de pausa",
-     "<b>E a sessao que protege o ombro</b> na semana em que a natacao volta ao volume cheio, com a NAT-C2 de 2.200 m na sexta",
      "<b>Confere com o workout 703 FOR-B · Tronco, Ombro e Core (v2)</b> agendado no Garmin (id 1698840822)"
-    ]
-   }
-  ]
- },
- {
-  "date": "2026-09-25",
-  "dow": "Sex",
-  "s": [
-   {
-    "t": "f",
-    "n": "FOR-A · Forca Base Triatlo",
-    "o": "veio da terca, que foi esvaziada para o teste de FTP",
-    "det": [
-     "<b>Agachamento livre 3x8</b>, 120 s de pausa",
-     "<b>Levantamento terra romeno 3x8</b>, 120 s de pausa",
-     "<b>Afundo caminhando 3x10</b>, 90 s de pausa",
-     "<b>Remada curvada 3x10</b>, 90 s de pausa",
-     "<b>Puxada alta ou barra fixa assistida 3x8</b>, 90 s de pausa",
-     "<b>Desenvolvimento de ombro 3x10</b>, 90 s de pausa",
-     "<b>Prancha frontal e lateral 3x</b>, 60 s de pausa, e <b>elevacao de panturrilha 3x15</b>, 60 s",
-     "<b>CrossFit vale nesta vaga.</b> Mas hoje e sexta e o brick e domingo — WOD pesado de perna aqui cobra caro depois de amanha",
-     "<b>Confere com o workout 703 FOR-A · Forca Base Triatlo (v2)</b> agendado no Garmin (id 1698840673)"
-    ]
-   },
-   {
-    "t": "n",
-    "n": "NAT-C2 · Ritmo Critico — o maior nado do ciclo",
-    "o": "versao CHEIA liberada pela trava: 2.200 m contra 1.200 m da C3",
-    "det": [
-     "<b>300 m de aquecimento:</b> 200 soltos mais 100 progressivos terminando no ritmo da serie",
-     "<b>PAUSA: 30 s parado na borda.</b> Nao emende o aquecimento na serie",
-     "<b>4x 50 m de ATIVACAO progressiva</b>, 15 s parado entre eles. O 4o ja no ritmo alvo da serie principal",
-     "<b>PAUSA ANTES DA SERIE PRINCIPAL: 60 s parado</b> (com os 15 s do ultimo 50, sao 75 s). Esta era exatamente a pausa que faltava antes de 19/09",
-     "<b>8x 100 m no seu CSS de 2:46/100 m</b>, 20 s parado entre eles. Deve doer no 6o. O 8o tem de sair no mesmo tempo do 1o — se cair mais de 5 s, voce saiu rapido demais",
-     "<b>100 m bem soltos</b>, alternando nados. Aqui a recuperacao e ATIVA de proposito: a pausa e longa o bastante para isso ajudar (Toubekis 2008)",
-     "<b>PAUSA: 30 s parado</b> antes dos 200 de ritmo",
-     "<b>3x 200 m no ritmo alvo, sem parar</b>, 35 s parado entre eles. Aqui o ritmo vira habito",
-     "<b>200 m de volta a calma.</b> ANOTE o tempo do 1o e do 8o cem metros, e os tres 200",
-     "<b>Tres numeros diferentes:</b> o nome diz 1.700 m, a soma dos passos da <b>2.200 m</b> e o Garmin estima 2.645 m. <b>O nado real e 2.200 m</b>",
-     "<b>Confere com o workout 703 NAT-C2 · Ritmo Critico 1700m (pausas)</b> agendado no Garmin (id 1702724414)"
-    ]
-   }
-  ]
- },
- {
-  "date": "2026-09-26",
-  "dow": "Sab",
-  "tag": "hard",
-  "s": [
-   {
-    "t": "r",
-    "n": "RUN-V2 · 5x1000 m no ritmo-alvo",
-    "o": "dia duro 2 — o ritmo do Cooper, fracionado",
-    "det": [
-     "<b>15 min de aquecimento progressivo</b>, FC 110-145, com 3 aceleracoes de 20 s no fim",
-     "<b>5x (1.000 m em 4:17 + 2:30 trotando leve a 110-142 bpm)</b>",
-     "<b>NAO mais rapido que 4:17.</b> O objetivo e gravar o ritmo, nao provar que consegue correr mais forte",
-     "<b>10 min de volta a calma</b> a 105-135 bpm. ANOTE os cinco tempos",
-     "<b>Erro classico:</b> sair a 4:05 no primeiro e terminar a 4:30 no quinto — isso nao treina o ritmo do teste, treina a desacelerar. A meta e cinco vezes 4:17",
-     "<b>4:17/km ja e o seu ritmo:</b> no Cooper de 14/09 voce fez 2.777 m em 12 min, o que da 4:19/km com FC media de 165",
-     "<b>Ressalva honesta, do proprio workout:</b> o formato 5x1000 e pratica consagrada de treino, nao protocolo validado em ensaio. O que tem evidencia e o tempo acumulado acima de 90 por cento do VO2max",
-     "<b>Confere com o workout 703 RUN-V2 · 5x1000m ritmo-alvo</b> agendado no Garmin (id 1694746492)"
     ]
    },
    {
     "t": "n",
     "n": "NAT-P3 · Ritmo de Prova 1.300 m",
-    "o": "1.000 m continuos — consolidar o marco que caiu em 16/09",
+    "o": "1.000 m sem parar — em 26/09 o bloco saiu em tres pedacos",
     "det": [
      "<b>200 m de aquecimento</b>, solto, com 4x25 progressivos no fim",
      "<b>PAUSA: 45 s parado na borda.</b> Ajuste oculos e touca: os proximos 1.000 m sao sem parar",
-     "<b>LARGADA SIMULADA: 100 m</b> um pouco acima do ritmo, como na prova para achar espaco. NAO PARE no fim deste passo",
-     "<b>800 m CONTINUOS em ritmo de prova.</b> Deve parecer facil demais nos primeiros 300 m; se nao parecer, esta rapido. Respire bilateral e levante os olhos 2x a cada 100 m",
-     "<b>FINAL: 100 m acelerando ate o CSS.</b> Veiga 2019: quem vai bem em aguas abertas acelera ate 9 por cento na volta final",
-     "<b>PAUSA: 30 s parado.</b> Anote o tempo dos 800 m agora, antes de esquecer",
-     "<b>100 m de volta a calma.</b> Anote como estava o ombro no fim",
-     "<b>O bloco de 1.000 m e sem pausa DE PROPOSITO</b> — 100 de largada mais 800 mais 100 de final. A prova e assim, nao e esquecimento",
-     "<b>MARCO JA CUMPRIDO, hoje e para consolidar:</b> em 16/09 voce nadou os 800 m continuos em 22:10, a 2:46,3/100 m — exatamente o CSS medido. O marco previsto para a semana 11 caiu na semana 5",
-     "<b>Versao de entrada mantida de proposito.</b> A NAT-P cheia tem 1.900 m continuos; saltar de 1.000 para 1.900 em uma semana e demais, e o marco de 1.500 m e da semana 20",
+     "<b>LARGADA SIMULADA: 100 m</b> um pouco acima do ritmo. NAO PARE no fim deste passo",
+     "<b>800 m CONTINUOS em ritmo de prova.</b> Deve parecer facil demais nos primeiros 300 m. Respire bilateral e levante os olhos 2x a cada 100 m",
+     "<b>FINAL: 100 m acelerando ate o CSS</b> (Veiga 2019)",
+     "<b>PAUSA: 30 s parado.</b> Anote o tempo dos 800 m",
+     "<b>100 m de volta a calma.</b> Anote como estava o ombro",
+     "<b>O bloco de 1.000 m e sem pausa DE PROPOSITO.</b> Em 26/09 o arquivo mostra paradas de cerca de 40 s entre a largada e os 800 m e de cerca de 20 s antes do final. A troca de passo e automatica por distancia — nao pare na borda",
+     "<b>Seu dado de 26/09:</b> os 800 m sairam em 21:04,6, ou 2:38,1/100 m, 8 s mais rapido que os 2:46,3 de 16/09, com 5 piscinas de peito ou costas no fim. A sessao pede ritmo que pareca facil",
+     "<b>Tres numeros:</b> nome e soma dos passos dao <b>1.300 m</b>; o Garmin estima 1.375 m. <b>O nado real e 1.300 m</b>",
      "<b>Confere com o workout 703 NAT-P3 · Ritmo de Prova 1300m (pausas)</b> agendado no Garmin (id 1702724669)"
     ]
    }
   ]
  },
  {
-  "date": "2026-09-27",
+  "date": "2026-10-02",
+  "dow": "Sex",
+  "tag": "off",
+  "s": []
+ },
+ {
+  "date": "2026-10-03",
+  "dow": "Sab",
+  "tag": "hard",
+  "s": [
+   {
+    "t": "r",
+    "n": "RUN-V2 · 5x1000 m no ritmo-alvo",
+    "o": "dia duro 2 — REPETE: em 26/09 sairam 4 de 5 blocos",
+    "det": [
+     "<b>15 min de aquecimento progressivo</b>, FC 110-145, com 3 aceleracoes de 20 s no fim",
+     "<b>5x (1.000 m em 4:17 + 2:30 trotando leve a 110-142 bpm)</b>",
+     "<b>NAO mais rapido que 4:17.</b> O objetivo e gravar o ritmo, nao provar que consegue correr mais forte",
+     "<b>10 min de volta a calma</b> a 105-135 bpm. ANOTE os cinco tempos",
+     "<b>Seu dado de 26/09:</b> 4:19,4 · 4:33,7 · 4:57,0 · 4:40,8/km com FC 158-161, e voce parou antes do 5o porque o ritmo caia. E o erro que o proprio workout descreve: comecar no alvo e desacelerar",
+     "<b>Abra o RUN-V2 no relogio ANTES de trotar.</b> Em 26/09 o aquecimento ficou gravado no perfil do RUN-A1 e a sessao saiu em duas atividades",
+     "<b>Ressalva do proprio workout:</b> 5x1000 e pratica consagrada de treino, nao protocolo validado em ensaio",
+     "<b>Confere com o workout 703 RUN-V2 · 5x1000m ritmo-alvo</b> agendado no Garmin (id 1694746492)"
+    ]
+   }
+  ]
+ },
+ {
+  "date": "2026-10-04",
   "dow": "Dom",
+  "tag": "hard",
   "s": [
    {
     "t": "b",
-    "n": "BRICK-B1 · Bike 60 min + T2 + Corrida 20 min",
-    "o": "brick continuo, um registro so — 80 min no total",
+    "n": "BRICK-B3 · Bike 2h + T2 + Corrida 20 min",
+    "o": "o brick longo — 2h20, um registro so",
     "det": [
-     "<b>BIKE — 10 min de aquecimento</b> a 90-112 bpm / 70-110 W, cadencia livre. No rolo, spindown antes",
-     "<b>BIKE — 45 min de base aerobica</b> a 112-128 bpm / 90-145 W, cadencia 85-90 rpm. Em subida ALIVIE em vez de deixar a FC subir. ANOTE a potencia media",
-     "<b>BIKE — 5 min de PREPARACAO DA TRANSICAO</b> a 125-138 bpm / 100-155 W, na posicao de prova. Nos ultimos 2 min suba a cadencia para 95 sem aumentar a carga: e isso que destrava a perna",
-     "<b>CORRIDA — primeiros 5 min</b> a 120-145 bpm. O treino inteiro esta aqui: NAO force o ritmo, cadencia alta e passada curta",
-     "<b>CORRIDA — 15 min em Z2 estavel</b> a 130-150 bpm, cadencia alvo 158-165 spm. ANOTE O PACE",
-     "<b>E UM treino so, nao dois.</b> Abra a atividade MULTIESPORTE no relogio e troque de esporte com o botao de volta — a T2 entra sozinha",
-     "<b>A bike encolhe de 68 para 60 min</b> em relacao ao BRICK-D1 de 20/09; a corrida e a mesma. A semana ja carrega o teste de FTP de quarta",
-     "<b>SEU MARCO A BATER, de 20/09:</b> a corrida do brick saiu a <b>5:18,1/km com FC media 148</b> ao longo de 3,79 km — mais rapido que o ritmo de prova alvo de 5:27/km",
-     "<b>Nos bricks a volta a calma da bike nao existe</b> — ela virou o bloco de preparacao de transicao. Aqui voce nao para, emenda",
-     "<b>Confere com o workout 703 BRICK-B1 · Bike 60min + T2 + Corrida 20min</b> agendado no Garmin (id 1700625905)"
+     "<b>BIKE — 15 min de aquecimento progressivo</b> a 90-112 bpm / 70-110 W, cadencia livre",
+     "<b>BIKE — 95 min LONGO</b> a 110-125 bpm / 85-135 W, cadencia 85-90 rpm. Levante do selim 30 s a cada 20 min. Em subida ALIVIE",
+     "<b>BIKE — deriva cardiovascular:</b> se a FC subir sozinha na segunda hora com os watts iguais, mantenha os watts (Wingo 2005, citado no workout)",
+     "<b>BIKE — 10 min de PREPARACAO DA TRANSICAO</b> a 120-135 bpm / 95-150 W, na posicao de prova. Nos ultimos 2 min suba a cadencia para 95 sem aumentar a carga",
+     "<b>CORRIDA — primeiros 5 min</b> a 120-145 bpm. Perna pesada e esperada. Cadencia alta, passada curta",
+     "<b>CORRIDA — 15 min em Z2 estavel</b> a 130-150 bpm, cadencia 158-165 spm. ANOTE O PACE",
+     "<b>E UM treino so.</b> Atividade MULTIESPORTE no relogio, troque de esporte com o botao de volta — a T2 entra sozinha",
+     "<b>A bike dobra de 60 para 120 min</b> — a maior pedalada do ciclo ate aqui foi de 68 min, em 20/09",
+     "<b>Nutricao, diferenca a conferir:</b> a descricao do workout fala em 75-90 g de carboidrato por hora; a rampa do NUTRICAO_703 para set-out e 40 g/h no bike longo. Nao e prescricao — anote quanto voce ingeriu",
+     "<b>Confere com o workout 703 BRICK-B3 · Bike 2h + T2 + Corrida 20min</b> agendado no Garmin (id 1700626083)"
     ]
    }
   ]
@@ -3107,43 +3313,29 @@ var SEMANA_ATUAL=[
    Formato: [ {sem:N, dias:[{date,dow,tag,s:[{t,n,o,det}]}]}, ... ] */
 var AGENDA_FUTURA=[
  {
-  "sem": 7,
+  "sem": 8,
   "dias": [
    {
-    "date": "2026-09-28",
+    "date": "2026-10-05",
     "dow": "Seg",
-    "tag": "hard",
     "s": [
      {
       "t": "r",
-      "n": "RUN-V1 · 5x3min vVO2max",
-      "o": "dia duro 1 — o intervalado longo volta",
+      "n": "RUN-A1 · Z2 + cadencia 158-165",
+      "o": "semana de recuperacao — sem qualidade, com o treino de cadencia",
       "det": [
-       "<b>15 min de aquecimento progressivo</b>, FC 110-145, terminando ja em Z2 alto",
-       "<b>5x (3 min a 4:10-4:15/km + 3 min trotando bem leve a 110-140 bpm)</b>, recuperacao ATIVA, sem parar de andar",
-       "<b>10 min de volta a calma</b> a 105-135 bpm. ANOTE o ritmo de cada bloco — a queda do 1o para o 5o e o dado da sessao",
-       "<b>Se nao sustentar o ritmo no 4o ou no 5o, corte a repeticao — nao o ritmo.</b> Foi exatamente o que aconteceu em 19/09, quando a coxa direita travou o 4o bloco",
-       "<b>Por que 3 min:</b> Fleckenstein 2025 comparou formatos e 4x3min a 95 por cento da vVO2max rendeu 328 s acima de 90 por cento do VO2max, contra 201 s no formato 24x30s",
-       "<b>Confere com o workout 703 RUN-V1 · 5x3min vVO2max</b> agendado no Garmin (id 1694746414)"
-      ]
-     },
-     {
-      "t": "n",
-      "n": "NAT-E2 · Economia 1.800 m",
-      "o": "bracada, nao tempo",
-      "det": [
-       "<b>300 m de aquecimento</b> em crawl suave, com 30 s parado depois",
-       "<b>4x 50 m de contagem base</b>, 15 s parado, e <b>45 s de pausa entre blocos</b>",
-       "<b>10x 50 m com uma bracada a menos</b> que a base, no mesmo tempo, 20 s parado, e <b>60 s de pausa antes do bloco final</b>",
-       "<b>6x 100 m de nado completo</b> mantendo a contagem reduzida, 25 s parado, e <b>200 m de soltura</b>",
-       "<b>O nado real e 1.800 m</b> — o Garmin estima 2.345 m",
-       "<b>Confere com o workout 703 NAT-E2 · Economia 1800m (pausas)</b> agendado no Garmin (id 1702724141)"
+       "<b>10 min de aquecimento em Z1</b> a 105-132 bpm",
+       "<b>6x (2 min a 158-165 spm no MESMO ritmo + 3 min em Z2 com cadencia livre a 130-150 bpm)</b>. Passos mais curtos, nao mais rapidos",
+       "<b>5 min de volta a calma</b> a 105-130 bpm",
+       "<b>Duracao real: 45 min</b> — o nome diz 50, a soma dos passos da 45",
+       "<b>Por que agora:</b> cadencia e a meta que menos anda, e o RUN-A1 nao e feito de verdade desde 31/08",
+       "<b>Confere com o workout 703 RUN-A1 · Z2 50min + Cadencia 158-165</b> agendado no Garmin (id 1666533088)"
       ]
      }
     ]
    },
    {
-    "date": "2026-09-29",
+    "date": "2026-10-06",
     "dow": "Ter",
     "s": [
      {
@@ -3154,165 +3346,72 @@ var AGENDA_FUTURA=[
        "<b>Agachamento livre 3x8</b> e <b>terra romeno 3x8</b>, 120 s de pausa cada",
        "<b>Afundo caminhando 3x10</b>, <b>remada curvada 3x10</b>, <b>puxada alta 3x8</b> e <b>desenvolvimento de ombro 3x10</b>, 90 s de pausa cada",
        "<b>Prancha frontal e lateral 3x</b> e <b>elevacao de panturrilha 3x15</b>, 60 s de pausa",
-       "<b>CrossFit vale nesta vaga.</b> WOD pesado de perna prefira a quinta",
+       "<b>CrossFit vale nesta vaga.</b> Semana de recuperacao: prefira a versao sem WOD pesado",
        "<b>Confere com o workout 703 FOR-A · Forca Base Triatlo (v2)</b> agendado no Garmin (id 1698840673)"
       ]
      },
      {
       "t": "n",
-      "n": "NAT-C2 · Ritmo Critico 2.200 m",
-      "o": "o maior nado da semana",
+      "n": "NAT-E2 · Economia 1.800 m",
+      "o": "sessao de tecnica — cabe numa semana de recuperacao",
       "det": [
-       "<b>300 m de aquecimento</b> e <b>30 s de pausa</b>",
-       "<b>4x 50 m de ativacao</b>, 15 s parado, e <b>60 s de pausa antes da serie principal</b>",
-       "<b>8x 100 m no CSS de 2:46/100 m</b>, 20 s parado. O 8o tem de sair no tempo do 1o",
-       "<b>100 m soltos</b>, <b>30 s de pausa</b>, <b>3x 200 m no ritmo alvo</b> com 35 s, e <b>200 m de soltura</b>",
-       "<b>O nado real e 2.200 m</b> — o nome diz 1.700 m e o Garmin estima 2.645 m",
-       "<b>Confere com o workout 703 NAT-C2 · Ritmo Critico 1700m (pausas)</b> agendado no Garmin (id 1702724414)"
+       "<b>300 m de aquecimento</b> suave, com <b>30 s parado</b> depois",
+       "<b>4x 50 m de contagem base</b>, 15 s parado, e <b>45 s de pausa entre blocos</b>",
+       "<b>10x 50 m com uma bracada a menos</b> que a base, no mesmo tempo, 20 s parado, e <b>60 s de pausa antes dos 100</b>",
+       "<b>6x 100 m de nado completo</b> mantendo a contagem reduzida, 25 s parado, e <b>200 m de soltura</b>",
+       "<b>O nado real e 1.800 m</b> — o Garmin estima 2.345 m",
+       "<b>Confere com o workout 703 NAT-E2 · Economia 1800m (pausas)</b> agendado no Garmin (id 1702724141)"
       ]
      }
     ]
    },
    {
-    "date": "2026-09-30",
+    "date": "2026-10-07",
     "dow": "Qua",
-    "tag": "hard",
     "s": [
      {
       "t": "b",
-      "n": "BIKE-B2D · Cadencia 75 min",
-      "o": "a primeira bike prescrita ja com o FTP medido em 23/09",
+      "n": "BIKE-B1D · Z2 Base 60 min",
+      "o": "bike de base — o FTP foi antecipado para 30/09",
       "det": [
-       "<b>15 min de aquecimento progressivo</b> a 90-112 bpm / 70-110 W",
-       "<b>6x (3 min a 95-105 rpm em marcha LEVE + 2 min soltos a 95-115 bpm)</b>. O alvo aqui e a CADENCIA, nao a carga — se a FC passar de 132, alivie a marcha",
-       "<b>20 min de base aerobica</b> a 112-128 bpm / 90-145 W, mantendo 88-92 rpm. ANOTE a potencia media",
-       "<b>10 min girando leve</b> a 85-110 bpm / 65-105 W",
-       "<b>Quadril parado no selim nos blocos de cadencia</b>, sem quicar",
-       "<b>Confere com o workout 703 BIKE-B2D · Cadencia 75min (CAD+FC+POT)</b> agendado no Garmin (id 1700619909)"
+       "<b>10 min de aquecimento solto</b> a 90-112 bpm / 70-110 W, cadencia livre",
+       "<b>40 min de base aerobica</b> a 112-128 bpm / 90-145 W, cadencia 85-90 rpm. Em subida ALIVIE em vez de deixar a FC subir. ANOTE a potencia media",
+       "<b>10 min de volta a calma</b> a 85-110 bpm / 65-105 W",
+       "<b>Alvo duplo:</b> FC primaria, potencia secundaria. Se o teste de 30/09 sair valido, os watts desta sessao passam a ser lidos contra o FTP medido",
+       "<b>Semana de recuperacao:</b> e tempo em sela, nao esforco",
+       "<b>Confere com o workout 703 BIKE-B1D · Z2 Base 60min (FC+POT)</b> agendado no Garmin (id 1700619589)"
       ]
      }
     ]
    },
    {
-    "date": "2026-10-01",
+    "date": "2026-10-08",
     "dow": "Qui",
     "s": [
      {
       "t": "f",
       "n": "FOR-B · Tronco, Ombro e Core",
-      "o": "prehab de natacao — 8 exercicios",
+      "o": "prehab de natacao",
       "det": [
-       "<b>Rotacao externa de ombro com elastico 3x15</b>, 45 s, e <b>remada unilateral 3x10</b>, 75 s",
-       "<b>Puxada alta 3x8</b>, 90 s, <b>flexao de braco 3x12</b>, 60 s, e <b>desenvolvimento de ombro em pe 3x10</b>, 75 s",
-       "<b>Farmers carry de 40 m, 3x</b>, 75 s de pausa",
-       "<b>Prancha frontal 45 s e lateral 30 s de cada lado, 3x</b>, e <b>Pallof press 3x10</b>, 45 s",
+       "<b>Rotacao externa com elastico 3x15</b>, 45 s de pausa, e <b>remada unilateral 3x10</b>, 75 s",
+       "<b>Puxada alta 3x8</b>, 90 s, <b>flexao 3x12</b>, 60 s, e <b>desenvolvimento em pe 3x10</b>, 75 s",
+       "<b>Farmers carry 40 m 3x</b>, 75 s, <b>prancha frontal e lateral 3x</b>, 45 s, e <b>Pallof press 3x10</b>, 45 s",
        "<b>Confere com o workout 703 FOR-B · Tronco, Ombro e Core (v2)</b> agendado no Garmin (id 1698840822)"
       ]
      },
      {
       "t": "n",
       "n": "NAT-P3 · Ritmo de Prova 1.300 m",
-      "o": "1.000 m continuos, a sessao mais leve em intensidade",
+      "o": "ritmo de prova — a sessao mais leve em intensidade",
       "det": [
-       "<b>200 m de aquecimento</b> com 4x25 progressivos e <b>45 s de pausa</b>",
-       "<b>100 m de largada simulada</b>, um pouco acima do ritmo. NAO PARE no fim deste passo",
-       "<b>800 m continuos em ritmo de prova</b>, seguidos de <b>100 m acelerando ate o CSS</b>",
-       "<b>30 s de pausa</b> — anote o tempo dos 800 m — e <b>100 m de soltura</b>",
-       "<b>Os 1.000 m sao sem pausa de proposito.</b> A prova e assim",
+       "<b>200 m de aquecimento</b> com 4x25 progressivos, e <b>45 s parado</b> na borda",
+       "<b>100 m de largada + 800 m continuos em ritmo de prova + 100 m acelerando ate o CSS</b> — 1.000 m SEM PARAR, de proposito",
+       "<b>30 s parado</b> e <b>100 m de volta a calma</b>. Anote o tempo dos 800 m e o ombro",
+       "<b>O nado real e 1.300 m</b> — o Garmin estima 1.375 m",
        "<b>Confere com o workout 703 NAT-P3 · Ritmo de Prova 1300m (pausas)</b> agendado no Garmin (id 1702724669)"
       ]
      }
     ]
-   },
-   {
-    "date": "2026-10-02",
-    "dow": "Sex",
-    "tag": "off",
-    "s": []
-   },
-   {
-    "date": "2026-10-03",
-    "dow": "Sab",
-    "tag": "hard",
-    "s": [
-     {
-      "t": "r",
-      "n": "RUN-V2 · 5x1000 m no ritmo-alvo",
-      "o": "dia duro 2 — vespera do brick longo",
-      "det": [
-       "<b>15 min de aquecimento progressivo</b> com 3 aceleracoes de 20 s no fim",
-       "<b>5x (1.000 m em 4:17 + 2:30 trotando leve)</b>. NAO mais rapido que 4:17",
-       "<b>10 min de volta a calma.</b> ANOTE os cinco tempos — a meta e cinco vezes 4:17",
-       "<b>Amanha e o BRICK-B3, de 2h20.</b> Nao transforme este treino em prova",
-       "<b>Confere com o workout 703 RUN-V2 · 5x1000m ritmo-alvo</b> agendado no Garmin (id 1694746492)"
-      ]
-     }
-    ]
-   },
-   {
-    "date": "2026-10-04",
-    "dow": "Dom",
-    "tag": "hard",
-    "s": [
-     {
-      "t": "b",
-      "n": "BRICK-B3 · Bike 2h + T2 + Corrida 20 min",
-      "o": "o brick longo — 2h20 num registro so",
-      "det": [
-       "<b>BIKE — 15 min de aquecimento progressivo</b> a 90-112 bpm / 70-110 W, cadencia livre",
-       "<b>BIKE — 95 min a 110-125 bpm / 85-135 W</b>, cadencia 85-90 rpm. Levantar do selim 30 s a cada 20 min. Em subida ALIVIE",
-       "<b>BIKE — 10 min de preparacao da transicao</b> a 120-135 bpm / 95-150 W na posicao de prova, subindo a cadencia para 95 nos ultimos 2 min",
-       "<b>CORRIDA — primeiros 5 min</b> a 120-145 bpm. Depois de 2 h de bike a perna vai estar bem pesada. NAO force",
-       "<b>CORRIDA — 15 min em Z2 estavel</b> a 130-150 bpm, cadencia 158-165 spm. ANOTE O PACE: e o custo de brick que mais vale",
-       "<b>TREINAR O ESTOMAGO:</b> 1 gel mais agua a cada 40 min mesmo sem fome. A rampa de setembro-outubro e de <b>40 g de carboidrato por hora</b> no bike longo",
-       "<b>O teto de FC e mais baixo de proposito:</b> em sessao longa a FC sobe sozinha a carga constante (Wingo 2005 mediu mais 12 por cento entre os minutos 15 e 45). Mantenha os watts",
-       "<b>Confere com o workout 703 BRICK-B3 · Bike 2h + T2 + Corrida 20min</b> agendado no Garmin (id 1700626083)"
-      ]
-     }
-    ]
-   }
-  ]
- },
- {
-  "sem": 8,
-  "dias": [
-   {
-    "date": "2026-10-05",
-    "dow": "Seg",
-    "s": [
-     {
-      "t": "r",
-      "n": "RUN-TAPER · 3x3min pre-teste",
-      "o": "sessao curta e rapida — o unico agendamento da semana 8 ate agora",
-      "det": [
-       "<b>15 min facil</b> a 110-145 bpm, com 3 aceleracoes de 20 s no fim",
-       "<b>3x (3 min em 4:17/km + 3 min trotando leve a 110-140 bpm)</b>. Sinta o ritmo, nao persiga numero melhor",
-       "<b>10 min bem leve</b> a 105-135 bpm",
-       "<b>Deve terminar com a sensacao de que daria para fazer mais duas.</b> Se acabar exausto, foi demais",
-       "<b>Base:</b> Bosquet 2007, meta-analise de 27 estudos, mostrou que o taper otimo reduz o VOLUME em 41-60 por cento mas MANTEM intensidade e frequencia",
-       "<b>Contexto:</b> este treino foi montado como antessala do teste de 12 min previsto para esta semana. <b>O Cooper ja foi feito em 14/09</b>, com 2.777 m — o resto da semana 8 sera montado no fechamento de 27/09",
-       "<b>Confere com o workout 703 RUN-TAPER · 3x3min pre-teste</b> agendado no Garmin (id 1694746700)"
-      ]
-     }
-    ]
-   },
-   {
-    "date": "2026-10-06",
-    "dow": "Ter",
-    "tag": "off",
-    "s": []
-   },
-   {
-    "date": "2026-10-07",
-    "dow": "Qua",
-    "tag": "off",
-    "s": []
-   },
-   {
-    "date": "2026-10-08",
-    "dow": "Qui",
-    "tag": "off",
-    "s": []
    },
    {
     "date": "2026-10-09",
@@ -3323,14 +3422,52 @@ var AGENDA_FUTURA=[
    {
     "date": "2026-10-10",
     "dow": "Sab",
-    "tag": "off",
-    "s": []
+    "s": [
+     {
+      "t": "r",
+      "n": "RUN-0 · Z1/Z2 35 min",
+      "o": "corrida curta — semana de recuperacao",
+      "det": [
+       "<b>5 min de aquecimento</b>, sem alvo",
+       "<b>25 min correndo a 115-140 bpm</b>",
+       "<b>5 min de volta a calma</b>, sem alvo",
+       "<b>Semana de recuperacao:</b> a qualidade sai, a frequencia fica. Nao transforme em treino de ritmo",
+       "<b>Confere com o workout 703 RUN-0 · Retomada Z1/Z2 35min</b> agendado no Garmin (id 1666536253)"
+      ]
+     },
+     {
+      "t": "n",
+      "n": "NAT-P3 · Ritmo de Prova 1.300 m",
+      "o": "segunda NAT-P3 da semana — consolidar os 1.000 m sem parar",
+      "det": [
+       "<b>200 m de aquecimento</b> com 4x25 progressivos, e <b>45 s parado</b> na borda",
+       "<b>100 m de largada + 800 m continuos em ritmo de prova + 100 m acelerando ate o CSS</b> — 1.000 m SEM PARAR, de proposito",
+       "<b>30 s parado</b> e <b>100 m de volta a calma</b>. Anote o tempo dos 800 m e o ombro",
+       "<b>O nado real e 1.300 m</b> — o Garmin estima 1.375 m",
+       "<b>Confere com o workout 703 NAT-P3 · Ritmo de Prova 1300m (pausas)</b> agendado no Garmin (id 1702724669)"
+      ]
+     }
+    ]
    },
    {
     "date": "2026-10-11",
     "dow": "Dom",
-    "tag": "off",
-    "s": []
+    "s": [
+     {
+      "t": "b",
+      "n": "BRICK-B1 · Bike 60 min + T2 + Corrida 20 min",
+      "o": "brick curto — 80 min, um registro so",
+      "det": [
+       "<b>BIKE — 10 min de aquecimento</b> a 90-112 bpm / 70-110 W, cadencia livre",
+       "<b>BIKE — 45 min de base aerobica</b> a 112-128 bpm / 90-145 W, cadencia 85-90 rpm. ANOTE a potencia media",
+       "<b>BIKE — 5 min de PREPARACAO DA TRANSICAO</b> a 125-138 bpm / 100-155 W, na posicao de prova, cadencia 95 nos ultimos 2 min",
+       "<b>CORRIDA — primeiros 5 min</b> a 120-145 bpm. NAO force o ritmo",
+       "<b>CORRIDA — 15 min em Z2 estavel</b> a 130-150 bpm, cadencia 158-165 spm. ANOTE O PACE",
+       "<b>Seu dado dos dois ultimos bricks:</b> 5:18,1/km a FC 148 (20/09) e 5:18,7/km a FC 147 (27/09) — mais rapido que o ritmo de prova de 5:27/km",
+       "<b>Confere com o workout 703 BRICK-B1 · Bike 60min + T2 + Corrida 20min</b> agendado no Garmin (id 1700625905)"
+      ]
+     }
+    ]
    }
   ]
  },
@@ -3401,7 +3538,7 @@ var AGENDA_FUTURA=[
   ]
  }
 ];
-var AGENDA_FUTURA_UPDATED = "27/09/2026 09:05 - reconferida na rodada da manha contra get_scheduled_workouts de 28/09 a 18/10: 11 agendamentos, os MESMOS das rodadas anteriores, nenhum acrescimo e nenhuma remocao. CONTEUDO MANTIDO, nenhuma linha alterada. Conflitos que continuam abertos para o Alex decidir, repetidos aqui porque nada mudou: o sabado 03/10 traz RUN-V2 5x1000 m, treino fracionado, na vaga que a semana-padrao reserva para CORRIDA LONGA; nao ha corrida longa agendada nesse sabado. A terca 06/10 segue vazia e a semana 9 so tem o NAT-TESTE2 de 12/10. Nao ha corrida em terca ou quinta, nao ha forca na quarta e nao ha duplicatas. ||| Historico da conferencia anterior, 26/09/2026 06:40 - reconferida na rodada da manha contra get_scheduled_workouts de 28/09 a 18/10: 11 agendamentos, os MESMOS das rodadas anteriores, nenhum acrescimo e nenhuma remocao. CONTEUDO MANTIDO, nenhuma linha alterada. Conflitos que continuam abertos para o Alex decidir, repetidos aqui porque nada mudou: o sabado 03/10 traz RUN-V2 5x1000 m, treino fracionado, na vaga que a semana-padrao reserva para CORRIDA LONGA - mesmo padrao do sabado 26/09 da semana em curso; nao ha corrida longa agendada em nenhuma das duas semanas. A terca 06/10 segue vazia e a semana 9 so tem o NAT-TESTE2 de 12/10. Nao ha corrida em terca ou quinta, nao ha forca na quarta e nao ha duplicatas. ||| Historico da conferencia anterior, 25/09/2026 07:22 - reconferida na rodada da manha contra get_scheduled_workouts de 28/09 a 19/10: 11 agendamentos, os MESMOS das rodadas anteriores, nenhum acrescimo e nenhuma remocao. CONTEUDO MANTIDO, nenhuma linha alterada. Conflitos que continuam abertos para o Alex decidir, repetidos aqui porque nada mudou: o sabado 03/10 traz RUN-V2 5x1000 m, treino fracionado, na vaga que a semana-padrao reserva para CORRIDA LONGA - mesmo padrao do sabado 26/09 da semana em curso; nao ha corrida longa agendada em nenhuma das duas semanas. A terca 06/10 segue vazia e a semana 9 so tem o NAT-TESTE2 de 12/10. Nao ha corrida em terca ou quinta, nao ha forca na quarta e nao ha duplicatas. ||| Historico da conferencia anterior, 24/09/2026 06:14 - reconferida na rodada da manha contra get_scheduled_workouts de 28/09 a 19/10: 11 agendamentos, os MESMOS das rodadas anteriores, nenhum acrescimo e nenhuma remocao. CONTEUDO MANTIDO, nenhuma linha alterada. Conflitos que continuam abertos para o Alex decidir, repetidos aqui porque nada mudou: o sabado 03/10 traz RUN-V2 5x1000 m, treino fracionado, na vaga que a semana-padrao reserva para CORRIDA LONGA - mesmo padrao do sabado 26/09 da semana em curso; nao ha corrida longa agendada em nenhuma das duas semanas. A terca 06/10 segue vazia e a semana 9 so tem o NAT-TESTE2 de 12/10. Nao ha corrida em terca ou quinta, nao ha forca na quarta e nao ha duplicatas. ||| Historico da conferencia anterior, 23/09/2026 06:11 - reconferida na rodada da manha contra get_scheduled_workouts de 28/09 a 19/10: 11 agendamentos, os MESMOS das rodadas anteriores, nenhum acrescimo e nenhuma remocao. CONTEUDO MANTIDO, nenhuma linha alterada. Conflitos que continuam abertos para o Alex decidir, repetidos aqui porque nada mudou: o sabado 03/10 traz RUN-V2 5x1000 m, treino fracionado, na vaga que a semana-padrao reserva para CORRIDA LONGA - mesmo padrao do sabado 26/09 da semana em curso; nao ha corrida longa agendada em nenhuma das duas semanas. A terca 06/10 segue vazia e a semana 9 so tem o NAT-TESTE2 de 12/10. Nao ha corrida em terca ou quinta, nao ha forca na quarta e nao ha duplicatas. ||| Historico da conferencia anterior, 22/09/2026 06:20 - reconferida na rodada da manha contra get_scheduled_workouts de 28/09 a 18/10: 11 agendamentos, os MESMOS da rodada de ontem, nenhum acrescimo e nenhuma remocao. CONTEUDO MANTIDO, nenhuma linha alterada. Conflitos que continuam abertos para o Alex decidir, repetidos aqui porque nada mudou: o sabado 03/10 traz RUN-V2 5x1000 m, treino fracionado, na vaga que a semana-padrao reserva para CORRIDA LONGA - mesmo padrao do sabado 26/09 da semana em curso; nao ha corrida longa agendada em nenhuma das duas semanas. A terca 06/10 segue vazia e a semana 9 so tem o NAT-TESTE2 de 12/10. Nao ha corrida em terca ou quinta, nao ha forca na quarta e nao ha duplicatas. ||| Historico da reescrita anterior, 20/09/2026 20:45 - fechamento da semana 5, lida de get_scheduled_workouts. Semana 7 (28/09 a 04/10) com 9 agendamentos e sexta 02/10 vazia. Semana 8 (05/10 a 11/10) so tem o RUN-TAPER de segunda. Semana 9 traz o NAT-TESTE2 agendado hoje para 12/10, seis semanas depois da medida de CSS de 31/08 - ele tinha sumido do horizonte e o teste-painel pegou. As semanas 8 e 9 serao completadas nos fechamentos de 27/09 e 04/10.";
+var AGENDA_FUTURA_UPDATED = "27/09/2026 20:40 - sem mudanca nas semanas 8 e 9 neste segundo ajuste, que so mexeu na semana 7 (SEMANA_ATUAL): NAT-E2 na segunda antes do RUN-V3, FOR-A na quarta depois do BIKE-FTP, sabado so com RUN-V2. Conferido em get_scheduled_workouts. ||| 27/09/2026 20:10 - AJUSTE pedido pelo Alex no chat: rolo consertado, teste de FTP antecipado para a semana 7 (quarta 30/09). Semana 8 revista: o BIKE-FTP de 07/10 virou BIKE-B1D Z2 60 min e a FOR-A voltou da segunda para a terca 06/10, junto da NAT-E2; segunda 05/10 fica so com o RUN-A1. Semana 8 segue em cerca de 7,4 h contra alvo de 5,8 h (+27 por cento, estouro declarado pelos pisos). Semana 9 so com o NAT-TESTE2 de 12/10. Conferido em get_scheduled_workouts: sem duplicatas, sem corrida em terca ou quinta, sem bike junto de RUN-BRICK. ||| Historico anterior: 27/09/2026 19:30 - reescrita no fechamento da semana 6, com o BIKE-FTP em 07/10 condicionado ao conserto do rolo e o RUN-TAPER de 05/10 removido.";
 /* ==== FIM AGENDA FUTURA ==== */
 
 /* ==== INICIO ATIVIDADES - NAO EDITAR A MAO ====
@@ -4744,56 +4881,6 @@ function renderMini(){ renderRegistro(); }
    O arquivo HISTORICO_703.md na pasta e a fonte de verdade; isto e a vista. */
 var DECISOES=[
  [
-  "20/09/2026",
-  "<b>Trava de progressao na natacao: libera o VOLUME, segura o CONTINUO</b>",
-  "<b>A semana 5 fechou com 4 natacoes contra 3 prescritas</b>, readiness medio de 66 no despertar e FCrep de 40,0 — pela tabela da trava, progride normalmente. A consequencia direta e que as versoes CHEIAS sao liberadas: a <b>NAT-C2 entra na sexta 25/09 com 2.200 m de nado real</b>, contra 1.200 m da NAT-C3 que vinha sendo usada. <b>Mas o bloco continuo NAO acompanha.</b> A NAT-P cheia pede 1.900 m sem parar; ele acabou de fazer 1.000 m continuos em 16/09 (800 m do bloco principal a 2:46,3/100 m, exatamente o CSS medido). Saltar de 1.000 para 1.900 numa semana e mais 90 por cento na distancia ininterrupta, e o marco de 1.500 m e so da semana 20. <b>Sabado 26/09 mantem a NAT-P3</b>, repetindo os 1.000 m para consolidar. A biblioteca nao tem degrau intermediario entre 1.000 e 1.900 — se ele quiser um, e preciso criar o workout"
- ],
- [
-  "20/09/2026",
-  "<b>O deload da semana 5 nao aconteceu — e o erro comecou no papel</b>",
-  "<b>Alvo de 5,2 h, terceira semana do trio 3-4-5. Foi PROGRAMADA em 7,5 h</b>, ou seja 44 por cento acima do alvo antes de qualquer treino ser feito, <b>e fechou em 8,33 h reais</b>, 160 por cento do alvo. Nao e um caso de excesso do atleta: as 8 sessoes prescritas foram cumpridas, e o extra foi um HIIT de 32 min mais a natacao de segunda 21/09 antecipada. <b>A semana de recuperacao foi planejada com volume de semana de carga.</b> Este e o terceiro estouro de programacao do ciclo — 22/08 (8,1 h contra 3,0) e 30/08 (11,25 h contra 6,5) foram os anteriores. Os marcadores aguentaram: FCrep 38-41 com media de 40,0, VFC media de 60, sono medio de 7,50 h e readiness subindo ao longo da semana (21 na terca, 94 no domingo). <b>Nao e alerta fisiologico, e alerta de metodo</b>: a semana 6 foi conferida contra o alvo ANTES de agendar e fechou em 8,35 h contra 7,5 h, mais 11 por cento, dentro da tolerancia"
- ],
- [
-  "20/09/2026",
-  "<b>Cooper cumprido tres semanas antes: 2.777 m</b> — 23 m da meta",
-  "<b>O teste de 12 min estava previsto para a semana de 05 a 11/10 e foi feito em 14/09.</b> Resultado lido do <code>workout_step_index 6</code>, que e o teste de verdade: 1.000 m em 4:02,2, 1.000 m em 4:25,8 e 777,4 m em 3:32,0, somando <b>2.777,4 m em exatos 720 s</b>. Isso da 13,89 km/h, ou <b>4:19/km</b>, com FC media de 165 e maxima de 177. A meta de 2.800 m vinha da equacao de Cooper aplicada ao VO2max de laboratorio: ele entregou <b>99,2 por cento dela</b>. Pela equacao inversa, o teste devolve VO2max estimado de <b>50,8</b>, praticamente o que o Garmin marcava (49,3 a 50,0). Duas consequencias: <b>o ritmo-alvo de 4:17/km dos RUN-V2 e RUN-TAPER esta validado</b>, e a semana 8, que existia so para abrigar o teste, precisa ser remontada no fechamento de 27/09"
- ],
- [
-  "19/09/2026",
-  "<b>A natação ganhou pausa entre os blocos</b> — antes um emendava no outro",
-  "<b>O Alex percebeu:</b> ao terminar 4x50 m com 15 s de pausa, o treino já começava os 10x50 m com 20 s, sem intervalo de transição. Conferido nos workouts reais, e é pior do que parecia: <b>nenhum dos seis treinos de natação tinha pausa depois do aquecimento</b>, e no NAT-C3 o aquecimento emendava <b>direto na série principal</b>. No NAT-C2, a série de qualidade começava com apenas 15 s de pausa depois da ativação. O único correto era o NAT-TESTE2, com 3 e 5 min explícitos. Corrigidos os seis, só acrescentando pausas — <b>distâncias e estrutura inalteradas</b>: 30-45 s depois do aquecimento, 45-60 s entre blocos técnicos, 60 s antes de série principal. Os blocos contínuos de ritmo de prova (1.000 m no NAT-P3, 1.900 m no NAT-P) <b>seguem sem pausa de propósito</b> — a prova é assim. Uma ressalva honesta: <b>o tamanho das pausas é convenção, não achado</b>. Nenhum estudo revisado por pares comparou emendar blocos contra pausar entre eles; essa comparação nunca foi feita. O que tem evidência é outra coisa, e ela entrou nas descrições: <b>ficar parado nas pausas curtas</b>, porque Toubekis 2005 e 2011 mediram que nadar solto numa pausa de 45 a 120 s <b>piora</b> a série seguinte, mesmo baixando o lactato"
- ],
- [
-  "16/09/2026",
-  "<b>Todo brick passa a ser um treino multiesporte</b>, nunca dois workouts",
-  "<b>Regra do Alex, e ela resolve um problema real de medição.</b> Bike e corrida agendadas separadamente gravam <b>duas atividades</b>: o tempo não soma, a transição não é cronometrada e o painel precisa adivinhar que as duas eram a mesma sessão. Como multiesporte (<code>sportTypeId 10</code>, com <code>isSessionTransitionEnabled</code>), o relógio grava <b>um registro só</b> — ele troca de esporte com o botão de volta e a T2 entra sozinha. Criados três: <b>BRICK-D1</b> (bike 68 min + T2 + corrida 20 min, id 1700625780, domingos), <b>BRICK-B1</b> (bike 60 min, id 1700625905) e <b>BRICK-B3</b> (bike 2 h, id 1700626083, o brick longo). Todos herdam o alvo duplo FC+potência e as faixas recalibradas de 16/09. Nos bricks a <b>volta à calma da bike saiu</b> e virou bloco de preparação de transição — aqui não se para, emenda. O BRICK-1 antigo foi apagado: tinha teto de 100 bpm, das zonas velhas. A regra está escrita nas tarefas automáticas para que nenhuma execução futura volte a agendar brick como dois treinos"
- ],
- [
-  "16/09/2026",
-  "<b>Toda a biblioteca de bike foi recalibrada</b> — o teto de 109 bpm estava baixo demais",
-  "<b>Achado ao revisar o BIKE-TESTE de 13/09</b>, que tinha passado batido: nos 20 min de teste ele sustentou <b>29,6 km/h com FC média de 139-140</b> (laps 5 e 6, 9.862 m em 1.200 s). O limiar de campo da bike é <b>~140 bpm</b> — treze batimentos acima da compensação respiratória de 127 medida em laboratório em ago/2025. Toda a biblioteca tinha teto de <b>109 bpm</b>, e as pedaladas <b>regenerativas</b> dele na rua já saíam a 105-111: o plano chamava de base aeróbia o que para ele era recuperação. Novas faixas, ancoradas só em dados dele: regenerativo até 112, base 112-128, tempo 129-136, limiar 137-146. Todos os treinos de bike passam a ter <b>alvo duplo — FC primária e potência secundária</b>, que o Garmin aceita no mesmo step; assim o mesmo workout serve na rua e no rolo. Até o teste de 23/09 a potência é janela de registro, não alvo. <b>E o domingo 20/09 sobe de 40 min Z1 para 68 min estruturados:</b> a REGEN-B de 16/09 deu training effect 0,8 (RECOVERY), e um brick depois de uma bike que não cansa é só uma corrida. Pesa também a aderência — 4 pedaladas em 24 dias, na modalidade que mais prediz o tempo total no 70.3"
- ],
- [
-  "16/09/2026",
-  "<b>A bike passa a ser prescrita em watts</b> — e o FTP de 230 W do Garmin é falso",
-  "<b>Primeiro dia com o rolo Tacx com medidor:</b> 16,42 km em 40 min a <b>94 W médios, 96 W normalizados e 150 W de pico</b>, com FC de 98 bpm vinda do relógio, gravados em duas atividades simultâneas. Ao conferir as zonas apareceu o problema: o Garmin guarda um <b>FTP de 230 W</b> de 04/12/2025, e todas as zonas de potência saem dele. O número é impossível — o teste cardiopulmonar de ago/2025 mediu <b>162 W de pico absoluto em exaustão</b>, e o FTP não pode superar o pico de um incremental máximo. Por isso <b>23/09 vira teste de FTP</b> (BIKE-FTP no lugar do BIKE-B2), e a força de 22/09 foi para 25/09 para não chegar no teste com perna cansada. Só o REGEN-B2 de 20/09 já sai com watts (80-100 W), porque essa faixa veio do treino de 16/09 e não de tabela — o resto da biblioteca de bike só é convertido depois do teste"
- ],
- [
-  "14/09/2026",
-  "<b>Treinos de força recriados</b> — o relógio mostrava 1/1 em vez de 1/3",
-  "<b>Erro real que ele encontrou.</b> Os FOR-A, FOR-B e FOR-MAX de 16/08 tinham as séries só no TEXTO da descrição (<em>Agachamento: 3 sets x 8 reps</em>), mas a estrutura do Garmin trazia <b>um único step por exercício</b>. O relógio obedece à estrutura, não à descrição. As versões v2 usam <code>repeat_count: 3</code> de verdade, com o descanso dentro do grupo"
- ],
- [
-  "11/09/2026",
-  "<b>Bloco de 4 semanas para teste de 12 min</b> — meta 2.800 m (4:17/km)",
-  "A equação de Cooper aplicada ao VO₂máx medido de 51,38 devolve <b>2.803 m</b>: a meta é exatamente o que o laboratório diz que ele vale. Duas sessões intensas por semana (segunda e sábado), substituindo as corridas Z2 — <b>sem somar volume</b>. Bike e natação mantêm volume e perdem intensidade até o teste"
- ],
- [
-  "11/09/2026",
-  "<b>Teste-base de 12 min em 14/09</b> antes de prescrever ritmos",
-  "As cinco últimas corridas dele estão todas em Z2 (5:48 a 6:08/km) e a única sessão de qualidade é de 08/07. Sem dado em ritmo de teste, qualquer prescrição seria chute. <b>O resultado de 14/09 decide se 2.800 é plausível:</b> a literatura dá +2 a 4% em 4 semanas, então precisa partir de ~2.750 m"
- ],
- [
   "17/08/2026",
   "Início do macrociclo de 35 semanas",
   "Prova em 18/04/2027"
@@ -5044,6 +5131,16 @@ var DECISOES=[
   "O teste do painel pegou o erro. A reconstrução da biblioteca de natação em 22/08 aposentou NAT-0, NAT-A1, NAT-A2, NAT-A3 e NAT-B1 — não têm alvo de ritmo nem estrutura de descanso, e agora que existe CSS medido treinar sem alvo desperdiça a medição. Mas o arquivo da tarefa agendada <b>ainda os lista como biblioteca válida</b>, e foi de lá que eu os tirei. Trocados pelo <b>NAT-E2</b> na quinta 10/09 e na quinta 24/09. <b>Custo assumido, decidido com ele:</b> o NAT-E2 tem 1.800 m contra os 1.100 do NAT-A1, então a natação sobe de 3.300 m realizados na semana 3 para 4.300 m (+30%) — acima do que a trava autorizava. Aceito porque é sessão de intensidade baixa, com alvo de braçada e não de tempo. <b>PENDENTE:</b> a semana 5 usa NAT-A1 três vezes e não foi corrigida — é semana de recuperação (alvo 5,2 h) e três NAT-E2 dariam 5.400 m. Falta na biblioteca um treino técnico curto e calibrado"
  ],
  [
+  "11/09/2026",
+  "<b>Bloco de 4 semanas para teste de 12 min</b> — meta 2.800 m (4:17/km)",
+  "A equação de Cooper aplicada ao VO₂máx medido de 51,38 devolve <b>2.803 m</b>: a meta é exatamente o que o laboratório diz que ele vale. Duas sessões intensas por semana (segunda e sábado), substituindo as corridas Z2 — <b>sem somar volume</b>. Bike e natação mantêm volume e perdem intensidade até o teste"
+ ],
+ [
+  "11/09/2026",
+  "<b>Teste-base de 12 min em 14/09</b> antes de prescrever ritmos",
+  "As cinco últimas corridas dele estão todas em Z2 (5:48 a 6:08/km) e a única sessão de qualidade é de 08/07. Sem dado em ritmo de teste, qualquer prescrição seria chute. <b>O resultado de 14/09 decide se 2.800 é plausível:</b> a literatura dá +2 a 4% em 4 semanas, então precisa partir de ~2.750 m"
+ ],
+ [
   "13/09/2026",
   "<b>Trava de progressao: bike REPETE; natacao e corrida progridem; forca cumprida</b>",
   "Aderencia da semana 4: corrida <b>2/3</b>, natacao <b>2/3</b>, bike <b>1/2</b>, forca <b>2/2</b>. A bike caiu em <em>metade do prescrito</em> — faixa que manda repetir a dose, e por isso a semana 5 leva duas REGEN-B de 40 min em vez de subir para BIKE-B1 ou B2. Natacao e corrida ficaram em <em>mais da metade</em> e o gate APROVOU pela primeira vez no ciclo: readiness medio ao despertar <b>61,4</b> (minimo 60) e FCrep <b>42,7</b>, dentro da base de 40-43. Consequencia pratica: a natacao sobe para a versao cheia do NAT-E2, de 1.800 m, na quinta 17/09"
@@ -5067,6 +5164,76 @@ var DECISOES=[
   "13/09/2026",
   "<b>O arquivo da tarefa agendada esta desatualizado em dois pontos</b>",
   "Primeiro: ele afirma que <em>o CSS ainda NAO foi medido</em> e que os alvos de natacao sao estimativa de 2:40-3:07/100 m. <b>Falso desde 31/08</b> — o NAT-TESTE2 mediu CSS de <b>2:46,0/100 m</b>, e as decisoes de 07/09 ja recalibraram os alvos por ele. Segundo: a biblioteca listada no arquivo ainda inclui NAT-A1, NAT-A2 e NAT-A3, aposentados em 07/09 — foi de la que eles voltaram para o calendario. <b>Os dois pontos precisam ser corrigidos no SKILL.md</b>, senao voltam toda semana"
+ ],
+ [
+  "14/09/2026",
+  "<b>Treinos de força recriados</b> — o relógio mostrava 1/1 em vez de 1/3",
+  "<b>Erro real que ele encontrou.</b> Os FOR-A, FOR-B e FOR-MAX de 16/08 tinham as séries só no TEXTO da descrição (<em>Agachamento: 3 sets x 8 reps</em>), mas a estrutura do Garmin trazia <b>um único step por exercício</b>. O relógio obedece à estrutura, não à descrição. As versões v2 usam <code>repeat_count: 3</code> de verdade, com o descanso dentro do grupo"
+ ],
+ [
+  "16/09/2026",
+  "<b>Todo brick passa a ser um treino multiesporte</b>, nunca dois workouts",
+  "<b>Regra do Alex, e ela resolve um problema real de medição.</b> Bike e corrida agendadas separadamente gravam <b>duas atividades</b>: o tempo não soma, a transição não é cronometrada e o painel precisa adivinhar que as duas eram a mesma sessão. Como multiesporte (<code>sportTypeId 10</code>, com <code>isSessionTransitionEnabled</code>), o relógio grava <b>um registro só</b> — ele troca de esporte com o botão de volta e a T2 entra sozinha. Criados três: <b>BRICK-D1</b> (bike 68 min + T2 + corrida 20 min, id 1700625780, domingos), <b>BRICK-B1</b> (bike 60 min, id 1700625905) e <b>BRICK-B3</b> (bike 2 h, id 1700626083, o brick longo). Todos herdam o alvo duplo FC+potência e as faixas recalibradas de 16/09. Nos bricks a <b>volta à calma da bike saiu</b> e virou bloco de preparação de transição — aqui não se para, emenda. O BRICK-1 antigo foi apagado: tinha teto de 100 bpm, das zonas velhas. A regra está escrita nas tarefas automáticas para que nenhuma execução futura volte a agendar brick como dois treinos"
+ ],
+ [
+  "16/09/2026",
+  "<b>Toda a biblioteca de bike foi recalibrada</b> — o teto de 109 bpm estava baixo demais",
+  "<b>Achado ao revisar o BIKE-TESTE de 13/09</b>, que tinha passado batido: nos 20 min de teste ele sustentou <b>29,6 km/h com FC média de 139-140</b> (laps 5 e 6, 9.862 m em 1.200 s). O limiar de campo da bike é <b>~140 bpm</b> — treze batimentos acima da compensação respiratória de 127 medida em laboratório em ago/2025. Toda a biblioteca tinha teto de <b>109 bpm</b>, e as pedaladas <b>regenerativas</b> dele na rua já saíam a 105-111: o plano chamava de base aeróbia o que para ele era recuperação. Novas faixas, ancoradas só em dados dele: regenerativo até 112, base 112-128, tempo 129-136, limiar 137-146. Todos os treinos de bike passam a ter <b>alvo duplo — FC primária e potência secundária</b>, que o Garmin aceita no mesmo step; assim o mesmo workout serve na rua e no rolo. Até o teste de 23/09 a potência é janela de registro, não alvo. <b>E o domingo 20/09 sobe de 40 min Z1 para 68 min estruturados:</b> a REGEN-B de 16/09 deu training effect 0,8 (RECOVERY), e um brick depois de uma bike que não cansa é só uma corrida. Pesa também a aderência — 4 pedaladas em 24 dias, na modalidade que mais prediz o tempo total no 70.3"
+ ],
+ [
+  "16/09/2026",
+  "<b>A bike passa a ser prescrita em watts</b> — e o FTP de 230 W do Garmin é falso",
+  "<b>Primeiro dia com o rolo Tacx com medidor:</b> 16,42 km em 40 min a <b>94 W médios, 96 W normalizados e 150 W de pico</b>, com FC de 98 bpm vinda do relógio, gravados em duas atividades simultâneas. Ao conferir as zonas apareceu o problema: o Garmin guarda um <b>FTP de 230 W</b> de 04/12/2025, e todas as zonas de potência saem dele. O número é impossível — o teste cardiopulmonar de ago/2025 mediu <b>162 W de pico absoluto em exaustão</b>, e o FTP não pode superar o pico de um incremental máximo. Por isso <b>23/09 vira teste de FTP</b> (BIKE-FTP no lugar do BIKE-B2), e a força de 22/09 foi para 25/09 para não chegar no teste com perna cansada. Só o REGEN-B2 de 20/09 já sai com watts (80-100 W), porque essa faixa veio do treino de 16/09 e não de tabela — o resto da biblioteca de bike só é convertido depois do teste"
+ ],
+ [
+  "19/09/2026",
+  "<b>A natação ganhou pausa entre os blocos</b> — antes um emendava no outro",
+  "<b>O Alex percebeu:</b> ao terminar 4x50 m com 15 s de pausa, o treino já começava os 10x50 m com 20 s, sem intervalo de transição. Conferido nos workouts reais, e é pior do que parecia: <b>nenhum dos seis treinos de natação tinha pausa depois do aquecimento</b>, e no NAT-C3 o aquecimento emendava <b>direto na série principal</b>. No NAT-C2, a série de qualidade começava com apenas 15 s de pausa depois da ativação. O único correto era o NAT-TESTE2, com 3 e 5 min explícitos. Corrigidos os seis, só acrescentando pausas — <b>distâncias e estrutura inalteradas</b>: 30-45 s depois do aquecimento, 45-60 s entre blocos técnicos, 60 s antes de série principal. Os blocos contínuos de ritmo de prova (1.000 m no NAT-P3, 1.900 m no NAT-P) <b>seguem sem pausa de propósito</b> — a prova é assim. Uma ressalva honesta: <b>o tamanho das pausas é convenção, não achado</b>. Nenhum estudo revisado por pares comparou emendar blocos contra pausar entre eles; essa comparação nunca foi feita. O que tem evidência é outra coisa, e ela entrou nas descrições: <b>ficar parado nas pausas curtas</b>, porque Toubekis 2005 e 2011 mediram que nadar solto numa pausa de 45 a 120 s <b>piora</b> a série seguinte, mesmo baixando o lactato"
+ ],
+ [
+  "20/09/2026",
+  "<b>Trava de progressao na natacao: libera o VOLUME, segura o CONTINUO</b>",
+  "<b>A semana 5 fechou com 4 natacoes contra 3 prescritas</b>, readiness medio de 66 no despertar e FCrep de 40,0 — pela tabela da trava, progride normalmente. A consequencia direta e que as versoes CHEIAS sao liberadas: a <b>NAT-C2 entra na sexta 25/09 com 2.200 m de nado real</b>, contra 1.200 m da NAT-C3 que vinha sendo usada. <b>Mas o bloco continuo NAO acompanha.</b> A NAT-P cheia pede 1.900 m sem parar; ele acabou de fazer 1.000 m continuos em 16/09 (800 m do bloco principal a 2:46,3/100 m, exatamente o CSS medido). Saltar de 1.000 para 1.900 numa semana e mais 90 por cento na distancia ininterrupta, e o marco de 1.500 m e so da semana 20. <b>Sabado 26/09 mantem a NAT-P3</b>, repetindo os 1.000 m para consolidar. A biblioteca nao tem degrau intermediario entre 1.000 e 1.900 — se ele quiser um, e preciso criar o workout"
+ ],
+ [
+  "20/09/2026",
+  "<b>O deload da semana 5 nao aconteceu — e o erro comecou no papel</b>",
+  "<b>Alvo de 5,2 h, terceira semana do trio 3-4-5. Foi PROGRAMADA em 7,5 h</b>, ou seja 44 por cento acima do alvo antes de qualquer treino ser feito, <b>e fechou em 8,33 h reais</b>, 160 por cento do alvo. Nao e um caso de excesso do atleta: as 8 sessoes prescritas foram cumpridas, e o extra foi um HIIT de 32 min mais a natacao de segunda 21/09 antecipada. <b>A semana de recuperacao foi planejada com volume de semana de carga.</b> Este e o terceiro estouro de programacao do ciclo — 22/08 (8,1 h contra 3,0) e 30/08 (11,25 h contra 6,5) foram os anteriores. Os marcadores aguentaram: FCrep 38-41 com media de 40,0, VFC media de 60, sono medio de 7,50 h e readiness subindo ao longo da semana (21 na terca, 94 no domingo). <b>Nao e alerta fisiologico, e alerta de metodo</b>: a semana 6 foi conferida contra o alvo ANTES de agendar e fechou em 8,35 h contra 7,5 h, mais 11 por cento, dentro da tolerancia"
+ ],
+ [
+  "20/09/2026",
+  "<b>Cooper cumprido tres semanas antes: 2.777 m</b> — 23 m da meta",
+  "<b>O teste de 12 min estava previsto para a semana de 05 a 11/10 e foi feito em 14/09.</b> Resultado lido do <code>workout_step_index 6</code>, que e o teste de verdade: 1.000 m em 4:02,2, 1.000 m em 4:25,8 e 777,4 m em 3:32,0, somando <b>2.777,4 m em exatos 720 s</b>. Isso da 13,89 km/h, ou <b>4:19/km</b>, com FC media de 165 e maxima de 177. A meta de 2.800 m vinha da equacao de Cooper aplicada ao VO2max de laboratorio: ele entregou <b>99,2 por cento dela</b>. Pela equacao inversa, o teste devolve VO2max estimado de <b>50,8</b>, praticamente o que o Garmin marcava (49,3 a 50,0). Duas consequencias: <b>o ritmo-alvo de 4:17/km dos RUN-V2 e RUN-TAPER esta validado</b>, e a semana 8, que existia so para abrigar o teste, precisa ser remontada no fechamento de 27/09"
+ ],
+ [
+  "27/09/2026",
+  "<b>Trava da semana 6: corrida e forca REPETEM; natacao e bike progridem</b>",
+  "Semana 6 fechou com <b>6 de 9 sessoes</b>. Por modalidade: natacao <b>2/3</b> (faltou a NAT-C2 de 25/09), corrida <b>1/2</b> (faltou o RUN-V3 de 21/09; o RUN-V2 saiu com 4 de 5 blocos), bike <b>2/2</b> (o BIKE-FTP conta como sessao feita, mas o teste parou aos 10 min por pane do rolo) e forca <b>1/2</b> (faltou a FOR-A de 25/09; o HIIT de 22/09 nao conta como forca). Readiness medio de despertar <b>68,4</b> e FCrep <b>42,0</b>, dentro da base. Pela tabela: <b>corrida e forca em metade do prescrito = REPETE</b>, por isso a segunda 28/09 troca o RUN-V1 pelo RUN-V3 e o sabado repete o RUN-V2; FOR-A e FOR-B mantidas. <b>Natacao em mais da metade com readiness e FCrep ok = progride</b>: na pratica a NAT-C2 de 2.200 m ainda e estreia. <b>Bike 2/2 = progride</b>: o BRICK-B3 de 04/10 dobra a bike para 120 min. Semana 7 agendada em 9,6 h contra alvo de 8,6 h, +12 por cento."
+ ],
+ [
+  "27/09/2026",
+  "<b>BIKE-FTP refeito em 07/10, na semana de recuperacao — e so se o rolo estiver consertado</b>",
+  "O teste de 23/09 parou aos 10 min por pane do cassete; nao ha media de 20 min e <b>nenhum FTP foi calculado</b>. A semana 7 nao comporta o reteste sem tirar a forca da terca, que ja e a modalidade em repeticao. A semana 8 e de recuperacao e e o lugar natural para testar. Consequencias: a <b>FOR-A vai para a segunda 05/10</b>, porque a regra proibe forca na vespera do teste; o <b>RUN-TAPER de 05/10 foi removido</b>, porque preparava o Cooper que ja saiu em 14/09, e deu lugar ao RUN-A1 de cadencia. Nao sei se o rolo foi consertado — o det manda nao fazer o teste sem isso."
+ ],
+ [
+  "27/09/2026",
+  "<b>Semana 8 agendada 27 por cento acima do alvo de recuperacao — estouro declarado</b>",
+  "Alvo 5,8 h. Com os pisos (3 natacoes, 2 corridas, 2 bikes, 2 forcas, 1 folga) e o reteste de FTP, o minimo que coube foi <b>cerca de 7,4 h</b>. A qualidade saiu: corridas sao RUN-A1 e RUN-0, natacoes sao NAT-E2 e duas NAT-P3, o brick e o curto de 80 min. O que pesa sao as duas forcas (cerca de 1,6 h) e o teste de 59 min. Alternativa que eu nao usei: trocar o brick por uma bike solta, o que traria a semana para cerca de 6,8 h mas quebraria o domingo de brick."
+ ],
+ [
+  "27/09/2026",
+  "<b>DECISOES estava fora de ordem de novo</b>",
+  "A regra de 07/09 diz que entrada nova vai no FIM do array, porque o render le do fim. As decisoes de 11/09 a 20/09 tinham sido inseridas no COMECO, e o painel mostrava as de 13/09 como as tres mais recentes. Reordenado por data, estavel dentro do mesmo dia; nenhuma entrada apagada (65 antes, 65 mais 4 depois)."
+ ],
+ [
+  "27/09/2026",
+  "<b>Rolo consertado: BIKE-FTP antecipado para quarta 30/09</b>",
+  "Informado pelo Alex depois do fechamento. O teste sai da semana 8 e entra na semana 7, na quarta, como manda a regra. Para nao ter forca na vespera, a <b>FOR-A vai de terca para segunda 28/09, depois do RUN-V3</b>, e a <b>NAT-E2 vai de segunda para sabado 03/10</b>, junto do RUN-V2. Sai o BIKE-B2D de cadencia desta semana. Pisos mantidos (3 natacoes, 2 corridas, 2 bikes, 2 forcas, sexta de folga). Semana 7 passa de cerca de 9,6 h para <b>cerca de 9,35 h, +9 por cento</b> contra 8,6 h. Custo assumido: a segunda fica com intervalado de corrida e forca de perna no mesmo dia, 48 h antes do teste. Na semana 8 o BIKE-FTP vira BIKE-B1D Z2 e a FOR-A volta para a terca."
+ ],
+ [
+  "27/09/2026",
+  "<b>Semana 7 ajustada a rotina dele: FOR-A na quarta, depois do teste de FTP</b>",
+  "Rotina informada por ele: <b>segunda</b> nada cedo e corre depois, e nao consegue fazer forca apos a corrida; <b>terca</b> nao corre, pode nadar ou fazer forca; <b>quarta</b> tem a manha toda. Como a terca e vespera do teste e nao pode ter forca, a FOR-A foi para a <b>quarta, DEPOIS do BIKE-FTP</b>. A NAT-E2 volta para a segunda antes do RUN-V3 e o sabado fica so com o RUN-V2. Volume igual, cerca de 9,35 h. Pisos mantidos. Ganho extra: a segunda deixa de ter forca de perna 48 h antes do teste."
  ]
 ];
 
