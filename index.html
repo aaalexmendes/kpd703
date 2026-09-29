@@ -1926,9 +1926,25 @@ var LOG_AUTO = [
   "runT": 47.9,
   "obs": "FECHAMENTO DO DIA as 19:30 BRT. DUAS ATIVIDADES. (1) NATACAO 07:03, id 24527155598, lap_swimming: AULA COM O PROFESSOR, informado pelo Alex no chat - contada como realizada. 1.450 m; duracao total 48,0 min, tempo em movimento 31,4 min (1.881 s), ritmo em movimento 2:09,8/100 m pelo relogio - por ser aula (drills, pausas para correcao), nao usar como referencia de ritmo nem comparar com o CSS 2:46,0. FC media 114, max 144, 434 kcal, TE 2,1 AEROBIC_BASE. A aula substitui o NAT-E2 de 1.800 m do plano. (2) CORRIDA 09:12, id 24528646808, workout RUN-V3 4x4min 90-95% FCmax: 7,88 km em 48,1 min (47,9 em movimento), pace medio 6:05/km, FC media 137, FC MAXIMA 182 (acima do maximo de teste 171, prova 174 e trilha 181 - pico pontual do sensor ou esforco maximo, nao confirmado), 609 kcal, TE 3,6 ANAEROBIC_CAPACITY, RPE 90, carga 243, 12 laps; potencia de corrida do relogio 321 W (estimativa de running power). Splits dos blocos nao puxados (timeout do Garmin). READINESS: DESPERTAR 72 MODERATE as 06:24 (AFTER_WAKEUP_RESET) - referencia do dia. Leituras posteriores rotuladas: 68 as 07:51, 44 LOW as 10:07 (pos-exercicio, recovery time 36 h), 50 MODERATE as 17:23 (recovery time 28,8 h). CARGA AGUDA 868 na ultima leitura (502 no despertar). FCrep 42. VFC semanal 59, noturna 56. SONO 6,82 h score 73 FAIR. Fatores do despertar: sono 59 MODERATE, recuperacao 92 GOOD, carga 95 GOOD, VFC 100. Criterios de parada: nenhum disparou. Nenhum treino deslocado. NAO SOU MEDICO NEM TREINADOR.",
   "auto": true
+ },
+ {
+  "date": "2026-09-29",
+  "read": 67,
+  "rhr": 42,
+  "hrv": 59,
+  "sleep": 7.05,
+  "acute": 727,
+  "natM": null,
+  "natT": null,
+  "bikeK": null,
+  "bikeT": null,
+  "runK": null,
+  "runT": null,
+  "obs": "RODADA DA MANHA (29/09) as 06:20 BRT. Readiness do DESPERTAR 67 MODERATE as 06:14:55, contexto AFTER_WAKEUP_RESET, feedback RECOVERED_AND_READY. FATORES: sono 78 por cento GOOD, recuperacao 74 por cento GOOD com 15,9 h de recovery time pedidas, carga de treino 82 por cento GOOD, VFC 100 por cento VERY_GOOD, historico de estresse 83 por cento GOOD, historico de sono 63 por cento MODERATE. FCrep 42, dentro da base 40-43. VFC semanal 59 (banda 52-74), VFC da noite 67. SONO 7,05 h com score 84 GOOD - 17,7 por cento profundo, 60,3 por cento leve, 22,0 por cento REM, 1 despertar, estresse medio de sono 12. CARGA AGUDA 727, contra 868 no fechamento de ontem - em queda. Nenhuma atividade registrada hoje ate as 06:20. SEMAFORO: readiness 67 esta na faixa >=60, mas o recovery time pedido e 15,9 h, longe de zero - registro os dois numeros sem forcar cor unica. TREINO DE HOJE conforme o painel: NAT-C2 Ritmo Critico, nado real 2.200 m (nome do workout 1700m, Garmin estima 2.645 m), id 1702724414. CRITERIOS DE PARADA: FCrep 42/42/42 nos tres ultimos dias (nao dispara); sono 6,82 h e 7,05 h (nao dispara); readiness do despertar 72 e 67 (nao dispara). Nenhum limiar disparou. NAO SOU MEDICO NEM TREINADOR.",
+  "auto": true
  }
 ];
-var LOG_AUTO_UPDATED = "28/09/2026 19:30";
+var LOG_AUTO_UPDATED = "29/09/2026 06:20";
 /* ==== FIM DADOS AUTOMATICOS ==== */
 
 /* ==== INICIO CHECKLIST DA SEMANA - NAO EDITAR A MAO ====
@@ -1968,7 +1984,7 @@ var NOTAS = {
 };
 /* ==== FIM ANOTACOES ==== */
 
-var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,8,28);
+var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,8,29);
 
 var SECOES=[
  ["s-visao","01","Visão geral"],["s-atual","02","Hoje"],["s-trilhas","03","As três trilhas"],
@@ -3554,7 +3570,7 @@ var AGENDA_FUTURA=[
   ]
  }
 ];
-var AGENDA_FUTURA_UPDATED = "28/09/2026 06:15 - conferido de novo em get_scheduled_workouts (05/10 a 26/10, 10 agendamentos): conteudo identico ao ja escrito, sem duplicatas, sem corrida em terca ou quinta e sem forca na quarta - bloco mantido sem reescrita, so o carimbo de conferencia foi atualizado. ||| Historico anterior: 27/09/2026 20:40 - sem mudanca nas semanas 8 e 9 neste segundo ajuste, que so mexeu na semana 7 (SEMANA_ATUAL): NAT-E2 na segunda antes do RUN-V3, FOR-A na quarta depois do BIKE-FTP, sabado so com RUN-V2. Conferido em get_scheduled_workouts. ||| 27/09/2026 20:10 - AJUSTE pedido pelo Alex no chat: rolo consertado, teste de FTP antecipado para a semana 7 (quarta 30/09). Semana 8 revista: o BIKE-FTP de 07/10 virou BIKE-B1D Z2 60 min e a FOR-A voltou da segunda para a terca 06/10, junto da NAT-E2; segunda 05/10 fica so com o RUN-A1. Semana 8 segue em cerca de 7,4 h contra alvo de 5,8 h (+27 por cento, estouro declarado pelos pisos). Semana 9 so com o NAT-TESTE2 de 12/10. Conferido em get_scheduled_workouts: sem duplicatas, sem corrida em terca ou quinta, sem bike junto de RUN-BRICK. ||| Historico anterior: 27/09/2026 19:30 - reescrita no fechamento da semana 6, com o BIKE-FTP em 07/10 condicionado ao conserto do rolo e o RUN-TAPER de 05/10 removido.";
+var AGENDA_FUTURA_UPDATED = "29/09/2026 06:20 - conferido de novo em get_scheduled_workouts (05/10 a 26/10, 10 agendamentos): conteudo identico ao ja escrito, sem duplicatas de programacao antiga, sem corrida em terca ou quinta; bloco mantido sem reescrita, so o carimbo foi atualizado. Semanas 10 e 11 (13/10 a 26/10) seguem sem nenhum agendamento no Garmin. ||| Historico anterior: 28/09/2026 06:15 - conferido de novo em get_scheduled_workouts (05/10 a 26/10, 10 agendamentos): conteudo identico ao ja escrito, sem duplicatas, sem corrida em terca ou quinta e sem forca na quarta - bloco mantido sem reescrita, so o carimbo de conferencia foi atualizado. ||| Historico anterior: 27/09/2026 20:40 - sem mudanca nas semanas 8 e 9 neste segundo ajuste, que so mexeu na semana 7 (SEMANA_ATUAL): NAT-E2 na segunda antes do RUN-V3, FOR-A na quarta depois do BIKE-FTP, sabado so com RUN-V2. Conferido em get_scheduled_workouts. ||| 27/09/2026 20:10 - AJUSTE pedido pelo Alex no chat: rolo consertado, teste de FTP antecipado para a semana 7 (quarta 30/09). Semana 8 revista: o BIKE-FTP de 07/10 virou BIKE-B1D Z2 60 min e a FOR-A voltou da segunda para a terca 06/10, junto da NAT-E2; segunda 05/10 fica so com o RUN-A1. Semana 8 segue em cerca de 7,4 h contra alvo de 5,8 h (+27 por cento, estouro declarado pelos pisos). Semana 9 so com o NAT-TESTE2 de 12/10. Conferido em get_scheduled_workouts: sem duplicatas, sem corrida em terca ou quinta, sem bike junto de RUN-BRICK. ||| Historico anterior: 27/09/2026 19:30 - reescrita no fechamento da semana 6, com o BIKE-FTP em 07/10 condicionado ao conserto do rolo e o RUN-TAPER de 05/10 removido.";
 /* ==== FIM AGENDA FUTURA ==== */
 
 /* ==== INICIO ATIVIDADES - NAO EDITAR A MAO ====
