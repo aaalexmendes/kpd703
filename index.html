@@ -1239,7 +1239,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--grid);font-si
 /* ==== INICIO DADOS AUTOMATICOS - NAO EDITAR A MAO ====
    A tarefa agendada diaria substitui o conteudo entre estes marcadores.
    Formato: {date,read,rhr,hrv,sleep,acute,natM,natT,bikeK,bikeT,runK,runT,obs,auto:true} */
-var LOG_AUTO = [
+var LOG_AUTO=[
  {
   "date": "2026-08-17",
   "read": 25,
@@ -2334,23 +2334,55 @@ var LOG_AUTO = [
   "rhr": 42,
   "hrv": 56,
   "sleep": 6.62,
-  "acute": 558,
+  "acute": 790,
+  "natM": null,
+  "natT": null,
+  "bikeK": null,
+  "bikeT": null,
+  "runK": 13.16,
+  "runT": 75,
+  "obs": "RODADA DA MANHA de 24/10 (sabado, semana 10 de 35, 176 dias para a prova), executada as 15:43 BRT; o relogio ja sincronizou. Esta entrada traz os numeros de HOJE (a nota anterior de 06:15 ficou no fim do obs de 23/10 e dizia FCrep 47 parcial). Readiness do DESPERTAR 70 MODERATE as 06:31:14, AFTER_WAKEUP_RESET, feedback GOOD_SLEEP_HISTORY, unica leitura do dia, recovery time 0 h. FATORES: sono 68 por cento MODERATE, recuperacao 100 por cento VERY_GOOD, carga de treino 83 por cento GOOD, VFC 89 por cento GOOD, historico de estresse 89 por cento GOOD, historico de sono 60 por cento MODERATE. FCrep 42, dentro da base 40-43. VFC semanal 56, banda 52-74; VFC da noite 60. SONO 6,62 h score 79 FAIR - 18,6 por cento profundo, 67,3 leve, 14,1 REM, zero despertares, 52 momentos de inquietude, estresse de sono 16, SpO2 media 95 e minima 83. CARGA AGUDA 558 (660 no fechamento de ontem). Nenhuma atividade registrada em 24/10 ate as 15:43. SEMAFORO VERDE (readiness 70 e recovery 0), com a ressalva de sono um pouco curto e fator sono MODERATE. TREINO DE HOJE conforme o painel e o Garmin, dia duro 2: RUN-A2 Longo Z2 75 min (workout 1666533679) e NAT-E2 Economia 1800 m (workout 1702724141); ambos ainda nao concluidos no calendario. PASSO 3: Garmin de 19 a 25/10 bate com SEMANA_ATUAL de hoje em diante (24/10 RUN-A2 e NAT-E2, 25/10 BRICK-D1 id 1700625780) - NADA A CORRIGIR. PASSO 4: 26/10 a 15/11 (19 agendamentos) identicos a AGENDA_FUTURA das semanas 11 e 12; semana 13 sem agendamento. Observacao neutra: corridas em terca e quinta nas semanas 11 e 12 seguem a decisao do Alex de 19/10; quarta 28/10 e REGEN-B3 Z1 e quarta 04/11 e BIKE-B2D; sem duplicatas e sem forca na quarta. CRITERIOS DE PARADA: FCrep 48 ou mais por 3 dias NAO (44, 43, 42); sono abaixo de 6 h por 2 noites NAO (7,48 h e 6,62 h); readiness do despertar abaixo de 40 por 2 dias NAO (59 e 70). NENHUM LIMIAR DISPAROU. NAO SOU MEDICO NEM TREINADOR. ||| FECHAMENTO DO DIA as 18:50 BRT. UMA ATIVIDADE: RUN-A2 Longo Z2 75min, id 24840098858, running, GARMIN, inicio 16:56. 13,16 km em 75,1 min (75,0 em movimento), pace medio 5:42/km, FC media 145 e maxima 154 (teto prescrito 150: pico de 154 pontual, media dentro da Z2), cadencia media 152, 1053 kcal, ganho 73 m. TRAINING EFFECT 4,1 rotulado TEMPO (anaerobico 0,0), carga 182,2, RPE 80, sensacao 100. Potencia de corrida do relogio media 359 W (estimada, nao comparavel a bike). Referencia 17/10: 12,34 km em 75 min, bloco Z2 a 6:21/km FC 148; hoje o pace medio foi mais rapido com FC media 3 bpm menor, mas os blocos nao foram comparados lap a lap. NAT-E2 Economia 1800 m previsto para hoje: NENHUMA natacao registrada no Garmin ate agora. Checklist: RUN-A2 marcada (indice 0). CARGA AGUDA 790 na leitura pos-exercicio das 18:13 (AFTER_POST_EXERCISE_RESET, score 22 POOR, LET_YOUR_BODY_RECOVER, recovery time 48,5 h, fator recuperacao 30 por cento POOR), contra 558 no despertar. READINESS DO DESPERTAR DO DIA CONTINUA 70 MODERATE das 06:31, nao trocado pelo pos-treino. Sono 6,62 h e FCrep 42 confirmados. CRITERIOS: FCrep >= 48 por 3 dias NAO; sono < 6 h por 2 noites NAO; readiness do despertar < 40 por 2 dias NAO. NENHUM LIMIAR DISPAROU. NAO SOU MEDICO NEM TREINADOR.",
+  "auto": true
+ },
+ {
+  "date": "2026-10-25",
+  "read": 45,
+  "rhr": 42,
+  "hrv": 56,
+  "sleep": 7.65,
+  "acute": 861,
+  "natM": null,
+  "natT": null,
+  "bikeK": 30.85,
+  "bikeT": 68,
+  "runK": 3.67,
+  "runT": 20,
+  "obs": "RODADA DA MANHA de 25/10 (domingo, semana 10 de 35, 175 dias para a prova), 06:10 BRT. O RELOGIO AINDA NAO SINCRONIZOU: get_training_readiness e get_sleep_summary devolveram vazio para 25/10, entao nao ha readiness do despertar nem sono de hoje - NAO invento. get_rhr_day devolveu 47 para 25/10, mas e leitura provavelmente PARCIAL (mesmo padrao de 23/10 e 24/10, quando o 47 das 06h virou 42-43 depois do sync); por isso rhr fica nulo aqui ate o sync. Referencia de ONTEM 24/10 (despertar 70 MODERATE as 06:31, FCrep 42, VFC semanal 56, sono 6,62 h score 79): leitura pos-exercicio das 20:26 foi 25 LOW, feedback HIGH_RECOVERY_NEEDS, recovery time 46,2 h (fator recuperacao 32 por cento POOR), carga aguda 790 - a mais alta do ciclo nos registros recentes. Isso e do dia de ontem e NAO substitui o despertar de hoje. TREINO DE HOJE no painel e no Garmin: BRICK-D1 Bike 68 min + T2 + Corrida 20 min (workout id 1700625780); o proprio workout manda cortar para aquecimento + bloco final + corrida se o readiness do despertar ficar abaixo de 40 - ler o despertar quando sincronizar. Nenhuma atividade registrada em 25/10 ate agora. Natacao NAT-E2 de 24/10 nao aparece como feita no Garmin (continua agendada em 24/10 e tambem em 31/10); registro sem avaliacao. PASSO 3: semana em curso conferida, BRICK-D1 de hoje bate com SEMANA_ATUAL (mesmo workout_id), nada a corrigir. PASSO 4: 26/10 a 08/11 identico ao ja registrado em AGENDA_FUTURA; nao ha corrida em terca ou quinta, forca na quarta ou duplicatas. CRITERIOS DE PARADA: FCrep sem dado confiavel hoje (ultimos com dado 44, 42, 43, 42), sono < 6 h por duas noites NAO (7,48 h e 6,62 h), readiness < 40 por dois dias NAO (59 e 70). Nenhum limiar disparou com os dados disponiveis. NAO SOU MEDICO NEM TREINADOR. ||| FECHAMENTO DO DIA as 18:50 BRT. NENHUMA ATIVIDADE REGISTRADA NO GARMIN EM 25/10 (get_activities_by_date devolveu zero; as mais recentes continuam sendo RUN-A2 de 24/10 16:56, NAT-P3 e Forca de 23/10). O BRICK-D1 previsto para hoje (Bike 68 min + T2 + Corrida 20 min) NAO consta como feito ate este horario - pode ser treino nao realizado ou nao sincronizado; nao afirmo qual dos dois. Checklist: nada marcado hoje. ATIVIDADES nao alterado. DADOS DO DIA agora sincronizados: readiness do DESPERTAR 45 LOW as 06:52:41, AFTER_WAKEUP_RESET, feedback RECOVERY_IN_PROGRESS, recovery time 35,8 h, acute load 665. FATORES: sono 76 por cento GOOD, recuperacao 41 por cento MODERATE, carga 77 por cento GOOD, VFC 88 por cento GOOD, estresse 93 por cento GOOD, historico de sono 65 por cento MODERATE. FCrep 42 (dentro da base 40-43). VFC semanal 56, VFC da noite 56. SONO 7,65 h score 83 GOOD - 14,2 por cento profundo, 73,4 leve, 12,4 REM, estresse de sono 20, SpO2 media 95 e minima 84. LEITURA POS-EXERCICIO as 11:02 (AFTER_POST_EXERCISE_RESET): score 8 POOR, LET_YOUR_BODY_RECOVER, recovery time 62,4 h, recuperacao 18 por cento POOR, ACUTE LOAD 861 (665 no despertar). Como nao ha atividade em 25/10 no Garmin, essa leitura provavelmente reflete a carga do longo de 24/10 processada tardiamente - e inferencia minha, nao confirmada. Gravei 861 em acute por ser o ultimo valor do dia; o readiness do despertar (45) segue como referencia e nao foi trocado. CRITERIOS DE PARADA: FCrep >= 48 por 3 dias NAO (43, 42, 42); sono < 6 h por 2 noites NAO (6,62 h e 7,65 h); readiness do despertar < 40 por 2 dias NAO (70 e 45). NENHUM LIMIAR DISPAROU, mas o despertar de 45 e o mais baixo dos ultimos dias. NAO SOU MEDICO NEM TREINADOR. · BRICK-D1 RECUPERADO A MAO em 26/10/2026, das telas do relogio - a atividade multiesporte NAO sincronizou, segunda falha seguida depois do brick de 18/10. BIKE as 09:25: 30,85 km em 1:08:00, 27,2 km/h de media e 48,3 de maxima, FC 134/158, 810 kcal, TE 3,5, carga 118, subida 367 m. Zonas de FC da bike: Z2 22:19, Z3 28:25, Z4 13:37, Z5 3:30 - media de 134 bate com os 125-136 prescritos nos blocos. Sem potencia: o rolo Tacx fica em casa e na rua nao ha wattimetro. TRANSICAO: 220 m caminhando em 5:45,87. CORRIDA as 10:39: 3,67 km em 20:00,9, ritmo 5:28/km e GAP 5:35/km, FC 147/157, 290 kcal, TE 3,8, carga 154, cadencia 153 epm, potencia de corrida 365 W media. TOTAL 34,74 km em 1:33:47 e 1.118 kcal. MARCO DO BRICK: 5:28/km contra alvo de prova de 5:27/km, depois de 1h08 de bike e no dia seguinte a um longo de 13,16 km. O custo de brick praticamente sumiu em ritmo - a ressalva e que 20 min e curto demais para comparar com um longo de 75 min.",
+  "auto": true
+ },
+ {
+  "date": "2026-10-26",
+  "read": 35,
+  "rhr": 42,
+  "hrv": 57,
+  "sleep": 7.56,
+  "acute": 722,
   "natM": null,
   "natT": null,
   "bikeK": null,
   "bikeT": null,
   "runK": null,
   "runT": null,
-  "obs": "RODADA DA MANHA de 24/10 (sabado, semana 10 de 35, 176 dias para a prova), executada as 15:43 BRT; o relogio ja sincronizou. Esta entrada traz os numeros de HOJE (a nota anterior de 06:15 ficou no fim do obs de 23/10 e dizia FCrep 47 parcial). Readiness do DESPERTAR 70 MODERATE as 06:31:14, AFTER_WAKEUP_RESET, feedback GOOD_SLEEP_HISTORY, unica leitura do dia, recovery time 0 h. FATORES: sono 68 por cento MODERATE, recuperacao 100 por cento VERY_GOOD, carga de treino 83 por cento GOOD, VFC 89 por cento GOOD, historico de estresse 89 por cento GOOD, historico de sono 60 por cento MODERATE. FCrep 42, dentro da base 40-43. VFC semanal 56, banda 52-74; VFC da noite 60. SONO 6,62 h score 79 FAIR - 18,6 por cento profundo, 67,3 leve, 14,1 REM, zero despertares, 52 momentos de inquietude, estresse de sono 16, SpO2 media 95 e minima 83. CARGA AGUDA 558 (660 no fechamento de ontem). Nenhuma atividade registrada em 24/10 ate as 15:43. SEMAFORO VERDE (readiness 70 e recovery 0), com a ressalva de sono um pouco curto e fator sono MODERATE. TREINO DE HOJE conforme o painel e o Garmin, dia duro 2: RUN-A2 Longo Z2 75 min (workout 1666533679) e NAT-E2 Economia 1800 m (workout 1702724141); ambos ainda nao concluidos no calendario. PASSO 3: Garmin de 19 a 25/10 bate com SEMANA_ATUAL de hoje em diante (24/10 RUN-A2 e NAT-E2, 25/10 BRICK-D1 id 1700625780) - NADA A CORRIGIR. PASSO 4: 26/10 a 15/11 (19 agendamentos) identicos a AGENDA_FUTURA das semanas 11 e 12; semana 13 sem agendamento. Observacao neutra: corridas em terca e quinta nas semanas 11 e 12 seguem a decisao do Alex de 19/10; quarta 28/10 e REGEN-B3 Z1 e quarta 04/11 e BIKE-B2D; sem duplicatas e sem forca na quarta. CRITERIOS DE PARADA: FCrep 48 ou mais por 3 dias NAO (44, 43, 42); sono abaixo de 6 h por 2 noites NAO (7,48 h e 6,62 h); readiness do despertar abaixo de 40 por 2 dias NAO (59 e 70). NENHUM LIMIAR DISPAROU. NAO SOU MEDICO NEM TREINADOR.",
+  "obs": "RODADA DA MANHA de 26/10 (segunda, semana 11 de 35, 174 dias para a prova), 06:14 BRT. O RELOGIO AINDA NAO SINCRONIZOU: get_training_readiness para 26/10 devolveu vazio e get_sleep_summary devolveu vazio, entao nao ha readiness do despertar nem sono de hoje - NAO invento. get_rhr_day devolveu 42 para 26/10, dentro da base 40-43, mas em 23/10 e 24/10 a leitura das 06h foi parcial e mudou depois do sync; por isso rhr fica nulo aqui ate o sync. Sem atividade registrada em 25/10 e 26/10. REFERENCIA DE ONTEM 25/10 (usada por falta de dado de hoje): readiness do DESPERTAR 45 LOW as 06:52, RECOVERY_IN_PROGRESS, recovery time 35,8 h; pos-exercicio 8 POOR, recovery time 62,4 h, carga aguda 861; FCrep 42, VFC semanal 56, sono 7,65 h score 83. Semaforo provisorio com o dado de ontem: AMARELO (40-59). O BRICK-D1 de 25/10 nao consta como feito no Garmin. TREINO DE HOJE no painel e no Garmin: NAT-C3 Ritmo Critico 1200 m (workout 1702724518) e FOR-A Forca Base Triatlo v2 (workout 1698840673). PASSO 3: SEMANA_ATUAL de 26/10 a 01/11 confere com o calendario do Garmin, nada a corrigir. PASSO 4: AGENDA_FUTURA (semanas 12 e 13) confere com o Garmin; semana 14 sem nada agendado. CONFLITO A DECIDIR PELO ALEX: o calendario traz corrida em terca e quinta (RUN-A1 em 27/10, 03/11, 05/11, 10/11 e 12/11; RUN-0 em 29/10), o que difere da semana-padrao de 22/08; nao corrigi. Sem duplicatas e sem forca na quarta. CRITERIOS DE PARADA: FCrep >= 48 por 3 dias NAO (42, 42, 43); sono < 6 h por 2 noites NAO (6,62 h e 7,65 h); readiness do despertar < 40 por 2 dias NAO (70 e 45). Nenhum limiar disparou com os dados disponiveis. NAO SOU MEDICO NEM TREINADOR. ||| FECHAMENTO DO DIA as 18:55 BRT (segunda 26/10, semana 11). NENHUMA ATIVIDADE REGISTRADA no Garmin hoje ate agora (get_activities_by_date vazio). Previsto: NAT-C3 natacao ritmo critico 1.200 m - nao consta feita; nao marco checklist. Se treinar a noite, a proxima rodada captura. Relogio sincronizou: readiness do DESPERTAR 35 LOW as 06:40:13, AFTER_WAKEUP_RESET, HIGH_RECOVERY_NEEDS, recovery time 42,8 h (fator recuperacao 35 por cento POOR); sono 83 por cento GOOD, carga 75 por cento GOOD, VFC 97 por cento GOOD, estresse 87 por cento GOOD, historico de sono 73 por cento GOOD. Esse e o valor gravado em read (despertar). Leitura das 18:26 (UPDATE_REALTIME_VARIABLES, nao e pos-exercicio): 50 MODERATE, BOOSTED_BY_GOOD_SLEEP, recovery time 31,0 h - registrada a parte, nao substitui o despertar. FCrep 42 (base 40-43). VFC semanal 57, VFC da noite 54. SONO 7,56 h score 83 GOOD (24,3 por cento profundo, 63,1 leve, 12,8 REM, 8 min acordado). CARGA AGUDA 722, contra 861 na leitura de ontem. CRITERIOS DE PARADA: FCrep >= 48 por 3 dias NAO (42, 42, 42); sono < 6 h por 2 noites NAO (7,65 h e 7,56 h); readiness do despertar < 40 por 2 dias NAO (45 em 25/10 e 35 hoje - so hoje abaixo de 40). NENHUM LIMIAR DISPAROU. NAO SOU MEDICO NEM TREINADOR.",
   "auto": true
  }
 ];
-var LOG_AUTO_UPDATED = "24/10/2026 15:43";
+var LOG_AUTO_UPDATED = "26/10/2026 23:00";
 /* ==== FIM DADOS AUTOMATICOS ==== */
 
 /* ==== INICIO CHECKLIST DA SEMANA - NAO EDITAR A MAO ====
    Chave: "AAAA-MM-DD|indice". Valor: "auto" (detectado no Garmin) ou "manual". */
-var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"auto","2026-08-23|0":"auto","2026-08-24|0":"auto","2026-08-24|1":"auto","2026-08-26|0":"auto","2026-08-27|0":"auto","2026-08-28|0":"auto","2026-08-29|0":"auto","2026-08-29|1":"auto","2026-08-30|0":"auto","2026-08-31|0":"auto","2026-08-31|1":"auto","2026-09-01|0":"auto","2026-09-05|0":"auto","2026-09-05|1":"auto","2026-09-06|0":"auto","2026-09-07|1":"manual","2026-09-12|0":"auto","2026-09-13|0":"auto","2026-09-14|0":"auto","2026-09-14|1":"auto","2026-09-15|0":"auto","2026-09-15|1":"auto","2026-09-16|0":"auto","2026-09-17|0":"auto","2026-09-17|1":"auto","2026-09-19|0":"auto","2026-09-20|0":"auto","2026-09-23|0":"auto","2026-09-24|0":"auto","2026-09-26|0":"auto","2026-09-26|1":"auto","2026-09-27|0":"auto","2026-09-28|0":"auto","2026-09-28|1":"auto","2026-09-29|0":"auto","2026-09-30|0":"auto","2026-09-30|1":"manual","2026-10-02|0":"auto","2026-10-05|0":"auto","2026-10-08|0":"auto","2026-10-10|0":"manual","2026-10-10|1":"auto","2026-10-12|0":"auto","2026-10-17|0":"auto","2026-10-18|0":"manual","2026-10-19|1":"auto","2026-10-20|0":"auto","2026-10-19|0":"manual","2026-10-21|0":"auto","2026-10-21|1":"auto","2026-10-22|0":"auto","2026-10-22|1":"auto"};
+var SESS_DONE = {"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"auto","2026-08-23|0":"auto","2026-08-24|0":"auto","2026-08-24|1":"auto","2026-08-26|0":"auto","2026-08-27|0":"auto","2026-08-28|0":"auto","2026-08-29|0":"auto","2026-08-29|1":"auto","2026-08-30|0":"auto","2026-08-31|0":"auto","2026-08-31|1":"auto","2026-09-01|0":"auto","2026-09-05|0":"auto","2026-09-05|1":"auto","2026-09-06|0":"auto","2026-09-07|1":"manual","2026-09-12|0":"auto","2026-09-13|0":"auto","2026-09-14|0":"auto","2026-09-14|1":"auto","2026-09-15|0":"auto","2026-09-15|1":"auto","2026-09-16|0":"auto","2026-09-17|0":"auto","2026-09-17|1":"auto","2026-09-19|0":"auto","2026-09-20|0":"auto","2026-09-23|0":"auto","2026-09-24|0":"auto","2026-09-26|0":"auto","2026-09-26|1":"auto","2026-09-27|0":"auto","2026-09-28|0":"auto","2026-09-28|1":"auto","2026-09-29|0":"auto","2026-09-30|0":"auto","2026-09-30|1":"manual","2026-10-02|0":"auto","2026-10-05|0":"auto","2026-10-08|0":"auto","2026-10-10|0":"manual","2026-10-10|1":"auto","2026-10-12|0":"auto","2026-10-17|0":"auto","2026-10-18|0":"manual","2026-10-19|1":"auto","2026-10-20|0":"auto","2026-10-19|0":"manual","2026-10-21|0":"auto","2026-10-21|1":"auto","2026-10-22|0":"auto","2026-10-22|1":"auto","2026-10-24|0":"auto","2026-10-25|0":"manual"};
 /* ==== FIM CHECKLIST DA SEMANA ==== */
 
 /* ==== INICIO ANOTACOES - NAO EDITAR A MAO ====
@@ -2402,7 +2434,7 @@ var NOTAS = {
 };
 /* ==== FIM ANOTACOES ==== */
 
-var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,9,24);
+var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,9,26);
 
 var SECOES=[
  ["s-visao","01","Visão geral"],["s-atual","02","Hoje"],["s-trilhas","03","As três trilhas"],
@@ -4064,9 +4096,210 @@ var SEMANAS_FEITAS=[
     ]
    }
   ]
+ },
+ {
+  "sem": 10,
+  "ini": "2026-10-19",
+  "fim": "2026-10-25",
+  "alvo": 9.4,
+  "dias": [
+   {
+    "date": "2026-10-19",
+    "dow": "Seg",
+    "s": [
+     {
+      "t": "n",
+      "n": "NAT-TESTE2 · CSS 400+200",
+      "o": "o reteste de CSS, adiado desde a viagem — define os alvos das outras séries",
+      "det": [
+       "<b>Aquecimento de 400 m</b>, completo e sem pressa, terminando com 4x25 progressivos · em piscina de 50 m são 8 piscinas",
+       "<b>Descanso TOTAL de 3 min</b> parado na borda — o teste começa depois dele",
+       "<b>TESTE 1 · 400 m</b> em ritmo máximo sustentável, saída constante · conte as 8 piscinas; se o relógio apitar antes, ignore e termine · anote o tempo",
+       "<b>Recuperação de 5 min</b> — faz parte do protocolo, encurtar invalida o teste",
+       "<b>TESTE 2 · 200 m</b> (4 piscinas), mesmo protocolo · anote o tempo",
+       "<b>Volta à calma de 200 m</b>, solta, alternando nados",
+       "<b>CSS por 100 m = (tempo dos 400 − tempo dos 200) ÷ 2.</b> Valor vigente: 2:46,0/100 m, medido em 31/08",
+       "<b>Nado real:</b> os passos somam 400+400+200+200 = 1.200 m; o Garmin estima 1.680 m — vale a soma dos passos",
+       "<b>Confere com o workout 703 NAT-TESTE2 · CSS 400+200 (piscina 50m)</b> agendado no Garmin (id 1681307336)"
+      ]
+     },
+     {
+      "t": "f",
+      "n": "FOR-A · Força Base Triatlo",
+      "o": "a força volta depois de 18 dias — base, sem progressão (trava: força regride)",
+      "det": [
+       "<b>Agachamento livre</b> 3x8 · pausa 120 s",
+       "<b>Levantamento terra romeno</b> 3x8 · pausa 120 s",
+       "<b>Afundo caminhando</b> 3x10 · pausa 90 s",
+       "<b>Remada curvada</b> 3x10 · pausa 90 s",
+       "<b>Puxada alta ou barra fixa assistida</b> 3x8 · pausa 90 s",
+       "<b>Desenvolvimento de ombro</b> 3x10 · pausa 90 s",
+       "<b>Prancha frontal e lateral</b> 3 séries · pausa 60 s",
+       "<b>Elevação de panturrilha</b> 3x15 · pausa 60 s",
+       "<b>Trava de progressão:</b> a semana 9 fechou com 0 de 2 forças, então volta ao volume que ele de fato completou — FOR-A e FOR-B base, sem passar para o FOR-MAX",
+       "<b>Confere com o workout 703 FOR-A · Forca Base Triatlo (v2)</b> agendado no Garmin (id 1698840673)"
+      ]
+     }
+    ]
+   },
+   {
+    "date": "2026-10-20",
+    "dow": "Ter",
+    "s": [
+     {
+      "t": "r",
+      "n": "RUN-A1 · Z2 50 min + cadência 158-165",
+      "o": "troca de 19/10: o RUN-V1 de VO2 saiu porque o teste de 12 min ja passou; cadencia volta a ser a prioridade",
+      "det": [
+       "<b>Troca decidida pelo Alex em 19/10:</b> o RUN-V1 5x3min vVO2max existia para o teste de 12 min de 05/10; no Bloco A a corrida fica em manutencao e a cadencia (cerca de 151 spm contra 158-165) e o ponto aberto",
+       "<b>10 min de aquecimento</b> em Z1, 105-132 bpm",
+       "<b>6x (2 min de cadência 158-165 spm + 3 min em Z2 a 130-150 bpm)</b> — passos mais curtos e frequentes no mesmo ritmo, sem correr mais rápido",
+       "<b>5 min de volta à calma</b> em Z1, 105-130 bpm",
+       "<b>Duração real:</b> os passos somam 45 min (10 + 6x5 + 5), embora o nome diga 50",
+       "<b>Referência:</b> no RUN-A2 de 17/10 a cadência do bloco Z2 ficou perto de 151 spm (média simples dos laps 3 a 12); a meta é 158-165",
+       "<b>Confere com o workout 703 RUN-A1 · Z2 50min + Cadencia 158-165</b> agendado no Garmin (id 1666533088)"
+      ]
+     }
+    ]
+   },
+   {
+    "date": "2026-10-21",
+    "dow": "Qua",
+    "tag": "hard",
+    "s": [
+     {
+      "t": "n",
+      "n": "NAT-P3 · Ritmo de Prova 1.300 m",
+      "o": "movido de terca 20/10 para hoje pelo Alex; bike a noite",
+      "det": [
+       "<b>200 m de aquecimento</b> solto, com 4x25 progressivos no fim · <b>PAUSA 45 s</b> parado na borda",
+       "<b>100 m de largada simulada</b>, um pouco acima do ritmo · não pare no fim do passo",
+       "<b>800 m contínuos em ritmo de prova</b>, bilateral, olhos para frente duas vezes a cada 100 m · deve parecer fácil demais nos primeiros 300 m",
+       "<b>100 m finais acelerando até o CSS</b>",
+       "<b>Os 1.000 m (100+800+100) são sem pausa, de propósito</b> — a prova é assim",
+       "<b>PAUSA 30 s</b> parado · anote o tempo dos 800 m",
+       "<b>100 m de volta à calma</b> · anote como estava o ombro",
+       "<b>Nado real:</b> 200+100+800+100+100 = 1.300 m; o Garmin estima 1.375 m",
+       "<b>Confere com o workout 703 NAT-P3 · Ritmo de Prova 1300m (pausas)</b> agendado no Garmin (id 1702724669)"
+      ]
+     },
+     {
+      "t": "b",
+      "n": "BIKE-B2D · Cadência 75 min (rolo)",
+      "o": "a bike de qualidade volta, depois do B1D de 15/10 e do brick de 18/10",
+      "det": [
+       "<b>15 min de aquecimento</b> progressivo a 90-112 bpm e 70-110 W",
+       "<b>6x (3 min a 95-105 rpm em marcha leve + 2 min soltos)</b> — o alvo primário é a cadência, FC secundária 105-132 bpm; se passar de 132, alivie a marcha · soltos a 95-115 bpm e 70-110 W",
+       "<b>20 min de base aeróbica a 112-128 bpm e 90-145 W</b>, mantendo 88-92 rpm · anote a potência média",
+       "<b>10 min de volta à calma</b> a 85-110 bpm e 65-105 W",
+       "<b>Confere com o workout 703 BIKE-B2D · Cadencia 75min (CAD+FC+POT)</b> agendado no Garmin (id 1700619909)"
+      ]
+     }
+    ]
+   },
+   {
+    "date": "2026-10-22",
+    "dow": "Qui",
+    "s": [
+     {
+      "t": "r",
+      "n": "RUN-A1 · Z2 50 min + cadência 158-165",
+      "o": "mantida pelo Alex em 21/10 - corrida de cadencia na quinta",
+      "det": [
+       "<b>10 min de aquecimento</b> em Z1, 105-132 bpm",
+       "<b>6x (2 min de cadência 158-165 spm + 3 min em Z2 a 130-150 bpm)</b> — passos mais curtos e frequentes no mesmo ritmo, sem correr mais rápido",
+       "<b>5 min de volta à calma</b> em Z1, 105-130 bpm",
+       "<b>Duração real:</b> os passos somam 45 min (10 + 6x5 + 5), embora o nome diga 50",
+       "<b>Referência de 20/10:</b> 8,0 km em 45 min, FC média 146 e máxima 168",
+       "<b>Confere com o workout 703 RUN-A1 · Z2 50min + Cadencia 158-165</b> agendado no Garmin (id 1666533088), reagendado para 22/10 em 21/10"
+      ]
+     },
+     {
+      "t": "f",
+      "n": "FOR-B · Tronco, Ombro e Core",
+      "o": "tronco e ombro — não pega perna",
+      "det": [
+       "<b>Rotação externa de ombro com elástico</b> 3x15 · pausa 45 s",
+       "<b>Remada unilateral com halter</b> 3x10 · pausa 75 s",
+       "<b>Puxada alta ou barra fixa assistida</b> 3x8 · pausa 90 s",
+       "<b>Flexão de braço</b> 3x12 · pausa 60 s",
+       "<b>Desenvolvimento de ombro em pé</b> 3x10 · pausa 75 s",
+       "<b>Farmers carry 40 m</b> 3 séries · pausa 75 s",
+       "<b>Prancha frontal 45 s e lateral 30 s por lado</b> 3 séries · pausa 45 s",
+       "<b>Pallof press anti-rotação</b> 3x10 · pausa 45 s",
+       "<b>Registrado em 01/10:</b> o relógio abriu este workout com uma repetição por exercício, embora a API traga 3 séries em todos — causa não confirmada; se repetir, anote",
+       "<b>Confere com o workout 703 FOR-B · Tronco, Ombro e Core (v2)</b> agendado no Garmin (id 1698840822)"
+      ]
+     }
+    ]
+   },
+   {
+    "date": "2026-10-23",
+    "dow": "Sex",
+    "tag": "off",
+    "s": []
+   },
+   {
+    "date": "2026-10-24",
+    "dow": "Sab",
+    "tag": "hard",
+    "s": [
+     {
+      "t": "r",
+      "n": "RUN-A2 · Longo Z2 75 min",
+      "o": "o longo da semana — Z2 estrito, teto 150 bpm",
+      "det": [
+       "<b>10 min de aquecimento</b> em Z1, 105-132 bpm",
+       "<b>60 min em Z2 estrito, 130-150 bpm</b> · se passar de 150, caminhe · cadência 155 ou mais quando lembrar",
+       "<b>5 min de volta à calma</b> em Z1, 105-130 bpm",
+       "<b>Referência de 17/10:</b> 12,34 km em 75 min; bloco Z2 (laps 3 a 13) 10,18 km a 6:21/km com FC média 148 — nos laps 7 a 13 a FC ficou em 150-152, no teto ou acima, com o ritmo caindo de 5:13 para 6:35/km",
+       "<b>Referência de 11/10:</b> calor úmido empurrou o longo para TEMPO (FC média 147, TE 3,7)",
+       "<b>Confere com o workout 703 RUN-A2 · Longo Z2 75min</b> agendado no Garmin (id 1666533679)"
+      ]
+     },
+     {
+      "t": "n",
+      "n": "NAT-E2 · Economia 1.800 m",
+      "o": "o maior nado da semana — o alvo é braçada, não tempo",
+      "det": [
+       "<b>300 m de aquecimento</b> em crawl suave, expirando dentro da água · <b>PAUSA 30 s</b> parado",
+       "<b>4x50 m de contagem base</b>, pausa 15 s — conte as braçadas por piscina em ritmo confortável; é a referência do dia",
+       "<b>PAUSA ENTRE BLOCOS 45 s</b> parado (60 s com os 15 s do último 50)",
+       "<b>10x50 m com UMA BRAÇADA A MENOS que a base</b>, no mesmo tempo · pausa 20 s",
+       "<b>PAUSA ENTRE BLOCOS 60 s</b> parado (80 s com os 20 s do último 50)",
+       "<b>6x100 m nado completo</b> mantendo a contagem reduzida · pausa 25 s",
+       "<b>200 m de volta à calma</b> · anote a contagem base e a final",
+       "<b>Nado real:</b> 300+200+500+600+200 = 1.800 m; a estimativa do Garmin (2.345 m) não bate com a soma dos passos",
+       "<b>Confere com o workout 703 NAT-E2 · Economia 1800m (pausas)</b> agendado no Garmin (id 1702724141)"
+      ]
+     }
+    ]
+   },
+   {
+    "date": "2026-10-25",
+    "dow": "Dom",
+    "s": [
+     {
+      "t": "b",
+      "n": "BRICK-D1 · Bike 68 min + T2 + Corrida 20 min",
+      "o": "o brick padrão de 88 min — um passo sobre os 80 min de 18/10",
+      "det": [
+       "<b>BIKE — 15 min de aquecimento</b> progressivo a 95-115 bpm e 70-110 W · no rolo, faça o spindown antes",
+       "<b>BIKE — 3x (12 min a 125-136 bpm e 100-150 W, cadência 85-90 rpm + 3 min soltos a 100-115 bpm e 70-110 W)</b> · anote a potência de cada bloco",
+       "<b>BIKE — 8 min de preparação da transição</b> a 130-140 bpm e 110-160 W na posição de prova; nos 2 min finais suba a cadência para 95 sem aumentar a carga",
+       "<b>CORRIDA — 5 min a 120-145 bpm</b>, sem forçar o ritmo; é nesses minutos que está o treino",
+       "<b>CORRIDA — 15 min em Z2 a 130-150 bpm</b>, cadência 158-165 spm",
+       "<b>É UM treino só:</b> abra a atividade MULTIESPORTE e troque de esporte pelo botão de volta",
+       "<b>ANOTE o pace dos 15 min finais</b> — o custo de brick. Se o readiness do despertar estiver abaixo de 40, o workout manda cortar para aquecimento + bloco final + corrida",
+       "<b>Confere com o workout 703 BRICK-D1 · Bike 68min + T2 + Corrida 20min</b> agendado no Garmin (id 1700625780)"
+      ]
+     }
+    ]
+   }
+  ]
  }
 ];
-var SEMANAS_FEITAS_UPDATED = "19/10/2026 - semana 9 (12 a 18/10) arquivada pelo fechamento semanal e corrigida na manha de 19/10: o BRICK-B1 de domingo 18/10 foi feito e o Alex trouxe os dados do relogio (nao sincronizou com o Garmin). Alvo 8,2 h; realizado ~5,05 h (62 por cento): 2 natacoes em agua aberta, 1 bike no rolo (deslocada de 14 para 15/10), 1 corrida longa e o brick. Zero forca.";
+var SEMANAS_FEITAS_UPDATED = "25/10/2026 - semana 10 (19 a 25/10) arquivada pelo fechamento semanal; o brick de 25/10 nao constava no Garmin nem no Strava as 20:12 BRT. Anterior: 19/10/2026 - semana 9 (12 a 18/10) arquivada pelo fechamento semanal e corrigida na manha de 19/10: o BRICK-B1 de domingo 18/10 foi feito e o Alex trouxe os dados do relogio (nao sincronizou com o Garmin). Alvo 8,2 h; realizado ~5,05 h (62 por cento): 2 natacoes em agua aberta, 1 bike no rolo (deslocada de 14 para 15/10), 1 corrida longa e o brick. Zero forca.";
 /* ==== FIM SEMANAS ARQUIVADAS ==== */
 
 /* ==== INICIO SEMANA EM CURSO - NAO EDITAR A MAO ====
@@ -4084,29 +4317,28 @@ var SEMANAS_FEITAS_UPDATED = "19/10/2026 - semana 9 (12 a 18/10) arquivada pelo 
    `det` e OPCIONAL: sem ele o painel mostra um aviso de que nao foi gerado. */
 var SEMANA_ATUAL=[
  {
-  "date": "2026-10-19",
+  "date": "2026-10-26",
   "dow": "Seg",
   "s": [
    {
     "t": "n",
-    "n": "NAT-TESTE2 · CSS 400+200",
-    "o": "o reteste de CSS, adiado desde a viagem — define os alvos das outras séries",
+    "n": "NAT-C3 · Ritmo Crítico 1.200 m",
+    "o": "entrada do ritmo crítico, semana de recuperação",
     "det": [
-     "<b>Aquecimento de 400 m</b>, completo e sem pressa, terminando com 4x25 progressivos · em piscina de 50 m são 8 piscinas",
-     "<b>Descanso TOTAL de 3 min</b> parado na borda — o teste começa depois dele",
-     "<b>TESTE 1 · 400 m</b> em ritmo máximo sustentável, saída constante · conte as 8 piscinas; se o relógio apitar antes, ignore e termine · anote o tempo",
-     "<b>Recuperação de 5 min</b> — faz parte do protocolo, encurtar invalida o teste",
-     "<b>TESTE 2 · 200 m</b> (4 piscinas), mesmo protocolo · anote o tempo",
-     "<b>Volta à calma de 200 m</b>, solta, alternando nados",
-     "<b>CSS por 100 m = (tempo dos 400 − tempo dos 200) ÷ 2.</b> Valor vigente: 2:46,0/100 m, medido em 31/08",
-     "<b>Nado real:</b> os passos somam 400+400+200+200 = 1.200 m; o Garmin estima 1.680 m — vale a soma dos passos",
-     "<b>Confere com o workout 703 NAT-TESTE2 · CSS 400+200 (piscina 50m)</b> agendado no Garmin (id 1681307336)"
+     "<b>200 m de aquecimento</b> solto, terminando com 2x25 progressivos no ritmo da série · <b>PAUSA 45 s</b> parado",
+     "<b>6x100 m no CSS</b> (referência 2:46/100 m; o NAT-TESTE2 de 20/10 mediu 2:36,3/100 m em um único teste — a decisão de atualizar o alvo é dele) · pausa de 20 s parado · o 6o no mesmo tempo do 1o; se cair mais de 5 s, saiu rápido",
+     "<b>100 m bem solto</b>, alternando nados · <b>PAUSA 30 s</b> parado",
+     "<b>200 m no CSS, sem parar</b>",
+     "<b>PAUSA 30 s</b> parado antes de soltar",
+     "<b>100 m de volta à calma</b> · anote o tempo do 1o e do 6o cem",
+     "<b>Nado real:</b> 200+600+100+200+100 = 1.200 m; o Garmin estima 1.425 m — vale a soma dos passos",
+     "<b>Confere com o workout 703 NAT-C3 · Ritmo Critico 1200m (pausas)</b> agendado no Garmin (id 1702724518)"
     ]
    },
    {
     "t": "f",
     "n": "FOR-A · Força Base Triatlo",
-    "o": "a força volta depois de 18 dias — base, sem progressão (trava: força regride)",
+    "o": "força base — primeira das duas da semana de recuperação",
     "det": [
      "<b>Agachamento livre</b> 3x8 · pausa 120 s",
      "<b>Levantamento terra romeno</b> 3x8 · pausa 120 s",
@@ -4116,41 +4348,33 @@ var SEMANA_ATUAL=[
      "<b>Desenvolvimento de ombro</b> 3x10 · pausa 90 s",
      "<b>Prancha frontal e lateral</b> 3 séries · pausa 60 s",
      "<b>Elevação de panturrilha</b> 3x15 · pausa 60 s",
-     "<b>Trava de progressão:</b> a semana 9 fechou com 0 de 2 forças, então volta ao volume que ele de fato completou — FOR-A e FOR-B base, sem passar para o FOR-MAX",
+     "<b>Trava de progressão (semana 10):</b> 3 forças feitas contra 2 prescritas, então progride; mas esta é semana de recuperação e segue FOR-A e FOR-B base — o FOR-MAX volta na semana 13",
      "<b>Confere com o workout 703 FOR-A · Forca Base Triatlo (v2)</b> agendado no Garmin (id 1698840673)"
     ]
    }
   ]
  },
  {
-  "date": "2026-10-20",
+  "date": "2026-10-27",
   "dow": "Ter",
   "s": [
    {
     "t": "r",
     "n": "RUN-A1 · Z2 50 min + cadência 158-165",
-    "o": "troca de 19/10: o RUN-V1 de VO2 saiu porque o teste de 12 min ja passou; cadencia volta a ser a prioridade",
+    "o": "corrida de cadência da semana de recuperação",
     "det": [
-     "<b>Troca decidida pelo Alex em 19/10:</b> o RUN-V1 5x3min vVO2max existia para o teste de 12 min de 05/10; no Bloco A a corrida fica em manutencao e a cadencia (cerca de 151 spm contra 158-165) e o ponto aberto",
      "<b>10 min de aquecimento</b> em Z1, 105-132 bpm",
      "<b>6x (2 min de cadência 158-165 spm + 3 min em Z2 a 130-150 bpm)</b> — passos mais curtos e frequentes no mesmo ritmo, sem correr mais rápido",
      "<b>5 min de volta à calma</b> em Z1, 105-130 bpm",
      "<b>Duração real:</b> os passos somam 45 min (10 + 6x5 + 5), embora o nome diga 50",
-     "<b>Referência:</b> no RUN-A2 de 17/10 a cadência do bloco Z2 ficou perto de 151 spm (média simples dos laps 3 a 12); a meta é 158-165",
+     "<b>Referência de 20 e 22/10:</b> nas duas os blocos de cadência saíram a 164-165 spm, mas em 20/10 os blocos aceleraram de 5:32 para 4:31/km com FC até 168 (o workout pede o mesmo ritmo), e em 22/10 ficaram em 5:44 a 6:47/km com FC 138-144. Fora dos blocos e no longo de 24/10 a cadência ficou perto de 153 spm; a meta é 158-165",
      "<b>Confere com o workout 703 RUN-A1 · Z2 50min + Cadencia 158-165</b> agendado no Garmin (id 1666533088)"
     ]
-   }
-  ]
- },
- {
-  "date": "2026-10-21",
-  "dow": "Qua",
-  "tag": "hard",
-  "s": [
+   },
    {
     "t": "n",
     "n": "NAT-P3 · Ritmo de Prova 1.300 m",
-    "o": "movido de terca 20/10 para hoje pelo Alex; bike a noite",
+    "o": "bloco contínuo de 1.000 m, semana de recuperação",
     "det": [
      "<b>200 m de aquecimento</b> solto, com 4x25 progressivos no fim · <b>PAUSA 45 s</b> parado na borda",
      "<b>100 m de largada simulada</b>, um pouco acima do ritmo · não pare no fim do passo",
@@ -4162,42 +4386,46 @@ var SEMANA_ATUAL=[
      "<b>Nado real:</b> 200+100+800+100+100 = 1.300 m; o Garmin estima 1.375 m",
      "<b>Confere com o workout 703 NAT-P3 · Ritmo de Prova 1300m (pausas)</b> agendado no Garmin (id 1702724669)"
     ]
-   },
+   }
+  ]
+ },
+ {
+  "date": "2026-10-28",
+  "dow": "Qua",
+  "s": [
    {
     "t": "b",
-    "n": "BIKE-B2D · Cadência 75 min (rolo)",
-    "o": "a bike de qualidade volta, depois do B1D de 15/10 e do brick de 18/10",
+    "n": "REGEN-B3 · Z1 Bike 40 min (rolo)",
+    "o": "bike regenerativa de semana leve",
     "det": [
-     "<b>15 min de aquecimento</b> progressivo a 90-112 bpm e 70-110 W",
-     "<b>6x (3 min a 95-105 rpm em marcha leve + 2 min soltos)</b> — o alvo primário é a cadência, FC secundária 105-132 bpm; se passar de 132, alivie a marcha · soltos a 95-115 bpm e 70-110 W",
-     "<b>20 min de base aeróbica a 112-128 bpm e 90-145 W</b>, mantendo 88-92 rpm · anote a potência média",
-     "<b>10 min de volta à calma</b> a 85-110 bpm e 65-105 W",
-     "<b>Confere com o workout 703 BIKE-B2D · Cadencia 75min (CAD+FC+POT)</b> agendado no Garmin (id 1700619909)"
+     "<b>40 min em Z1 estrito, 85-112 bpm e 75-105 W</b>, cadência leve 85-95 rpm, quadril parado no selim",
+     "Se a FC passar de 112 ou a potência de 105 W, alivie",
+     "<b>Circulação, não estímulo</b> — é semana de recuperação",
+     "<b>Referência de 16/09:</b> 94 W médios com FC 98 bpm",
+     "<b>Confere com o workout 703 REGEN-B3 · Z1 Bike 40min (FC+POT)</b> agendado no Garmin (id 1700620101)"
     ]
    }
   ]
  },
  {
-  "date": "2026-10-22",
+  "date": "2026-10-29",
   "dow": "Qui",
   "s": [
    {
     "t": "r",
-    "n": "RUN-A1 · Z2 50 min + cadência 158-165",
-    "o": "mantida pelo Alex em 21/10 - corrida de cadencia na quinta",
+    "n": "RUN-0 · Retomada Z1/Z2 35 min",
+    "o": "trote curto de recuperação — quinta é dia de corrida",
     "det": [
-     "<b>10 min de aquecimento</b> em Z1, 105-132 bpm",
-     "<b>6x (2 min de cadência 158-165 spm + 3 min em Z2 a 130-150 bpm)</b> — passos mais curtos e frequentes no mesmo ritmo, sem correr mais rápido",
-     "<b>5 min de volta à calma</b> em Z1, 105-130 bpm",
-     "<b>Duração real:</b> os passos somam 45 min (10 + 6x5 + 5), embora o nome diga 50",
-     "<b>Referência de 20/10:</b> 8,0 km em 45 min, FC média 146 e máxima 168",
-     "<b>Confere com o workout 703 RUN-A1 · Z2 50min + Cadencia 158-165</b> agendado no Garmin (id 1666533088), reagendado para 22/10 em 21/10"
+     "<b>5 min de aquecimento</b> — o workout não traz alvo de FC neste passo",
+     "<b>25 min a 115-140 bpm</b>",
+     "<b>5 min de volta à calma</b>, sem alvo de FC",
+     "<b>Confere com o workout 703 RUN-0 · Retomada Z1/Z2 35min</b> agendado no Garmin (id 1666536253)"
     ]
    },
    {
     "t": "f",
     "n": "FOR-B · Tronco, Ombro e Core",
-    "o": "tronco e ombro — não pega perna",
+    "o": "tronco e ombro — segunda força da semana de recuperação",
     "det": [
      "<b>Rotação externa de ombro com elástico</b> 3x15 · pausa 45 s",
      "<b>Remada unilateral com halter</b> 3x10 · pausa 75 s",
@@ -4214,33 +4442,19 @@ var SEMANA_ATUAL=[
   ]
  },
  {
-  "date": "2026-10-23",
+  "date": "2026-10-30",
   "dow": "Sex",
   "tag": "off",
   "s": []
  },
  {
-  "date": "2026-10-24",
+  "date": "2026-10-31",
   "dow": "Sab",
-  "tag": "hard",
   "s": [
-   {
-    "t": "r",
-    "n": "RUN-A2 · Longo Z2 75 min",
-    "o": "o longo da semana — Z2 estrito, teto 150 bpm",
-    "det": [
-     "<b>10 min de aquecimento</b> em Z1, 105-132 bpm",
-     "<b>60 min em Z2 estrito, 130-150 bpm</b> · se passar de 150, caminhe · cadência 155 ou mais quando lembrar",
-     "<b>5 min de volta à calma</b> em Z1, 105-130 bpm",
-     "<b>Referência de 17/10:</b> 12,34 km em 75 min; bloco Z2 (laps 3 a 13) 10,18 km a 6:21/km com FC média 148 — nos laps 7 a 13 a FC ficou em 150-152, no teto ou acima, com o ritmo caindo de 5:13 para 6:35/km",
-     "<b>Referência de 11/10:</b> calor úmido empurrou o longo para TEMPO (FC média 147, TE 3,7)",
-     "<b>Confere com o workout 703 RUN-A2 · Longo Z2 75min</b> agendado no Garmin (id 1666533679)"
-    ]
-   },
    {
     "t": "n",
     "n": "NAT-E2 · Economia 1.800 m",
-    "o": "o maior nado da semana — o alvo é braçada, não tempo",
+    "o": "o maior nado da semana — sábado sem corrida: a semana de recuperação corta o longo mas mantém duas corridas e o brick",
     "det": [
      "<b>300 m de aquecimento</b> em crawl suave, expirando dentro da água · <b>PAUSA 30 s</b> parado",
      "<b>4x50 m de contagem base</b>, pausa 15 s — conte as braçadas por piscina em ritmo confortável; é a referência do dia",
@@ -4256,22 +4470,24 @@ var SEMANA_ATUAL=[
   ]
  },
  {
-  "date": "2026-10-25",
+  "date": "2026-11-01",
   "dow": "Dom",
   "s": [
    {
     "t": "b",
-    "n": "BRICK-D1 · Bike 68 min + T2 + Corrida 20 min",
-    "o": "o brick padrão de 88 min — um passo sobre os 80 min de 18/10",
+    "n": "BRICK-B1 · Bike 60 min + T2 + Corrida 20 min",
+    "o": "brick na versão menor",
     "det": [
-     "<b>BIKE — 15 min de aquecimento</b> progressivo a 95-115 bpm e 70-110 W · no rolo, faça o spindown antes",
-     "<b>BIKE — 3x (12 min a 125-136 bpm e 100-150 W, cadência 85-90 rpm + 3 min soltos a 100-115 bpm e 70-110 W)</b> · anote a potência de cada bloco",
-     "<b>BIKE — 8 min de preparação da transição</b> a 130-140 bpm e 110-160 W na posição de prova; nos 2 min finais suba a cadência para 95 sem aumentar a carga",
-     "<b>CORRIDA — 5 min a 120-145 bpm</b>, sem forçar o ritmo; é nesses minutos que está o treino",
+     "<b>BIKE — 10 min de aquecimento</b> a 90-112 bpm e 70-110 W · no rolo, faça o spindown antes",
+     "<b>BIKE — 45 min de base a 112-128 bpm e 90-145 W</b>, cadência 85-90 rpm",
+     "<b>BIKE — 5 min a 125-138 bpm e 100-155 W na posição de prova</b>, cadência 95 nos 2 min finais",
+     "<b>CORRIDA — 5 min a 120-145 bpm</b>, sem forçar o ritmo; cadência alta e passada curta",
      "<b>CORRIDA — 15 min em Z2 a 130-150 bpm</b>, cadência 158-165 spm",
-     "<b>É UM treino só:</b> abra a atividade MULTIESPORTE e troque de esporte pelo botão de volta",
-     "<b>ANOTE o pace dos 15 min finais</b> — o custo de brick. Se o readiness do despertar estiver abaixo de 40, o workout manda cortar para aquecimento + bloco final + corrida",
-     "<b>Confere com o workout 703 BRICK-D1 · Bike 68min + T2 + Corrida 20min</b> agendado no Garmin (id 1700625780)"
+     "<b>É UM treino só:</b> abra a atividade MULTIESPORTE e troque de esporte pelo botão de volta — a transição entra sozinha; a volta à calma da bike não existe, vira bloco de preparação",
+     "<b>Trava:</b> corta-se volume, não estímulo — a bike de 60 min é a versão menor e o estímulo do brick, correr com a perna cansada, fica inteiro",
+     "<b>ANOTE o pace dos 15 min finais</b> — é o custo de brick. Marco de 06/09: 5:27,4/km com FC média 140; em 20/09 e 27/09 o segmento inteiro de corrida saiu a cerca de 5:18/km, FC 147-148",
+     "<b>Nutrição:</b> registre quanto de carboidrato ingeriu (rampa de set-out: 40 g/h)",
+     "<b>Confere com o workout 703 BRICK-B1 · Bike 60min + T2 + Corrida 20min</b> agendado no Garmin (id 1700625905)"
     ]
    }
   ]
@@ -4286,187 +4502,6 @@ var SEMANA_ATUAL=[
    Formato: [ {sem:N, dias:[{date,dow,tag,s:[{t,n,o,det}]}]}, ... ] */
 var AGENDA_FUTURA=[
  {
-  "sem": 11,
-  "dias": [
-   {
-    "date": "2026-10-26",
-    "dow": "Seg",
-    "s": [
-     {
-      "t": "n",
-      "n": "NAT-C3 · Ritmo Crítico 1.200 m",
-      "o": "entrada do ritmo crítico, semana de recuperação",
-      "det": [
-       "<b>200 m de aquecimento</b> solto, terminando com 2x25 progressivos no ritmo da série · <b>PAUSA 45 s</b> parado",
-       "<b>6x100 m no CSS</b> (vigente 2:46/100 m; o NAT-TESTE2 de 19/10 pode atualizá-lo) · pausa de 20 s parado · o 6o no mesmo tempo do 1o; se cair mais de 5 s, saiu rápido",
-       "<b>100 m bem solto</b>, alternando nados · <b>PAUSA 30 s</b> parado",
-       "<b>200 m no CSS, sem parar</b>",
-       "<b>PAUSA 30 s</b> parado antes de soltar",
-       "<b>100 m de volta à calma</b> · anote o tempo do 1o e do 6o cem",
-       "<b>Nado real:</b> 200+600+100+200+100 = 1.200 m; o Garmin estima 1.425 m — vale a soma dos passos",
-       "<b>Confere com o workout 703 NAT-C3 · Ritmo Critico 1200m (pausas)</b> agendado no Garmin (id 1702724518)"
-      ]
-     },
-     {
-      "t": "f",
-      "n": "FOR-A · Força Base Triatlo",
-      "o": "força base — primeira das duas da semana de recuperação",
-      "det": [
-       "<b>Agachamento livre</b> 3x8 · pausa 120 s",
-       "<b>Levantamento terra romeno</b> 3x8 · pausa 120 s",
-       "<b>Afundo caminhando</b> 3x10 · pausa 90 s",
-       "<b>Remada curvada</b> 3x10 · pausa 90 s",
-       "<b>Puxada alta ou barra fixa assistida</b> 3x8 · pausa 90 s",
-       "<b>Desenvolvimento de ombro</b> 3x10 · pausa 90 s",
-       "<b>Prancha frontal e lateral</b> 3 séries · pausa 60 s",
-       "<b>Elevação de panturrilha</b> 3x15 · pausa 60 s",
-       "<b>Trava de progressão:</b> a semana 9 fechou com 0 de 2 forças, então volta ao volume que ele de fato completou — FOR-A e FOR-B base, sem passar para o FOR-MAX",
-       "<b>Confere com o workout 703 FOR-A · Forca Base Triatlo (v2)</b> agendado no Garmin (id 1698840673)"
-      ]
-     }
-    ]
-   },
-   {
-    "date": "2026-10-27",
-    "dow": "Ter",
-    "s": [
-     {
-      "t": "r",
-      "n": "RUN-A1 · Z2 50 min + cadência 158-165",
-      "o": "corrida de cadência da semana de recuperação",
-      "det": [
-       "<b>10 min de aquecimento</b> em Z1, 105-132 bpm",
-       "<b>6x (2 min de cadência 158-165 spm + 3 min em Z2 a 130-150 bpm)</b> — passos mais curtos e frequentes no mesmo ritmo, sem correr mais rápido",
-       "<b>5 min de volta à calma</b> em Z1, 105-130 bpm",
-       "<b>Duração real:</b> os passos somam 45 min (10 + 6x5 + 5), embora o nome diga 50",
-       "<b>Referência:</b> no RUN-A2 de 17/10 a cadência do bloco Z2 ficou perto de 151 spm (média simples dos laps 3 a 12); a meta é 158-165",
-       "<b>Confere com o workout 703 RUN-A1 · Z2 50min + Cadencia 158-165</b> agendado no Garmin (id 1666533088)"
-      ]
-     },
-     {
-      "t": "n",
-      "n": "NAT-P3 · Ritmo de Prova 1.300 m",
-      "o": "bloco contínuo de 1.000 m, semana de recuperação",
-      "det": [
-       "<b>200 m de aquecimento</b> solto, com 4x25 progressivos no fim · <b>PAUSA 45 s</b> parado na borda",
-       "<b>100 m de largada simulada</b>, um pouco acima do ritmo · não pare no fim do passo",
-       "<b>800 m contínuos em ritmo de prova</b>, bilateral, olhos para frente duas vezes a cada 100 m · deve parecer fácil demais nos primeiros 300 m",
-       "<b>100 m finais acelerando até o CSS</b>",
-       "<b>Os 1.000 m (100+800+100) são sem pausa, de propósito</b> — a prova é assim",
-       "<b>PAUSA 30 s</b> parado · anote o tempo dos 800 m",
-       "<b>100 m de volta à calma</b> · anote como estava o ombro",
-       "<b>Nado real:</b> 200+100+800+100+100 = 1.300 m; o Garmin estima 1.375 m",
-       "<b>Confere com o workout 703 NAT-P3 · Ritmo de Prova 1300m (pausas)</b> agendado no Garmin (id 1702724669)"
-      ]
-     }
-    ]
-   },
-   {
-    "date": "2026-10-28",
-    "dow": "Qua",
-    "s": [
-     {
-      "t": "b",
-      "n": "REGEN-B3 · Z1 Bike 40 min (rolo)",
-      "o": "bike regenerativa de semana leve",
-      "det": [
-       "<b>40 min em Z1 estrito, 85-112 bpm e 75-105 W</b>, cadência leve 85-95 rpm, quadril parado no selim",
-       "Se a FC passar de 112 ou a potência de 105 W, alivie",
-       "<b>Circulação, não estímulo</b> — é semana de recuperação",
-       "<b>Referência de 16/09:</b> 94 W médios com FC 98 bpm",
-       "<b>Confere com o workout 703 REGEN-B3 · Z1 Bike 40min (FC+POT)</b> agendado no Garmin (id 1700620101)"
-      ]
-     }
-    ]
-   },
-   {
-    "date": "2026-10-29",
-    "dow": "Qui",
-    "s": [
-     {
-      "t": "r",
-      "n": "RUN-0 · Retomada Z1/Z2 35 min",
-      "o": "trote curto de recuperação — quinta é dia de corrida",
-      "det": [
-       "<b>5 min de aquecimento</b> — o workout não traz alvo de FC neste passo",
-       "<b>25 min a 115-140 bpm</b>",
-       "<b>5 min de volta à calma</b>, sem alvo de FC",
-       "<b>Confere com o workout 703 RUN-0 · Retomada Z1/Z2 35min</b> agendado no Garmin (id 1666536253)"
-      ]
-     },
-     {
-      "t": "f",
-      "n": "FOR-B · Tronco, Ombro e Core",
-      "o": "tronco e ombro — segunda força da semana de recuperação",
-      "det": [
-       "<b>Rotação externa de ombro com elástico</b> 3x15 · pausa 45 s",
-       "<b>Remada unilateral com halter</b> 3x10 · pausa 75 s",
-       "<b>Puxada alta ou barra fixa assistida</b> 3x8 · pausa 90 s",
-       "<b>Flexão de braço</b> 3x12 · pausa 60 s",
-       "<b>Desenvolvimento de ombro em pé</b> 3x10 · pausa 75 s",
-       "<b>Farmers carry 40 m</b> 3 séries · pausa 75 s",
-       "<b>Prancha frontal 45 s e lateral 30 s por lado</b> 3 séries · pausa 45 s",
-       "<b>Pallof press anti-rotação</b> 3x10 · pausa 45 s",
-       "<b>Registrado em 01/10:</b> o relógio abriu este workout com uma repetição por exercício, embora a API traga 3 séries em todos — causa não confirmada; se repetir, anote",
-       "<b>Confere com o workout 703 FOR-B · Tronco, Ombro e Core (v2)</b> agendado no Garmin (id 1698840822)"
-      ]
-     }
-    ]
-   },
-   {
-    "date": "2026-10-30",
-    "dow": "Sex",
-    "tag": "off",
-    "s": []
-   },
-   {
-    "date": "2026-10-31",
-    "dow": "Sab",
-    "s": [
-     {
-      "t": "n",
-      "n": "NAT-E2 · Economia 1.800 m",
-      "o": "o maior nado da semana — sábado sem corrida: a semana de recuperação corta o longo mas mantém duas corridas e o brick",
-      "det": [
-       "<b>300 m de aquecimento</b> em crawl suave, expirando dentro da água · <b>PAUSA 30 s</b> parado",
-       "<b>4x50 m de contagem base</b>, pausa 15 s — conte as braçadas por piscina em ritmo confortável; é a referência do dia",
-       "<b>PAUSA ENTRE BLOCOS 45 s</b> parado (60 s com os 15 s do último 50)",
-       "<b>10x50 m com UMA BRAÇADA A MENOS que a base</b>, no mesmo tempo · pausa 20 s",
-       "<b>PAUSA ENTRE BLOCOS 60 s</b> parado (80 s com os 20 s do último 50)",
-       "<b>6x100 m nado completo</b> mantendo a contagem reduzida · pausa 25 s",
-       "<b>200 m de volta à calma</b> · anote a contagem base e a final",
-       "<b>Nado real:</b> 300+200+500+600+200 = 1.800 m; a estimativa do Garmin (2.345 m) não bate com a soma dos passos",
-       "<b>Confere com o workout 703 NAT-E2 · Economia 1800m (pausas)</b> agendado no Garmin (id 1702724141)"
-      ]
-     }
-    ]
-   },
-   {
-    "date": "2026-11-01",
-    "dow": "Dom",
-    "s": [
-     {
-      "t": "b",
-      "n": "BRICK-B1 · Bike 60 min + T2 + Corrida 20 min",
-      "o": "brick na versão menor",
-      "det": [
-       "<b>BIKE — 10 min de aquecimento</b> a 90-112 bpm e 70-110 W · no rolo, faça o spindown antes",
-       "<b>BIKE — 45 min de base a 112-128 bpm e 90-145 W</b>, cadência 85-90 rpm",
-       "<b>BIKE — 5 min a 125-138 bpm e 100-155 W na posição de prova</b>, cadência 95 nos 2 min finais",
-       "<b>CORRIDA — 5 min a 120-145 bpm</b>, sem forçar o ritmo; cadência alta e passada curta",
-       "<b>CORRIDA — 15 min em Z2 a 130-150 bpm</b>, cadência 158-165 spm",
-       "<b>É UM treino só:</b> abra a atividade MULTIESPORTE e troque de esporte pelo botão de volta — a transição entra sozinha; a volta à calma da bike não existe, vira bloco de preparação",
-       "<b>Trava:</b> corta-se volume, não estímulo — a bike de 60 min é a versão menor e o estímulo do brick, correr com a perna cansada, fica inteiro",
-       "<b>ANOTE o pace dos 15 min finais</b> — é o custo de brick. Marco de 06/09: 5:27,4/km com FC média 140; em 20/09 e 27/09 o segmento inteiro de corrida saiu a cerca de 5:18/km, FC 147-148",
-       "<b>Nutrição:</b> registre quanto de carboidrato ingeriu (rampa de set-out: 40 g/h)",
-       "<b>Confere com o workout 703 BRICK-B1 · Bike 60min + T2 + Corrida 20min</b> agendado no Garmin (id 1700625905)"
-      ]
-     }
-    ]
-   }
-  ]
- },
- {
   "sem": 12,
   "dias": [
    {
@@ -4475,17 +4510,18 @@ var AGENDA_FUTURA=[
     "s": [
      {
       "t": "n",
-      "n": "NAT-C3 · Ritmo Crítico 1.200 m",
-      "o": "previsão — versão de entrada até a trava liberar",
+      "n": "NAT-C2 · Ritmo Crítico 1.700 m",
+      "o": "previsão — a natação fechou 3 de 3 na semana 10 e libera a versão cheia",
       "det": [
-       "<b>200 m de aquecimento</b> solto, terminando com 2x25 progressivos no ritmo da série · <b>PAUSA 45 s</b> parado",
-       "<b>6x100 m no CSS</b> (vigente 2:46/100 m; o NAT-TESTE2 de 19/10 pode atualizá-lo) · pausa de 20 s parado · o 6o no mesmo tempo do 1o; se cair mais de 5 s, saiu rápido",
+       "<b>300 m de aquecimento</b> (200 solto + 100 progressivo terminando no ritmo da série) · <b>PAUSA 30 s</b> parado",
+       "<b>4x50 m de ativação progressiva</b>, o 4o já no ritmo alvo da série · pausa 15 s parado",
+       "<b>PAUSA 60 s</b> parado antes da série principal (75 s com os 15 s do último 50)",
+       "<b>8x100 m no CSS</b> (referência 2:46/100 m; o NAT-TESTE2 de 20/10 mediu 2:36,3/100 m) · pausa 20 s parado · o 8o no mesmo tempo do 1o; se cair mais de 5 s, saiu rápido",
        "<b>100 m bem solto</b>, alternando nados · <b>PAUSA 30 s</b> parado",
-       "<b>200 m no CSS, sem parar</b>",
-       "<b>PAUSA 30 s</b> parado antes de soltar",
-       "<b>100 m de volta à calma</b> · anote o tempo do 1o e do 6o cem",
-       "<b>Nado real:</b> 200+600+100+200+100 = 1.200 m; o Garmin estima 1.425 m — vale a soma dos passos",
-       "<b>Confere com o workout 703 NAT-C3 · Ritmo Critico 1200m (pausas)</b> agendado no Garmin (id 1702724518)"
+       "<b>3x200 m no ritmo alvo</b>, sem parar dentro de cada 200 · pausa 35 s parado",
+       "<b>200 m de volta à calma</b> · anote o tempo do 1o e do 8o cem e dos três 200",
+       "<b>Nado real:</b> 300+200+800+100+600+200 = 2.200 m; o nome diz 1.700 e o Garmin estima 2.645 m — vale a soma dos passos",
+       "<b>Confere com o workout 703 NAT-C2 · Ritmo Critico 1700m (pausas)</b> agendado no Garmin (id 1702724414)"
       ]
      },
      {
@@ -4501,7 +4537,7 @@ var AGENDA_FUTURA=[
        "<b>Desenvolvimento de ombro</b> 3x10 · pausa 90 s",
        "<b>Prancha frontal e lateral</b> 3 séries · pausa 60 s",
        "<b>Elevação de panturrilha</b> 3x15 · pausa 60 s",
-       "<b>Trava de progressão:</b> a semana 9 fechou com 0 de 2 forças, então volta ao volume que ele de fato completou — FOR-A e FOR-B base, sem passar para o FOR-MAX",
+       "<b>Trava de progressão (semana 10):</b> 3 forças contra 2 prescritas, então progride — FOR-A base nesta semana e FOR-MAX na semana 13, depois da semana de recuperação",
        "<b>Confere com o workout 703 FOR-A · Forca Base Triatlo (v2)</b> agendado no Garmin (id 1698840673)"
       ]
      }
@@ -4550,7 +4586,7 @@ var AGENDA_FUTURA=[
      {
       "t": "b",
       "n": "BIKE-B2D · Cadência 75 min (rolo)",
-      "o": "previsão — a bike de qualidade só volta se a trava da semana 10 liberar",
+      "o": "previsão — repete a bike de cadência da semana 10 (trava: 1 de 2 confirmada, repete)",
       "det": [
        "<b>15 min de aquecimento</b> progressivo a 90-112 bpm e 70-110 W",
        "<b>6x (3 min a 95-105 rpm em marcha leve + 2 min soltos)</b> — o alvo primário é a cadência, FC secundária 105-132 bpm; se passar de 132, alivie a marcha · soltos a 95-115 bpm e 70-110 W",
@@ -4574,7 +4610,7 @@ var AGENDA_FUTURA=[
        "<b>6x (2 min de cadência 158-165 spm + 3 min em Z2 a 130-150 bpm)</b> — passos mais curtos e frequentes no mesmo ritmo, sem correr mais rápido",
        "<b>5 min de volta à calma</b> em Z1, 105-130 bpm",
        "<b>Duração real:</b> os passos somam 45 min (10 + 6x5 + 5), embora o nome diga 50",
-       "<b>Referência:</b> no RUN-A2 de 17/10 a cadência do bloco Z2 ficou perto de 151 spm (média simples dos laps 3 a 12); a meta é 158-165",
+       "<b>Referência de 20 e 22/10:</b> nas duas os blocos de cadência saíram a 164-165 spm, mas em 20/10 os blocos aceleraram de 5:32 para 4:31/km com FC até 168 (o workout pede o mesmo ritmo), e em 22/10 ficaram em 5:44 a 6:47/km com FC 138-144. Fora dos blocos e no longo de 24/10 a cadência ficou perto de 153 spm; a meta é 158-165",
        "<b>Confere com o workout 703 RUN-A1 · Z2 50min + Cadencia 158-165</b> agendado no Garmin (id 1666533088)"
       ]
      },
@@ -4617,6 +4653,7 @@ var AGENDA_FUTURA=[
        "<b>60 min em Z2 estrito, 130-150 bpm</b> · se passar de 150, caminhe · cadência 155 ou mais quando lembrar",
        "<b>5 min de volta à calma</b> em Z1, 105-130 bpm",
        "<b>Referência de 17/10:</b> 12,34 km em 75 min; bloco Z2 (laps 3 a 13) 10,18 km a 6:21/km com FC média 148 — nos laps 7 a 13 a FC ficou em 150-152, no teto ou acima, com o ritmo caindo de 5:13 para 6:35/km",
+       "<b>Referência de 24/10:</b> 13,16 km em 75 min; bloco Z2 (laps 3 a 13) 10,74 km a 5:35/km com FC média 147, laps 7 a 13 em 148-150 sem passar do teto; cadência perto de 153 spm",
        "<b>Referência de 11/10:</b> calor úmido empurrou o longo para TEMPO (FC média 147, TE 3,7)",
        "<b>Confere com o workout 703 RUN-A2 · Longo Z2 75min</b> agendado no Garmin (id 1666533679)"
       ]
@@ -4661,9 +4698,205 @@ var AGENDA_FUTURA=[
     ]
    }
   ]
+ },
+ {
+  "sem": 13,
+  "dias": [
+   {
+    "date": "2026-11-09",
+    "dow": "Seg",
+    "s": [
+     {
+      "t": "n",
+      "n": "NAT-C2 · Ritmo Crítico 1.700 m",
+      "o": "previsão — natação cheia, mesma estrutura da semana 12",
+      "det": [
+       "<b>300 m de aquecimento</b> (200 solto + 100 progressivo terminando no ritmo da série) · <b>PAUSA 30 s</b> parado",
+       "<b>4x50 m de ativação progressiva</b>, o 4o já no ritmo alvo da série · pausa 15 s parado",
+       "<b>PAUSA 60 s</b> parado antes da série principal (75 s com os 15 s do último 50)",
+       "<b>8x100 m no CSS</b> (referência 2:46/100 m; o NAT-TESTE2 de 20/10 mediu 2:36,3/100 m) · pausa 20 s parado · o 8o no mesmo tempo do 1o; se cair mais de 5 s, saiu rápido",
+       "<b>100 m bem solto</b>, alternando nados · <b>PAUSA 30 s</b> parado",
+       "<b>3x200 m no ritmo alvo</b>, sem parar dentro de cada 200 · pausa 35 s parado",
+       "<b>200 m de volta à calma</b> · anote o tempo do 1o e do 8o cem e dos três 200",
+       "<b>Nado real:</b> 300+200+800+100+600+200 = 2.200 m; o nome diz 1.700 e o Garmin estima 2.645 m — vale a soma dos passos",
+       "<b>Confere com o workout 703 NAT-C2 · Ritmo Critico 1700m (pausas)</b> agendado no Garmin (id 1702724414)"
+      ]
+     },
+     {
+      "t": "f",
+      "n": "FOR-MAX · Pernas e Cadeia Posterior",
+      "o": "previsão — a força progride do base para o FOR-MAX; última sessão pesada de perna antes da meia maratona de 22/11",
+      "det": [
+       "<b>Agachamento livre a 80-85% de 1RM</b> 4x5 · pausa 180 s",
+       "<b>Levantamento terra romeno pesado</b> 4x5 · pausa 180 s",
+       "<b>Afundo búlgaro com halteres</b> 3x8 · pausa 120 s",
+       "<b>Elevação de panturrilha em pé com carga</b> 4x8 · pausa 90 s",
+       "<b>Flexão nórdica ou mesa flexora excêntrica</b> 3x6 · pausa 120 s",
+       "<b>Prancha frontal e lateral</b> 3 séries · pausa 60 s",
+       "<b>Trava de progressão (semana 10):</b> 3 forças contra 2 prescritas, então progride do base para o FOR-MAX. A moldura de 19/10 para a meia maratona pede sem perna pesada depois de terça 17/11",
+       "<b>Confere com o workout 703 FOR-MAX · Pernas e Cadeia Posterior (v2)</b> agendado no Garmin (id 1698840890)"
+      ]
+     }
+    ]
+   },
+   {
+    "date": "2026-11-10",
+    "dow": "Ter",
+    "s": [
+     {
+      "t": "r",
+      "n": "RUN-A1 · Z2 50 min + cadência 158-165",
+      "o": "previsão — corrida de cadência",
+      "det": [
+       "<b>Troca decidida pelo Alex em 19/10:</b> o RUN-V2 5x1000 m a 4:17/km existia para o teste de 12 min de 05/10; no Bloco A a corrida fica em manutenção e a cadência é o ponto aberto",
+       "<b>10 min de aquecimento</b> em Z1, 105-132 bpm",
+       "<b>6x (2 min de cadência 158-165 spm + 3 min em Z2 a 130-150 bpm)</b> — passos mais curtos e frequentes no mesmo ritmo, sem correr mais rápido",
+       "<b>5 min de volta à calma</b> em Z1, 105-130 bpm",
+       "<b>Duração real:</b> os passos somam 45 min (10 + 6x5 + 5), embora o nome diga 50",
+       "<b>Confere com o workout 703 RUN-A1 · Z2 50min + Cadencia 158-165</b> agendado no Garmin (id 1666533088)"
+      ]
+     },
+     {
+      "t": "n",
+      "n": "NAT-P3 · Ritmo de Prova 1.300 m",
+      "o": "previsão — bloco contínuo de 1.000 m",
+      "det": [
+       "<b>200 m de aquecimento</b> solto, com 4x25 progressivos no fim · <b>PAUSA 45 s</b> parado na borda",
+       "<b>100 m de largada simulada</b>, um pouco acima do ritmo · não pare no fim do passo",
+       "<b>800 m contínuos em ritmo de prova</b>, bilateral, olhos para frente duas vezes a cada 100 m · deve parecer fácil demais nos primeiros 300 m",
+       "<b>100 m finais acelerando até o CSS</b>",
+       "<b>Os 1.000 m (100+800+100) são sem pausa, de propósito</b> — a prova é assim",
+       "<b>PAUSA 30 s</b> parado · anote o tempo dos 800 m",
+       "<b>100 m de volta à calma</b> · anote como estava o ombro",
+       "<b>Nado real:</b> 200+100+800+100+100 = 1.300 m; o Garmin estima 1.375 m",
+       "<b>Confere com o workout 703 NAT-P3 · Ritmo de Prova 1300m (pausas)</b> agendado no Garmin (id 1702724669)"
+      ]
+     }
+    ]
+   },
+   {
+    "date": "2026-11-11",
+    "dow": "Qua",
+    "tag": "hard",
+    "s": [
+     {
+      "t": "b",
+      "n": "BIKE-B2D · Cadência 75 min (rolo)",
+      "o": "previsão — bike de cadência no rolo",
+      "det": [
+       "<b>15 min de aquecimento</b> progressivo a 90-112 bpm e 70-110 W",
+       "<b>6x (3 min a 95-105 rpm em marcha leve + 2 min soltos)</b> — o alvo primário é a cadência, FC secundária 105-132 bpm; se passar de 132, alivie a marcha · soltos a 95-115 bpm e 70-110 W",
+       "<b>20 min de base aeróbica a 112-128 bpm e 90-145 W</b>, mantendo 88-92 rpm · anote a potência média",
+       "<b>10 min de volta à calma</b> a 85-110 bpm e 65-105 W",
+       "<b>Confere com o workout 703 BIKE-B2D · Cadencia 75min (CAD+FC+POT)</b> agendado no Garmin (id 1700619909)"
+      ]
+     }
+    ]
+   },
+   {
+    "date": "2026-11-12",
+    "dow": "Qui",
+    "s": [
+     {
+      "t": "r",
+      "n": "RUN-A1 · Z2 50 min + cadência 158-165",
+      "o": "previsão — corrida de cadência",
+      "det": [
+       "<b>10 min de aquecimento</b> em Z1, 105-132 bpm",
+       "<b>6x (2 min de cadência 158-165 spm + 3 min em Z2 a 130-150 bpm)</b> — passos mais curtos e frequentes no mesmo ritmo, sem correr mais rápido",
+       "<b>5 min de volta à calma</b> em Z1, 105-130 bpm",
+       "<b>Duração real:</b> os passos somam 45 min (10 + 6x5 + 5), embora o nome diga 50",
+       "<b>Referência de 20 e 22/10:</b> nas duas os blocos de cadência saíram a 164-165 spm, mas em 20/10 os blocos aceleraram de 5:32 para 4:31/km com FC até 168 (o workout pede o mesmo ritmo), e em 22/10 ficaram em 5:44 a 6:47/km com FC 138-144. Fora dos blocos e no longo de 24/10 a cadência ficou perto de 153 spm; a meta é 158-165",
+       "<b>Confere com o workout 703 RUN-A1 · Z2 50min + Cadencia 158-165</b> agendado no Garmin (id 1666533088)"
+      ]
+     },
+     {
+      "t": "f",
+      "n": "FOR-B · Tronco, Ombro e Core",
+      "o": "previsão — tronco e ombro",
+      "det": [
+       "<b>Rotação externa de ombro com elástico</b> 3x15 · pausa 45 s",
+       "<b>Remada unilateral com halter</b> 3x10 · pausa 75 s",
+       "<b>Puxada alta ou barra fixa assistida</b> 3x8 · pausa 90 s",
+       "<b>Flexão de braço</b> 3x12 · pausa 60 s",
+       "<b>Desenvolvimento de ombro em pé</b> 3x10 · pausa 75 s",
+       "<b>Farmers carry 40 m</b> 3 séries · pausa 75 s",
+       "<b>Prancha frontal 45 s e lateral 30 s por lado</b> 3 séries · pausa 45 s",
+       "<b>Pallof press anti-rotação</b> 3x10 · pausa 45 s",
+       "<b>Registrado em 01/10:</b> o relógio abriu este workout com uma repetição por exercício, embora a API traga 3 séries em todos — causa não confirmada; se repetir, anote",
+       "<b>Confere com o workout 703 FOR-B · Tronco, Ombro e Core (v2)</b> agendado no Garmin (id 1698840822)"
+      ]
+     }
+    ]
+   },
+   {
+    "date": "2026-11-13",
+    "dow": "Sex",
+    "tag": "off",
+    "s": []
+   },
+   {
+    "date": "2026-11-14",
+    "dow": "Sab",
+    "tag": "hard",
+    "s": [
+     {
+      "t": "r",
+      "n": "RUN-A2 · Longo Z2 75 min",
+      "o": "previsão — o longo do sábado",
+      "det": [
+       "<b>10 min de aquecimento</b> em Z1, 105-132 bpm",
+       "<b>60 min em Z2 estrito, 130-150 bpm</b> · se passar de 150, caminhe · cadência 155 ou mais quando lembrar",
+       "<b>5 min de volta à calma</b> em Z1, 105-130 bpm",
+       "<b>Referência de 17/10:</b> 12,34 km em 75 min; bloco Z2 (laps 3 a 13) 10,18 km a 6:21/km com FC média 148 — nos laps 7 a 13 a FC ficou em 150-152, no teto ou acima, com o ritmo caindo de 5:13 para 6:35/km",
+       "<b>Referência de 24/10:</b> 13,16 km em 75 min; bloco Z2 (laps 3 a 13) 10,74 km a 5:35/km com FC média 147, laps 7 a 13 em 148-150 sem passar do teto; cadência perto de 153 spm",
+       "<b>Referência de 11/10:</b> calor úmido empurrou o longo para TEMPO (FC média 147, TE 3,7)",
+       "<b>Confere com o workout 703 RUN-A2 · Longo Z2 75min</b> agendado no Garmin (id 1666533679)"
+      ]
+     },
+     {
+      "t": "n",
+      "n": "NAT-E2 · Economia 1.800 m",
+      "o": "previsão — o maior nado da semana",
+      "det": [
+       "<b>300 m de aquecimento</b> em crawl suave, expirando dentro da água · <b>PAUSA 30 s</b> parado",
+       "<b>4x50 m de contagem base</b>, pausa 15 s — conte as braçadas por piscina em ritmo confortável; é a referência do dia",
+       "<b>PAUSA ENTRE BLOCOS 45 s</b> parado (60 s com os 15 s do último 50)",
+       "<b>10x50 m com UMA BRAÇADA A MENOS que a base</b>, no mesmo tempo · pausa 20 s",
+       "<b>PAUSA ENTRE BLOCOS 60 s</b> parado (80 s com os 20 s do último 50)",
+       "<b>6x100 m nado completo</b> mantendo a contagem reduzida · pausa 25 s",
+       "<b>200 m de volta à calma</b> · anote a contagem base e a final",
+       "<b>Nado real:</b> 300+200+500+600+200 = 1.800 m; a estimativa do Garmin (2.345 m) não bate com a soma dos passos",
+       "<b>Confere com o workout 703 NAT-E2 · Economia 1800m (pausas)</b> agendado no Garmin (id 1702724141)"
+      ]
+     }
+    ]
+   },
+   {
+    "date": "2026-11-15",
+    "dow": "Dom",
+    "s": [
+     {
+      "t": "b",
+      "n": "BRICK-D1 · Bike 68 min + T2 + Corrida 20 min",
+      "o": "previsão — o brick padrão de 88 min",
+      "det": [
+       "<b>BIKE — 15 min de aquecimento</b> progressivo a 95-115 bpm e 70-110 W · no rolo, faça o spindown antes",
+       "<b>BIKE — 3x (12 min a 125-136 bpm e 100-150 W, cadência 85-90 rpm + 3 min soltos a 100-115 bpm e 70-110 W)</b> · anote a potência de cada bloco",
+       "<b>BIKE — 8 min de preparação da transição</b> a 130-140 bpm e 110-160 W na posição de prova; nos 2 min finais suba a cadência para 95 sem aumentar a carga",
+       "<b>CORRIDA — 5 min a 120-145 bpm</b>, sem forçar o ritmo; é nesses minutos que está o treino",
+       "<b>CORRIDA — 15 min em Z2 a 130-150 bpm</b>, cadência 158-165 spm",
+       "<b>É UM treino só:</b> abra a atividade MULTIESPORTE e troque de esporte pelo botão de volta",
+       "<b>ANOTE o pace dos 15 min finais</b> — o custo de brick. Se o readiness do despertar estiver abaixo de 40, o workout manda cortar para aquecimento + bloco final + corrida",
+       "<b>Confere com o workout 703 BRICK-D1 · Bike 68min + T2 + Corrida 20min</b> agendado no Garmin (id 1700625780)"
+      ]
+     }
+    ]
+   }
+  ]
  }
 ];
-var AGENDA_FUTURA_UPDATED = "24/10/2026 15:43 - conferida contra o Garmin (26/10 a 15/11): conteudo identico, nada alterado. Anterior: 24/10/2026 06:15 - 23/10/2026 07:30 - conferida contra o Garmin (26/10 a 15/11): conteudo identico, nada alterado. Anterior: 19/10/2026 - semanas 11 (26/10 a 01/11) e 12 (02 a 08/11) reescritas depois da decisao do Alex de avancar em vez de repetir e de priorizar corridas em terca e quinta; calendario do Garmin conferido; reconferido em 20/10/2026 06:20 e em 22/10/2026 07:30 e em 23/10/2026 06:15 sem divergencias (sem 11 e 12; semana 13 ainda nao agendada)";
+var AGENDA_FUTURA_UPDATED = "25/10/2026 23:40 - reescrita pelo fechamento semanal: semanas 12 (02 a 08/11, NAT-C3 de 02/11 trocado por NAT-C2) e 13 (09 a 15/11, agendada agora, FOR-MAX na segunda); semana 11 virou SEMANA_ATUAL. Calendario do Garmin conferido. Anterior: 25/10/2026 06:15 - conferida contra o Garmin (26/10 a 15/11): conteudo identico, nada alterado. Anterior: 24/10/2026 15:43 - conferida contra o Garmin (26/10 a 15/11): conteudo identico, nada alterado. Anterior: 24/10/2026 06:15 - 23/10/2026 07:30 - conferida contra o Garmin (26/10 a 15/11): conteudo identico, nada alterado. Anterior: 19/10/2026 - semanas 11 (26/10 a 01/11) e 12 (02 a 08/11) reescritas depois da decisao do Alex de avancar em vez de repetir e de priorizar corridas em terca e quinta; calendario do Garmin conferido; reconferido em 20/10/2026 06:20 e em 22/10/2026 07:30 e em 23/10/2026 06:15 sem divergencias (sem 11 e 12; semana 13 ainda nao agendada)";
 /* ==== FIM AGENDA FUTURA ==== */
 
 /* ==== INICIO ATIVIDADES - NAO EDITAR A MAO ====
@@ -4674,34 +4907,6 @@ var AGENDA_FUTURA_UPDATED = "24/10/2026 15:43 - conferida contra o Garmin (26/10
             dur (min totais), mov (min em movimento), fcm, fcx, te, teLabel, rpe, kcal,
             movidoDe:"AAAA-MM-DD" quando o treino era de outro dia} */
 var ATIVIDADES=[
- {
-  "date": "2026-08-24",
-  "t": "r",
-  "nome": "RUN-0 Retomada Z1/Z2",
-  "dist": 5.86,
-  "dur": 35.1,
-  "mov": 35.1,
-  "fcm": 129,
-  "fcx": 153,
-  "te": 2.3,
-  "teLabel": "AEROBIC_BASE",
-  "rpe": null,
-  "kcal": 458
- },
- {
-  "date": "2026-08-24",
-  "t": "n",
-  "nome": "Natacao em piscina - aula",
-  "dist": 1200,
-  "dur": 53.6,
-  "mov": 20.2,
-  "fcm": 110,
-  "fcx": 137,
-  "te": 2.1,
-  "teLabel": "AEROBIC_BASE",
-  "rpe": 60,
-  "kcal": 459
- },
  {
   "date": "2026-08-25",
   "t": "x",
@@ -5773,9 +5978,54 @@ var ATIVIDADES=[
   "rpe": 60,
   "kcal": 365,
   "fonte": "Garmin id 24826532391, lap_swimming. Ritmo 2:28/100 m em tempo de movimento (1892 s para 1275 m); sem splits disponiveis."
+ },
+ {
+  "date": "2026-10-24",
+  "t": "r",
+  "nome": "RUN-A2 Longo Z2 75min",
+  "dist": 13.16,
+  "dur": 75.1,
+  "mov": 75,
+  "fcm": 145,
+  "fcx": 154,
+  "te": 4.1,
+  "teLabel": "TEMPO",
+  "rpe": 80,
+  "kcal": 1053,
+  "fonte": "Garmin id 24840098858, running. Pace medio 5:42/km em tempo de movimento; sem splits por lap analisados."
+ },
+ {
+  "date": "2026-10-25",
+  "t": "b",
+  "nome": "BRICK-D1 Bike 68min (rua)",
+  "dist": 30.85,
+  "dur": 68,
+  "mov": 68,
+  "fcm": 134,
+  "fcx": 158,
+  "te": 3.5,
+  "teLabel": "TEMPO",
+  "rpe": null,
+  "kcal": 810,
+  "fonte": "recuperado das telas do relogio em 26/10 - a atividade multiesporte nao sincronizou"
+ },
+ {
+  "date": "2026-10-25",
+  "t": "r",
+  "nome": "BRICK-D1 Corrida 20min pos-bike",
+  "dist": 3.67,
+  "dur": 20,
+  "mov": 20,
+  "fcm": 147,
+  "fcx": 157,
+  "te": 3.8,
+  "teLabel": "TEMPO",
+  "rpe": null,
+  "kcal": 290,
+  "fonte": "recuperado das telas do relogio em 26/10 - a atividade multiesporte nao sincronizou"
  }
 ];
-var ATIVIDADES_UPDATED = "23/10/2026 18:55";
+var ATIVIDADES_UPDATED = "26/10/2026 - brick de 25/10 recuperado a mao das telas do relogio";
 /* ==== FIM ATIVIDADES ==== */
 
 var REFS=[
@@ -6329,6 +6579,7 @@ function renderMini(){ renderRegistro(); }
    Le o LOG_AUTO (permanente, escrito pelas tarefas) e monta o acumulado.
    O arquivo HISTORICO_703.md na pasta e a fonte de verdade; isto e a vista. */
 var DECISOES=[
+ ["26/10/2026","<b>Brick de 25/10 recuperado a mao</b> — e o custo de brick praticamente sumiu","<b>A atividade multiesporte nao saiu do relogio</b> pela segunda vez seguida (a de 18/10 tambem nao). Verificado: nao existe no Connect, os segmentos-filhos tambem nao subiram, o workout BRICK-D1 esta <b>integro e identico</b> ao que sincronizou em 20/09 (nunca editado desde 17/09), e o relogio sincronizou normalmente em 26/10 as 14:43. <b>A configuracao nao e a causa</b> — o arquivo nao saiu do dispositivo, e o MCP do Garmin nao alcanca o relogio. Os dados foram transcritos das telas do relogio e lancados como duas atividades manuais (ids 24862972882 e 24862975178), com os numeros reais na descricao de cada uma. <b>BIKE:</b> 30,85 km em 1:08:00, 27,2 km/h, FC 134/158, 367 m de subida, TE 3,5. A FC media de 134 cai exatamente dentro dos 125-136 prescritos nos blocos — execucao fiel. <b>CORRIDA:</b> 3,67 km em 20:00,9 a <b>5:28/km</b> com FC 147, cadencia 153 epm. <b>O numero que importa:</b> o alvo de prova e <b>5:27/km</b> e ele entregou 5:28 <b>depois de 1h08 de bike e no dia seguinte a um longo de 13,16 km</b>. O marco anterior, de 06/09, era 5:27,4/km com FC 140 — mesmo ritmo, 7 bpm a mais, mas desta vez com um longo na vespera. <b>Ressalva honesta:</b> 20 min e curto demais para medir custo de brick de forma comparavel a uma meia maratona; o que este dado mostra e que a transicao bike-corrida nao esta custando ritmo em volume curto, nao que a corrida de prova esta resolvida. <b>Dois pontos de atencao:</b> a cadencia segue em 153 epm contra alvo de 158-165 (subiu de 148 em 11/10, mas ainda baixa), e a bike na rua saiu a 27,2 km/h contra meta de prova de 31,8 — com 367 m de subida no percurso, mas e a terceira evidencia seguida de que <b>o ciclismo e a modalidade mais distante do alvo</b>"],
  ["15/10/2026","<b>Teste de 12 min: 2.763 m.</b> Faltaram 37 m, e o pacing explica os 37 m","<b>Resultado medido em 05/10</b>, laps 11 a 13 do workout (<code>workout_step_index 6</code>), somando <b>720,0 s exatos</b>: 1.000 m em 253,65 s + 1.000 m em 267,71 s + 763,01 m em 198,64 s = <b>2.763,01 m</b>. Meta era 2.800 m — <b>faltou 1,3%</b>. Ritmo médio 4:20,6/km contra alvo de 4:17. <b>O problema foi distribuição, não capacidade:</b> o primeiro quilômetro saiu a <b>4:13,6</b> (3,4 s/km rápido demais), o segundo despencou para <b>4:27,7</b> (10,7 s/km lento) e o final recuperou para 4:20,3. Aqueles 10,7 s perdidos no segundo quilômetro valem <b>cerca de 41 m</b> no ritmo dele — praticamente o que faltou para a meta. Com ritmo constante a 4:17 o teste fecharia em 2.801 m. FC subiu 148 → 154 → 168, com <b>pico de 179</b>, confirmando que a máxima real está em 179-182 e não nos 171 do laboratório. <b>VO₂máx pela equação de Cooper: (2.763 − 504,9) ÷ 44,73 = 50,5</b>, contra 51,38 medido em esteira em out/2025 e 51,2 que o relógio estima hoje — as três medidas convergem dentro de 2%. A meta de 2.800 m continua válida e está ao alcance: o que precisa treinar é <b>pacing constante</b>, não VO₂máx"],
  ["15/10/2026","<b>FTP medido: 151 W</b> — mas o teste foi conservador e o número provavelmente subestima","<b>Teste completo em 30/09</b>, agora com os 20 min inteiros (laps 10 e 11, <code>workout_step_index 5</code>, 1.200,0 s exatos): 619,77 s a <b>172 W</b> e 580,23 s a <b>164 W</b>, média ponderada de <b>168,1 W</b>. Pela fórmula, <b>FTP = 168 × 0,90 = 151 W</b>, ou <b>1,84 W/kg</b>. <b>A ressalva é grande e precisa ficar registrada:</b> a FC no bloco ficou em <b>122-123 bpm</b>, com máxima de 129. Em 13/09, no teste de campo na rua, ele sustentou <b>139-140 bpm por 20 min</b> — são <b>17 batimentos de diferença</b>. Num esforço que deveria ser o máximo sustentável, ficar 17 bpm abaixo do que já se provou capaz indica que o teste não foi ao limite. Então 151 W é um <b>piso medido</b>, não o FTP real. <b>O que isso significa para a meta:</b> 90 km a 31,8 km/h exigem cerca de <b>187 W</b>. Com FTP de 151 W, a potência sustentável por 2h50 ficaria perto de 118 W, o que daria algo como 27 km/h e <b>3h18 nos 90 km — quase 30 min acima da meta</b>. Esse cálculo usa um intensity factor que é prática de treinador, não achado de artigo, e parte de um FTP que o próprio teste sugere estar baixo. Mas a direção é clara e não deve ser maquiada: <b>a bike é a modalidade mais distante da meta</b>, e é também a que mais prediz o tempo total no 70.3. Próximo teste em 8 semanas, com instrução explícita de pacing pela FC: o bloco de 20 min tem de terminar acima de 135 bpm"],
  ["15/10/2026","<b>Semana-padrão invertida</b> — corrida passa para terça, quinta, sábado e domingo","<b>Disponibilidade nova informada por ele na volta da viagem</b>, e ela inverte a regra de 22/08: <b>terça e quinta, que eram os dias SEM corrida, agora são dias de corrida</b>; a segunda, que era dia de corrida, passa a receber natação e força. E a <b>bike na rua só no fim de semana</b> — durante a semana, rolo. Isso fixa quarta e sexta no rolo e manda o pedal de rua para o domingo, junto do brick, o que casa bem porque o brick quer bike longa. Nova distribuição: <b>3 natações, 2 bikes, 4 corridas, 2 forças, 1 folga</b>, com os dias duros em terça, quarta e sábado. <b>Risco que fica registrado:</b> com quatro corridas e duas bikes, a semana pende para a corrida — a modalidade que ele já tem forte — enquanto o ciclismo fica com menos sessões, e o domingo na rua passa a carregar quase todo o volume de bike. Se o domingo cai, a bike da semana vira só o rolo de quarta. O fechamento de domingo precisa vigiar isso"],
@@ -6709,7 +6960,10 @@ var DECISOES=[
  ["18/10/2026","<b>Semanas 11 e 12 ajustadas; a regra de terça e quinta da tarefa semanal está desatualizada</b>","A decisão de 15/10 (semana-padrão invertida: corrida em terça, quinta, sábado e domingo, bike de semana no rolo) <b>substituiu</b> a regra antiga de que terça e quinta não recebem corrida, mas o texto da tarefa semanal ainda traz a regra antiga — <b>esse arquivo precisa ser corrigido</b>, senão o fechamento desfaz a semana-padrão toda semana. Nesta rodada o calendário foi mexido pela regra antiga e depois refeito pela de 15/10. Resultado: <b>semana 11</b> (recuperação, alvo 6,3 h) com cerca de 7,4 h, +17%, dentro do limite de 20%: NAT-C3 e FOR-B na segunda, RUN-A1 e NAT-P3 na terça, REGEN-B3 na quarta, FOR-A na quinta (sem corrida, para fechar o piso de 2 forças — antes só havia FOR-B), RUN-A1 e NAT-E2 no sábado, BRICK-B1 no domingo. <b>Semana 12</b> (alvo 8,6 h) agendada de forma provisória em cerca de 9,2 h, +7%: depende do que a trava de 25/10 liberar. A semana 12 não existia no calendário"],
  ["18/10/2026","<b>VO2máx de corrida caiu de 51,2 para 49,0 depois do longo de 17/10</b>","Estimativa do Garmin, recalculada após o RUN-A2 de sábado (12,34 km, FC 145 de média, FC 150-152 nos últimos 7 km): 51,2 até 16/10, 49,0 em 17/10 e 49,3 em 18/10. Em 5 semanas o relógio foi de 49,9 a 51,3 e voltou. <b>Não é medida clínica e variações pontuais assim não indicam perda de condicionamento por si só</b>; a leitura que cabe é acompanhar a tendência de 4 a 6 semanas. O longo de 17/10 teve FC acima do teto de 150 nos 7 km finais, o mesmo padrão do longo de 11/10"],
  ["19/10/2026","<b>Brick de 18/10 foi feito — e a trava da semana 9 muda</b>","O Alex trouxe fotos do relógio (a atividade não sincronizou com o Garmin): <b>BRICK-B1, 30,97 km em 1:24:50, 938 kcal, FC média 128 e máxima 154, TE aeróbico 3,4 e anaeróbico 0,9</b>; trechos de <b>bike 1:00:00 e corrida 20:07,68</b>. A diferença de 4:43 entre o total e os dois trechos provavelmente é a T2, mas a tela não mostra. <b>Sem distância nem FC por trecho, o pace da corrida e o custo de brick ficam sem dado.</b> A semana 9 passa a <b>4 das 9 sessões, 5,05 h de 8,2 h (62%)</b>. Recontando a trava com o brick (uma sessão que conta para bike e corrida): <b>bike 2/2 → progride; corrida 2/3 → mais da metade, com readiness médio 80,0 e FCrep 40,7 na base → progride; natação 2/3 → progride; força 0/2 → regride a FOR-A e FOR-B base</b>. Isso <b>substitui a conduta de 18/10</b> (corrida e bike repetem), que se baseava no brick não realizado"],
- ["19/10/2026","<b>Decisão do Alex: avançar um pouco em vez de repetir, e corridas prioritariamente em terça e quinta</b>","<b>Duas instruções dele em 19/10.</b> (1) Apesar de não ter cumprido o tempo previsto nas semanas, <b>avançar um pouco</b> em vez de repetir tudo. (2) <b>Corridas de semana prioritariamente em terça e quinta</b>; sábado e domingo mantêm a disponibilidade. A semana 10 volta ao desenho de 15/10: <b>Seg NAT-TESTE2 + FOR-A · Ter RUN-V1 + NAT-P3 · Qua BIKE-B2D · Qui RUN-A1 + FOR-B · Sex folga · Sáb RUN-A2 + NAT-E2 · Dom BRICK-D1</b>, cerca de <b>9,55 h contra alvo de 9,4 h (+2%)</b> (durações estimadas; força estimada em 52 e 42 min). O que avança: a qualidade de corrida (RUN-V1, a primeira desde o RUN-V3 de 28/09 e o Cooper), a bike de cadência de 75 min e o brick de 88 min. A força fica base. <b>Risco registrado:</b> o RUN-V1 de terça vem 2 dias depois de um longo em que a FC passou de 150 nos últimos 7 km e de um despertar com readiness 60 e 21 h de recovery; se o readiness de terça vier baixo, a leitura de hoje é do Alex, não minha. <b>Semana 11</b> (recuperação, alvo 6,3 h) ≈ 7,2 h (+15%): Seg NAT-C3 + FOR-A · Ter RUN-A1 + NAT-P3 · Qua REGEN-B3 · Qui RUN-0 + FOR-B · Sex folga · Sáb NAT-E2 (sem corrida, para caber no limite de 20%) · Dom BRICK-B1. <b>Semana 12</b> (alvo 8,6 h, provisória) ≈ 9,5 h (+11%), com RUN-V2 na terça"]
+ ["19/10/2026","<b>Decisão do Alex: avançar um pouco em vez de repetir, e corridas prioritariamente em terça e quinta</b>","<b>Duas instruções dele em 19/10.</b> (1) Apesar de não ter cumprido o tempo previsto nas semanas, <b>avançar um pouco</b> em vez de repetir tudo. (2) <b>Corridas de semana prioritariamente em terça e quinta</b>; sábado e domingo mantêm a disponibilidade. A semana 10 volta ao desenho de 15/10: <b>Seg NAT-TESTE2 + FOR-A · Ter RUN-V1 + NAT-P3 · Qua BIKE-B2D · Qui RUN-A1 + FOR-B · Sex folga · Sáb RUN-A2 + NAT-E2 · Dom BRICK-D1</b>, cerca de <b>9,55 h contra alvo de 9,4 h (+2%)</b> (durações estimadas; força estimada em 52 e 42 min). O que avança: a qualidade de corrida (RUN-V1, a primeira desde o RUN-V3 de 28/09 e o Cooper), a bike de cadência de 75 min e o brick de 88 min. A força fica base. <b>Risco registrado:</b> o RUN-V1 de terça vem 2 dias depois de um longo em que a FC passou de 150 nos últimos 7 km e de um despertar com readiness 60 e 21 h de recovery; se o readiness de terça vier baixo, a leitura de hoje é do Alex, não minha. <b>Semana 11</b> (recuperação, alvo 6,3 h) ≈ 7,2 h (+15%): Seg NAT-C3 + FOR-A · Ter RUN-A1 + NAT-P3 · Qua REGEN-B3 · Qui RUN-0 + FOR-B · Sex folga · Sáb NAT-E2 (sem corrida, para caber no limite de 20%) · Dom BRICK-B1. <b>Semana 12</b> (alvo 8,6 h, provisória) ≈ 9,5 h (+11%), com RUN-V2 na terça"],
+ ["25/10/2026","<b>Trava da semana 10: natação e força progridem; corrida e bike REPETEM</b>","Aderência pelo Garmin, sem o brick de 25/10 (não consta no Garmin nem no Strava até 20:12 BRT): natação <b>3 de 3</b> (NAT-TESTE2 em 20/10, deslocado; natação livre de 21/10 no lugar do NAT-P3; NAT-P3 em 23/10; o NAT-E2 de 24/10 não saiu) → tudo, <b>progride</b>. Força <b>3 de 2</b> (FOR-A, FOR-B e uma força leve de 27 min em 23/10) → <b>progride</b>. Corrida <b>3 de 4</b> (RUN-A1 em 20 e 22/10, RUN-A2 em 24/10; falta o trote do brick) → mais da metade, mas o readiness médio ao despertar foi <b>57,6</b>, abaixo de 60 (FCrep médio 42,6, na base) → <b>repete</b>. Bike <b>1 de 2</b> (BIKE-B2D de 21/10) → exatamente metade → <b>repete</b>. Se o brick foi feito e não sincronizou — a leitura pós-exercício de 25/10 às 11:02 mostra carga aguda de 861 e 62,4 h de recovery, o que sugere treino, mas não prova — bike passa a 2 de 2 e corrida a 4 de 4, e a conduta de ambas muda para progride. A semana 11 de recuperação fica igual nos dois casos, porque já está abaixo do volume feito. A trava corta volume, nunca o estímulo do brick."],
+ ["25/10/2026","<b>Semana 11 mantida (recuperação): cerca de 7,25 h contra alvo de 6,3 h, +15%</b>","Somando as durações (força estimada em 52 e 42 min): NAT-C3 41 + FOR-A 52 + RUN-A1 45 + NAT-P3 40 + REGEN-B3 40 + RUN-0 35 + FOR-B 42 + NAT-E2 60 + BRICK-B1 80 = 435 min = 7,25 h. Pisos respeitados: 3 natações, 2 corridas mais o brick, 2 bikes (REGEN-B3 e o brick), 2 forças, folga na sexta 30/10. O calendário do Garmin já batia com o painel; nada foi movido. Na manhã de 25/10 o readiness foi 45 (LOW) com 35,8 h de recovery pedidas, e a leitura de 11:02 mostrou carga aguda 861 e 62,4 h; manter ou cortar a FOR-A de segunda diante do readiness de 26/10 é decisão do Alex."],
+ ["25/10/2026","<b>Semana 12: NAT-C3 de 02/11 vira NAT-C2; semana 13 agendada</b>","A natação fechou 3 de 3 e a regra da biblioteca manda usar as versões cheias quando a trava libera: a segunda 02/11 troca o NAT-C3 (1.200 m) pelo NAT-C2 (nado real 2.200 m, id 1702724414). NAT-P3 e NAT-E2 ficam, porque a NAT-P cheia (1.900 m contínuos) segue sem degrau intermediário. Semana 12 ≈ 582 min = 9,7 h contra 8,6 h (+13%). Semana 13 (09 a 15/11, alvo 10,0 h) agendada em ≈ 590 min = 9,8 h (−2%): Seg NAT-C2 + FOR-MAX · Ter RUN-A1 + NAT-P3 · Qua BIKE-B2D · Qui RUN-A1 + FOR-B · Sex folga · Sáb RUN-A2 + NAT-E2 · Dom BRICK-D1. O FOR-MAX (pernas) volta na segunda 09/11, a última sessão pesada de perna antes da meia maratona de 22/11; a semana 12 fica com FOR-A base. Ponto ainda aberto, de decisão dele: o maior longo recente é de 13,16 km (24/10) e o RUN-A2 segue em 75 min nas semanas 12 e 13, contra os 21,1 km da meia."]
 ];
 
 function histDados(){
