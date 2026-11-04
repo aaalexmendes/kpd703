@@ -2503,9 +2503,25 @@ var LOG_AUTO=[
   "runT": 35,
   "obs": "RODADA DA MANHA, relogio SINCRONIZOU as 06:00 BRT (reconsulta as 06:40). Readiness do DESPERTAR 11 POOR as 06:00:29, AFTER_WAKEUP_RESET, feedback TIME_TO_SLOW_DOWN, unica leitura do dia, recovery time 55,3 h. FATORES: sono 74 por cento GOOD, recuperacao 24 por cento POOR, carga de treino 95 por cento GOOD, VFC 66 por cento MODERATE, historico de estresse 88 por cento GOOD, historico de sono 50 por cento MODERATE. FCrep 41, dentro da base 40-43. VFC semanal 53, dentro da banda 52-74, perto do piso; VFC da noite 52. SONO 7,12 h score 82 GOOD, 11,9 por cento profundo, 72,6 por cento leve, 15,5 por cento REM, zero despertares, 58 momentos de inquietude, SpO2 media 96 e minima 86. CARGA AGUDA 522, contra 649 no fechamento de ontem. NENHUMA ATIVIDADE REGISTRADA ate as 06:40. SEMAFORO VERMELHO. REGRA DE PARADA DISPARADA: readiness do despertar abaixo de 40 por dois dias seguidos (1 em 02/11 e 11 em 03/11). As outras duas regras NAO dispararam: FCrep 41, 42 e 42 (limite 48) e sono 8,38 h e 7,12 h (limite 6 h). O FCrep baixo e o sono bom mostram que o problema esta no fator RECUPERACAO (24 por cento, 55,3 h pedidas), nao em sono ou repouso. Plano do dia no painel e no Garmin: FOR-A, RUN-RP 3x3 km em ritmo de prova 5:27/km e NAT-E2 1800 m. Pelo semaforo e pela regra de parada, a sugestao e NAO fazer o RUN-RP em ritmo de prova hoje; a decisao de reduzir, trocar ou descansar e do Alex. PASSO 3: SEMANA_ATUAL de hoje em diante confere com o Garmin, mesmos workout_id, nada corrigido. NAO SOU MEDICO NEM TREINADOR. || FECHAMENTO DO DIA 19:00 BRT. TREINADO: (1) FOR-A Forca Base Triatlo, strength_training, 07:33, 60,1 min (56,2 em movimento), FC media 90 e max 135, TE 0,4, 296 kcal. (2) CORRIDA 09:02, nome no Garmin RUN-0 Retomada Z1/Z2 35mi, 5,69 km em 35,0 min, pace 6:09/km, FC media 138 e max 151, TE 3,1 AEROBIC_BASE, RPE 60, 466 kcal, ganho 50 m, cadencia 149. A vaga prevista para hoje era RUN-RP 3x3 km em ritmo de prova; o Alex fez a RUN-0 (prevista para quinta 05/11) em seu lugar, o que e uma corrida leve, coerente com a sugestao da manha. NAT-E2 NAO registrada ate as 19:00. READINESS POS-EXERCICIO (nao e o do despertar, que segue 11): 14 as 08:37 e 3 as 09:38, AFTER_POST_EXERCISE_RESET, recovery time 72,6 h, recuperacao 10 por cento POOR. CARGA AGUDA 643 (522 de manha, 649 ontem). FCrep 41, VFC semanal 53, sono 7,12 h. NAO SOU MEDICO NEM TREINADOR.",
   "auto": true
+ },
+ {
+  "date": "2026-11-04",
+  "read": 15,
+  "rhr": 46,
+  "hrv": 52,
+  "sleep": 6.37,
+  "acute": 527,
+  "natM": null,
+  "natT": null,
+  "bikeK": null,
+  "bikeT": null,
+  "runK": null,
+  "runT": null,
+  "obs": "RODADA DA MANHA as 09:15 BRT (relogio sincronizou 06:06), quarta, semana 12 de 35, 165 dias para a prova. Readiness do DESPERTAR 15 POOR as 06:06:08, AFTER_WAKEUP_RESET, feedback TIME_TO_SLOW_DOWN, unica leitura do dia, recovery time 52,1 h. FATORES: sono 61 por cento MODERATE (score 74), recuperacao 27 por cento POOR, carga de treino 95 por cento GOOD, VFC 60 por cento MODERATE, historico de estresse 90 por cento GOOD, historico de sono 69 por cento MODERATE. FCrep 46 (ontem 41), sono 6,37 h (deep 1,2 h, REM 0,7 h), VFC noturna 46, media semanal 52. REGRA DE PARADA: readiness abaixo de 40 por 3 dias seguidos (02/11 = 1, 03/11 = 11, 04/11 = 15). FCrep e sono ainda fora dos gatilhos. Sem atividade registrada hoje ate o momento. Ontem 03/11: forca 60 min (FC 90/135) e corrida RUN-0 5,69 km em 35 min (FC 138/151); Garmin mostra NAT-E2 e RUN-RP de 03/11 como nao concluidos. Treino de hoje no painel: BIKE-B2D cadencia 75 min.",
+  "auto": true
  }
 ];
-var LOG_AUTO_UPDATED = "03/11/2026 19:00";
+var LOG_AUTO_UPDATED = "04/11/2026 09:15";
 /* ==== FIM DADOS AUTOMATICOS ==== */
 
 /* ==== INICIO CHECKLIST DA SEMANA - NAO EDITAR A MAO ====
@@ -2564,7 +2580,7 @@ var NOTAS = {
 };
 /* ==== FIM ANOTACOES ==== */
 
-var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,10,3);
+var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,10,4);
 
 var SECOES=[
  ["s-visao","01","Visão geral"],["s-atual","02","Hoje"],["s-trilhas","03","As três trilhas"],
@@ -4732,19 +4748,6 @@ var SEMANA_ATUAL=[
   "dow": "Qui",
   "s": [
    {
-    "t": "r",
-    "n": "RUN-0 · Retomada Z1/Z2 35 min",
-    "o": "corrida leve no lugar do RUN-A1, para caber no limite de volume",
-    "det": [
-     "<b>5 min de aquecimento</b> (sem alvo de FC)",
-     "<b>25 min de corrida a 115-140 bpm</b>",
-     "<b>5 min de desaquecimento</b>",
-     "<b>Total 35 min.</b> Retomada leve na semana da meia; referência de 29/10: 5,25 km em 30 min, 5:46/km, FC 128/141, cadência 149",
-     "<b>Corte de volume desta semana:</b> a bike progride (BIKE-B2D e BRICK-D1) e o total precisava ficar em até +20% do alvo; o RUN-A1 de quinta (45 min, cadência) foi trocado por este RUN-0 de 35 min. Para manter o RUN-A1, é preciso tirar outros ~10 min da semana",
-     "<b>Confere com o workout 703 RUN-0 · Retomada Z1/Z2 35min</b> agendado no Garmin (id 1666536253)"
-    ]
-   },
-   {
     "t": "f",
     "n": "FOR-B · Tronco, Ombro e Core",
     "o": "força base de tronco e ombro",
@@ -5215,7 +5218,7 @@ var AGENDA_FUTURA=[
   ]
  }
 ];
-var AGENDA_FUTURA_UPDATED = "03/11/2026 - conferida contra o Garmin: semanas 13 (09 a 15/11) e 14 (16 a 22/11) sem mudanca; 23 a 29/11 ainda nao agendada";
+var AGENDA_FUTURA_UPDATED = "04/11/2026 - conferida contra o Garmin: semanas 13 (09 a 15/11) e 14 (16 a 22/11) sem mudanca; 23 a 29/11 ainda nao agendada";
 /* ==== FIM AGENDA FUTURA ==== */
 
 /* ==== INICIO ATIVIDADES - NAO EDITAR A MAO ====
