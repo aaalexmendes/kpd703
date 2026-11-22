@@ -2757,16 +2757,65 @@ var LOG_AUTO = [
   "bikeT": null,
   "runK": null,
   "runT": null,
-  "obs": "RODADA DA MANHA as 06:15 BRT, quinta, semana 14 de 35, 150 dias para a prova. RELOGIO SINCRONIZADO. Readiness do DESPERTAR 66 MODERATE as 05:14:42 (AFTER_WAKEUP_RESET, GOOD_SLEEP_HISTORY), recovery time 0 h. Ha outra leitura do dia, das 00:15 (UPDATE_REALTIME_VARIABLES, 76 HIGH, fator de sono zerado, carga 513, recovery 4,9 h) - NAO e de despertar e nao uso em read. FATORES do despertar: sono 49 por cento MODERATE (score 66), recuperacao 100 por cento VERY_GOOD, carga 100 por cento VERY_GOOD, VFC 100 por cento VERY_GOOD, historico de estresse 83 por cento GOOD, historico de sono 64 por cento MODERATE. FCrep 45 (get_rhr_day as 06:11, valor PARCIAL do dia), dois pontos acima da base 40-43 e abaixo do alerta 48. VFC semanal 59, dentro da banda 52-74, status BALANCED; VFC da noite 52, no limite de baixo da banda (61 na noite anterior). SONO 5,38 h (23:50 a 05:14), score 66 FAIR, 33,1 por cento profundo, 57,9 por cento leve, 9,0 por cento REM, nenhum despertar e 1 min acordado - noite curta, abaixo de 6 h; a anterior teve 7,12 h. Carga aguda 426 no despertar (513 no fechamento de ontem). SEMAFORO VERDE COM RESSALVA: pela regra e verde (readiness 66, faixa >= 60, e recovery time 0 h), mas o unico fator que segura a nota e o sono (49 por cento) e ha tres sinais menores no mesmo sentido nesta manha - sono de 5,38 h, FCrep 45 parcial e VFC da noite 52. Recuperacao, carga e VFC semanal estao no teto. Registro o fato; a decisao e do Alex. NENHUMA ATIVIDADE registrada hoje ate as 06:15. ONTEM (18/11): nada novo no Garmin depois do fechamento das 20:45; a NAT-E2 Economia 1.800 m de 18/11 e a NAT-P3 de 17/11 continuam sem registro. TREINO DE HOJE conforme o painel e o Garmin: FOR-B Tronco, Ombro e Core (workout 1698840822) e BRICK-B1L Bike 60 min (LAP) + T2 + Corrida 20 min (workout 1762285607, multiesporte) - o proprio det avisa que os dois somam cerca de 2 h; e o ultimo dia de treino antes da viagem de 20 a 22/11. CHECKLIST: 4 de 8 atividades marcadas na semana 14 (NAT-C3 e FOR-A de 16/11, RUN-RP de 17/11, REGEN-B3 de 18/11); em aberto NAT-P3 de 17/11, NAT-E2 de 18/11, FOR-B e BRICK-B1L de hoje. CRITERIOS DE PARADA: FCrep >= 48 por 3 dias NAO (44, 43, 45 parcial); sono < 6 h por 2 noites NAO - 7,12 h em 18/11 e 5,38 h hoje, e UMA noite abaixo de 6 h (se a proxima tambem ficar abaixo, o criterio dispara); readiness do despertar < 40 por 2 dias NAO (47 e 66). NENHUM LIMIAR DISPAROU. PASSO 3: o Garmin lista 4 agendamentos de 16 a 22/11 (NAT-P3 em 17/11 e NAT-E2 em 18/11, ambos nao concluidos; FOR-B e BRICK-B1L em 19/11); de hoje em diante bate com SEMANA_ATUAL, mesmos workout_id, e 20 a 22/11 vazios (viagem). Reli os dois workouts de hoje com get_workout_by_id: exercicios, series, pausas, alvos de FC e potencia e os passos por LAP conferem com o det - NADA A CORRIGIR. PASSO 4: os 18 agendamentos de 23/11 a 06/12 sao identicos a AGENDA_FUTURA (semanas 15 e 16); nada agendado de 07 a 13/12 (semana 17 omitida). Conteudo do bloco mantido com os det, porque o cabecalho do bloco e o teste-painel.js exigem. Sem duplicatas e sem forca na quarta; ha corrida em terca (RUN-0 em 24/11 e RUN-RP em 01/12), que consta no painel como decisao dele (nota de 31/10 e ajustes de 15/11) - nao alterei nada. NAO SOU MEDICO NEM TREINADOR. ||| FECHAMENTO DO DIA as 18:55 BRT, quinta, semana 14 de 35, 150 dias para a prova. DUAS ATIVIDADES no Garmin em 19/11. (1) FORCA 703 FOR-B Tronco, Ombro e Core as 07:04, id 25129200222, strength_training, prevista para hoje: 45,1 min, FC 69/104, TE 0,1 AEROBIC_BASE (anaerobico 0,0), carga 1,6, 115 kcal, sem RPE registrado. (2) NATACAO 703 NAT-P3 Ritmo de Prova 1300 as 08:05, id 25129655069, lap_swimming, piscina de 25 m: 1.300 m em 34,1 min totais e 32,4 min EM MOVIMENTO (1.946,5 s), RITMO EM MOVIMENTO 2:29,7/100 m sobre a sessao inteira, FC 120/145, TE 2,3 RECOVERY (anaerobico 0,1), carga 45,2, RPE 80, sensacao 100, 369 kcal. TREINO DESLOCADO: a NAT-P3 era de terca 17/11 e nao havia natacao prevista para hoje; foi feita dois dias depois, identificada pelo nome do workout (o mesmo 703 NAT-P3 agendado em 17/11), dentro da janela de 3 dias - gravei movidoDe 2026-11-17 em ATIVIDADES. PARCIAIS pelos laps (tempo em movimento): aquecimento 200 m em 5:16,2 (2:38,1/100 m); pausa 45 s; largada simulada 100 m em 2:14,0; 800 m continuos em 19:28,7 = 2:26,1/100 m com FC 123/131 e media de 12,9 bracadas por piscina; 100 m finais em 2:40,2; pausa 31 s; 100 m de volta a calma em nado peito em 2:47,5. RESSALVA nos 800 m: a primeira piscina do bloco tem 59,5 s contra 32 a 39 s das outras 31, o que parece parada contada como nado (o passo pedia NAO parar entre a largada e os 800 m), NAO confirmado; as outras 31 piscinas (775 m) somam 1.110,4 s = 2:23,3/100 m, conta minha. O mesmo padrao aparece na primeira piscina dos 100 m finais (52,3 s). Referencias: NAT-P3 de 27/10 2:35,3/100 m; CSS de 31/08 2:46,0 e reteste de 20/10 2:36,3; melhor ritmo medido 2:24,9/100 m. Sem gravacao dupla. BRICK-B1L Bike 60 min (LAP) + T2 + Corrida 20 min, previsto para hoje, NAO consta no Garmin ate as 18:55 - nao sei se nao foi feito, se sera feito a noite ou se o relogio ainda nao sincronizou (em 18/11 a bike so apareceu depois das 20 h); campos de bike e corrida ficam nulos, nao estimo, e sem brick nao ha pace dos 15 min finais. A NAT-E2 Economia 1.800 m de 18/11 tambem segue sem registro. LEITURAS POS-EXERCICIO, a parte: readiness 66 MODERATE as 07:52:53 (AFTER_POST_EXERCISE_RESET, depois da forca; carga 428) e 56 MODERATE as 08:40:15 (AFTER_POST_EXERCISE_RESET, depois da natacao; fator de recuperacao 80 por cento GOOD, carga 96 por cento GOOD, sono 49 por cento MODERATE, VFC 100 por cento VERY_GOOD), recovery time 0,0 h nas duas. O READINESS DO DESPERTAR CONTINUA 66 MODERATE das 05:14 - nao troco pelas leituras pos-exercicio. CARGA AGUDA 486 no fechamento (426 no despertar). FCrep 45 confirmada as 18:52, dois pontos acima da base 40-43 e abaixo do alerta 48. Sono 5,38 h confirmado, score 66 FAIR, VFC da noite 52. CHECKLIST: 2026-11-19 indice 0 (FOR-B) marcado auto e 2026-11-17 indice 1 (NAT-P3, feita hoje) marcado auto, como nos deslocamentos anteriores (10/11 e 12/11); 6 de 8 na semana 14; em aberto NAT-E2 de 18/11 e BRICK-B1L de hoje. NOTAS: acrescentei a linha de 19/11 com a natacao fora do previsto para o dia. CRITERIOS DE PARADA: FCrep >= 48 por 3 dias NAO (44, 43, 45); sono < 6 h por 2 noites NAO (7,12 h e 5,38 h) - e UMA noite abaixo de 6 h, se a proxima tambem ficar abaixo o criterio dispara; readiness do despertar < 40 por 2 dias NAO (47 e 66). NENHUM LIMIAR DISPAROU. NAO SOU MEDICO NEM TREINADOR.",
+  "obs": "RODADA DA MANHA as 06:15 BRT, quinta, semana 14 de 35, 150 dias para a prova. RELOGIO SINCRONIZADO. Readiness do DESPERTAR 66 MODERATE as 05:14:42 (AFTER_WAKEUP_RESET, GOOD_SLEEP_HISTORY), recovery time 0 h. Ha outra leitura do dia, das 00:15 (UPDATE_REALTIME_VARIABLES, 76 HIGH, fator de sono zerado, carga 513, recovery 4,9 h) - NAO e de despertar e nao uso em read. FATORES do despertar: sono 49 por cento MODERATE (score 66), recuperacao 100 por cento VERY_GOOD, carga 100 por cento VERY_GOOD, VFC 100 por cento VERY_GOOD, historico de estresse 83 por cento GOOD, historico de sono 64 por cento MODERATE. FCrep 45 (get_rhr_day as 06:11, valor PARCIAL do dia), dois pontos acima da base 40-43 e abaixo do alerta 48. VFC semanal 59, dentro da banda 52-74, status BALANCED; VFC da noite 52, no limite de baixo da banda (61 na noite anterior). SONO 5,38 h (23:50 a 05:14), score 66 FAIR, 33,1 por cento profundo, 57,9 por cento leve, 9,0 por cento REM, nenhum despertar e 1 min acordado - noite curta, abaixo de 6 h; a anterior teve 7,12 h. Carga aguda 426 no despertar (513 no fechamento de ontem). SEMAFORO VERDE COM RESSALVA: pela regra e verde (readiness 66, faixa >= 60, e recovery time 0 h), mas o unico fator que segura a nota e o sono (49 por cento) e ha tres sinais menores no mesmo sentido nesta manha - sono de 5,38 h, FCrep 45 parcial e VFC da noite 52. Recuperacao, carga e VFC semanal estao no teto. Registro o fato; a decisao e do Alex. NENHUMA ATIVIDADE registrada hoje ate as 06:15. ONTEM (18/11): nada novo no Garmin depois do fechamento das 20:45; a NAT-E2 Economia 1.800 m de 18/11 e a NAT-P3 de 17/11 continuam sem registro. TREINO DE HOJE conforme o painel e o Garmin: FOR-B Tronco, Ombro e Core (workout 1698840822) e BRICK-B1L Bike 60 min (LAP) + T2 + Corrida 20 min (workout 1762285607, multiesporte) - o proprio det avisa que os dois somam cerca de 2 h; e o ultimo dia de treino antes da viagem de 20 a 22/11. CHECKLIST: 4 de 8 atividades marcadas na semana 14 (NAT-C3 e FOR-A de 16/11, RUN-RP de 17/11, REGEN-B3 de 18/11); em aberto NAT-P3 de 17/11, NAT-E2 de 18/11, FOR-B e BRICK-B1L de hoje. CRITERIOS DE PARADA: FCrep >= 48 por 3 dias NAO (44, 43, 45 parcial); sono < 6 h por 2 noites NAO - 7,12 h em 18/11 e 5,38 h hoje, e UMA noite abaixo de 6 h (se a proxima tambem ficar abaixo, o criterio dispara); readiness do despertar < 40 por 2 dias NAO (47 e 66). NENHUM LIMIAR DISPAROU. PASSO 3: o Garmin lista 4 agendamentos de 16 a 22/11 (NAT-P3 em 17/11 e NAT-E2 em 18/11, ambos nao concluidos; FOR-B e BRICK-B1L em 19/11); de hoje em diante bate com SEMANA_ATUAL, mesmos workout_id, e 20 a 22/11 vazios (viagem). Reli os dois workouts de hoje com get_workout_by_id: exercicios, series, pausas, alvos de FC e potencia e os passos por LAP conferem com o det - NADA A CORRIGIR. PASSO 4: os 18 agendamentos de 23/11 a 06/12 sao identicos a AGENDA_FUTURA (semanas 15 e 16); nada agendado de 07 a 13/12 (semana 17 omitida). Conteudo do bloco mantido com os det, porque o cabecalho do bloco e o teste-painel.js exigem. Sem duplicatas e sem forca na quarta; ha corrida em terca (RUN-0 em 24/11 e RUN-RP em 01/12), que consta no painel como decisao dele (nota de 31/10 e ajustes de 15/11) - nao alterei nada. NAO SOU MEDICO NEM TREINADOR. ||| FECHAMENTO DO DIA as 18:55 BRT, quinta, semana 14 de 35, 150 dias para a prova. DUAS ATIVIDADES no Garmin em 19/11. (1) FORCA 703 FOR-B Tronco, Ombro e Core as 07:04, id 25129200222, strength_training, prevista para hoje: 45,1 min, FC 69/104, TE 0,1 AEROBIC_BASE (anaerobico 0,0), carga 1,6, 115 kcal, sem RPE registrado. (2) NATACAO 703 NAT-P3 Ritmo de Prova 1300 as 08:05, id 25129655069, lap_swimming, piscina de 25 m: 1.300 m em 34,1 min totais e 32,4 min EM MOVIMENTO (1.946,5 s), RITMO EM MOVIMENTO 2:29,7/100 m sobre a sessao inteira, FC 120/145, TE 2,3 RECOVERY (anaerobico 0,1), carga 45,2, RPE 80, sensacao 100, 369 kcal. TREINO DESLOCADO: a NAT-P3 era de terca 17/11 e nao havia natacao prevista para hoje; foi feita dois dias depois, identificada pelo nome do workout (o mesmo 703 NAT-P3 agendado em 17/11), dentro da janela de 3 dias - gravei movidoDe 2026-11-17 em ATIVIDADES. PARCIAIS pelos laps (tempo em movimento): aquecimento 200 m em 5:16,2 (2:38,1/100 m); pausa 45 s; largada simulada 100 m em 2:14,0; 800 m continuos em 19:28,7 = 2:26,1/100 m com FC 123/131 e media de 12,9 bracadas por piscina; 100 m finais em 2:40,2; pausa 31 s; 100 m de volta a calma em nado peito em 2:47,5. RESSALVA nos 800 m: a primeira piscina do bloco tem 59,5 s contra 32 a 39 s das outras 31, o que parece parada contada como nado (o passo pedia NAO parar entre a largada e os 800 m), NAO confirmado; as outras 31 piscinas (775 m) somam 1.110,4 s = 2:23,3/100 m, conta minha. O mesmo padrao aparece na primeira piscina dos 100 m finais (52,3 s). Referencias: NAT-P3 de 27/10 2:35,3/100 m; CSS de 31/08 2:46,0 e reteste de 20/10 2:36,3; melhor ritmo medido 2:24,9/100 m. Sem gravacao dupla. BRICK-B1L Bike 60 min (LAP) + T2 + Corrida 20 min, previsto para hoje, NAO consta no Garmin ate as 18:55 - nao sei se nao foi feito, se sera feito a noite ou se o relogio ainda nao sincronizou (em 18/11 a bike so apareceu depois das 20 h); campos de bike e corrida ficam nulos, nao estimo, e sem brick nao ha pace dos 15 min finais. A NAT-E2 Economia 1.800 m de 18/11 tambem segue sem registro. LEITURAS POS-EXERCICIO, a parte: readiness 66 MODERATE as 07:52:53 (AFTER_POST_EXERCISE_RESET, depois da forca; carga 428) e 56 MODERATE as 08:40:15 (AFTER_POST_EXERCISE_RESET, depois da natacao; fator de recuperacao 80 por cento GOOD, carga 96 por cento GOOD, sono 49 por cento MODERATE, VFC 100 por cento VERY_GOOD), recovery time 0,0 h nas duas. O READINESS DO DESPERTAR CONTINUA 66 MODERATE das 05:14 - nao troco pelas leituras pos-exercicio. CARGA AGUDA 486 no fechamento (426 no despertar). FCrep 45 confirmada as 18:52, dois pontos acima da base 40-43 e abaixo do alerta 48. Sono 5,38 h confirmado, score 66 FAIR, VFC da noite 52. CHECKLIST: 2026-11-19 indice 0 (FOR-B) marcado auto e 2026-11-17 indice 1 (NAT-P3, feita hoje) marcado auto, como nos deslocamentos anteriores (10/11 e 12/11); 6 de 8 na semana 14; em aberto NAT-E2 de 18/11 e BRICK-B1L de hoje. NOTAS: acrescentei a linha de 19/11 com a natacao fora do previsto para o dia. CRITERIOS DE PARADA: FCrep >= 48 por 3 dias NAO (44, 43, 45); sono < 6 h por 2 noites NAO (7,12 h e 5,38 h) - e UMA noite abaixo de 6 h, se a proxima tambem ficar abaixo o criterio dispara; readiness do despertar < 40 por 2 dias NAO (47 e 66). NENHUM LIMIAR DISPAROU. NAO SOU MEDICO NEM TREINADOR. ||| RODADA DA MANHA (20/11) as 06:12 BRT, sexta, semana 14 de 35, 149 dias para a prova. DADOS DE HOJE INCOMPLETOS: get_training_readiness e get_sleep_summary devolveram vazio para 20/11 - o relogio ainda nao sincronizou a leitura de despertar nem o sono desta noite. Unico dado de hoje: FCrep 44 (get_rhr_day 20/11), um ponto acima da base 40-43 e abaixo do alerta 48. Por regra do PASSO 0 a referencia segue sendo ONTEM 19/11 (despertar 66 MODERATE, FCrep 45, VFC semanal 59, sono 5,38 h, carga aguda 486) - nao criei entrada de 20/11 sem readiness. Nenhuma atividade nova desde o fechamento de ontem: o BRICK-B1L de 19/11 e a NAT-E2 de 18/11 seguem sem registro no Garmin. PASSO 3: semana 16 a 22/11 no Garmin tem so 2 agendamentos, NAT-E2 em 18/11 e BRICK-B1L em 19/11, ambos no passado e iguais a SEMANA_ATUAL; de hoje a domingo nada agendado, bate com as folgas de viagem - NADA A CORRIGIR. PASSO 4: 23/11 a 13/12, 18 agendamentos identicos a AGENDA_FUTURA, nada de 07 a 13/12; conteudo mantido. Observacao neutra ja registrada antes: RUN-0 na terca 24/11 e RUN-RP na terca 01/12; sem duplicatas e sem forca na quarta. CRITERIOS DE PARADA: FCrep >= 48 por 3 dias NAO (43, 45, 44); sono < 6 h por 2 noites NAO CONFIRMADO - 19/11 teve 5,38 h e a noite de 20/11 ainda nao tem dado, se vier abaixo de 6 h o criterio dispara; readiness do despertar < 40 por 2 dias NAO (47 e 66). NAO SOU MEDICO NEM TREINADOR.",
+  "auto": true
+ },
+ {
+  "date": "2026-11-20",
+  "read": 75,
+  "rhr": 41,
+  "hrv": 59,
+  "sleep": 8.5,
+  "acute": 534,
+  "natM": null,
+  "natT": null,
+  "bikeK": 29.24,
+  "bikeT": 60,
+  "runK": 3.88,
+  "runT": 19.8,
+  "obs": "REGISTRO feito em 20/11 as 13:40 BRT numa sessao de chat, a partir de 8 fotos do relogio enviadas pelo Alex: o BRICK de hoje NAO sincronizou com o Garmin Connect (get_activities_by_date 19 e 20/11 so devolve FOR-B e NAT-P3 de 19/11). Era o BRICK-B1L de quinta 19/11, feito na sexta, dia de folga de viagem no painel. PRONTIDAO (sincronizou depois da rodada da manha): readiness do DESPERTAR 75 HIGH as 07:54:40 (AFTER_WAKEUP_RESET, WELL_RECOVERED), recovery 0 h; FATORES sono 80 por cento GOOD, recuperacao 100 por cento VERY_GOOD, carga 100 por cento, VFC 100 por cento VERY_GOOD, historico de estresse 93 por cento, historico de sono 54 por cento MODERATE. Leitura pos-exercicio a parte: 55 MODERATE as 11:55:15 (recuperacao 57 por cento), carga aguda 534 (397 no despertar). SONO 8,5 h score 85 GOOD, VFC da noite 64. FCrep 44 (get_rhr_day). BRICK PELAS FOTOS: total 37,25 km em 1:24:52, 1.013 kcal. BIKE (trecho do relogio): 29,24 km em 1:00:00, 29,2 km/h, maxima 44,5 km/h, FC media 127 e maxima 152 (minima 91), TE 2,7 aerobico e 0,1 anaerobico, carga 63, 654 kcal; 2 intervalos, o ultimo com 25,18 km em 50:00,1 a 30,2 km/h, o que deixa 4,06 km em 10 min no aquecimento (conta minha). A bike ENTROU NA TRANSICAO SOZINHA em 1:00:00 - informado pelo Alex: ele pedalou mais que 1 h. Um trecho de bike que termina por tempo em 10 + 50 min nao bate com o BRICK-B1L (passos por LAP); o mais provavel e que o relogio tenha executado o BRICK-B1 antigo (10 + 45 + 5 min por tempo), NAO confirmado. CORRIDA: 3,88 km, tempo de corrida 19:46 (o Alex confirma cerca de 20 min), inatividade 0:05, RITMO EM MOVIMENTO 5:06/km (mostrado no relogio e conferido: 3,88 km em 19:46 = 5:05,7/km), FC media 150 e maxima 167 (minima 87), TE 3,3 aerobico e 0,1 anaerobico, carga 108, 297 kcal, inicio as 11:29. RESSALVA: a mesma tela mostra Tempo 15:25,5 e ritmo 3:58/km para a corrida, incompativel com 19:46 e implausivel para ele (o Cooper saiu a 4:20/km); registro a corrida em 19,8 min pela palavra dele e pelo ritmo em movimento do relogio. NAO FECHA: total 1:24:52 menos 60:00 de bike menos cerca de 19:51 de corrida deixa cerca de 5 min para a transicao, que no entanto acumula 4,13 km (37,25 - 29,24 - 3,88) - isso daria quase 50 km/h, entao alguma das telas esta inconsistente e NAO consigo dizer quanto tempo de bike passou de 1 h. Sem pace separado dos 15 min finais. Comparacao: 27/09 corrida do brick a 5:18,7/km com FC 147; hoje 5:06/km com FC 150. ACAO NO GARMIN pedida por ele: criadas versoes LAP v2 de todos os bricks (B1 1768067672, L60 1768068289, L1 1768068310, B3 1768068320, D1 1768068325) com a bike e o bloco final da corrida terminando no botao LAP; 29/11 e 06/12 reagendados para as versoes novas. NAO SOU MEDICO NEM TREINADOR. ||| FECHAMENTO DO DIA as 18:51 BRT (rotina automatica). GARMIN CONNECT AINDA SEM O BRICK: get_activities_by_date e get_activities_fordate para 20/11 devolvem ZERO atividades, e a lista das 6 mais recentes termina na NAT-P3 de 19/11 - o brick continua registrado so pelas fotos, e os campos de treino desta entrada e as duas entradas de ATIVIDADES de hoje NAO foram alterados por esta rodada. CONFERENCIA DOS NUMEROS: readiness do DESPERTAR segue 75 HIGH das 07:54:40 (mantido); ultima leitura do dia continua a pos-exercicio das 11:55:15, 55 MODERATE, carga aguda 534 (mantida), recovery time 0 h. FCrep: get_rhr_day agora devolve 41 (antes 44) e o resumo de sono tambem traz 41 - campo rhr atualizado para 41. Sono 8,5 h score 85 confirmado; VFC semanal 59, VFC da noite 64. CHECKLIST semana 14: 7 de 8 marcadas; em aberto so a NAT-E2 de 18/11. Treinos deslocados na semana: NAT-P3 de 17/11 feita em 19/11 e BRICK-B1L de 19/11 feito hoje. CRITERIOS DE PARADA: FCrep >= 48 por 3 dias NAO (43, 45, 41); sono < 6 h por 2 noites NAO (5,38 h e 8,5 h); readiness do despertar < 40 por 2 dias NAO (66 e 75). NENHUM LIMIAR DISPAROU. NAO SOU MEDICO NEM TREINADOR. ||| RODADA DA MANHA de 21/11 as 06:12 BRT (sabado, folga de viagem, semana 14 de 35, 148 dias para a prova). O relogio ainda NAO sincronizou o dia 21/11: get_training_readiness, get_rhr_day e get_sleep_summary devolveram vazio para hoje, e nenhuma atividade em 20 ou 21/11 aparece no Garmin (o brick de 20/11 segue sem sincronizar). Por regra, a referencia desta rodada e ONTEM, 20/11. NOTA SOBRE A FCrep: get_rhr_day agora devolve 41 para 20/11, que e o valor ja gravado no campo rhr; o 44 citado no texto acima foi lido antes de o dia fechar. Reconferido: readiness do despertar 75 HIGH as 07:54:40 (AFTER_WAKEUP_RESET), sono 8,5 h score 85, VFC semanal 59, carga aguda 534 na leitura pos-exercicio das 11:55. PASSO 3: Garmin de 16 a 22/11 so lista NAT-E2 de 18/11 e BRICK-B1L de 19/11 como nao concluidos (o brick foi feito em 20/11 sem sincronizar; a NAT-E2 de 18/11 nao consta como feita); 21 e 22/11 sem agendamento, batem com a tag off - NADA A CORRIGIR. PASSO 4: 18 agendamentos de 23/11 a 06/12 identicos a AGENDA_FUTURA; nada de 07 a 13/12. CRITERIOS DE PARADA: FCrep >= 48 por 3 dias NAO (43, 45, 41); sono < 6 h por 2 noites NAO (5,38 h em 19/11 e 8,5 h em 20/11); readiness do despertar < 40 por 2 dias NAO (66 e 75). NENHUM LIMIAR DISPAROU. NAO SOU MEDICO NEM TREINADOR.",
+  "auto": false
+ },
+ {
+  "date": "2026-11-21",
+  "read": null,
+  "rhr": null,
+  "hrv": null,
+  "sleep": null,
+  "acute": null,
+  "natM": null,
+  "natT": null,
+  "bikeK": null,
+  "bikeT": null,
+  "runK": null,
+  "runT": null,
+  "obs": "FECHAMENTO DO DIA as 18:55 BRT, sabado, semana 14 de 35, 148 dias para a prova. ESTA RODADA CRIOU A ENTRADA DE HOJE: a rodada da manha das 06:12 nao deixou entrada de 21/11 em LOG_AUTO - ela gravou o relato dela no fim do obs de 20/11, embora LOG_AUTO_UPDATED ja marcasse 21/11 06:12. RELOGIO SEM SINCRONIZAR O DIA INTEIRO: get_device_last_used informa que o ultimo envio do fenix 8 - 51mm AMOLED para o Garmin Connect foi em 20/11/2026 as 13:49:38, ou seja mais de 29 h atras. Consequencia direta: get_training_readiness, get_rhr_day, get_sleep_summary, get_hrv_data, get_stats e get_recovery_time_remaining devolveram VAZIO para 21/11, e get_activities_by_date e get_activities_fordate nao listam nenhuma atividade hoje. TODOS os campos numericos desta entrada ficam NULOS - nao estimo nem repito o valor de ontem no lugar de uma medida que nao existe. SEM READINESS DE DESPERTAR HOJE: a ultima leitura de despertar que existe e a de 20/11, 75 HIGH as 07:54:40, e a ultima carga aguda conhecida e 534, da leitura pos-exercicio das 11:55 de 20/11 - os dois sao numeros de ONTEM e estao gravados na entrada de ontem, nao aqui. TREINO PREVISTO PARA HOJE: NENHUM. SEMANA_ATUAL marca 21/11 com tag off e lista de sessoes vazia - 20, 21 e 22/11 sao folga de viagem, definida na reorganizacao da semana 14 feita em 09/11, depois de ele cancelar a meia maratona de 22/11. A ausencia de treino hoje e portanto o plano, nao uma sessao perdida. CHECKLIST da semana 14 segue em 7 de 8 marcadas, sem alteracao nesta rodada: em aberto apenas a NAT-E2 de 18/11; nada a marcar hoje, porque nao ha vaga no dia nem atividade registrada. O BRICK-B1L de 20/11 CONTINUA SEM SINCRONIZAR com o Garmin Connect - permanece registrado apenas pelas fotos do relogio, e nem os campos de treino de 20/11 nem as duas entradas de ATIVIDADES daquele dia foram tocados por esta rodada. TREINOS DESLOCADOS: nenhum novo hoje; seguem valendo os dois da semana, NAT-P3 de 17/11 feita em 19/11 e BRICK-B1L de 19/11 feito em 20/11. CRITERIOS DE PARADA, verificacao literal com os dados que existem: (1) FCrep igual ou acima de 48 por tres dias - NAO, as tres ultimas medidas sao 43 em 18/11, 45 em 19/11 e 41 em 20/11, e hoje nao ha medida; (2) sono abaixo de 6 h por duas noites - NAO, 5,38 h em 19/11 e 8,5 h em 20/11, e a noite de hoje nao tem dado; (3) readiness do despertar abaixo de 40 por dois dias - NAO, 66 em 19/11 e 75 em 20/11, e hoje nao ha leitura. NENHUM LIMIAR DISPAROU, com a ressalva de que hoje nao existe medida nova para avaliar. PENDENCIA QUE DEPENDE DELE: abrir o app Garmin Connect no celular com o relogio por perto para forcar a sincronizacao - sem isso o sono e a prontidao de hoje e de amanha podem nao chegar, e o brick de 20/11 nunca entra no historico do Garmin. ATIVIDADES: nenhuma entrada nova; o bloco foi apenas podado para a janela de 60 dias (corte em 22/09), saindo as tres entradas de 20/09 - bike e corrida do BRICK-D1 e a NAT-C3 -, de 76 para 73 itens. NAO SOU MEDICO NEM TREINADOR.",
+  "auto": true
+ }
+,
+ {
+  "date": "2026-11-22",
+  "read": null,
+  "rhr": null,
+  "hrv": null,
+  "sleep": null,
+  "acute": null,
+  "natM": null,
+  "natT": null,
+  "bikeK": null,
+  "bikeT": null,
+  "runK": null,
+  "runT": null,
+  "obs": "RODADA DA MANHA as 06:12 BRT, domingo, semana 14 de 35, ultimo dia da semana, 147 dias para a prova. RELOGIO SEM SINCRONIZAR PELO SEGUNDO DIA SEGUIDO: get_device_last_used informa que o ultimo envio do fenix 8 - 51mm AMOLED para o Garmin Connect foi em 20/11/2026 as 13:49:38, cerca de 40 h atras - exatamente o mesmo horario registrado no fechamento de ontem, ou seja NAO houve nenhuma sincronizacao nas ultimas 24 h. Consequencia direta: get_training_readiness, get_rhr_day e get_sleep_summary devolveram VAZIO tanto para HOJE 22/11 como para ONTEM 21/11, e get_activities_by_date nao lista nenhuma atividade em 20, 21 nem 22/11. Pela regra do PASSO 0 eu usaria o dia de ONTEM, mas 21/11 tambem esta vazio - o ultimo dia COM dado e 20/11, sexta: readiness do despertar 75 HIGH as 07:54:40, FCrep 41, VFC semanal 59, sono 8,5 h com score 85 GOOD, carga aguda 397 no despertar. Esses numeros estao gravados na entrada de 20/11 e NAO sao repetidos aqui. TODOS os campos numericos desta entrada ficam NULOS - nao estimo nem transporto medida de outro dia. SEM SEMAFORO HOJE: nao existe readiness de despertar de hoje nem de ontem para classificar. TREINO PREVISTO PARA HOJE: NENHUM. SEMANA_ATUAL marca 22/11 com tag off e lista de sessoes vazia - 20, 21 e 22/11 sao folga de viagem, definida na reorganizacao da semana 14 feita em 09/11, depois de ele cancelar a meia maratona de 22/11. A ausencia de treino hoje e o plano, nao uma sessao perdida. CHECKLIST da semana 14 segue em 7 de 8 atividades marcadas, sem alteracao nesta rodada: em aberto apenas a NAT-E2 de 18/11; nada a marcar hoje, porque nao ha vaga no dia nem atividade registrada. PASSO 3, conferencia da semana em curso (16 a 22/11) contra o Garmin: get_scheduled_workouts devolveu 2 agendamentos, a NAT-E2 de 18/11 (id 1702724141) e o BRICK-B1L de 19/11 (id 1762285607), os unicos que seguem com completed falso - os demais da semana saem da lista depois de concluidos. Para HOJE, unico dia que ainda conta pela regra, o Garmin nao tem nada agendado e SEMANA_ATUAL marca off: BATE. NADA A CORRIGIR. PASSO 4, conferencia de 23/11 a 13/12: get_scheduled_workouts devolveu 18 agendamentos, IDENTICOS aos ja escritos em AGENDA_FUTURA (semanas 15 e 16); nada agendado de 07 a 13/12, por isso a semana 17 segue omitida. CONTEUDO MANTIDO, apenas o carimbo de conferencia atualizado. CONFLITOS COM A SEMANA-PADRAO: ha CORRIDA EM TERCA em 24/11 (RUN-0 Retomada Z1/Z2 35 min) e em 01/12 (RUN-RP 3x3 km), contra a semana-padrao de 22/08, que reserva terca e quinta sem corrida - registro de forma neutra e NAO corrijo; e coerente com a decisao dele de 19/10 de priorizar corridas em terca e quinta, ja anotada em AGENDA_FUTURA_UPDATED. Nao ha forca na quarta e nao ha duplicatas. CRITERIOS DE PARADA, verificacao literal com os dados que existem: (1) FCrep igual ou acima de 48 por tres dias - NAO, as tres ultimas medidas sao 43 em 18/11, 45 em 19/11 e 41 em 20/11, e nao ha medida em 21 nem 22/11; (2) sono abaixo de 6 h por duas noites - NAO, 5,38 h em 19/11 e 8,5 h em 20/11, e as duas noites seguintes nao tem dado; (3) readiness do despertar abaixo de 40 por dois dias - NAO, 66 em 19/11 e 75 em 20/11, sem leitura depois disso. NENHUM LIMIAR DISPAROU, com a ressalva honesta de que ha dois dias sem nenhuma medida nova para avaliar. O BRICK-B1L de 20/11 CONTINUA SEM SINCRONIZAR com o Garmin Connect - permanece registrado apenas pelas fotos do relogio. PENDENCIA QUE DEPENDE DELE, a mais urgente desta rodada: abrir o app Garmin Connect no celular com o relogio por perto para forcar a sincronizacao. Sao quase dois dias de sono, prontidao e FCrep que podem nao chegar, e a semana 15 comeca amanha 23/11 com o FOR-B - o fechamento semanal de hoje a noite vai arquivar a semana 14 sem esses numeros. NAO SOU MEDICO NEM TREINADOR.",
   "auto": true
  }
 ];
-var LOG_AUTO_UPDATED = "19/11/2026 18:55";
+var LOG_AUTO_UPDATED = "22/11/2026 06:12";
 /* ==== FIM DADOS AUTOMATICOS ==== */
 
 /* ==== INICIO CHECKLIST DA SEMANA - NAO EDITAR A MAO ====
    Chave: "AAAA-MM-DD|indice". Valor: "auto" (detectado no Garmin) ou "manual". */
-var SESS_DONE ={"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"auto","2026-08-23|0":"auto","2026-08-24|0":"auto","2026-08-24|1":"auto","2026-08-26|0":"auto","2026-08-27|0":"auto","2026-08-28|0":"auto","2026-08-29|0":"auto","2026-08-29|1":"auto","2026-08-30|0":"auto","2026-08-31|0":"auto","2026-08-31|1":"auto","2026-09-01|0":"auto","2026-09-05|0":"auto","2026-09-05|1":"auto","2026-09-06|0":"auto","2026-09-07|1":"manual","2026-09-12|0":"auto","2026-09-13|0":"auto","2026-09-14|0":"auto","2026-09-14|1":"auto","2026-09-15|0":"auto","2026-09-15|1":"auto","2026-09-16|0":"auto","2026-09-17|0":"auto","2026-09-17|1":"auto","2026-09-19|0":"auto","2026-09-20|0":"auto","2026-09-23|0":"auto","2026-09-24|0":"auto","2026-09-26|0":"auto","2026-09-26|1":"auto","2026-09-27|0":"auto","2026-09-28|0":"auto","2026-09-28|1":"auto","2026-09-29|0":"auto","2026-09-30|0":"auto","2026-09-30|1":"manual","2026-10-02|0":"auto","2026-10-05|0":"auto","2026-10-08|0":"auto","2026-10-10|0":"manual","2026-10-10|1":"auto","2026-10-12|0":"auto","2026-10-17|0":"auto","2026-10-18|0":"manual","2026-10-19|1":"auto","2026-10-20|0":"auto","2026-10-19|0":"manual","2026-10-21|0":"auto","2026-10-21|1":"auto","2026-10-22|0":"auto","2026-10-22|1":"auto","2026-10-24|0":"auto","2026-10-25|0":"manual","2026-10-27|0":"auto","2026-10-27|1":"auto","2026-10-28|0":"auto","2026-10-29|0":"auto","2026-10-29|1":"auto","2026-10-31|0":"auto","2026-11-01|0":"auto","2026-11-02|0":"auto","2026-11-03|0":"auto","2026-11-03|1":"auto","2026-11-04|0":"auto","2026-11-03|2":"manual","2026-11-08|0":"auto","2026-11-09|0":"auto","2026-11-09|1":"auto","2026-11-10|0":"auto","2026-11-10|1":"auto","2026-11-11|0":"auto","2026-11-12|0":"auto","2026-11-15|0":"auto","2026-11-16|0":"auto","2026-11-16|1":"auto","2026-11-17|0":"auto","2026-11-18|0":"auto","2026-11-19|0":"auto","2026-11-17|1":"auto"};
+var SESS_DONE ={"2026-08-18|0":"auto","2026-08-20|0":"auto","2026-08-22|0":"auto","2026-08-23|0":"auto","2026-08-24|0":"auto","2026-08-24|1":"auto","2026-08-26|0":"auto","2026-08-27|0":"auto","2026-08-28|0":"auto","2026-08-29|0":"auto","2026-08-29|1":"auto","2026-08-30|0":"auto","2026-08-31|0":"auto","2026-08-31|1":"auto","2026-09-01|0":"auto","2026-09-05|0":"auto","2026-09-05|1":"auto","2026-09-06|0":"auto","2026-09-07|1":"manual","2026-09-12|0":"auto","2026-09-13|0":"auto","2026-09-14|0":"auto","2026-09-14|1":"auto","2026-09-15|0":"auto","2026-09-15|1":"auto","2026-09-16|0":"auto","2026-09-17|0":"auto","2026-09-17|1":"auto","2026-09-19|0":"auto","2026-09-20|0":"auto","2026-09-23|0":"auto","2026-09-24|0":"auto","2026-09-26|0":"auto","2026-09-26|1":"auto","2026-09-27|0":"auto","2026-09-28|0":"auto","2026-09-28|1":"auto","2026-09-29|0":"auto","2026-09-30|0":"auto","2026-09-30|1":"manual","2026-10-02|0":"auto","2026-10-05|0":"auto","2026-10-08|0":"auto","2026-10-10|0":"manual","2026-10-10|1":"auto","2026-10-12|0":"auto","2026-10-17|0":"auto","2026-10-18|0":"manual","2026-10-19|1":"auto","2026-10-20|0":"auto","2026-10-19|0":"manual","2026-10-21|0":"auto","2026-10-21|1":"auto","2026-10-22|0":"auto","2026-10-22|1":"auto","2026-10-24|0":"auto","2026-10-25|0":"manual","2026-10-27|0":"auto","2026-10-27|1":"auto","2026-10-28|0":"auto","2026-10-29|0":"auto","2026-10-29|1":"auto","2026-10-31|0":"auto","2026-11-01|0":"auto","2026-11-02|0":"auto","2026-11-03|0":"auto","2026-11-03|1":"auto","2026-11-04|0":"auto","2026-11-03|2":"manual","2026-11-08|0":"auto","2026-11-09|0":"auto","2026-11-09|1":"auto","2026-11-10|0":"auto","2026-11-10|1":"auto","2026-11-11|0":"auto","2026-11-12|0":"auto","2026-11-15|0":"auto","2026-11-16|0":"auto","2026-11-16|1":"auto","2026-11-17|0":"auto","2026-11-18|0":"auto","2026-11-19|0":"auto","2026-11-17|1":"auto","2026-11-19|1":"manual"};
 /* ==== FIM CHECKLIST DA SEMANA ==== */
 
 /* ==== INICIO ANOTACOES - NAO EDITAR A MAO ====
@@ -2821,11 +2870,12 @@ var NOTAS = {
  "2026-11-08": "BENCHMARK - primeiro triathlon completo (informado pelo Alex em 08/11): TRI-SIM com natacao em aguas abertas no Lago Paranoa 750 m em 19:13 (2:33,7/100 m), T1 4:15, bike 32,37 km em 63:13 (30,7 km/h, FC 137), T2 3:05, corrida 6,03 km em 29:55 (4:57/km, FC 150). Total cerca de 1:59:41. Distancias travadas no relogio; nos proximos o Alex vai usar o modo triathlon do Garmin. Usar como referencia de comparacao.",
  "2026-11-11": "Garmin registrou: natacao 1.800 m em 42,5 min de movimento (67,4 min totais, 2:21,8/100 m, FC 115/135), em dia com apenas a bike REGEN-B3 prevista. E a NAT-E2 de terca 10/11, feita um dia depois. A bike REGEN-B3 nao consta no Garmin ate as 18:55.",
  "2026-11-13": "Garmin registrou: forca 38 min (703 FOR-B, FC 79/117) e natacao 1.650 m em 36,4 min de movimento (50,1 min totais, 2:12,2/100 m, FC 106/130), em dia de folga no plano. O FOR-B e o de quinta 12/11, feito um dia depois (identificado pelo nome). A natacao tem nome generico; pode ser o NAT-P3 de 12/11 (1.300 m prescritos), nao confirmado.",
- "2026-11-19": "Garmin registrou: natacao 1.300 m em 32,4 min de movimento (34,1 min totais, 2:29,7/100 m, FC 120/145), em dia com apenas FOR-B e BRICK-B1L previstos. E a NAT-P3 Ritmo de Prova 1.300 m de terca 17/11, feita dois dias depois (identificada pelo nome do workout)."
+ "2026-11-19": "Garmin registrou: natacao 1.300 m em 32,4 min de movimento (34,1 min totais, 2:29,7/100 m, FC 120/145), em dia com apenas FOR-B e BRICK-B1L previstos. E a NAT-P3 Ritmo de Prova 1.300 m de terca 17/11, feita dois dias depois (identificada pelo nome do workout).",
+ "2026-11-20": "Informado pelo Alex em 20/11 com fotos do relogio (o brick NAO sincronizou com o Garmin): BRICK-B1L de quinta 19/11 feito hoje, dia de folga de viagem. Total 37,25 km em 1:24:52, 1.013 kcal. Bike 29,24 km em 1:00:00 registrados (29,2 km/h, FC 127/152) - o relogio passou para a transicao sozinho em 1 h, mas ele pedalou mais que isso. Corrida cerca de 20 min: 3,88 km em 19:46, 5:06/km, FC 150/167. O tempo extra de bike nao pode ser separado pelas fotos. Pedido dele: todos os bricks com etapas encerradas pelo botao LAP - versoes LAP v2 criadas no Garmin."
 };
 /* ==== FIM ANOTACOES ==== */
 
-var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,10,19);
+var RACE=new Date(2027,3,18), START=new Date(2026,7,17), TOTAL_WEEKS=35, TODAY=new Date(2026,10,22);
 
 var SECOES=[
  ["s-visao","01","Visão geral"],["s-atual","02","Hoje"],["s-trilhas","03","As três trilhas"],
@@ -5604,8 +5654,8 @@ var AGENDA_FUTURA=[
     "s": [
      {
       "t": "b",
-      "n": "BRICK-B1L · Bike 60 min (LAP) + T2 + Corrida 20 min",
-      "o": "brick curto, multiesporte em um registro",
+      "n": "BRICK-B1 LAP v2 · Bike 60 min + T2 + Corrida 20 min",
+      "o": "brick curto, multiesporte em um registro; bike e bloco final da corrida terminam no LAP",
       "det": [
        "<b>BIKE — 10 min de aquecimento</b> a 90-112 bpm / 70-110 W (no rolo, spindown antes); este passo avança sozinho",
        "<b>BIKE — base a 112-128 bpm / 90-145 W, até apertar LAP</b> (referência do plano: 45 min, LAP perto dos 55 min de pedal), cadência 85-90 rpm; em subida alivie em vez de deixar a FC subir; anote a potência média",
@@ -5614,7 +5664,8 @@ var AGENDA_FUTURA=[
        "<b>É UM treino só:</b> abra a atividade MULTIESPORTE (ou o modo triatlo) e troque de esporte com o botão de volta — a transição entra sozinha; não há volta à calma da bike",
        "<b>Duração:</b> referência de 80 min (bike 60 + corrida 20); o Garmin só estima os 20 min da corrida, porque a bike termina no botão. Referências de corrida: 5:27,4/km com FC 140 (06/09), 5:18,7/km com FC 147 (27/09) e, no TRI-SIM de 08/11, 4:57/km com FC 150 em 6,03 km",
        "<b>Semana 15 provisória:</b> depende de como a semana 14 e a volta da viagem (20 a 22/11) saírem; o BRICK-B3 de 2 h espera a semana 16",
-       "<b>Confere com o workout 703 BRICK-B1L · Bike 60min (LAP) + T2 + Corrida 20min</b> agendado no Garmin (id 1762285607)"
+       "<b>Trocado em 20/11 a pedido dele:</b> o brick de 20/11 saiu da bike sozinho em 1 h; a versao LAP v2 encerra a bike e o bloco Z2 da corrida no botao LAP",
+       "<b>Confere com o workout 703 BRICK-B1 · Bike 60min + T2 + Corrida 20min (LAP v2)</b> agendado no Garmin (id 1768067672)"
       ]
      }
     ]
@@ -5790,7 +5841,7 @@ var AGENDA_FUTURA=[
     "s": [
      {
       "t": "b",
-      "n": "BRICK-L60 · Bike livre 60 km (LAP) + T2 + Corrida 20 min",
+      "n": "BRICK-L60 LAP v2 · Bike livre 60 km + T2 + Corrida 20 min",
       "o": "o pedal de 60 km do Portão do Bloco B, na semana 16 por decisão dele; multiesporte em um registro",
       "det": [
        "<b>BIKE — 10 min de aquecimento</b> a 90-112 bpm / 70-110 W, cadência livre; este passo avança sozinho",
@@ -5801,7 +5852,8 @@ var AGENDA_FUTURA=[
        "<b>Duração:</b> estimo cerca de 154 min — 60 km no ritmo de 15/11 (27,9 km/h) dão 129 min, mais T2 e 20 min de corrida; aritmética, não previsão. O Garmin só estima os 20 min da corrida. Na rua não há medidor: a faixa de watts só vale no rolo",
        "<b>Portão do Bloco B:</b> o maior pedal do ciclo é o de 15/11, 44,5 km. Nutrição: é a sessão para praticar a ingestão do plano (rampa de nov-dez: 60 g/h com frutose)",
        "<b>Semana 16 provisória:</b> primeira do Bloco B (Base Específica), alvo 9,2 h; depende das travas de 22/11 e 29/11",
-       "<b>Confere com o workout 703 BRICK-L60 · Bike livre 60km (LAP) + T2 + Corrida 20min</b> agendado no Garmin (id 1763271033)"
+       "<b>Trocado em 20/11 a pedido dele:</b> versao LAP v2, com o bloco Z2 da corrida tambem terminando no botao LAP",
+       "<b>Confere com o workout 703 BRICK-L60 · Bike livre 60km + T2 + Corrida 20min (LAP v2)</b> agendado no Garmin (id 1768068289)"
       ]
      }
     ],
@@ -5810,7 +5862,7 @@ var AGENDA_FUTURA=[
   ]
  }
 ];
-var AGENDA_FUTURA_UPDATED = "19/11/2026 06:15 - rodada da manha: 18 agendamentos de 23/11 a 06/12 reconferidos contra o Garmin, identicos ao bloco; nada de 07 a 13/12; anterior 18/11/2026 07:25 - rodada da manha: 18 agendamentos de 23/11 a 06/12 reconferidos contra o Garmin, identicos ao bloco; nada de 07 a 13/12; anterior 17/11/2026 06:14 - rodada da manha: 18 agendamentos de 23/11 a 06/12 reconferidos contra o Garmin, identicos ao bloco; nada de 07 a 13/12; anterior 16/11/2026 06:12 - rodada da manha: 18 agendamentos de 23/11 a 06/12 conferidos contra o Garmin, identicos ao bloco (semanas 15 e 16); nada agendado de 07 a 13/12; anterior 15/11/2026 20:55 - ajustes pedidos por ele depois do fechamento: semana 14 com RUN-RP em 17/11 no lugar do RUN-0; semana 15 sem o NAT-C2b de 23/11, com NAT-TESTE2 em 24/11 (antecipado de 08/12, piscina de 50 m) e RUN-A2 em 28/11 no lugar do RUN-A1; semana 16 com RUN-RP em 01/12 no lugar do RUN-A1, sem o RUN-0 de 03/12 e com o BRICK-L60 (id 1763271033) em 06/12 no lugar do BRICK-B1L. Conferida contra o Garmin; anterior 15/11/2026 20:40 - fechamento semanal: semana 14 passou para SEMANA EM CURSO; AGENDA cobre as semanas 15 (23 a 29/11) e 16 (30/11 a 06/12), lidas do Garmin por get_scheduled_workouts e conferidas work...";
+var AGENDA_FUTURA_UPDATED = "22/11/2026 06:12 - rodada da manha: 18 agendamentos de 23/11 a 13/12 reconferidos contra o Garmin, identicos ao bloco (semanas 15 e 16); nada de 07 a 13/12, semana 17 segue omitida. Conflito registrado sem correcao: corrida em terca em 24/11 (RUN-0) e 01/12 (RUN-RP), contra a semana-padrao de 22/08; coerente com a decisao dele de 19/10. Sem forca na quarta e sem duplicatas; anterior 21/11/2026 06:12 - rodada da manha: 18 agendamentos de 23/11 a 06/12 reconferidos contra o Garmin, identicos ao bloco; nada de 07 a 13/12; anterior 20/11/2026 13:40 - pedido dele no chat: bricks de 29/11 e 06/12 trocados pelas versoes LAP v2 (ids 1768067672 e 1768068289), etapas encerradas no botao LAP; anterior 20/11/2026 06:12 - rodada da manha: 18 agendamentos de 23/11 a 06/12 reconferidos contra o Garmin, identicos ao bloco; nada de 07 a 13/12; anterior 19/11/2026 06:15 - rodada da manha: 18 agendamentos de 23/11 a 06/12 reconferidos contra o Garmin, identicos ao bloco; nada de 07 a 13/12; anterior 18/11/2026 07:25 - rodada da manha: 18 agendamentos de 23/11 a 06/12 reconferidos contra o Garmin, identicos ao bloco; nada de 07 a 13/12; anterior 17/11/2026 06:14 - rodada da manha: 18 agendamentos de 23/11 a 06/12 reconferidos contra o Garmin, identicos ao bloco; nada de 07 a 13/12; anterior 16/11/2026 06:12 - rodada da manha: 18 agendamentos de 23/11 a 06/12 conferidos contra o Garmin, identicos ao bloco (semanas 15 e 16); nada agendado de 07 a 13/12; anterior 15/11/2026 20:55 - ajustes pedidos por ele depois do fechamento: semana 14 com RUN-RP em 17/11 no lugar do RUN-0; semana 15 sem o NAT-C2b de 23/11, com NAT-TESTE2 em 24/11 (antecipado de 08/12, piscina de 50 m) e RUN-A2 em 28/11 no lugar do RUN-A1; semana 16 com RUN-RP em 01/12 no lugar do RUN-A1, sem o RUN-0 de 03/12 e com o BRICK-L60 (id 1763271033) em 06/12 no lugar do BRICK-B1L. Conferida contra o Garmin; anterior 15/11/2026 20:40 - fechamento semanal: semana 14 passou para SEMANA EM CURSO; AGENDA cobre as semanas 15 (23 a 29/11) e 16 (30/11 a 06/12), lidas do Garmin por get_scheduled_workouts e conferidas work...";
 /* ==== FIM AGENDA FUTURA ==== */
 
 /* ==== INICIO ATIVIDADES - NAO EDITAR A MAO ====
@@ -5821,51 +5873,6 @@ var AGENDA_FUTURA_UPDATED = "19/11/2026 06:15 - rodada da manha: 18 agendamentos
             dur (min totais), mov (min em movimento), fcm, fcx, te, teLabel, rpe, kcal,
             movidoDe:"AAAA-MM-DD" quando o treino era de outro dia} */
 var ATIVIDADES=[
- {
-  "date": "2026-09-20",
-  "t": "b",
-  "nome": "BRICK-D1 bike 68 min",
-  "dist": 30.25,
-  "dur": 68,
-  "mov": 68,
-  "fcm": 124,
-  "fcx": 145,
-  "te": 3.5,
-  "teLabel": "AEROBIC_BASE",
-  "rpe": 60,
-  "kcal": 755,
-  "fonte": "brick multiesporte, atividade unica 24432775773 - lap 1. Sem medidor de potencia nesta pedalada, foi na rua com o relogio. T2 de 3,6 min entre os dois segmentos"
- },
- {
-  "date": "2026-09-20",
-  "t": "r",
-  "nome": "BRICK-D1 corrida 20 min",
-  "dist": 3.79,
-  "dur": 20.1,
-  "mov": 20.1,
-  "fcm": 148,
-  "fcx": 156,
-  "te": 3.5,
-  "teLabel": "AEROBIC_BASE",
-  "rpe": 60,
-  "kcal": 295,
-  "fonte": "brick multiesporte, atividade unica 24432775773 - lap 3. Pace medio 5:18,1/km. TE e RPE sao da atividade inteira, o Garmin nao separa por segmento. Os 15 min finais nao sao separaveis: o segmento e um unico lap e has_splits e falso"
- },
- {
-  "date": "2026-09-20",
-  "t": "n",
-  "nome": "NAT-C3 Ritmo Critico",
-  "dist": 975,
-  "dur": 29.8,
-  "mov": 24.3,
-  "fcm": 117,
-  "fcx": 138,
-  "te": 2.1,
-  "teLabel": "RECOVERY",
-  "rpe": 50,
-  "kcal": 320,
-  "fonte": "NAT-C3 de SEGUNDA 21/09 ANTECIPADA um dia - informado pelo Alex. INTERROMPIDA POR CAIBRA: 975 m dos 1.200 m prescritos, 81 por cento do volume. Ritmo 2:29,6/100 m em tempo de movimento. A etiqueta movido nao cobre antecipacao, so treino feito ate 3 dias depois. Vaga 2026-09-21 indice 0 NAO marcada - decisao do Alex."
- },
  {
   "date": "2026-09-22",
   "t": "x",
@@ -6963,9 +6970,41 @@ var ATIVIDADES=[
   "kcal": 369,
   "movidoDe": "2026-11-17",
   "fonte": "Garmin id 25129655069; prescrita para terca 17/11, feita na quinta. Ritmo em movimento 2:29,7/100 m sobre a sessao inteira. Laps: aquecimento 200 m em 5:16,2; largada 100 m em 2:14,0; 800 m continuos em 19:28,7 = 2:26,1/100 m com FC 123/131 (a primeira piscina do bloco tem 59,5 s, provavel parada contada como nado, nao confirmado; as outras 31 dao 2:23,3/100 m); 100 m finais em 2:40,2; 100 m de volta a calma em peito em 2:47,5."
+ },
+ {
+  "date": "2026-11-20",
+  "t": "b",
+  "nome": "BRICK-B1L bike (registro manual, sem Garmin)",
+  "dist": 29.24,
+  "dur": 60,
+  "mov": 60,
+  "fcm": 127,
+  "fcx": 152,
+  "te": 2.7,
+  "teLabel": null,
+  "rpe": null,
+  "kcal": 654,
+  "movidoDe": "2026-11-19",
+  "fonte": "fotos do relogio enviadas pelo Alex em 20/11; a atividade nao sincronizou com o Garmin Connect. Trecho de bike 1:00:00 e 29,24 km, 29,2 km/h, max 44,5 km/h, carga 63. O relogio encerrou a bike por tempo em 1 h e ele seguiu pedalando - o tempo extra ficou fora deste trecho e nao pode ser separado."
+ },
+ {
+  "date": "2026-11-20",
+  "t": "r",
+  "nome": "BRICK-B1L corrida 20 min (registro manual, sem Garmin)",
+  "dist": 3.88,
+  "dur": 19.9,
+  "mov": 19.8,
+  "fcm": 150,
+  "fcx": 167,
+  "te": 3.3,
+  "teLabel": null,
+  "rpe": null,
+  "kcal": 297,
+  "movidoDe": "2026-11-19",
+  "fonte": "fotos do relogio: 3,88 km, tempo de corrida 19:46, inatividade 0:05, ritmo em movimento 5:06/km, carga 108. A mesma tela mostra Tempo 15:25,5 e ritmo 3:58/km, incompativel com o resto; usado 19:46 pela palavra dele."
  }
 ];
-var ATIVIDADES_UPDATED = "19/11/2026 18:55";
+var ATIVIDADES_UPDATED = "21/11/2026 18:55";
 /* ==== FIM ATIVIDADES ==== */
 
 var REFS=[
